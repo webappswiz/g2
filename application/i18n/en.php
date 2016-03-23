@@ -14,6 +14,8 @@ return array
     'Profilom' => 'My Profile',
     'Kilépés' => 'Logout',
     'Belépés' => 'Login',
+	'Placc' => 'Forum',
+	'Speciális' => 'Specials',
 	'Utca*' => 'Street name*',
 	'Házszám/Emelet, ajtó*' => 'House number/Floor, door number*',
     //Main page

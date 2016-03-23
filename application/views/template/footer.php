@@ -1,3 +1,4 @@
+</div>
 </div> <!--End container-->
 <footer class="main-footer">
 	<div class="row flx-center footer-top">
