@@ -31,8 +31,7 @@ return array(
             'jquery-ui.theme.min' => NULL,
             'lightbox' => NULL,
             'jquery.bxslider' => NULL,
-            
-           
+            'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' => NULL
         ),
     ),
 );

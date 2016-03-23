@@ -24,7 +24,7 @@ if (!$menus)
         foreach ($menus as $uri => $data) {
             $class = ''; //active
             if (isset($active_menu) && $active_menu === $data[1]) {
-                $class = 'class = "selected"';
+                $class = 'class = "text-pink"';
             }
             echo "<li>";
             echo HTML::anchor($uri, $data[0],array($class));

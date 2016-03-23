@@ -1,0 +1,197 @@
+/* 1160px */
+@media screen and (max-width: 1160px) {
+  .wrapper .content-box {
+    padding-left: 1em;
+    padding-right: 1em; }
+  .wrapper .content-box.w100 {
+    padding: 0; } }
+
+@media screen and (max-width: 1140px) {
+  .row.content-bg.blog-carusel .blog-area {
+    height: auto;
+    justify-content: center; }
+  .row.content-bg.blog-carusel .blog-area .column-1-6 {
+    min-width: 570px; }
+  .row.content-bg.blog-carusel .blog-area .blog-list-wrapper .bottom-line article.column-1-6 {
+    width: 49.99%; } }
+
+@media screen and (max-width: 1000px) {
+  .category-list .select-item {
+    font-size: 20px; }
+  .campus.content-area-4 .container {
+    flex-wrap: wrap; }
+  .campus.content-area-4 .container .column-1-4 {
+    width: 100%; } }
+
+@media screen and (max-width: 960px) {
+  .subscribe-top .container {
+    display: none; } }
+
+@media screen and (max-width: 900px) {
+  .campus.content-area-2 .container {
+    padding-left: 1em;
+    padding-right: 1em; }
+  .contact .content-area {
+    padding: 1em; }
+  .payment.content-area-1 .content-box {
+    flex-direction: column-reverse; }
+  .payment.content-area-1 .column-1-6 {
+    width: 100%;
+    padding: 0; }
+  .payment.content-area-1 .column-1-12 {
+    padding: 1em 0; }
+  .payment.content-area-1 img {
+    height: 300px; }
+  .payment.content-area-1 .radio-s {
+    font-size: 18px; }
+  .payment.content-area-1 .radio-sum:not(checked) + .radio-s:before {
+    height: 16px;
+    width: 16px; }
+  .payment.content-area-1 .radio-sum:checked + .radio-s:after {
+    top: 4px;
+    left: 30px;
+    height: 8px;
+    width: 8px; }
+  .payment.content-area-1 .resault .amount {
+    line-height: 30px; }
+  .payment.content-area-1 .resault .symbol,
+  .payment.content-area-1 .resault #res {
+    font-size: 30px; }
+  .payment.content-area-1 .resault {
+    font-size: 16px;
+    padding: 1em; }
+  .payment.content-area-1 .radio-card:not(checked) + .radio-c:before {
+    left: 12px; }
+  .payment.content-area-1 .radio-card:checked + .radio-c:after {
+    left: 18px; }
+  .payment.content-area-1 .radio-congfirm:not(checked) + .radio-con:before {
+    left: 0; }
+  .payment.content-area-1 .radio-congfirm:checked + .radio-con:after {
+    left: 6px; } }
+
+@media screen and (max-width: 800px) {
+  .header-content > .holder-social-btn {
+    display: none; } }
+
+@media screen and (max-width: 770px) {
+  .main-footer .footer-bottom {
+    height: auto; }
+  .main-footer .footer-bottom .footer-content .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
+
+@media screen and (max-width: 700px) {
+  .main-footer .footer-top {
+    height: auto; }
+  .main-footer .footer-top .subscribe form {
+    flex-direction: column; }
+    .main-footer .footer-top .subscribe form label {
+      text-align: center; }
+  .main-footer .footer-top .subscribe input[type="email"] {
+    width: auto; }
+  .about.content-area-1 .container {
+    padding: 1em; } }
+
+@media screen and (max-width: 600px) {
+  .wrapper .cover .cover-slider-revolution {
+    min-height: initial; }
+  .column-1-4 {
+    width: 100%; }
+  .cover-title {
+    font-size: 36px; }
+  .donation.content-area-2 .content-box {
+    flex-wrap: wrap; }
+  .about.content-area-1 .container.column-1-8 {
+    width: 100%; }
+  .about.content-area-1 .img-box.column-1-4 {
+    width: 2em; }
+  .about.content-area-3 .container {
+    -webkit-column-count: 1;
+    column-count: 1; }
+  .category-list {
+    flex-wrap: wrap; }
+  .category-list .select-item {
+    font-size: 16px;
+    padding-top: 1.5em; }
+  article.post header h1 {
+    font-size: 26px; }
+  article.post header .share-btn {
+    flex-wrap: wrap; }
+  .contact .content-box {
+    flex-direction: column;
+    align-items: center; }
+  .contact .column-1-6 {
+    width: 100%; }
+  .event-list .event-month article .entry-content .aside {
+    display: block;
+    text-align: left;
+    margin-bottom: 1em; }
+  .event-list .event-month article .entry-content .main {
+    width: 100%; }
+  .row.content-bg.blog-carusel .blog-area .blog-carusel-wrapper {
+    display: none; }
+  .row.content-bg.blog-carusel .blog-area .column-1-6 {
+    min-width: initial;
+    width: 100%; }
+  .row.content-bg.blog-carusel .blog-area .blog-list-wrapper .top-line {
+    height: auto; }
+  .row.content-bg.blog-carusel .blog-area .blog-list-wrapper .top-line article.flx-row {
+    flex-direction: column; }
+  .row.content-bg.blog-carusel .blog-area .blog-list-wrapper .top-line img {
+    width: 100%; }
+  .row.content-bg.blog-carusel .blog-area .blog-list-wrapper .bottom-line {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  .row.content-bg.blog-carusel .blog-area .blog-list-wrapper .bottom-line article:first-child {
+    margin: 16px; }
+  .row.content-bg.blog-carusel .blog-area .blog-list-wrapper .bottom-line article:last-child {
+    margin: 16px; }
+  #mega-menu-wrap-primary .mega-menu-toggle {
+    display: none; }
+  .header-content > .holder-social-btn {
+    display: flex; }
+  .header-content .top-nav {
+    display: none; }
+  .header-mainbox .header-content .top-nav.mobile {
+    display: block; } }
+
+@media screen and (max-width: 500px) {
+  .event-list .event-month .button {
+    display: block;
+    margin: 1em auto 0; }
+  .column-1-8 {
+    width: 100%; } }
+
+@media screen and (max-width: 460px) {
+  .action-donate-round .box {
+    right: initial; }
+  .action-donate-btn .button {
+    left: calc(50% - 100px);
+    width: 200px; } }
+
+@media screen and (max-width: 400px) {
+  .main-footer .footer-top .subscribe form {
+    padding: 1em 0.1em; }
+  h1 {
+    font-size: 24px; }
+  .campus.content-area-4 {
+    padding-left: 0;
+    padding-right: 0; }
+  .campus.content-area-4 .content-box {
+    padding-left: 0;
+    padding-right: 0; }
+  .campus.content-area-4 table td {
+    white-space: normal; }
+  .event article .dt:before {
+    margin-right: 1em;
+    margin-left: 1em; } }
+
+@media screen and (handheld) {
+  .row.content-bg.locations .format-location > .back {
+    background-color: #fff;
+    border-color: #cccccc; }
+  .row.content-bg.locations .format-location > .back > .article-content {
+    opacity: 1; } }
