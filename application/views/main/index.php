@@ -247,3 +247,73 @@ $time       = explode( ':', $date_array[1] );
 	<!-- end .row.flx-center.bgc-yellow_light-->
 </section>
 
+<!-- Photo ========================================-->
+<section>
+	<div class="row flx-center bgc-yellow_light">
+		<div class="content-box photo">
+			<h1 class="text-center">Goodiebox photo</h1>
+			<div class="row flx-justify"><img src="<?= URL::base( true, false ) ?>assets/img/photo-1.jpg"><img src="<?= URL::base( true, false ) ?>assets/img/photo-2.jpg"><img src="<?= URL::base( true, false ) ?>assets/img/photo-3.jpg"><img src="<?= URL::base( true, false ) ?>assets/img/photo-4.jpg"></div>
+			<!-- end .row.flx-justify-->
+		</div>
+		<!-- end .content-box.photo-->
+	</div>
+	<!-- end .row.flx-center.bgc-yellow_light-->
+</section>
+
+<section>
+	<div class="row flx-center">
+		<div class="content-box feedback">
+			<h1 class="text-center">Feedback</h1>
+			<div class="row flx-justify">
+				<div class="item feed">
+					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-1.jpg"></header>
+					<div class="content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+					</div>
+					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
+						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+					</footer>
+				</div>
+				<div class="item feed">
+					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-2.jpg"></header>
+					<div class="content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+					</div>
+					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
+						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+					</footer>
+				</div>
+				<div class="item feed">
+					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-3.jpg"></header>
+					<div class="content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+					</div>
+					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-3.jpg" class="avatar">
+						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+					</footer>
+				</div>
+				<div class="item feed">
+					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-1.jpg"></header>
+					<div class="content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+					</div>
+					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
+						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+					</footer>
+				</div>
+				<div class="item feed">
+					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-2.jpg"></header>
+					<div class="content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+					</div>
+					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
+						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+					</footer>
+				</div>
+			</div>
+			<!-- end .row.flx-justify-->
+		</div>
+		<!-- end .content-box.feedback-->
+	</div>
+	<!-- end .row.flx-center-->
+</section>
