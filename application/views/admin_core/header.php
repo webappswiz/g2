@@ -17,7 +17,7 @@ $time       = explode( ':', $date_array[1] );
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/admin_css.css">
 	<link rel="stylesheet" href="/assets/css/datetimepicker.css">
 
 	<script>

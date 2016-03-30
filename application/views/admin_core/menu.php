@@ -3,9 +3,10 @@
 $menus = array();
 $menus = array(
 	'/admin/categories' => array( 'Categories', 'product_cats' ),
-	'/admin/packages'   => array( 'Products', 'packages' ),
+	'/admin/products' => array( 'Products', 'products' ),
+	'/admin/packages'   => array( 'Packages', 'packages' ),
 	'/admin/orders'     => array( 'Orders', 'orders' ),
-	'/admin/settings'   => array( 'Statuses', 'settings' ),
+	//'/admin/settings'   => array( 'Statuses', 'settings' ),
 	//'/admin/shelters' => array('Shelters', 'shelters'),
 	//'/admin/users' => array('Users', 'users'),
 	'/admin/templates'  => array( 'Templates', 'templates' ),
