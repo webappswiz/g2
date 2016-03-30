@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-01-02 11:05:02 --- EMERGENCY: Database_Exception [ 2 ]: mysqli_connect(): (42000/1203): User goodieb1_wp already has more than 'max_user_connections' active connections ~ MODPATH/database/classes/Database/MySQLi.php [ 57 ] in /home2/goodieb1/public_html/modules/database/classes/Database/MySQLi.php:155
 2015-01-02 11:05:02 --- DEBUG: #0 /home2/goodieb1/public_html/modules/database/classes/Database/MySQLi.php(155): Database_MySQLi->connect()

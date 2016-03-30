@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-05-24 11:02:31 --- EMERGENCY: ErrorException [ 2 ]: mysql_query(): Access denied for user 'root'@'localhost' (using password: NO) ~ APPPATH/views/admin/counter/index.php [ 50 ] in file:line
 2015-05-24 11:02:31 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'mysql_query(): ...', '/home2/goodieb1...', 50, Array)

@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-07-30 08:22:41 --- EMERGENCY: ErrorException [ 4 ]: syntax error, unexpected '$email' (T_VARIABLE) ~ APPPATH/classes/Controller/Order.php [ 20 ] in file:line
 2015-07-30 08:22:41 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()

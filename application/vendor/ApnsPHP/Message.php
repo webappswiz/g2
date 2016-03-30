@@ -31,35 +31,44 @@
  * @ingroup ApnsPHP_Message
  * @see http://tinyurl.com/ApplePushNotificationPayload
  */
-class ApnsPHP_Message
-{
-	const PAYLOAD_MAXIMUM_SIZE = 256; /**< @type integer The maximum size allowed for a notification payload. */
-	const APPLE_RESERVED_NAMESPACE = 'aps'; /**< @type string The Apple-reserved aps namespace. */
+class ApnsPHP_Message {
+	const PAYLOAD_MAXIMUM_SIZE = 256;
+	/**< @type integer The maximum size allowed for a notification payload. */
+	const APPLE_RESERVED_NAMESPACE = 'aps';
+	/**< @type string The Apple-reserved aps namespace. */
 
-	protected $_bAutoAdjustLongPayload = true; /**< @type boolean If the JSON payload is longer than maximum allowed size, shorts message text. */
+	protected $_bAutoAdjustLongPayload = true;
+	/**< @type boolean If the JSON payload is longer than maximum allowed size, shorts message text. */
 
-	public $_aDeviceTokens = array(); /**< @type array Recipients device tokens. */
+	public $_aDeviceTokens = array();
+	/**< @type array Recipients device tokens. */
 
-	protected $_sText; /**< @type string Alert message to display to the user. */
-	protected $_nBadge; /**< @type integer Number to badge the application icon with. */
-	protected $_sSound; /**< @type string Sound to play. */
-	protected $_bContentAvailable; /**< @type boolean True to initiates the Newsstand background download. @see http://tinyurl.com/ApplePushNotificationNewsstand */
+	protected $_sText;
+	/**< @type string Alert message to display to the user. */
+	protected $_nBadge;
+	/**< @type integer Number to badge the application icon with. */
+	protected $_sSound;
+	/**< @type string Sound to play. */
+	protected $_bContentAvailable;
+	/**< @type boolean True to initiates the Newsstand background download. @see http://tinyurl.com/ApplePushNotificationNewsstand */
 
-	protected $_aCustomProperties; /**< @type mixed Custom properties container. */
+	protected $_aCustomProperties;
+	/**< @type mixed Custom properties container. */
 
-	protected $_nExpiryValue = 604800; /**< @type integer That message will expire in 604800 seconds (86400 * 7, 7 days) if not successful delivered. */
+	protected $_nExpiryValue = 604800;
+	/**< @type integer That message will expire in 604800 seconds (86400 * 7, 7 days) if not successful delivered. */
 
-	protected $_mCustomIdentifier; /**< @type mixed Custom message identifier. */
+	protected $_mCustomIdentifier;
+	/**< @type mixed Custom message identifier. */
 
 	/**
 	 * Constructor.
 	 *
 	 * @param  $sDeviceToken @type string @optional Recipients device token.
 	 */
-	public function __construct($sDeviceToken = null)
-	{
-		if (isset($sDeviceToken)) {
-			$this->addRecipient($sDeviceToken);
+	public function __construct( $sDeviceToken = null ) {
+		if ( isset( $sDeviceToken ) ) {
+			$this->addRecipient( $sDeviceToken );
 		}
 	}
 
@@ -67,12 +76,12 @@ class ApnsPHP_Message
 	 * Add a recipient device token.
 	 *
 	 * @param  $sDeviceToken @type string Recipients device token.
+	 *
 	 * @throws ApnsPHP_Message_Exception if the device token
 	 *         is not well formed.
 	 */
-	public function addRecipient($sDeviceToken)
-	{
-		if (!preg_match('~^[a-f0-9]{64}$~i', $sDeviceToken)) {
+	public function addRecipient( $sDeviceToken ) {
+		if ( ! preg_match( '~^[a-f0-9]{64}$~i', $sDeviceToken ) ) {
 			throw new ApnsPHP_Message_Exception(
 				"Invalid device token '{$sDeviceToken}'"
 			);
@@ -84,18 +93,19 @@ class ApnsPHP_Message
 	 * Get a recipient.
 	 *
 	 * @param  $nRecipient @type integer @optional Recipient number to return.
+	 *
 	 * @throws ApnsPHP_Message_Exception if no recipient number
 	 *         exists.
 	 * @return @type string The recipient token at index $nRecipient.
 	 */
-	public function getRecipient($nRecipient = 0)
-	{
-		if (!isset($this->_aDeviceTokens[$nRecipient])) {
+	public function getRecipient( $nRecipient = 0 ) {
+		if ( ! isset( $this->_aDeviceTokens[ $nRecipient ] ) ) {
 			throw new ApnsPHP_Message_Exception(
 				"No recipient at index '{$nRecipient}'"
 			);
 		}
-		return $this->_aDeviceTokens[$nRecipient];
+
+		return $this->_aDeviceTokens[ $nRecipient ];
 	}
 
 	/**
@@ -103,9 +113,8 @@ class ApnsPHP_Message
 	 *
 	 * @return @type integer Recipient's number.
 	 */
-	public function getRecipientsNumber()
-	{
-		return count($this->_aDeviceTokens);
+	public function getRecipientsNumber() {
+		return count( $this->_aDeviceTokens );
 	}
 
 	/**
@@ -113,8 +122,7 @@ class ApnsPHP_Message
 	 *
 	 * @return @type array Array of all recipients device token.
 	 */
-	public function getRecipients()
-	{
+	public function getRecipients() {
 		return $this->_aDeviceTokens;
 	}
 
@@ -123,8 +131,7 @@ class ApnsPHP_Message
 	 *
 	 * @param  $sText @type string An alert message to display to the user.
 	 */
-	public function setText($sText)
-	{
+	public function setText( $sText ) {
 		$this->_sText = $sText;
 	}
 
@@ -133,8 +140,7 @@ class ApnsPHP_Message
 	 *
 	 * @return @type string The alert message to display to the user.
 	 */
-	public function getText()
-	{
+	public function getText() {
 		return $this->_sText;
 	}
 
@@ -142,12 +148,12 @@ class ApnsPHP_Message
 	 * Set the number to badge the application icon with.
 	 *
 	 * @param  $nBadge @type integer A number to badge the application icon with.
+	 *
 	 * @throws ApnsPHP_Message_Exception if badge is not an
 	 *         integer.
 	 */
-	public function setBadge($nBadge)
-	{
-		if (!is_int($nBadge)) {
+	public function setBadge( $nBadge ) {
+		if ( ! is_int( $nBadge ) ) {
 			throw new ApnsPHP_Message_Exception(
 				"Invalid badge number '{$nBadge}'"
 			);
@@ -160,8 +166,7 @@ class ApnsPHP_Message
 	 *
 	 * @return @type integer The number to badge the application icon with.
 	 */
-	public function getBadge()
-	{
+	public function getBadge() {
 		return $this->_nBadge;
 	}
 
@@ -171,8 +176,7 @@ class ApnsPHP_Message
 	 * @param  $sSound @type string @optional A sound to play ('default sound' is
 	 *         the default sound).
 	 */
-	public function setSound($sSound = 'default')
-	{
+	public function setSound( $sSound = 'default' ) {
 		$this->_sSound = $sSound;
 	}
 
@@ -181,8 +185,7 @@ class ApnsPHP_Message
 	 *
 	 * @return @type string The sound to play.
 	 */
-	public function getSound()
-	{
+	public function getSound() {
 		return $this->_sSound;
 	}
 
@@ -191,12 +194,12 @@ class ApnsPHP_Message
 	 * @see http://tinyurl.com/ApplePushNotificationNewsstand
 	 *
 	 * @param  $bContentAvailable @type boolean True to initiates the Newsstand background download.
+	 *
 	 * @throws ApnsPHP_Message_Exception if ContentAvailable is not a
 	 *         boolean.
 	 */
-	public function setContentAvailable($bContentAvailable = true)
-	{
-		if (!is_bool($bContentAvailable)) {
+	public function setContentAvailable( $bContentAvailable = true ) {
+		if ( ! is_bool( $bContentAvailable ) ) {
 			throw new ApnsPHP_Message_Exception(
 				"Invalid content-available value '{$bContentAvailable}'"
 			);
@@ -209,8 +212,7 @@ class ApnsPHP_Message
 	 *
 	 * @return @type boolean Initiates the Newsstand background download property.
 	 */
-	public function getContentAvailable()
-	{
+	public function getContentAvailable() {
 		return $this->_bContentAvailable;
 	}
 
@@ -219,17 +221,17 @@ class ApnsPHP_Message
 	 *
 	 * @param  $sName @type string Custom property name.
 	 * @param  $mValue @type mixed Custom property value.
+	 *
 	 * @throws ApnsPHP_Message_Exception if custom property name is not outside
 	 *         the Apple-reserved 'aps' namespace.
 	 */
-	public function setCustomProperty($sName, $mValue)
-	{
-		if ($sName == self::APPLE_RESERVED_NAMESPACE) {
+	public function setCustomProperty( $sName, $mValue ) {
+		if ( $sName == self::APPLE_RESERVED_NAMESPACE ) {
 			throw new ApnsPHP_Message_Exception(
 				"Property name '" . self::APPLE_RESERVED_NAMESPACE . "' can not be used for custom property."
 			);
 		}
-		$this->_aCustomProperties[trim($sName)] = $mValue;
+		$this->_aCustomProperties[ trim( $sName ) ] = $mValue;
 	}
 
 	/**
@@ -239,12 +241,12 @@ class ApnsPHP_Message
 	 *
 	 * @return @type string The first custom property name.
 	 */
-	public function getCustomPropertyName()
-	{
-		if (!is_array($this->_aCustomProperties)) {
+	public function getCustomPropertyName() {
+		if ( ! is_array( $this->_aCustomProperties ) ) {
 			return;
 		}
-		$aKeys = array_keys($this->_aCustomProperties);
+		$aKeys = array_keys( $this->_aCustomProperties );
+
 		return $aKeys[0];
 	}
 
@@ -255,13 +257,13 @@ class ApnsPHP_Message
 	 *
 	 * @return @type mixed The first custom property value.
 	 */
-	public function getCustomPropertyValue()
-	{
-		if (!is_array($this->_aCustomProperties)) {
+	public function getCustomPropertyValue() {
+		if ( ! is_array( $this->_aCustomProperties ) ) {
 			return;
 		}
-		$aKeys = array_keys($this->_aCustomProperties);
-		return $this->_aCustomProperties[$aKeys[0]];
+		$aKeys = array_keys( $this->_aCustomProperties );
+
+		return $this->_aCustomProperties[ $aKeys[0] ];
 	}
 
 	/**
@@ -269,30 +271,31 @@ class ApnsPHP_Message
 	 *
 	 * @return @type array All properties names.
 	 */
-	public function getCustomPropertyNames()
-	{
-		if (!is_array($this->_aCustomProperties)) {
+	public function getCustomPropertyNames() {
+		if ( ! is_array( $this->_aCustomProperties ) ) {
 			return array();
 		}
-		return array_keys($this->_aCustomProperties);
+
+		return array_keys( $this->_aCustomProperties );
 	}
 
 	/**
 	 * Get the custom property value.
 	 *
 	 * @param  $sName @type string Custom property name.
+	 *
 	 * @throws ApnsPHP_Message_Exception if no property exists with the specified
 	 *         name.
 	 * @return @type string The custom property value.
 	 */
-	public function getCustomProperty($sName)
-	{
-		if (!array_key_exists($sName, $this->_aCustomProperties)) {
+	public function getCustomProperty( $sName ) {
+		if ( ! array_key_exists( $sName, $this->_aCustomProperties ) ) {
 			throw new ApnsPHP_Message_Exception(
 				"No property exists with the specified name '{$sName}'."
 			);
 		}
-		return $this->_aCustomProperties[$sName];
+
+		return $this->_aCustomProperties[ $sName ];
 	}
 
 	/**
@@ -301,9 +304,8 @@ class ApnsPHP_Message
 	 * @param  $bAutoAdjust @type boolean If true a long payload is shorted cutting
 	 *         long text value.
 	 */
-	public function setAutoAdjustLongPayload($bAutoAdjust)
-	{
-		$this->_bAutoAdjustLongPayload = (boolean)$bAutoAdjust;
+	public function setAutoAdjustLongPayload( $bAutoAdjust ) {
+		$this->_bAutoAdjustLongPayload = (boolean) $bAutoAdjust;
 	}
 
 	/**
@@ -311,8 +313,7 @@ class ApnsPHP_Message
 	 *
 	 * @return @type boolean The auto-adjust long payload value.
 	 */
-	public function getAutoAdjustLongPayload()
-	{
+	public function getAutoAdjustLongPayload() {
 		return $this->_bAutoAdjustLongPayload;
 	}
 
@@ -322,13 +323,13 @@ class ApnsPHP_Message
 	 *
 	 * @return @type string JSON-encoded payload.
 	 */
-	public function __toString()
-	{
+	public function __toString() {
 		try {
 			$sJSONPayload = $this->getPayload();
-		} catch (ApnsPHP_Message_Exception $e) {
+		} catch ( ApnsPHP_Message_Exception $e ) {
 			$sJSONPayload = '';
 		}
+
 		return $sJSONPayload;
 	}
 
@@ -337,26 +338,25 @@ class ApnsPHP_Message
 	 *
 	 * @return @type array The payload dictionary.
 	 */
-	protected function _getPayload()
-	{
-		$aPayload[self::APPLE_RESERVED_NAMESPACE] = array();
+	protected function _getPayload() {
+		$aPayload[ self::APPLE_RESERVED_NAMESPACE ] = array();
 
-		if (isset($this->_sText)) {
-			$aPayload[self::APPLE_RESERVED_NAMESPACE]['alert'] = (string)$this->_sText;
+		if ( isset( $this->_sText ) ) {
+			$aPayload[ self::APPLE_RESERVED_NAMESPACE ]['alert'] = (string) $this->_sText;
 		}
-		if (isset($this->_nBadge) && $this->_nBadge >= 0) {
-			$aPayload[self::APPLE_RESERVED_NAMESPACE]['badge'] = (int)$this->_nBadge;
+		if ( isset( $this->_nBadge ) && $this->_nBadge >= 0 ) {
+			$aPayload[ self::APPLE_RESERVED_NAMESPACE ]['badge'] = (int) $this->_nBadge;
 		}
-		if (isset($this->_sSound)) {
-			$aPayload[self::APPLE_RESERVED_NAMESPACE]['sound'] = (string)$this->_sSound;
+		if ( isset( $this->_sSound ) ) {
+			$aPayload[ self::APPLE_RESERVED_NAMESPACE ]['sound'] = (string) $this->_sSound;
 		}
-		if (isset($this->_bContentAvailable)) {
-			$aPayload[self::APPLE_RESERVED_NAMESPACE]['content-available'] = (int)$this->_bContentAvailable;
+		if ( isset( $this->_bContentAvailable ) ) {
+			$aPayload[ self::APPLE_RESERVED_NAMESPACE ]['content-available'] = (int) $this->_bContentAvailable;
 		}
 
-		if (is_array($this->_aCustomProperties)) {
-			foreach($this->_aCustomProperties as $sPropertyName => $mPropertyValue) {
-				$aPayload[$sPropertyName] = $mPropertyValue;
+		if ( is_array( $this->_aCustomProperties ) ) {
+			foreach ( $this->_aCustomProperties as $sPropertyName => $mPropertyValue ) {
+				$aPayload[ $sPropertyName ] = $mPropertyValue;
 			}
 		}
 
@@ -370,28 +370,30 @@ class ApnsPHP_Message
 	 *         size and AutoAdjustLongPayload is disabled.
 	 * @return @type string JSON-encoded payload.
 	 */
-	public function getPayload()
-	{
-		$sJSON = json_encode($this->_getPayload(), defined('JSON_UNESCAPED_UNICODE') ? JSON_UNESCAPED_UNICODE : 0);
-		if (!defined('JSON_UNESCAPED_UNICODE') && function_exists('mb_convert_encoding')) {
+	public function getPayload() {
+		$sJSON = json_encode( $this->_getPayload(), defined( 'JSON_UNESCAPED_UNICODE' ) ? JSON_UNESCAPED_UNICODE : 0 );
+		if ( ! defined( 'JSON_UNESCAPED_UNICODE' ) && function_exists( 'mb_convert_encoding' ) ) {
 			$sJSON = preg_replace_callback(
 				'~\\\\u([0-9a-f]{4})~i',
-				create_function('$aMatches', 'return mb_convert_encoding(pack("H*", $aMatches[1]), "UTF-8", "UTF-16");'),
-				$sJSON);
+				create_function( '$aMatches', 'return mb_convert_encoding(pack("H*", $aMatches[1]), "UTF-8", "UTF-16");' ),
+				$sJSON );
 		}
 
-		$sJSONPayload = str_replace(
+		$sJSONPayload    = str_replace(
 			'"' . self::APPLE_RESERVED_NAMESPACE . '":[]',
 			'"' . self::APPLE_RESERVED_NAMESPACE . '":{}',
 			$sJSON
 		);
-		$nJSONPayloadLen = strlen($sJSONPayload);
+		$nJSONPayloadLen = strlen( $sJSONPayload );
 
-		if ($nJSONPayloadLen > self::PAYLOAD_MAXIMUM_SIZE) {
-			if ($this->_bAutoAdjustLongPayload) {
-				$nMaxTextLen = $nTextLen = strlen($this->_sText) - ($nJSONPayloadLen - self::PAYLOAD_MAXIMUM_SIZE);
-				if ($nMaxTextLen > 0) {
-					while (strlen($this->_sText = mb_substr($this->_sText, 0, --$nTextLen, 'UTF-8')) > $nMaxTextLen);
+		if ( $nJSONPayloadLen > self::PAYLOAD_MAXIMUM_SIZE ) {
+			if ( $this->_bAutoAdjustLongPayload ) {
+				$nMaxTextLen = $nTextLen = strlen( $this->_sText ) - ( $nJSONPayloadLen - self::PAYLOAD_MAXIMUM_SIZE );
+				if ( $nMaxTextLen > 0 ) {
+					while ( strlen( $this->_sText = mb_substr( $this->_sText, 0, -- $nTextLen, 'UTF-8' ) ) > $nMaxTextLen ) {
+						;
+					}
+
 					return $this->getPayload();
 				} else {
 					throw new ApnsPHP_Message_Exception(
@@ -416,9 +418,8 @@ class ApnsPHP_Message
 	 * @param  $nExpiryValue @type integer This message will expire in N seconds
 	 *         if not successful delivered.
 	 */
-	public function setExpiry($nExpiryValue)
-	{
-		if (!is_int($nExpiryValue)) {
+	public function setExpiry( $nExpiryValue ) {
+		if ( ! is_int( $nExpiryValue ) ) {
 			throw new ApnsPHP_Message_Exception(
 				"Invalid seconds number '{$nExpiryValue}'"
 			);
@@ -431,8 +432,7 @@ class ApnsPHP_Message
 	 *
 	 * @return @type integer The expire message value (in seconds).
 	 */
-	public function getExpiry()
-	{
+	public function getExpiry() {
 		return $this->_nExpiryValue;
 	}
 
@@ -448,8 +448,7 @@ class ApnsPHP_Message
 	 *
 	 * @param  $mCustomIdentifier @type mixed The custom message identifier.
 	 */
-	public function setCustomIdentifier($mCustomIdentifier)
-	{
+	public function setCustomIdentifier( $mCustomIdentifier ) {
 		$this->_mCustomIdentifier = $mCustomIdentifier;
 	}
 
@@ -458,8 +457,7 @@ class ApnsPHP_Message
 	 *
 	 * @return @type mixed The custom message identifier.
 	 */
-	public function getCustomIdentifier()
-	{
+	public function getCustomIdentifier() {
 		return $this->_mCustomIdentifier;
 	}
 }

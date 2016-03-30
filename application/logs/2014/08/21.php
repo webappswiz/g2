@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-08-21 13:52:49 --- EMERGENCY: Exception [ 0 ]: Class file '/var/www/vhosts/goodiebox.karam.org.ua/public_html/application/vendor/Controller/Hogyan.php' does not exists ~ APPPATH/vendor/ApnsPHP/Autoload.php [ 49 ] in file:line
 2014-08-21 13:52:49 --- DEBUG: #0 [internal function]: ApnsPHP_Autoload('Controller_Hogy...')

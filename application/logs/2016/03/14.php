@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2016-03-14 18:45:05 --- EMERGENCY: View_Exception [ 0 ]: The requested view admin/xmlexport/index could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /var/www/vhosts/goodiebox.priv/public_html/application/classes/Controller/Base/Core.php:550
 2016-03-14 18:45:05 --- DEBUG: #0 /var/www/vhosts/goodiebox.priv/public_html/application/classes/Controller/Base/Core.php(550): Kohana_View->set_filename('admin/xmlexport...')

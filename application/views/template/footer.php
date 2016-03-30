@@ -28,7 +28,8 @@
 				<a href="http://facebook.com/goodieboxhu"><i class="fa fa-facebook"></i></a>
 				<a href="http://twitter.com/goodieboxhu"><i class="fa fa-twitter"></i></a>
 				<a href="https://instagram.com/goodieboxhu"><i class="fa fa-instagram"></i></a>
-				<a href="https://www.youtube.com/channel/UCAnqUKt9dkY7Tw2kndO9JAA/feed"><i class="fa fa-youtube-square"></i></a>
+				<a href="https://www.youtube.com/channel/UCAnqUKt9dkY7Tw2kndO9JAA/feed"><i
+						class="fa fa-youtube-square"></i></a>
 			</div>
 			<div class="col-4 text-right">
 				<p><span><a href="/adatkezelesi.pdf">Adatvédelem</a></p>

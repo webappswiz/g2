@@ -1,17 +1,16 @@
 <?php
 
-defined('SYSPATH') or die('No direct script access.');
+defined( 'SYSPATH' ) or die( 'No direct script access.' );
 
 class Controller_Tamogass extends Controller_Core {
-public function before()
-    {
-        parent::before();
-        $this->set_title(__('Tamogass'));
-        $this->template->active_menu = 'tamogass';
-    }
-    public function action_index()
-    {
+	public function before() {
+		parent::before();
+		$this->set_title( __( 'Tamogass' ) );
+		$this->template->active_menu = 'tamogass';
+	}
 
-    }
+	public function action_index() {
+
+	}
 
 }

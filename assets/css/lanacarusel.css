@@ -1,0 +1,47 @@
+.la-carusel {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .la-carusel img {
+    width: 100%; }
+
+.la-arrow-left,
+.la-arrow-right {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  font-size: 36px; }
+
+.la-arrow-left {
+  margin-right: 1em; }
+
+.la-arrow-right {
+  margin-left: 1em; }
+
+.la-arrow-left:before {
+  content: '\f104';
+  font-family: 'FontAwesome';
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  line-height: 55px;
+  text-align: center; }
+
+.la-arrow-right:before {
+  content: '\f105';
+  font-family: 'FontAwesome';
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  line-height: 55px;
+  text-align: center; }
+
+.la-rounded {
+  border-radius: 50%;
+  border: 2px solid #f79320; }
+
+.la-orange {
+  color: #f79320; }

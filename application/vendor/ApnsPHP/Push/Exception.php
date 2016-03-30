@@ -22,6 +22,5 @@
  *
  * @ingroup ApnsPHP_Push
  */
-class ApnsPHP_Push_Exception extends ApnsPHP_Exception
-{
+class ApnsPHP_Push_Exception extends ApnsPHP_Exception {
 }

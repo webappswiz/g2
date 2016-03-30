@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-02-06 09:12:57 --- EMERGENCY: ErrorException [ 8 ]: Trying to get property of non-object ~ APPPATH/classes/Controller/Order.php [ 340 ] in /home2/goodieb1/public_html/application/classes/Controller/Order.php:340
 2015-02-06 09:12:57 --- DEBUG: #0 /home2/goodieb1/public_html/application/classes/Controller/Order.php(340): Kohana_Core::error_handler(8, 'Trying to get p...', '/home2/goodieb1...', 340, Array)

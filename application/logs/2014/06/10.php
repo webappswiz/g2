@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-06-10 05:06:46 --- EMERGENCY: Exception [ 0 ]: Class file '/var/www/joblinker.priv/application/vendor/Controller/A.php' does not exists ~ APPPATH/vendor/ApnsPHP/Autoload.php [ 49 ] in file:line
 2014-06-10 05:06:46 --- DEBUG: #0 [internal function]: ApnsPHP_Autoload('Controller_A')

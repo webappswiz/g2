@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-09-18 12:57:00 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined method Auth_ORM::is_logged() ~ APPPATH/views/order/step3.php [ 125 ] in file:line
 2014-09-18 12:57:00 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()

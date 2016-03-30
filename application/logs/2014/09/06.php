@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-09-06 16:44:02 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: menus ~ APPPATH/views/main/index.php [ 40 ] in /var/www/goodiebox.priv/application/views/main/index.php:40
 2014-09-06 16:44:02 --- DEBUG: #0 /var/www/goodiebox.priv/application/views/main/index.php(40): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/goodie...', 40, Array)

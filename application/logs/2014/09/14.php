@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-09-14 10:07:23 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: _SESSION ~ APPPATH/views/order/step3.php [ 6 ] in /var/www/goodiebox.priv/application/views/order/step3.php:6
 2014-09-14 10:07:23 --- DEBUG: #0 /var/www/goodiebox.priv/application/views/order/step3.php(6): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/goodie...', 6, Array)

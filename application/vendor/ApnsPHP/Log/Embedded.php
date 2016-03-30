@@ -28,17 +28,15 @@
  *
  * @ingroup ApnsPHP_Log
  */
-class ApnsPHP_Log_Embedded implements ApnsPHP_Log_Interface
-{
+class ApnsPHP_Log_Embedded implements ApnsPHP_Log_Interface {
 	/**
 	 * Logs a message.
 	 *
 	 * @param  $sMessage @type string The message.
 	 */
-	public function log($sMessage)
-	{
-		printf("%s ApnsPHP[%d]: %s\n",
-			date('r'), getmypid(), trim($sMessage)
+	public function log( $sMessage ) {
+		printf( "%s ApnsPHP[%d]: %s\n",
+			date( 'r' ), getmypid(), trim( $sMessage )
 		);
 	}
 }

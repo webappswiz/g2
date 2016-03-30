@@ -26,12 +26,15 @@
  * @ingroup ApnsPHP_Message
  * @see http://tinyurl.com/ApplePushNotificationPayload
  */
-class ApnsPHP_Message_Custom extends ApnsPHP_Message
-{
-	protected $_sActionLocKey; /**< @type string The "View" button title. */
-	protected $_sLocKey; /**< @type string A key to an alert-message string in a Localizable.strings file */
-	protected $_aLocArgs; /**< @type array Variable string values to appear in place of the format specifiers in loc-key. */
-	protected $_sLaunchImage; /**< @type string The filename of an image file in the application bundle. */
+class ApnsPHP_Message_Custom extends ApnsPHP_Message {
+	protected $_sActionLocKey;
+	/**< @type string The "View" button title. */
+	protected $_sLocKey;
+	/**< @type string A key to an alert-message string in a Localizable.strings file */
+	protected $_aLocArgs;
+	/**< @type array Variable string values to appear in place of the format specifiers in loc-key. */
+	protected $_sLaunchImage;
+	/**< @type string The filename of an image file in the application bundle. */
 
 	/**
 	 * Set the "View" button title.
@@ -45,8 +48,7 @@ class ApnsPHP_Message_Custom extends ApnsPHP_Message
 	 * @param  $sActionLocKey @type string @optional The "View" button title, default
 	 *         empty string.
 	 */
-	public function setActionLocKey($sActionLocKey = '')
-	{
+	public function setActionLocKey( $sActionLocKey = '' ) {
 		$this->_sActionLocKey = $sActionLocKey;
 	}
 
@@ -55,8 +57,7 @@ class ApnsPHP_Message_Custom extends ApnsPHP_Message
 	 *
 	 * @return @type string The "View" button title.
 	 */
-	public function getActionLocKey()
-	{
+	public function getActionLocKey() {
 		return $this->_sActionLocKey;
 	}
 
@@ -69,8 +70,7 @@ class ApnsPHP_Message_Custom extends ApnsPHP_Message
 	 *
 	 * @param  $sLocKey @type string The alert-message string.
 	 */
-	public function setLocKey($sLocKey)
-	{
+	public function setLocKey( $sLocKey ) {
 		$this->_sLocKey = $sLocKey;
 	}
 
@@ -79,8 +79,7 @@ class ApnsPHP_Message_Custom extends ApnsPHP_Message
 	 *
 	 * @return @type string The alert-message string.
 	 */
-	public function getLocKey()
-	{
+	public function getLocKey() {
 		return $this->_sLocKey;
 	}
 
@@ -90,8 +89,7 @@ class ApnsPHP_Message_Custom extends ApnsPHP_Message
 	 *
 	 * @param  $aLocArgs @type array The variable string values.
 	 */
-	public function setLocArgs($aLocArgs)
-	{
+	public function setLocArgs( $aLocArgs ) {
 		$this->_aLocArgs = $aLocArgs;
 	}
 
@@ -101,8 +99,7 @@ class ApnsPHP_Message_Custom extends ApnsPHP_Message
 	 *
 	 * @return @type string The variable string values.
 	 */
-	public function getLocArgs()
-	{
+	public function getLocArgs() {
 		return $this->_aLocArgs;
 	}
 
@@ -118,8 +115,7 @@ class ApnsPHP_Message_Custom extends ApnsPHP_Message
 	 *
 	 * @param  $sLaunchImage @type string The filename of an image file.
 	 */
-	public function setLaunchImage($sLaunchImage)
-	{
+	public function setLaunchImage( $sLaunchImage ) {
 		$this->_sLaunchImage = $sLaunchImage;
 	}
 
@@ -128,8 +124,7 @@ class ApnsPHP_Message_Custom extends ApnsPHP_Message
 	 *
 	 * @return @type string The filename of an image file.
 	 */
-	public function getLaunchImage()
-	{
+	public function getLaunchImage() {
 		return $this->_sLaunchImage;
 	}
 
@@ -138,31 +133,30 @@ class ApnsPHP_Message_Custom extends ApnsPHP_Message
 	 *
 	 * @return @type array The payload dictionary.
 	 */
-	protected function _getPayload()
-	{
+	protected function _getPayload() {
 		$aPayload = parent::_getPayload();
 
 		$aPayload['aps']['alert'] = array();
 
-		if (isset($this->_sText) && !isset($this->_sLocKey)) {
-			$aPayload['aps']['alert']['body'] = (string)$this->_sText;
+		if ( isset( $this->_sText ) && ! isset( $this->_sLocKey ) ) {
+			$aPayload['aps']['alert']['body'] = (string) $this->_sText;
 		}
 
-		if (isset($this->_sActionLocKey)) {
+		if ( isset( $this->_sActionLocKey ) ) {
 			$aPayload['aps']['alert']['action-loc-key'] = $this->_sActionLocKey == '' ?
-				null : (string)$this->_sActionLocKey;
+				null : (string) $this->_sActionLocKey;
 		}
 
-		if (isset($this->_sLocKey)) {
-			$aPayload['aps']['alert']['loc-key'] = (string)$this->_sLocKey;
+		if ( isset( $this->_sLocKey ) ) {
+			$aPayload['aps']['alert']['loc-key'] = (string) $this->_sLocKey;
 		}
 
-		if (isset($this->_aLocArgs)) {
+		if ( isset( $this->_aLocArgs ) ) {
 			$aPayload['aps']['alert']['loc-args'] = $this->_aLocArgs;
 		}
 
-		if (isset($this->_sLaunchImage)) {
-			$aPayload['aps']['alert']['launch-image'] = (string)$this->_sLaunchImage;
+		if ( isset( $this->_sLaunchImage ) ) {
+			$aPayload['aps']['alert']['launch-image'] = (string) $this->_sLaunchImage;
 		}
 
 		return $aPayload;

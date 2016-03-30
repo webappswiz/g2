@@ -30,12 +30,11 @@
  *
  * @ingroup ApnsPHP_Log
  */
-interface ApnsPHP_Log_Interface
-{
+interface ApnsPHP_Log_Interface {
 	/**
 	 * Logs a message.
 	 *
 	 * @param  $sMessage @type string The message.
 	 */
-	public function log($sMessage);
+	public function log( $sMessage );
 }

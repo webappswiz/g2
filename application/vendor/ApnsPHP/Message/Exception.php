@@ -22,6 +22,5 @@
  *
  * @ingroup ApnsPHP_Message
  */
-class ApnsPHP_Message_Exception extends ApnsPHP_Exception
-{
+class ApnsPHP_Message_Exception extends ApnsPHP_Exception {
 }

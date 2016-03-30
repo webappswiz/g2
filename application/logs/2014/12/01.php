@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-12-01 06:34:38 --- EMERGENCY: Database_Exception [ 126 ]: Incorrect key file for table '/ramdisk/mysql/tmp/#sql_2454_2.MYI'; try to repair it [ SHOW FULL COLUMNS FROM `shelters` ] ~ MODPATH/database/classes/Database/MySQLi.php [ 172 ] in /home2/goodieb1/public_html/modules/database/classes/Database/MySQLi.php:336
 2014-12-01 06:34:38 --- DEBUG: #0 /home2/goodieb1/public_html/modules/database/classes/Database/MySQLi.php(336): Database_MySQLi->query(1, 'SHOW FULL COLUM...', false)

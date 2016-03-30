@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php defined( 'SYSPATH' ) or die( 'No direct script access.' );
 
 /**
  * Class just to make easy call Base_Media functions
@@ -17,16 +17,14 @@
  * @subpackage template
  * @category template
  */
-
 class Media {
 
-    /**
-     * @internal
-     */
-    public static function __callStatic($name, $arguments)
-    {
-        return call_user_func_array(array(Base_Media::instance(), $name), $arguments);
-    }
+	/**
+	 * @internal
+	 */
+	public static function __callStatic( $name, $arguments ) {
+		return call_user_func_array( array( Base_Media::instance(), $name ), $arguments );
+	}
 
 }
 

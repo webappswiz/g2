@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-09-22 11:49:31 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: template ~ APPPATH/views/template/menu.php [ 2 ] in /var/www/goodiebox.priv/application/views/template/menu.php:2
 2014-09-22 11:49:31 --- DEBUG: #0 /var/www/goodiebox.priv/application/views/template/menu.php(2): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/goodie...', 2, Array)

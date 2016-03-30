@@ -22,6 +22,5 @@
  *
  * @ingroup ApplePushNotificationService
  */
-class ApnsPHP_Exception extends Exception
-{
+class ApnsPHP_Exception extends Exception {
 }

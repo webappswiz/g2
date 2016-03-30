@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-06-29 06:50:36 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: customer_email ~ APPPATH/classes/Controller/Admin/Coupons.php [ 57 ] in /home2/goodieb1/public_html/application/classes/Controller/Admin/Coupons.php:57
 2015-06-29 06:50:36 --- DEBUG: #0 /home2/goodieb1/public_html/application/classes/Controller/Admin/Coupons.php(57): Kohana_Core::error_handler(8, 'Undefined index...', '/home2/goodieb1...', 57, Array)

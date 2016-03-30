@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-10-21 11:14:59 --- EMERGENCY: ErrorException [ 8 ]: Object of class Model_Order could not be converted to int ~ APPPATH/classes/Controller/Order.php [ 685 ] in /home2/goodieb1/public_html/application/classes/Controller/Order.php:685
 2014-10-21 11:14:59 --- DEBUG: #0 /home2/goodieb1/public_html/application/classes/Controller/Order.php(685): Kohana_Core::error_handler(8, 'Object of class...', '/home2/goodieb1...', 685, Array)

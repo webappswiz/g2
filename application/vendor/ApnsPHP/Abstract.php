@@ -37,35 +37,52 @@
  * @ingroup ApplePushNotificationService
  * @see http://tinyurl.com/ApplePushNotificationService
  */
-abstract class ApnsPHP_Abstract
-{
-	const ENVIRONMENT_PRODUCTION = 0; /**< @type integer Production environment. */
-	const ENVIRONMENT_SANDBOX = 1; /**< @type integer Sandbox environment. */
+abstract class ApnsPHP_Abstract {
+	const ENVIRONMENT_PRODUCTION = 0;
+	/**< @type integer Production environment. */
+	const ENVIRONMENT_SANDBOX = 1;
+	/**< @type integer Sandbox environment. */
 
-	const DEVICE_BINARY_SIZE = 32; /**< @type integer Device token length. */
+	const DEVICE_BINARY_SIZE = 32;
+	/**< @type integer Device token length. */
 
-	const WRITE_INTERVAL = 10000; /**< @type integer Default write interval in micro seconds. */
-	const CONNECT_RETRY_INTERVAL = 1000000; /**< @type integer Default connect retry interval in micro seconds. */
-	const SOCKET_SELECT_TIMEOUT = 1000000; /**< @type integer Default socket select timeout in micro seconds. */
+	const WRITE_INTERVAL = 10000;
+	/**< @type integer Default write interval in micro seconds. */
+	const CONNECT_RETRY_INTERVAL = 1000000;
+	/**< @type integer Default connect retry interval in micro seconds. */
+	const SOCKET_SELECT_TIMEOUT = 1000000;
+	/**< @type integer Default socket select timeout in micro seconds. */
 
-	protected $_aServiceURLs = array(); /**< @type array Container for service URLs environments. */
+	protected $_aServiceURLs = array();
+	/**< @type array Container for service URLs environments. */
 
-	protected $_nEnvironment; /**< @type integer Active environment. */
+	protected $_nEnvironment;
+	/**< @type integer Active environment. */
 
-	protected $_nConnectTimeout; /**< @type integer Connect timeout in seconds. */
-	protected $_nConnectRetryTimes = 3; /**< @type integer Connect retry times. */
+	protected $_nConnectTimeout;
+	/**< @type integer Connect timeout in seconds. */
+	protected $_nConnectRetryTimes = 3;
+	/**< @type integer Connect retry times. */
 
-	protected $_sProviderCertificateFile; /**< @type string Provider certificate file with key (Bundled PEM). */
-	protected $_sProviderCertificatePassphrase; /**< @type string Provider certificate passphrase. */
-	protected $_sRootCertificationAuthorityFile; /**< @type string Root certification authority file. */
+	protected $_sProviderCertificateFile;
+	/**< @type string Provider certificate file with key (Bundled PEM). */
+	protected $_sProviderCertificatePassphrase;
+	/**< @type string Provider certificate passphrase. */
+	protected $_sRootCertificationAuthorityFile;
+	/**< @type string Root certification authority file. */
 
-	protected $_nWriteInterval; /**< @type integer Write interval in micro seconds. */
-	protected $_nConnectRetryInterval; /**< @type integer Connect retry interval in micro seconds. */
-	protected $_nSocketSelectTimeout; /**< @type integer Socket select timeout in micro seconds. */
+	protected $_nWriteInterval;
+	/**< @type integer Write interval in micro seconds. */
+	protected $_nConnectRetryInterval;
+	/**< @type integer Connect retry interval in micro seconds. */
+	protected $_nSocketSelectTimeout;
+	/**< @type integer Socket select timeout in micro seconds. */
 
-	protected $_logger; /**< @type ApnsPHP_Log_Interface Logger. */
+	protected $_logger;
+	/**< @type ApnsPHP_Log_Interface Logger. */
 
-	protected $_hSocket; /**< @type resource SSL Socket. */
+	protected $_hSocket;
+	/**< @type resource SSL Socket. */
 
 	/**
 	 * Constructor.
@@ -73,29 +90,29 @@ abstract class ApnsPHP_Abstract
 	 * @param  $nEnvironment @type integer Environment.
 	 * @param  $sProviderCertificateFile @type string Provider certificate file
 	 *         with key (Bundled PEM).
+	 *
 	 * @throws ApnsPHP_Exception if the environment is not
 	 *         sandbox or production or the provider certificate file is not readable.
 	 */
-	public function __construct($nEnvironment, $sProviderCertificateFile)
-	{
-		if ($nEnvironment != self::ENVIRONMENT_PRODUCTION && $nEnvironment != self::ENVIRONMENT_SANDBOX) {
+	public function __construct( $nEnvironment, $sProviderCertificateFile ) {
+		if ( $nEnvironment != self::ENVIRONMENT_PRODUCTION && $nEnvironment != self::ENVIRONMENT_SANDBOX ) {
 			throw new ApnsPHP_Exception(
 				"Invalid environment '{$nEnvironment}'"
 			);
 		}
 		$this->_nEnvironment = $nEnvironment;
 
-		if (!is_readable($sProviderCertificateFile)) {
+		if ( ! is_readable( $sProviderCertificateFile ) ) {
 			throw new ApnsPHP_Exception(
 				"Unable to read certificate file '{$sProviderCertificateFile}'"
 			);
 		}
 		$this->_sProviderCertificateFile = $sProviderCertificateFile;
 
-		$this->_nConnectTimeout = ini_get("default_socket_timeout");
-		$this->_nWriteInterval = self::WRITE_INTERVAL;
+		$this->_nConnectTimeout       = ini_get( "default_socket_timeout" );
+		$this->_nWriteInterval        = self::WRITE_INTERVAL;
 		$this->_nConnectRetryInterval = self::CONNECT_RETRY_INTERVAL;
-		$this->_nSocketSelectTimeout = self::SOCKET_SELECT_TIMEOUT;
+		$this->_nSocketSelectTimeout  = self::SOCKET_SELECT_TIMEOUT;
 	}
 
 	/**
@@ -112,19 +129,19 @@ abstract class ApnsPHP_Abstract
 	 * @see ApnsPHP_Log_Embedded
 	 *
 	 * @param  $logger @type ApnsPHP_Log_Interface Logger instance.
+	 *
 	 * @throws ApnsPHP_Exception if Logger is not an instance
 	 *         of ApnsPHP_Log_Interface.
 	 */
-	public function setLogger(ApnsPHP_Log_Interface $logger)
-	{
-		if (!is_object($logger)) {
+	public function setLogger( ApnsPHP_Log_Interface $logger ) {
+		if ( ! is_object( $logger ) ) {
 			throw new ApnsPHP_Exception(
 				"The logger should be an instance of 'ApnsPHP_Log_Interface'"
 			);
 		}
-		if (!($logger instanceof ApnsPHP_Log_Interface)) {
+		if ( ! ( $logger instanceof ApnsPHP_Log_Interface ) ) {
 			throw new ApnsPHP_Exception(
-				"Unable to use an instance of '" . get_class($logger) . "' as logger: " .
+				"Unable to use an instance of '" . get_class( $logger ) . "' as logger: " .
 				"a logger must implements ApnsPHP_Log_Interface."
 			);
 		}
@@ -136,8 +153,7 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @return @type ApnsPHP_Log_Interface Current Logger instance.
 	 */
-	public function getLogger()
-	{
+	public function getLogger() {
 		return $this->_logger;
 	}
 
@@ -147,8 +163,7 @@ abstract class ApnsPHP_Abstract
 	 * @param  $sProviderCertificatePassphrase @type string Provider Certificate
 	 *         passphrase.
 	 */
-	public function setProviderCertificatePassphrase($sProviderCertificatePassphrase)
-	{
+	public function setProviderCertificatePassphrase( $sProviderCertificatePassphrase ) {
 		$this->_sProviderCertificatePassphrase = $sProviderCertificatePassphrase;
 	}
 
@@ -164,12 +179,12 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @param  $sRootCertificationAuthorityFile @type string Root Certification
 	 *         Authority file.
+	 *
 	 * @throws ApnsPHP_Exception if Root Certification Authority
 	 *         file is not readable.
 	 */
-	public function setRootCertificationAuthority($sRootCertificationAuthorityFile)
-	{
-		if (!is_readable($sRootCertificationAuthorityFile)) {
+	public function setRootCertificationAuthority( $sRootCertificationAuthorityFile ) {
+		if ( ! is_readable( $sRootCertificationAuthorityFile ) ) {
 			throw new ApnsPHP_Exception(
 				"Unable to read Certificate Authority file '{$sRootCertificationAuthorityFile}'"
 			);
@@ -182,23 +197,21 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @return @type string Current Root Certification Authority file path.
 	 */
-	public function getCertificateAuthority()
-	{
+	public function getCertificateAuthority() {
 		return $this->_sRootCertificationAuthorityFile;
 	}
 
 	/**
 	 * Set the write interval.
 	 *
-	 * After each socket write operation we are sleeping for this 
+	 * After each socket write operation we are sleeping for this
 	 * time interval. To speed up the sending operations, use Zero
 	 * as parameter but some messages may be lost.
 	 *
 	 * @param  $nWriteInterval @type integer Write interval in micro seconds.
 	 */
-	public function setWriteInterval($nWriteInterval)
-	{
-		$this->_nWriteInterval = (int)$nWriteInterval;
+	public function setWriteInterval( $nWriteInterval ) {
+		$this->_nWriteInterval = (int) $nWriteInterval;
 	}
 
 	/**
@@ -206,8 +219,7 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @return @type integer Write interval in micro seconds.
 	 */
-	public function getWriteInterval()
-	{
+	public function getWriteInterval() {
 		return $this->_nWriteInterval;
 	}
 
@@ -219,9 +231,8 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @param  $nTimeout @type integer Connection timeout in seconds.
 	 */
-	public function setConnectTimeout($nTimeout)
-	{
-		$this->_nConnectTimeout = (int)$nTimeout;
+	public function setConnectTimeout( $nTimeout ) {
+		$this->_nConnectTimeout = (int) $nTimeout;
 	}
 
 	/**
@@ -229,8 +240,7 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @return @type integer Connection timeout in seconds.
 	 */
-	public function getConnectTimeout()
-	{
+	public function getConnectTimeout() {
 		return $this->_nConnectTimeout;
 	}
 
@@ -242,9 +252,8 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @param  $nRetryTimes @type integer Connect retry times.
 	 */
-	public function setConnectRetryTimes($nRetryTimes)
-	{
-		$this->_nConnectRetryTimes = (int)$nRetryTimes;
+	public function setConnectRetryTimes( $nRetryTimes ) {
+		$this->_nConnectRetryTimes = (int) $nRetryTimes;
 	}
 
 	/**
@@ -252,8 +261,7 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @return @type integer Connect retry times.
 	 */
-	public function getConnectRetryTimes()
-	{
+	public function getConnectRetryTimes() {
 		return $this->_nConnectRetryTimes;
 	}
 
@@ -267,9 +275,8 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @param  $nRetryInterval @type integer Connect retry interval in micro seconds.
 	 */
-	public function setConnectRetryInterval($nRetryInterval)
-	{
-		$this->_nConnectRetryInterval = (int)$nRetryInterval;
+	public function setConnectRetryInterval( $nRetryInterval ) {
+		$this->_nConnectRetryInterval = (int) $nRetryInterval;
 	}
 
 	/**
@@ -277,8 +284,7 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @return @type integer Connect retry interval in micro seconds.
 	 */
-	public function getConnectRetryInterval()
-	{
+	public function getConnectRetryInterval() {
 		return $this->_nConnectRetryInterval;
 	}
 
@@ -299,9 +305,8 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @param  $nSelectTimeout @type integer Socket select timeout in micro seconds.
 	 */
-	public function setSocketSelectTimeout($nSelectTimeout)
-	{
-		$this->_nSocketSelectTimeout = (int)$nSelectTimeout;
+	public function setSocketSelectTimeout( $nSelectTimeout ) {
+		$this->_nSocketSelectTimeout = (int) $nSelectTimeout;
 	}
 
 	/**
@@ -309,8 +314,7 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @return @type integer Socket select timeout in micro seconds.
 	 */
-	public function getSocketSelectTimeout()
-	{
+	public function getSocketSelectTimeout() {
 		return $this->_nSocketSelectTimeout;
 	}
 
@@ -325,26 +329,25 @@ abstract class ApnsPHP_Abstract
 	 * @throws ApnsPHP_Exception if is unable to connect after
 	 *         ConnectRetryTimes.
 	 */
-	public function connect()
-	{
+	public function connect() {
 		$bConnected = false;
-		$nRetry = 0;
-		while (!$bConnected) {
+		$nRetry     = 0;
+		while ( ! $bConnected ) {
 			try {
 				$bConnected = $this->_connect();
-			} catch (ApnsPHP_Exception $e) {
-				$this->_log('ERROR: ' . $e->getMessage());
-				if ($nRetry >= $this->_nConnectRetryTimes) {
+			} catch ( ApnsPHP_Exception $e ) {
+				$this->_log( 'ERROR: ' . $e->getMessage() );
+				if ( $nRetry >= $this->_nConnectRetryTimes ) {
 					throw $e;
 				} else {
 					$this->_log(
-						"INFO: Retry to connect (" . ($nRetry+1) .
+						"INFO: Retry to connect (" . ( $nRetry + 1 ) .
 						"/{$this->_nConnectRetryTimes})..."
 					);
-					usleep($this->_nConnectRetryInterval);
+					usleep( $this->_nConnectRetryInterval );
 				}
 			}
-			$nRetry++;
+			$nRetry ++;
 		}
 	}
 
@@ -353,12 +356,13 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @return @type boolean True if successful disconnected.
 	 */
-	public function disconnect()
-	{
-		if (is_resource($this->_hSocket)) {
-			$this->_log('INFO: Disconnected.');
-			return fclose($this->_hSocket);
+	public function disconnect() {
+		if ( is_resource( $this->_hSocket ) ) {
+			$this->_log( 'INFO: Disconnected.' );
+
+			return fclose( $this->_hSocket );
 		}
+
 		return false;
 	}
 
@@ -368,40 +372,41 @@ abstract class ApnsPHP_Abstract
 	 * @throws ApnsPHP_Exception if is unable to connect.
 	 * @return @type boolean True if successful connected.
 	 */
-	protected function _connect()
-	{
-		$sURL = $this->_aServiceURLs[$this->_nEnvironment];
-		unset($aURLs);
+	protected function _connect() {
+		$sURL = $this->_aServiceURLs[ $this->_nEnvironment ];
+		unset( $aURLs );
 
-		$this->_log("INFO: Trying {$sURL}...");
+		$this->_log( "INFO: Trying {$sURL}..." );
 
 		/**
 		 * @see http://php.net/manual/en/context.ssl.php
 		 */
-		$streamContext = stream_context_create(array('ssl' => array(
-			'verify_peer' => isset($this->_sRootCertificationAuthorityFile),
-			'cafile' => $this->_sRootCertificationAuthorityFile,
-			'local_cert' => $this->_sProviderCertificateFile
-		)));
+		$streamContext = stream_context_create( array(
+			'ssl' => array(
+				'verify_peer' => isset( $this->_sRootCertificationAuthorityFile ),
+				'cafile'      => $this->_sRootCertificationAuthorityFile,
+				'local_cert'  => $this->_sProviderCertificateFile
+			)
+		) );
 
-		if (!empty($this->_sProviderCertificatePassphrase)) {
-			stream_context_set_option($streamContext, 'ssl',
-				'passphrase', $this->_sProviderCertificatePassphrase);
+		if ( ! empty( $this->_sProviderCertificatePassphrase ) ) {
+			stream_context_set_option( $streamContext, 'ssl',
+				'passphrase', $this->_sProviderCertificatePassphrase );
 		}
 
-		$this->_hSocket = @stream_socket_client($sURL, $nError, $sError,
-			$this->_nConnectTimeout, STREAM_CLIENT_CONNECT, $streamContext);
+		$this->_hSocket = @stream_socket_client( $sURL, $nError, $sError,
+			$this->_nConnectTimeout, STREAM_CLIENT_CONNECT, $streamContext );
 
-		if (!$this->_hSocket) {
+		if ( ! $this->_hSocket ) {
 			throw new ApnsPHP_Exception(
 				"Unable to connect to '{$sURL}': {$sError} ({$nError})"
 			);
 		}
 
-		stream_set_blocking($this->_hSocket, 0);
-		stream_set_write_buffer($this->_hSocket, 0);
+		stream_set_blocking( $this->_hSocket, 0 );
+		stream_set_write_buffer( $this->_hSocket, 0 );
 
-		$this->_log("INFO: Connected to {$sURL}.");
+		$this->_log( "INFO: Connected to {$sURL}." );
 
 		return true;
 	}
@@ -411,11 +416,10 @@ abstract class ApnsPHP_Abstract
 	 *
 	 * @param  $sMessage @type string The message.
 	 */
-	protected function _log($sMessage)
-	{
-		if (!isset($this->_logger)) {
+	protected function _log( $sMessage ) {
+		if ( ! isset( $this->_logger ) ) {
 			$this->_logger = new ApnsPHP_Log_Embedded();
 		}
-		$this->_logger->log($sMessage);
+		$this->_logger->log( $sMessage );
 	}
 }

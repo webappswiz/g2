@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-05-12 19:09:17 --- EMERGENCY: Kohana_Exception [ 0 ]: The order_num property does not exist in the Model_Order class ~ MODPATH/orm/classes/Kohana/ORM.php [ 760 ] in /var/www/vhosts/goodiebox.priv/public_html/modules/orm/classes/Kohana/ORM.php:702
 2015-05-12 19:09:17 --- DEBUG: #0 /var/www/vhosts/goodiebox.priv/public_html/modules/orm/classes/Kohana/ORM.php(702): Kohana_ORM->set('order_num', '548')

@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-10-26 17:42:54 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: firstname ~ APPPATH/classes/Controller/Kapcsolat.php [ 27 ] in /var/www/vhosts/goodiebox.karam.org.ua/public_html/application/classes/Controller/Kapcsolat.php:27
 2015-10-26 17:42:54 --- DEBUG: #0 /var/www/vhosts/goodiebox.karam.org.ua/public_html/application/classes/Controller/Kapcsolat.php(27): Kohana_Core::error_handler(8, 'Undefined index...', '/var/www/vhosts...', 27, Array)

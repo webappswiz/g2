@@ -1,4 +1,5 @@
-<?php defined('SYSPATH') OR die('No direct access allowed.');
+<?php defined( 'SYSPATH' ) OR die( 'No direct access allowed.' );
+
 /**
  * Default auth role
  *
@@ -9,22 +10,21 @@
  */
 class Model_Auth_Role extends ORM {
 
-        protected $_table_name = 'roles';
+	protected $_table_name = 'roles';
 	// Relationships
 	protected $_has_many = array(
-		'users' => array('model' => 'User','through' => 'roles_users'),
+		'users' => array( 'model' => 'User', 'through' => 'roles_users' ),
 	);
 
-	public function rules()
-	{
+	public function rules() {
 		return array(
-			'name' => array(
-				array('not_empty'),
-				array('min_length', array(':value', 4)),
-				array('max_length', array(':value', 32)),
+			'name'        => array(
+				array( 'not_empty' ),
+				array( 'min_length', array( ':value', 4 ) ),
+				array( 'max_length', array( ':value', 32 ) ),
 			),
 			'description' => array(
-				array('max_length', array(':value', 255)),
+				array( 'max_length', array( ':value', 255 ) ),
 			)
 		);
 	}

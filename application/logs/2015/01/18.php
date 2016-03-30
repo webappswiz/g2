@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-01-18 09:34:42 --- EMERGENCY: Kohana_Exception [ 0 ]: The 1 property does not exist in the Model_Order class ~ MODPATH/orm/classes/Kohana/ORM.php [ 687 ] in /home2/goodieb1/public_html/modules/orm/classes/Kohana/ORM.php:603
 2015-01-18 09:34:42 --- DEBUG: #0 /home2/goodieb1/public_html/modules/orm/classes/Kohana/ORM.php(603): Kohana_ORM->get('1')

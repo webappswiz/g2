@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-09-20 17:04:52 --- EMERGENCY: ErrorException [ 1 ]: Call to a member function is_admin() on a non-object ~ APPPATH/classes/Controller/Admin.php [ 9 ] in file:line
 2014-09-20 17:04:52 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()

@@ -1,7 +1,7 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-03-17 20:02:44 --- EMERGENCY: ErrorException [ 2 ]: file_get_contents(http://gdata.youtube.com/feeds/api/users/UCAnqUKt9dkY7Tw2kndO9JAA/uploads?max-results=4): failed to open stream: HTTP request failed! HTTP/1.0 503 Service Unavailable
- ~ APPPATH/views/main/index.php [ 313 ] in file:line
+~ APPPATH/views/main/index.php [ 313 ] in file:line
 2015-03-17 20:02:44 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'file_get_conten...', '/home2/goodieb1...', 313, Array)
 #1 /home2/goodieb1/public_html/application/views/main/index.php(313): file_get_contents('http://gdata.yo...')
 #2 /home2/goodieb1/public_html/system/classes/Kohana/View.php(61): include('/home2/goodieb1...')

@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-12-04 09:30:30 --- EMERGENCY: Session_Exception [ 1 ]: Error reading session data. ~ SYSPATH/classes/Kohana/Session.php [ 324 ] in /home2/goodieb1/public_html/system/classes/Kohana/Session.php:125
 2014-12-04 09:30:30 --- DEBUG: #0 /home2/goodieb1/public_html/system/classes/Kohana/Session.php(125): Kohana_Session->read(NULL)

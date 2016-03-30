@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-08-22 12:24:55 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: user ~ APPPATH/views/users/registration.php [ 5 ] in /var/www/vhosts/goodiebox.karam.org.ua/public_html/application/views/users/registration.php:5
 2014-08-22 12:24:55 --- DEBUG: #0 /var/www/vhosts/goodiebox.karam.org.ua/public_html/application/views/users/registration.php(5): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/vhosts...', 5, Array)

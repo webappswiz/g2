@@ -1,17 +1,17 @@
 <?php
 
-defined('SYSPATH') or die('No direct script access.');
+defined( 'SYSPATH' ) or die( 'No direct script access.' );
 
 // -- Environment setup --------------------------------------------------------
 // Load the core Kohana class
 require SYSPATH . 'classes/Kohana/Core' . EXT;
 
-if (is_file(APPPATH . 'classes/Kohana' . EXT)) {
-    // Application extends the core
-    require APPPATH . 'classes/Kohana' . EXT;
+if ( is_file( APPPATH . 'classes/Kohana' . EXT ) ) {
+	// Application extends the core
+	require APPPATH . 'classes/Kohana' . EXT;
 } else {
-    // Load empty core extension
-    require SYSPATH . 'classes/Kohana' . EXT;
+	// Load empty core extension
+	require SYSPATH . 'classes/Kohana' . EXT;
 }
 
 /**
@@ -20,7 +20,7 @@ if (is_file(APPPATH . 'classes/Kohana' . EXT)) {
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/timezones
  */
-date_default_timezone_set('Europe/Kiev');
+date_default_timezone_set( 'Europe/Kiev' );
 
 /**
  * Set the default locale.
@@ -28,7 +28,7 @@ date_default_timezone_set('Europe/Kiev');
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/function.setlocale
  */
-setlocale(LC_ALL, 'en_US.utf-8');
+setlocale( LC_ALL, 'en_US.utf-8' );
 
 /**
  * Enable the Kohana auto-loader.
@@ -36,7 +36,7 @@ setlocale(LC_ALL, 'en_US.utf-8');
  * @link http://kohanaframework.org/guide/using.autoloading
  * @link http://www.php.net/manual/function.spl-autoload-register
  */
-spl_autoload_register(array('Kohana', 'auto_load'));
+spl_autoload_register( array( 'Kohana', 'auto_load' ) );
 
 /**
  * Optionally, you can enable a compatibility auto-loader for use with
@@ -52,25 +52,25 @@ spl_autoload_register(array('Kohana', 'auto_load'));
  * @link http://www.php.net/manual/function.spl-autoload-call
  * @link http://www.php.net/manual/var.configuration#unserialize-callback-func
  */
-ini_set('unserialize_callback_func', 'spl_autoload_call');
+ini_set( 'unserialize_callback_func', 'spl_autoload_call' );
 
 /**
  * Set the mb_substitute_character to "none"
  *
  * @link http://www.php.net/manual/function.mb-substitute-character.php
  */
-mb_substitute_character('none');
+mb_substitute_character( 'none' );
 
 // -- Configuration and initialization -----------------------------------------
 
 /**
  * Set the default language
  */
-I18n::lang('en');
+I18n::lang( 'en' );
 
-if (isset($_SERVER['SERVER_PROTOCOL'])) {
-    // Replace the default protocol.
-    HTTP::$protocol = $_SERVER['SERVER_PROTOCOL'];
+if ( isset( $_SERVER['SERVER_PROTOCOL'] ) ) {
+	// Replace the default protocol.
+	HTTP::$protocol = $_SERVER['SERVER_PROTOCOL'];
 }
 
 /**
@@ -79,8 +79,8 @@ if (isset($_SERVER['SERVER_PROTOCOL'])) {
  * Note: If you supply an invalid environment name, a PHP warning will be thrown
  * saying "Couldn't find constant Kohana::<INVALID_ENV_NAME>"
  */
-if (isset($_SERVER['KOHANA_ENV'])) {
-    Kohana::$environment = constant('Kohana::' . strtoupper($_SERVER['KOHANA_ENV']));
+if ( isset( $_SERVER['KOHANA_ENV'] ) ) {
+	Kohana::$environment = constant( 'Kohana::' . strtoupper( $_SERVER['KOHANA_ENV'] ) );
 }
 
 /**
@@ -98,52 +98,52 @@ if (isset($_SERVER['KOHANA_ENV'])) {
  * - boolean  caching     enable or disable internal caching                 FALSE
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
-Kohana::init(array(
-    'base_url' => '/',
-    'index_file' => ''
-));
+Kohana::init( array(
+	'base_url'   => '/',
+	'index_file' => ''
+) );
 
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
-Kohana::$log->attach(new Log_File(APPPATH . 'logs'));
+Kohana::$log->attach( new Log_File( APPPATH . 'logs' ) );
 
 /**
  * Attach a file reader to config. Multiple readers are supported.
  */
-Kohana::$config->attach(new Config_File);
+Kohana::$config->attach( new Config_File );
 Cookie::$salt = "Trololo finance. Investing is the best way to become rich!!!";
 /**
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
-Route::set('admin', 'admin/(<controller>(/<action>(/<id>)))')
-        ->defaults(array(
-            'directory' => 'admin',
-            'controller' => 'welcome',
-            'action' => 'index',
-        ));
+Route::set( 'admin', 'admin/(<controller>(/<action>(/<id>)))' )
+     ->defaults( array(
+	     'directory'  => 'admin',
+	     'controller' => 'welcome',
+	     'action'     => 'index',
+     ) );
 
-Route::set('default', '(<controller>(/<action>(/<id>)))')
-        ->defaults(array(
-            'controller' => 'main',
-            'action' => 'index',
-        ));
+Route::set( 'default', '(<controller>(/<action>(/<id>)))' )
+     ->defaults( array(
+	     'controller' => 'main',
+	     'action'     => 'index',
+     ) );
 
-Kohana::modules(array(
-    'auth' => MODPATH . 'auth', // Basic authentication
-    'cache' => MODPATH . 'cache', // Caching with multiple backends
-    'database' => MODPATH . 'database', // Database access
-    //'image'      => MODPATH.'image',      // Image manipulation
-    'orm' => MODPATH . 'orm', // Object Relationship Mapping
-    // 'api' => MODPATH . 'api',
-    'pagination' => MODPATH . 'pagination'
-));
+Kohana::modules( array(
+	'auth'       => MODPATH . 'auth', // Basic authentication
+	'cache'      => MODPATH . 'cache', // Caching with multiple backends
+	'database'   => MODPATH . 'database', // Database access
+	//'image'      => MODPATH.'image',      // Image manipulation
+	'orm'        => MODPATH . 'orm', // Object Relationship Mapping
+	// 'api' => MODPATH . 'api',
+	'pagination' => MODPATH . 'pagination'
+) );
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-require_once Kohana::find_file('vendor', 'class.phpmailer');
-require_once Kohana::find_file('vendor', 'dompdf/dompdf_config.inc');
-require_once Kohana::find_file('vendor', 'tcpdf_min/tcpdf');
-require_once Kohana::find_file('vendor', 'payu/PayUPayment.class');
+require_once Kohana::find_file( 'vendor', 'class.phpmailer' );
+require_once Kohana::find_file( 'vendor', 'dompdf/dompdf_config.inc' );
+require_once Kohana::find_file( 'vendor', 'tcpdf_min/tcpdf' );
+require_once Kohana::find_file( 'vendor', 'payu/PayUPayment.class' );

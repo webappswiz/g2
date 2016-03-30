@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-05-18 06:15:52 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined method Controller_Admin_Coupons::find_model() ~ APPPATH/classes/Controller/Admin/Coupons.php [ 13 ] in file:line
 2015-05-18 06:15:52 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()

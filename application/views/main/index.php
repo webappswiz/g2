@@ -126,7 +126,7 @@ $time       = explode( ':', $date_array[1] );
 			</div>
 			<div style="padding-bottom:10px;">
 				<label><?php echo __( 'Email címed:' ); ?></label>
-				<input type="email" name="email"size="20"/>
+				<input type="email" name="email" size="20"/>
 			</div>
 			<div style="text-align: center;margin-bottom:10px;">
 				<input type="submit" value="<?php echo __( 'Kérem az értesítést!' ); ?>"
@@ -168,14 +168,19 @@ $time       = explode( ':', $date_array[1] );
 	<div class="row flx-center bgc-pink">
 		<div class="content-box timer">
 			<div class="row flx-center flx-justify">
-				<div class="image-holder"><img src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/home-img-2.png' ); ?>"></div>
+				<div class="image-holder"><img
+						src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/home-img-2.png' ); ?>"></div>
 				<!-- end .image-holder-->
 				<div class="container text-white">
 					<h2><?php echo $text ?></h2>
-					<h3>Get our Xmas box for your pup!</h3><a id="subscribe" href="#" class="btn border white bold">subscribe now</a>
+
+					<h3>Get our Xmas box for your pup!</h3><a id="subscribe" href="#" class="btn border white bold">subscribe
+						now</a>
 				</div>
 				<!-- end .container.text-white-->
-				<div class="counter-holder"><span id="days" class="counter">12</span><span id="hours" class="counter">09</span><span id="minutes" class="counter">15</span><span id="seconds" class="counter">30</span></div>
+				<div class="counter-holder"><span id="days" class="counter">12</span><span id="hours"
+				                                                                           class="counter">09</span><span
+						id="minutes" class="counter">15</span><span id="seconds" class="counter">30</span></div>
 				<!-- end .counter-holder-->
 			</div>
 			<!-- end .row.flx-center.flx-justify-->
@@ -190,41 +195,66 @@ $time       = explode( ':', $date_array[1] );
 	<div class="row flx-center box-shadow">
 		<div class="content-box hiw">
 			<h1 class="text-center">How it works?</h1>
+
 			<div class="row flx-justify">
-				<div class="container col-3"><img src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/hiw-1.png' ); ?>">
+				<div class="container col-3"><img
+						src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/hiw-1.png' ); ?>">
+
 					<div class="row"><span class="round">1</span>
+
 						<div class="header">
 							<h2>Choose</h2>
+
 							<h3>your puppy size!</h3>
 						</div>
 						<!-- end .header-->
 					</div>
 					<!-- end .row-->
-					<p>Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This is a highly personalized service. Based on your pup's size, age and allergies, we carefully select premium products which will be delivered to your doorstep. Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This is a highly personalized service.</p>
+					<p>Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items,
+						vitamins). This is a highly personalized service. Based on your pup's size, age and allergies,
+						we carefully select premium products which will be delivered to your doorstep. Every month, 3-6
+						different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This
+						is a highly personalized service.</p>
 				</div>
 				<!-- end .container.col-3-->
-				<div class="container col-3"><img src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/hiw-2.png' ); ?>">
+				<div class="container col-3"><img
+						src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/hiw-2.png' ); ?>">
+
 					<div class="row"><span class="round">2</span>
+
 						<div class="header">
 							<h2>Choose</h2>
+
 							<h3>the box type!</h3>
 						</div>
 						<!-- end .header-->
 					</div>
 					<!-- end .row-->
-					<p>Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This is a highly personalized service. Based on your pup's size, age and allergies, we carefully select premium products which will be delivered to your doorstep. Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This is a highly personalized service.</p>
+					<p>Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items,
+						vitamins). This is a highly personalized service. Based on your pup's size, age and allergies,
+						we carefully select premium products which will be delivered to your doorstep. Every month, 3-6
+						different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This
+						is a highly personalized service.</p>
 				</div>
 				<!-- end .container.col-3-->
-				<div class="container col-3"><img src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/hiw-3.png' ); ?>">
+				<div class="container col-3"><img
+						src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/hiw-3.png' ); ?>">
+
 					<div class="row"><span class="round">3</span>
+
 						<div class="header">
 							<h2>Get</h2>
+
 							<h3>your package!</h3>
 						</div>
 						<!-- end .header-->
 					</div>
 					<!-- end .row-->
-					<p>Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This is a highly personalized service. Based on your pup's size, age and allergies, we carefully select premium products which will be delivered to your doorstep. Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This is a highly personalized service.</p>
+					<p>Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items,
+						vitamins). This is a highly personalized service. Based on your pup's size, age and allergies,
+						we carefully select premium products which will be delivered to your doorstep. Every month, 3-6
+						different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This
+						is a highly personalized service.</p>
 				</div>
 				<!-- end .container.col-3-->
 			</div>
@@ -240,7 +270,12 @@ $time       = explode( ':', $date_array[1] );
 	<div class="row flx-center bgc-yellow_light box-shadow">
 		<div class="content-box call-to-action-2">
 			<h1 class="text-center text-orange">What can you find in a Goodiebox?</h1>
-			<h3 class="text-center">Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This is a highly personalized service. Based on your pup's size, age and allergies, we carefully select premium products which will be delivered to your doorstep.</h3><img src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/home-img-3.png' ); ?>" class="resposive"><a a href="#" class="btn large solid orange">order now</a>
+
+			<h3 class="text-center">Every month, 3-6 different items are in the box (food, snacks, toys, accessories,
+				grooming items, vitamins). This is a highly personalized service. Based on your pup's size, age and
+				allergies, we carefully select premium products which will be delivered to your doorstep.</h3><img
+				src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/home-img-3.png' ); ?>" class="resposive"><a
+				a href="#" class="btn large solid orange">order now</a>
 		</div>
 		<!-- end .content-box.call-to-action-2-->
 	</div>
@@ -252,7 +287,11 @@ $time       = explode( ':', $date_array[1] );
 	<div class="row flx-center bgc-yellow_light">
 		<div class="content-box photo">
 			<h1 class="text-center">Goodiebox photo</h1>
-			<div class="row flx-justify"><img src="<?= URL::base( true, false ) ?>assets/img/photo-1.jpg"><img src="<?= URL::base( true, false ) ?>assets/img/photo-2.jpg"><img src="<?= URL::base( true, false ) ?>assets/img/photo-3.jpg"><img src="<?= URL::base( true, false ) ?>assets/img/photo-4.jpg"></div>
+
+			<div class="row flx-justify"><img src="<?= URL::base( true, false ) ?>assets/img/photo-1.jpg"><img
+					src="<?= URL::base( true, false ) ?>assets/img/photo-2.jpg"><img
+					src="<?= URL::base( true, false ) ?>assets/img/photo-3.jpg"><img
+					src="<?= URL::base( true, false ) ?>assets/img/photo-4.jpg"></div>
 			<!-- end .row.flx-justify-->
 		</div>
 		<!-- end .content-box.photo-->
@@ -264,49 +303,70 @@ $time       = explode( ':', $date_array[1] );
 	<div class="row flx-center">
 		<div class="content-box feedback">
 			<h1 class="text-center">Feedback</h1>
+
 			<div class="row flx-justify">
 				<div class="item feed">
 					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-1.jpg"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
+							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
+							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+							rhoncus, leo at pretium commodo.</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
+
 						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
 					</footer>
 				</div>
 				<div class="item feed">
 					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-2.jpg"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
+							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
+							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+							rhoncus, leo at pretium commodo.</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
+
 						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
 					</footer>
 				</div>
 				<div class="item feed">
 					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-3.jpg"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
+							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
+							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+							rhoncus, leo at pretium commodo.</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-3.jpg" class="avatar">
+
 						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
 					</footer>
 				</div>
 				<div class="item feed">
 					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-1.jpg"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
+							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
+							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+							rhoncus, leo at pretium commodo.</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
+
 						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
 					</footer>
 				</div>
 				<div class="item feed">
 					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-2.jpg"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
+							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
+							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+							rhoncus, leo at pretium commodo.</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
+
 						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
 					</footer>
 				</div>

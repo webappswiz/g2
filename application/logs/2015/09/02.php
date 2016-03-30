@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-09-02 10:40:23 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: session ~ APPPATH/classes/Controller/Order.php [ 225 ] in /var/www/vhosts/goodiebox.priv/public_html/application/classes/Controller/Order.php:225
 2015-09-02 10:40:23 --- DEBUG: #0 /var/www/vhosts/goodiebox.priv/public_html/application/classes/Controller/Order.php(225): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/vhosts...', 225, Array)

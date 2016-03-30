@@ -1,11 +1,11 @@
 <?php
 
-defined('SYSPATH') OR die('No direct access allowed.');
+defined( 'SYSPATH' ) OR die( 'No direct access allowed.' );
 
 class Model_Invites extends ORM {
 
-    protected $_table_name = 'invites';
-    protected $_primary_key = 'id';
+	protected $_table_name = 'invites';
+	protected $_primary_key = 'id';
 
 }
 

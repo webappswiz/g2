@@ -1,4 +1,5 @@
-<?php defined('SYSPATH') OR die('No direct access allowed.');
+<?php defined( 'SYSPATH' ) OR die( 'No direct access allowed.' );
+
 /**
  * Default auth user
  *
@@ -15,8 +16,8 @@ class Model_Auth_User extends ORM {
 	 * @var array Relationhips
 	 */
 	protected $_has_many = array(
-		'user_tokens' => array('model' => 'User_Token'),
-		'roles'       => array('model' => 'Role', 'through' => 'roles_users'),
+		'user_tokens' => array( 'model' => 'User_Token' ),
+		'roles'       => array( 'model' => 'Role', 'through' => 'roles_users' ),
 	);
 
 	/**
@@ -27,21 +28,20 @@ class Model_Auth_User extends ORM {
 	 *
 	 * @return array Rules
 	 */
-	public function rules()
-	{
+	public function rules() {
 		return array(
 			'username' => array(
-				array('not_empty'),
-				array('max_length', array(':value', 127)),
-				array(array($this, 'unique'), array('username', ':value')),
+				array( 'not_empty' ),
+				array( 'max_length', array( ':value', 127 ) ),
+				array( array( $this, 'unique' ), array( 'username', ':value' ) ),
 			),
 			'password' => array(
-				array('not_empty'),
+				array( 'not_empty' ),
 			),
-			'email' => array(
-				array('not_empty'),
-				array('email'),
-				array(array($this, 'unique'), array('email', ':value')),
+			'email'    => array(
+				array( 'not_empty' ),
+				array( 'email' ),
+				array( array( $this, 'unique' ), array( 'email', ':value' ) ),
 			),
 		);
 	}
@@ -52,11 +52,10 @@ class Model_Auth_User extends ORM {
 	 *
 	 * @return array Filters
 	 */
-	public function filters()
-	{
+	public function filters() {
 		return array(
 			'password' => array(
-				array(array(Auth::instance(), 'hash'))
+				array( array( Auth::instance(), 'hash' ) )
 			)
 		);
 	}
@@ -66,13 +65,12 @@ class Model_Auth_User extends ORM {
 	 *
 	 * @return array Labels
 	 */
-	public function labels()
-	{
+	public function labels() {
 		return array(
-			'username'         => 'username',
-			'email'            => 'email address',
-			'password'         => 'password',
-                        'meta_data'        => 'meta_data',
+			'username'  => 'username',
+			'email'     => 'email address',
+			'password'  => 'password',
+			'meta_data' => 'meta_data',
 		);
 	}
 
@@ -81,12 +79,10 @@ class Model_Auth_User extends ORM {
 	 *
 	 * @return void
 	 */
-	public function complete_login()
-	{
-		if ($this->_loaded)
-		{
+	public function complete_login() {
+		if ( $this->_loaded ) {
 			// Update the number of logins
-			$this->logins = new Database_Expression('logins + 1');
+			$this->logins = new Database_Expression( 'logins + 1' );
 
 			// Set the last login date
 			$this->last_login = time();
@@ -101,46 +97,45 @@ class Model_Auth_User extends ORM {
 	 *
 	 * @param   mixed    the value to test
 	 * @param   string   field name
+	 *
 	 * @return  boolean
 	 */
-	public function unique_key_exists($value, $field = NULL)
-	{
-		if ($field === NULL)
-		{
+	public function unique_key_exists( $value, $field = null ) {
+		if ( $field === null ) {
 			// Automatically determine field by looking at the value
-			$field = $this->unique_key($value);
+			$field = $this->unique_key( $value );
 		}
 
-		return (bool) DB::select(array(DB::expr('COUNT(*)'), 'total_count'))
-			->from($this->_table_name)
-			->where($field, '=', $value)
-			->where($this->_primary_key, '!=', $this->pk())
-			->execute($this->_db)
-			->get('total_count');
+		return (bool) DB::select( array( DB::expr( 'COUNT(*)' ), 'total_count' ) )
+		                ->from( $this->_table_name )
+		                ->where( $field, '=', $value )
+		                ->where( $this->_primary_key, '!=', $this->pk() )
+		                ->execute( $this->_db )
+		                ->get( 'total_count' );
 	}
 
 	/**
 	 * Allows a model use both email and username as unique identifiers for login
 	 *
 	 * @param   string  unique value
+	 *
 	 * @return  string  field name
 	 */
-	public function unique_key($value)
-	{
-		return Valid::email($value) ? 'email' : 'username';
+	public function unique_key( $value ) {
+		return Valid::email( $value ) ? 'email' : 'username';
 	}
 
 	/**
 	 * Password validation for plain passwords.
 	 *
 	 * @param array $values
+	 *
 	 * @return Validation
 	 */
-	public static function get_password_validation($values)
-	{
-		return Validation::factory($values)
-			->rule('password', 'min_length', array(':value', 8))
-			->rule('password_confirm', 'matches', array(':validation', ':field', 'password'));
+	public static function get_password_validation( $values ) {
+		return Validation::factory( $values )
+		                 ->rule( 'password', 'min_length', array( ':value', 8 ) )
+		                 ->rule( 'password_confirm', 'matches', array( ':validation', ':field', 'password' ) );
 	}
 
 	/**
@@ -149,23 +144,23 @@ class Model_Auth_User extends ORM {
 	 * Example usage:
 	 * ~~~
 	 * $user = ORM::factory('User')->create_user($_POST, array(
-	 *	'username',
-	 *	'password',
-	 *	'email',
+	 *    'username',
+	 *    'password',
+	 *    'email',
 	 * );
 	 * ~~~
 	 *
 	 * @param array $values
 	 * @param array $expected
+	 *
 	 * @throws ORM_Validation_Exception
 	 */
-	public function create_user($values, $expected)
-	{
+	public function create_user( $values, $expected ) {
 		// Validation for passwords
-		$extra_validation = Model_User::get_password_validation($values)
-			->rule('password', 'not_empty');
+		$extra_validation = Model_User::get_password_validation( $values )
+		                              ->rule( 'password', 'not_empty' );
 
-		return $this->values($values, $expected)->create($extra_validation);
+		return $this->values( $values, $expected )->create( $extra_validation );
 	}
 
 	/**
@@ -176,30 +171,29 @@ class Model_Auth_User extends ORM {
 	 * Example usage:
 	 * ~~~
 	 * $user = ORM::factory('User')
-	 *	->where('username', '=', 'kiall')
-	 *	->find()
-	 *	->update_user($_POST, array(
-	 *		'username',
-	 *		'password',
-	 *		'email',
-	 *	);
+	 *    ->where('username', '=', 'kiall')
+	 *    ->find()
+	 *    ->update_user($_POST, array(
+	 *        'username',
+	 *        'password',
+	 *        'email',
+	 *    );
 	 * ~~~
 	 *
 	 * @param array $values
 	 * @param array $expected
+	 *
 	 * @throws ORM_Validation_Exception
 	 */
-	public function update_user($values, $expected = NULL)
-	{
-		if (empty($values['password']))
-		{
-			unset($values['password'], $values['password_confirm']);
+	public function update_user( $values, $expected = null ) {
+		if ( empty( $values['password'] ) ) {
+			unset( $values['password'], $values['password_confirm'] );
 		}
 
 		// Validation for passwords
-		$extra_validation = Model_User::get_password_validation($values);
+		$extra_validation = Model_User::get_password_validation( $values );
 
-		return $this->values($values, $expected)->update($extra_validation);
+		return $this->values( $values, $expected )->update( $extra_validation );
 	}
 
 } // End Auth User Model

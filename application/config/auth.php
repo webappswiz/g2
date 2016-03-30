@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct access allowed.');
+<?php defined( 'SYSPATH' ) OR die( 'No direct access allowed.' );
 
 return array(
 
@@ -10,7 +10,7 @@ return array(
 	'session_key'  => 'auth_user',
 
 	// Username/password combinations for the Auth File driver
-	'users' => array(
+	'users'        => array(
 		'admin' => '20abf809f74a9e11dd5d033916818365eb703d0b16f7e61bddcc45b4c8fc0525',
 	),
 

@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-09-16 11:46:02 --- EMERGENCY: ErrorException [ 4096 ]: Argument 4 passed to Kohana_Form::select() must be of the type array, string given, called in /var/www/goodiebox.priv/application/views/order/index.php on line 92 and defined ~ SYSPATH/classes/Kohana/Form.php [ 252 ] in /var/www/goodiebox.priv/system/classes/Kohana/Form.php:252
 2014-09-16 11:46:02 --- DEBUG: #0 /var/www/goodiebox.priv/system/classes/Kohana/Form.php(252): Kohana_Core::error_handler(4096, 'Argument 4 pass...', '/var/www/goodie...', 252, Array)

@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-10-24 05:46:46 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: step1 ~ APPPATH/views/order/step3.php [ 211 ] in /home2/goodieb1/public_html/application/views/order/step3.php:211
 2014-10-24 05:46:46 --- DEBUG: #0 /home2/goodieb1/public_html/application/views/order/step3.php(211): Kohana_Core::error_handler(8, 'Undefined index...', '/home2/goodieb1...', 211, Array)

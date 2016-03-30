@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-09-12 12:26:23 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: type ~ APPPATH/views/admin/orders/edit.php [ 84 ] in /home2/goodieb1/public_html/application/views/admin/orders/edit.php:84
 2015-09-12 12:26:23 --- DEBUG: #0 /home2/goodieb1/public_html/application/views/admin/orders/edit.php(84): Kohana_Core::error_handler(8, 'Undefined varia...', '/home2/goodieb1...', 84, Array)

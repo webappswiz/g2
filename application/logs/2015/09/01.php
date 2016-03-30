@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-09-01 15:52:00 --- EMERGENCY: Database_Exception [ 2 ]: mysqli_connect(): (28000/1045): Access denied for user 'goodieb1_wp'@'localhost' (using password: YES) ~ MODPATH/database/classes/Database/MySQLi.php [ 57 ] in /var/www/vhosts/goodiebox.priv/public_html/modules/database/classes/Database/MySQLi.php:155
 2015-09-01 15:52:00 --- DEBUG: #0 /var/www/vhosts/goodiebox.priv/public_html/modules/database/classes/Database/MySQLi.php(155): Database_MySQLi->connect()

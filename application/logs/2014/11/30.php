@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-11-30 18:08:12 --- EMERGENCY: ErrorException [ 8 ]: Undefined offset: 1 ~ APPPATH/views/main/index.php [ 8 ] in /home2/goodieb1/public_html/application/views/main/index.php:8
 2014-11-30 18:08:12 --- DEBUG: #0 /home2/goodieb1/public_html/application/views/main/index.php(8): Kohana_Core::error_handler(8, 'Undefined offse...', '/home2/goodieb1...', 8, Array)

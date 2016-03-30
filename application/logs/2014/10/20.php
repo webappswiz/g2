@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-10-20 19:09:45 --- EMERGENCY: Database_Exception [ 1146 ]: Table 'goodieb1_goodiebox.users' doesn't exist [ SHOW FULL COLUMNS FROM `users` ] ~ MODPATH/database/classes/Database/MySQLi.php [ 172 ] in /home2/goodieb1/public_html/modules/database/classes/Database/MySQLi.php:336
 2014-10-20 19:09:45 --- DEBUG: #0 /home2/goodieb1/public_html/modules/database/classes/Database/MySQLi.php(336): Database_MySQLi->query(1, 'SHOW FULL COLUM...', false)

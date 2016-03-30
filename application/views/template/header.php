@@ -191,12 +191,12 @@ $time       = explode( ':', $date_array[1] );
 					if ( Cookie::get( 'lang', 'hu' ) == 'hu' ) {
 						?>
 						<a
-						   href="<?php echo URL::base( true, false ) . 'main/chg_lang/en' ?>"><span>english</span></a>
+							href="<?php echo URL::base( true, false ) . 'main/chg_lang/en' ?>"><span>english</span></a>
 						<?php
 					} else {
 						?>
 						<a
-						   href="<?php echo URL::base( true, false ) . 'main/chg_lang/hu' ?>"><span>magyar</span></a>
+							href="<?php echo URL::base( true, false ) . 'main/chg_lang/hu' ?>"><span>magyar</span></a>
 						<?php
 					}
 					?>
@@ -209,7 +209,9 @@ $time       = explode( ':', $date_array[1] );
 						   target="blank"><i class="fa fa-instagram"></i></a>
 					</div>
 				</div>
-				<a href="<?php echo URL::base( true, false ) . 'cart' ?>"><div class="cart-holder col-4"><span class="cart-count">0</span></div></a>
+				<a href="<?php echo URL::base( true, false ) . 'cart' ?>">
+					<div class="cart-holder col-4"><span class="cart-count">0</span></div>
+				</a>
 			</div>
 		</div>
 	</div>

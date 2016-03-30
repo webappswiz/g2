@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2014-12-03 06:00:49 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: size ~ APPPATH/views/admin/orders/edit.php [ 124 ] in /home2/goodieb1/public_html/application/views/admin/orders/edit.php:124
 2014-12-03 06:00:49 --- DEBUG: #0 /home2/goodieb1/public_html/application/views/admin/orders/edit.php(124): Kohana_Core::error_handler(8, 'Undefined varia...', '/home2/goodieb1...', 124, Array)

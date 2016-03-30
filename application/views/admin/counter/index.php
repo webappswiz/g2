@@ -46,12 +46,14 @@
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="counting_text">Limit of smart orders</label>
+
 				<div class="controls">
 					<input type="text" name="smart_limit" value="<?= $model->smart ?>">
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="counting_text">Limit of Plus orders</label>
+
 				<div class="controls">
 					<input type="text" name="plus_limit" value="<?= $model->plus ?>">
 				</div>
@@ -69,9 +71,9 @@
 			</div>
 		</fieldset>
 		<?php
-		echo 'Smart orders left: <span style="color:red;font-weight:bold;">' . ($model->smart - $model->current_smart) . '</span> ';
+		echo 'Smart orders left: <span style="color:red;font-weight:bold;">' . ( $model->smart - $model->current_smart ) . '</span> ';
 		echo '<br/>';
-		echo 'Plus orders left: <span style="color:red;font-weight:bold;">' . ($model->plus - $model->current_plus) . '</span>';
+		echo 'Plus orders left: <span style="color:red;font-weight:bold;">' . ( $model->plus - $model->current_plus ) . '</span>';
 		?>
 	</form>
 

@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-01-09 18:57:52 --- EMERGENCY: Kohana_Exception [ 0 ]: Method find() cannot be called on loaded objects ~ MODPATH/orm/classes/Kohana/ORM.php [ 966 ] in /home2/goodieb1/public_html/application/classes/Controller/Order.php:771
 2015-01-09 18:57:52 --- DEBUG: #0 /home2/goodieb1/public_html/application/classes/Controller/Order.php(771): Kohana_ORM->find()

@@ -115,9 +115,9 @@ class Controller_Admin_Orders extends Controller_Admin {
 					fclose( $pdf );
 				}
 
-				unset($_GET['orders']);
-				$url = "?" . http_build_query($_GET);
-				echo '<script type="text/javascript">history.pushState(null, null,"'.$url.'");</script>';
+				unset( $_GET['orders'] );
+				$url = "?" . http_build_query( $_GET );
+				echo '<script type="text/javascript">history.pushState(null, null,"' . $url . '");</script>';
 			}
 			if ( $_REQUEST['action'] == 2 ) {
 				foreach ( $_REQUEST['orders'] as $ord ) {
@@ -134,16 +134,17 @@ class Controller_Admin_Orders extends Controller_Admin {
 					$o                = ORM::factory( 'Order', $ord );
 					$o->orders_status = $_REQUEST['status_name'];
 					$o->save();
-					if ( $o->payment_status == 5 && $_REQUEST['status_name']==2) {
+					if ( $o->payment_status == 5 && $_REQUEST['status_name'] == 2 ) {
 						$ords[] = $o;
 					}
 
 				}
-				if(sizeof($ords)>0)
+				if ( sizeof( $ords ) > 0 ) {
 					$this->mass_generate_cod_invoice( $ords );
-				unset($_GET['orders']);
-				$url = "?" . http_build_query($_GET);
-				echo '<script type="text/javascript">history.pushState(null, null,"'.$url.'");</script>';
+				}
+				unset( $_GET['orders'] );
+				$url = "?" . http_build_query( $_GET );
+				echo '<script type="text/javascript">history.pushState(null, null,"' . $url . '");</script>';
 			}
 			if ( $_REQUEST['action'] == 4 ) {
 
@@ -256,7 +257,6 @@ class Controller_Admin_Orders extends Controller_Admin {
 	}
 
 
-
 	public function action_receipt() {
 		$id = (int) $this->request->param( 'id' );
 		if ( file_exists( DOCROOT . 'orders/order_' . $id . '.pdf' ) ) {
@@ -358,7 +358,7 @@ class Controller_Admin_Orders extends Controller_Admin {
 		if ( $order->company_name <> '' ) {
 			$company      = 'Cégnév: ' . $order->company_name . '<br/>
                     Cím: ' . $order->company_zip . ', ' . $order->company_city . '<br/>
-                        ' . $order->company_street .' '. $order->company_house . '<br/>
+                        ' . $order->company_street . ' ' . $order->company_house . '<br/>
                     Adószám: ' . $order->tax_code . '<br/>';
 			$user_details = '';
 		} else {
@@ -524,12 +524,12 @@ class Controller_Admin_Orders extends Controller_Admin {
 		} elseif ( $order->package->term == 3 ) {
 			$cod = $cost->cost * 6;
 		}
-		$o                     = ORM::factory( 'Order' )
-		                            ->where( 'invoice_num', '<>', '' )
-		                            ->order_by( 'invoice_num', 'DESC' )
-		                            ->find();
-		if($order->invoice_num==''){
-			$order->invoice_num    = $o->invoice_num + 1;
+		$o = ORM::factory( 'Order' )
+		        ->where( 'invoice_num', '<>', '' )
+		        ->order_by( 'invoice_num', 'DESC' )
+		        ->find();
+		if ( $order->invoice_num == '' ) {
+			$order->invoice_num = $o->invoice_num + 1;
 		}
 		$order->date_purchased = date( 'Y-m-d' );
 		$order->save();
@@ -540,13 +540,13 @@ class Controller_Admin_Orders extends Controller_Admin {
 		if ( $order->company_name <> '' ) {
 			$company = __( 'Cégnév:' ) . ' ' . $order->company_name . '<br/>';
 			$company .= __( 'Cím:' ) . ' ' . $order->company_zip . ', ' . $order->company_city . '<br/>
-                        ' . $order->company_street .' '. $order->company_house . '<br/>';
+                        ' . $order->company_street . ' ' . $order->company_house . '<br/>';
 			$company .= __( 'Adószám:' ) . ' ' . $order->tax_code . '<br/>';
 			$user_details = '';
 		} else {
 			$company      = '';
 			$user_details = __( 'Név:' ) . '	' . $user->customer_lastname . ' ' . $user->customer_firstname . '<br/>';
-			$user_details .= __( 'Cím:' ) . '	' . $user->customer_zip . ', ' . $user->customer_city . '<br/>' . $user->customer_street . ' ' .$user->customer_house.'<br/>';
+			$user_details .= __( 'Cím:' ) . '	' . $user->customer_zip . ', ' . $user->customer_city . '<br/>' . $user->customer_street . ' ' . $user->customer_house . '<br/>';
 		}
 		if ( $order->package->term == 1 ) {
 			$term = '1';
@@ -702,7 +702,7 @@ class Controller_Admin_Orders extends Controller_Admin {
 	private function mass_generate_cod_invoice( $orders ) {
 		$invoice = '';
 		foreach ( $orders as $order ):
-			$user     = $order->user;
+			$user = $order->user;
 			$this->generate_cod_invoice( $order, $order->user );
 			$lang     = I18n::lang();
 			$old_lang = ( $lang == 1 ) ? 'hu' : 'en';
@@ -731,12 +731,12 @@ class Controller_Admin_Orders extends Controller_Admin {
 			} elseif ( $order->package->term == 3 ) {
 				$cod = $cost->cost * 6;
 			}
-			$o                     = ORM::factory( 'Order' )
-			                            ->where( 'invoice_num', '<>', '' )
-			                            ->order_by( 'invoice_num', 'DESC' )
-			                            ->find();
-			if($order->invoice_num==''){
-				$order->invoice_num    = $o->invoice_num + 1;
+			$o = ORM::factory( 'Order' )
+			        ->where( 'invoice_num', '<>', '' )
+			        ->order_by( 'invoice_num', 'DESC' )
+			        ->find();
+			if ( $order->invoice_num == '' ) {
+				$order->invoice_num = $o->invoice_num + 1;
 			}
 			$order->date_purchased = date( 'Y-m-d H:i:s' );
 			$order->save();

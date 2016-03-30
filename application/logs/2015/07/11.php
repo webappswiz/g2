@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+<?php defined( 'SYSPATH' ) OR die( 'No direct script access.' ); ?>
 
 2015-07-11 12:53:12 --- EMERGENCY: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH/classes/Controller/Admin/Orders.php [ 210 ] in /home2/goodieb1/public_html/application/classes/Controller/Admin/Orders.php:210
 2015-07-11 12:53:12 --- DEBUG: #0 /home2/goodieb1/public_html/application/classes/Controller/Admin/Orders.php(210): Kohana_Core::error_handler(8, 'Undefined offse...', '/home2/goodieb1...', 210, Array)
