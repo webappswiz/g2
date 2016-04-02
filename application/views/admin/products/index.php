@@ -10,6 +10,7 @@ if ( count( $products ) > 0 ) {
 			<th>Package name</th>
 			<th>Package price</th>
 			<th>Enabled</th>
+			<th>Category</th>
 			<th></th>
 		</tr>
 		</thead>
@@ -19,10 +20,12 @@ if ( count( $products ) > 0 ) {
 		foreach ( $products as $package ) {
 			echo '<tr>';
 			echo '<td>' . $i . '</td>';
-			echo '<td>' . $package->package_name . '</td>';
+			echo '<td>' . $package->product_name . '</td>';
 			echo '<td>' . $package->price . '</td>';
-			echo '<td>' . $package->enabled . '</td>';
-			echo '<td><a href="/admin/packages/edit/' . $package->id . '" class="btn btn-primary">Edit</a> ';
+			echo '<td>' . $package->status . '</td>';
+			$cat = ORM::factory('Categories',$package->product_cat);
+			echo '<td>' . $cat->cat_name . '</td>';
+			echo '<td><a href="/admin/products/edit/' . $package->id . '" class="btn btn-primary">Edit</a> ';
 			echo '</td>';
 			echo '</tr>';
 			$i ++;

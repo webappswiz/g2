@@ -11,6 +11,7 @@ class Controller_Admin_Products extends Controller_Admin {
 
 	protected function find_model() {
 		$this->model = ORM::factory( 'Products', (int) $this->request->param( 'id' ) );
+		$this->categories = ORM::factory( 'Categories' )->find_all();
 		if ( ! $this->model->loaded() ) {
 			throw new Kohana_HTTP_Exception_404;
 		}
@@ -31,7 +32,8 @@ class Controller_Admin_Products extends Controller_Admin {
 
 	public function action_add() {
 		$this->set_filename( 'admin/products/form' );
-		$this->model = ORM::factory( 'Packages' );
+		$this->model = ORM::factory( 'Products' );
+
 		if ( ! $this->is_post() ) {
 			return;
 		}
@@ -45,16 +47,18 @@ class Controller_Admin_Products extends Controller_Admin {
 		} else {
 			$this->model = ORM::factory( 'Products' );
 		}
-		$this->model->package_name   = $_REQUEST['package_name'];
+		$this->model->product_name   = $_REQUEST['product_name'];
+		$this->model->product_subtitle   = $_REQUEST['product_subtitle'];
 		$this->model->price          = $_REQUEST['package_price'];
 		$this->model->product_number = $_REQUEST['package_code'];
-		$this->model->type           = $_REQUEST['type'];
-		$this->model->term           = $_REQUEST['term'];
-		$this->model->description    = $_REQUEST['description'];
+		$this->model->product_description    = $_REQUEST['product_description'];
+		$this->model->product_about    = $_REQUEST['product_about'];
+		$this->model->product_composition    = $_REQUEST['product_composition'];
+		$this->model->product_cat = $_REQUEST['product_cat'];
 		if ( isset( $_REQUEST['package_enabled'] ) ) {
-			$this->model->enabled = 1;
+			$this->model->status = 1;
 		} else {
-			$this->model->enabled = 0;
+			$this->model->status = 0;
 		}
 		$this->model->save();
 		$this->redirect( '/admin/products/' );
