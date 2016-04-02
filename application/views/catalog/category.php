@@ -27,30 +27,6 @@
 							<input type="text" id="amount-2" readonly>
 						</div>
 					</div>
-					<div class="category-chekbox"><span class="filter-block">Product category:</span>
-						<ul class="text-gray">
-							<li>
-								<input id="category-1" type="checkbox" name="category-1" value="1">
-								<label for="category-1" class="gray-box__green-check">Smart Goodiebox</label>
-							</li>
-							<li>
-								<input id="category-2" type="checkbox" name="category-2" value="2">
-								<label for="category-2" class="gray-box__green-check">Plus Goodiebox </label>
-							</li>
-							<li>
-								<input id="category-3" type="checkbox" name="category-3" value="3">
-								<label for="category-3" class="gray-box__green-check">Toys</label>
-							</li>
-							<li>
-								<input id="category-4" type="checkbox" name="category-4" value="4">
-								<label for="category-4" class="gray-box__green-check">Snacks</label>
-							</li>
-							<li>
-								<input id="category-5" type="checkbox" name="category-5" value="5">
-								<label for="category-5" class="gray-box__green-check">Chews</label>
-							</li>
-						</ul>
-					</div>
 					<div class="slide-filter age"><span class="filter-block">Age:</span>
 
 						<div id="slider-range-max-1"></div>
@@ -74,6 +50,7 @@
 					<a class="btn large solid gray">SAVE</a>
 				</form>
 
+
 				<?php if ( isset( $_SESSION['cart'] ) && count( $_SESSION['cart'] ) > 0 ): ?>
 					<div class="cart-box">
 						<!-- Cart ========-->
@@ -87,15 +64,15 @@
 							?>
 							<div id="item-id" class="cart-item">
 								<div class="row"><img
-											src="<?php echo URL::base( true, false ); ?>assets/img/filter-cart-thumb-1.jpg"
-											class="thumbnail"><a href="#"><?php echo $product_info->product_name; ?></a>
+										src="<?php echo URL::base( true, false ); ?>assets/img/filter-cart-thumb-1.jpg"
+										class="thumbnail"><a href="#"><?php echo $product_info->product_name; ?></a>
 								</div>
 								<div class="row">
 									<form action="#" method="POST"><span class="btn-minus">-</span>
 										<input type="text" name="quantity" value="<?php echo $cart_item; ?>"
 										       readonly><span
-												class="btn-plus">+</span><span
-												class="item-total-ammount"><?php echo $subtotal; ?></span>
+											class="btn-plus">+</span><span
+											class="item-total-ammount"><?php echo $subtotal; ?></span>
 									</form>
 								</div>
 								<div class="row"><a href="#" class="del">Delete</a></div>
@@ -109,46 +86,48 @@
 					</div>
 				<?php endif; ?>
 
+
 			</aside>
 			<!-- Content ========================================-->
 			<div class="col-9">
 				<div id="slider_catalog"><img
 						src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg"
 						class="responsive"></div>
-				<?php foreach ( $categories as $category ): ?>
-					<div class="category-box">
-						<div class="category-title"><a
-								href="<?php echo URL::base( true, false ); ?>catalog/category/<?php echo $category->id ?>"><?php echo $category->cat_name; ?></><a
-								href="#">SEE MORE</a></div>
-						<div class="product-line">
-							<?php
-							$products = $category->products->order_by( 'id', 'DESC' )->limit( 3 )->find_all();
-							if ( count( $products ) > 0 ):
-								?>
-								<ul>
-									<?php foreach ( $products as $product ): ?>
-										<li>
-											<div class="item product-preview">
-												<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><img
-													src="<?php echo URL::base( true, false ); ?>assets/img/product-img-4.jpg"></a>
 
-												<div class="row">
-													<h2><a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><?php echo $product->product_name ?></a></h2><span
-														class="ammount"><?php echo $product->price ?></span>
+				<div class="category-box">
+					<div class="category-title"><?php echo $category->cat_name; ?></div>
+					<div class="product-line">
+						<?php
+						$products = $category->products->order_by( 'id', 'DESC' )->find_all();
+						if ( count( $products ) > 0 ):
+							?>
+							<ul>
+								<?php foreach ( $products as $product ): ?>
+									<li>
+										<div class="item product-preview">
+											<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>">
+												<img
+													src="<?php echo URL::base( true, false ); ?>assets/img/product-img-4.jpg">
+											</a>
 
-													<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>" class="btn solid pink">BUY NOW</a>
+											<div class="row">
+												<h2>
+													<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><?php echo $product->product_name ?></a>
+												</h2><span
+													class="ammount"><?php echo $product->price ?></span>
 
-												</div>
+												<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"
+												   class="btn solid pink">BUY NOW</a>
 											</div>
-										</li>
-									<?php endforeach; ?>
-								</ul>
-							<?php else: ?>
-								<h3>No products in this category yet</h3>
-							<?php endif; ?>
-						</div>
+										</div>
+									</li>
+								<?php endforeach; ?>
+							</ul>
+						<?php else: ?>
+							<h3>No products in this category yet</h3>
+						<?php endif; ?>
 					</div>
-				<?php endforeach; ?>
+				</div>
 			</div>
 		</div>
 	</div>

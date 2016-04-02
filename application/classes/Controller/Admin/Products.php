@@ -33,7 +33,7 @@ class Controller_Admin_Products extends Controller_Admin {
 	public function action_add() {
 		$this->set_filename( 'admin/products/form' );
 		$this->model = ORM::factory( 'Products' );
-
+		$this->categories = ORM::factory( 'Categories' )->find_all();
 		if ( ! $this->is_post() ) {
 			return;
 		}

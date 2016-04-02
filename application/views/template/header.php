@@ -209,8 +209,11 @@ $time       = explode( ':', $date_array[1] );
 						   target="blank"><i class="fa fa-instagram"></i></a>
 					</div>
 				</div>
+				<?php
+				$session = Session::instance();
+				?>
 				<a href="<?php echo URL::base( true, false ) . 'cart' ?>">
-					<div class="cart-holder col-4"><span class="cart-count">0</span></div>
+					<div class="cart-holder col-4"><span class="cart-count"><?php echo (isset($_SESSION['cart']))?count($_SESSION['cart']):0;?></span></div>
 				</a>
 			</div>
 		</div>

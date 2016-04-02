@@ -21,18 +21,20 @@ return array(
 			'jquery.easytabs',
 			'lightbox.min',
 			'main',
-			'scripts',
+
 			'jquery.bxslider.min',
-			'bootstrap-datepicker'
+			'bootstrap-datepicker',
+				'scripts',
 		),
 		'css' => array(
-			'style'                                                                      => null,
+
 			'jquery-ui.min'                                                              => null,
 			'jquery-ui.structure.min'                                                    => null,
 			'jquery-ui.theme.min'                                                        => null,
 			'lightbox'                                                                   => null,
 			'jquery.bxslider'                                                            => null,
-			'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' => null
+			'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' => null,
+				'style'                                                                      => null,
 		),
 	),
 );

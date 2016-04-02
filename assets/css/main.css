@@ -159,7 +159,11 @@ section {
 
 /*-- BLOCLS --*/
 .product-preview {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 250px; }
   .product-preview img {
@@ -273,29 +277,51 @@ section {
 /*-- END BUTTONS #########################################*/
 /*-- FLEX SETS ###########################################*/
 .flx {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 
 .flx-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 .flx-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row; }
 
 .flx-end {
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
   justify-content: flex-end; }
 
 .flx-center {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
   align-items: center; }
 
 .flx-justify {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .flx-around {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
   justify-content: space-around; }
 
 .flx-start-center {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
   align-items: center; }
 
 /*-- END FLEX SETS #######################################*/
@@ -308,6 +334,9 @@ section {
   .header-mainbox .row {
     height: 100%; }
   .header-mainbox .content-box {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center; }
     .header-mainbox .content-box .nav-holder .nav-toggle {
       display: none;
@@ -354,6 +383,8 @@ section {
 
 .main-footer .footer-bottom {
   background-color: #f3f3f3;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 2em 0; }
   .main-footer .footer-bottom .fa {
@@ -384,8 +415,12 @@ section {
 
 /*-- Pagination --*/
 .pagination {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin: 4em 0;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center; }
   .pagination a {
     display: inline-block;
@@ -594,6 +629,8 @@ section {
     font-size: 14px; }
   .catalog-aside .slide-filter .row {
     margin-bottom: 1em;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
   .catalog-aside .slide-filter input[type="text"] {
     width: 108px;
@@ -639,7 +676,11 @@ section {
   width: 100%;
   padding: 1em;
   border-radius: 5px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 3em; }
   .category-box .category-title a {
@@ -651,8 +692,14 @@ section {
 .category-box .product-line {
   margin-bottom: 3em; }
   .category-box .product-line ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between; }
 
 #slider_catalog {
@@ -670,6 +717,8 @@ section {
     margin-bottom: 1em;
     border-bottom: 1px solid #b1b1b1; }
     .cart-box .cart-item .row {
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
       padding: 7px 0; }
     .cart-box .cart-item img.thumbnail {
@@ -752,6 +801,8 @@ section {
   /* Product detail Tabs*/
   /* Comments */ }
   .product-detail .main {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     height: 395px;
     margin-bottom: 1em; }
@@ -763,6 +814,8 @@ section {
       height: 315px;
       object-fit: cover; }
     .product-detail .col-left .thumb-line {
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
       overflow: hidden;
       margin-top: 0.5em; }
@@ -902,6 +955,8 @@ section {
     .product-detail #tabs .ui-tabs-panel {
       padding: 1em 0; }
   .product-detail .comment-box .comment-item {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     margin: 1em 0; }
     .product-detail .comment-box .comment-item .container:last-of-type {
