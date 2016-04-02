@@ -88,7 +88,7 @@
 							<div id="item-id" class="cart-item">
 								<div class="row"><img
 											src="<?php echo URL::base( true, false ); ?>assets/img/filter-cart-thumb-1.jpg"
-											class="thumbnail"><a href="#"><?php echo $product_info->product_name; ?></a>
+											class="thumbnail"><a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product_info->id ?>"><?php echo $product_info->product_name; ?></a>
 								</div>
 								<div class="row">
 									<form action="#" method="POST"><span class="btn-minus">-</span>
@@ -98,7 +98,7 @@
 												class="item-total-ammount"><?php echo $subtotal; ?></span>
 									</form>
 								</div>
-								<div class="row"><a href="#" class="del">Delete</a></div>
+								<div class="row"><a href="<?php echo URL::base( true, false ); ?>cart/delete/<?php echo $product_info->id ?>" class="del">Delete</a></div>
 							</div>
 						<?php endforeach; ?>
 						<div class="cart-total">

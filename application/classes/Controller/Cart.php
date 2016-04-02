@@ -35,7 +35,14 @@ class Controller_Cart extends Controller_Core {
 	}
 
 	public function action_delete(){
-
+		$id = (int) $this->request->param( 'id' );
+		if(isset($_SESSION['cart'][$id])){
+			unset($_SESSION['cart'][$id]);
+			Flash::set( 'notice', __( 'Your cart has been successfully update' ) );
+		} else {
+			Flash::set( 'alert', __( 'Some internal error occurred.' ) );
+		}
+		$this->redirect($this->request->referrer());
 	}
 
 }

@@ -282,6 +282,46 @@ $time       = explode( ':', $date_array[1] );
 	<!-- end .row.flx-center.bgc-yellow_light-->
 </section>
 
+<!-- Shop Carusel =================================-->
+<section>
+	<div class="row flx-center bgc-pink_light box-shadow">
+		<div class="content-box shop-carusel">
+			<h1 class="text-center text-pink">Shop</h1>
+
+			<h3 class="text-center">Every month, 3-6 different items are in the box (food, snacks, toys, accessories,
+				grooming items, vitamins)</h3>
+
+			<div id="carusel-1" class="carusel-container">
+				<div class="left-btn"></div>
+				<div class="viewport">
+					<div id="carusel-line">
+						<?php
+						$products = ORM::factory( 'Products' )->order_by( 'id', 'DESC' )->limit( 6 )->find_all();
+						foreach ( $products as $product ):
+							?>
+							<div class="item product-preview"><img
+									src="<?= URL::base( true, false ) ?>assets/img/product-img-1.jpg">
+								<div class="row">
+									<h2><?php echo $product->product_name; ?></h2><span
+										class="ammount"><?php echo $product->price; ?></span>
+									<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"
+									   class="btn solid pink">BUY NOW</a>
+								</div>
+							</div>
+						<?php endforeach; ?>
+					</div>
+
+				</div>
+				<!-- end .viewport-->
+				<div class="right-btn"></div>
+			</div>
+			<!-- end #carusel-1.carusel-container-->
+		</div>
+		<!-- end .content-box.shop-carusel-->
+	</div>
+	<!-- end .row.flx-center.bgc-pink_light-->
+</section>
+
 <!-- Photo ========================================-->
 <section>
 	<div class="row flx-center bgc-yellow_light">

@@ -66,165 +66,122 @@
 		}, "Custom message for this rule");
 	});
 </script>
-<div class="clear"></div>
-<section class="process-1" class="rounded">
-	<img src="<?= URL::base( true, false ) ?>assets/img/shop.png" class="badge">
 
-	<h1><?php echo __( 'Rendelés' ); ?></h1>
-
-	<div class="process-circles">
-		<ul>
-			<li>
-				<div class="circle">1</div>
-			</li>
-			<li>
-				<div class="circle-line c-grey"> . . . . . . . . . .</div>
-			</li>
-			<li>
-				<div class="circle c-grey">2</div>
-			</li>
-			<li>
-				<div class="circle-line c-grey">. . . . . . . . . .</div>
-			</li>
-			<li>
-				<div class="circle c-grey">3</div>
-			</li>
-		</ul>
-
+<!-- Page Title ======================================-->
+<section>
+	<div class="row flx-center">
+		<div class="content-box page-title">
+			<h1 class="text-center">My Cart</h1>
+		</div>
+		<!-- end .content-box-->
 	</div>
-	<div class="clear"></div>
-	<h2 style="margin-bottom: 40px;"><?php echo __( 'Válaszd ki </br>mekkora a kutyus!*' ); ?></h2>
-
-	<ul class="claim-option-list">
-		<li><img src="<?= URL::base( true, false ) ?>assets/img/claim-dogs1.jpg"><input style="cursor: pointer"
-		                                                                                type="radio" id="size"
-		                                                                                name="group1" value="1" class=""
-		                                                                                checked><?php echo __( 'Icipici' ); ?>
-			<br/><br/> max 9kg
-		</li>
-		<li><img src="<?= URL::base( true, false ) ?>assets/img/claim-dogs2.jpg"><input style="cursor: pointer"
-		                                                                                type="radio" id="size"
-		                                                                                name="group1" value="2"
-		                                                                                class=""><?php echo __( 'Éppen jó' ); ?>
-			<br/><br/> 10-24kg
-		</li>
-		<li><img src="<?= URL::base( true, false ) ?>assets/img/claim-dogs3.jpg"><input style="cursor: pointer"
-		                                                                                type="radio" id="size"
-		                                                                                name="group1" value="3"
-		                                                                                class=""><?php echo __( 'Igazi óriás' ); ?>
-			<br/><br/> 25kg+
-		</li>
-	</ul>
-	<div class="clear"></div>
-
-	<h2><?php echo __( 'Kinek veszed a Goodiebox-ot?' ); ?></h2>
-
-	<div class="drop-down-form">
-		<div>
-			<div class="content">
-				<div class="claim-form2">
-					<form class="process-form" name="order" method="POST">
-						<label for=""><?php echo __( 'E-mail címed*' ); ?></label>
-						<input type="text" name="email" class="rounded email"
-						       required <?= ( $current_user ) ? 'value="' . $current_user->email . '"' : ""; ?> >
-
-						<label for=""><?php echo __( 'Kutyus neve*' ); ?></label>
-						<input type="text" name="puppy_name" class="rounded" id="" required>
-
-						<div class="radio-list">
-							<label for="last-name"><?php echo __( 'Kutyus neme*' ); ?></label>
-							<input style="cursor: pointer" type="radio" name="gender" value="0" class=""
-							       checked><?php echo __( 'Lány' ); ?> <input style="cursor: pointer" name="gender"
-							                                                  value="1" type="radio"
-							                                                  class=""><?php echo __( 'Fiú' ); ?>
-						</div>
-						<?php
-						for ( $i = 1994; $i <= date( 'Y' ); $i ++ ) {
-							$years[ $i ] = $i;
-						}
-
-						for ( $i = 1; $i <= 12; $i ++ ) {
-							$months[ $i ] = $i;
-						}
-						?>
-						<label for="last-name"><?php echo __( 'Kutyus születésnapja*' ); ?></label>
-
-						<div class="text-shor1 fl" style="margin-right: 10px">
-							<?php
-							echo Form::select( 'years', $years, '', array(
-									'required',
-									'class' => 'rounded option-name'
-								) ) . ' ';
-							?>
-						</div>
-
-						<div class="text-shor1 fl">
-							<?php
-							echo Form::select( 'months', $months, '', array(
-								'required',
-								'class' => 'rounded option-name'
-							) );
-							?>
-						</div>
-						<div class="clear"></div>
-						<div class="radio-list">
-							<label for="Igen"><?php echo __( 'Allergiás a kutyusod?*' ); ?></label>
-							<input style="cursor: pointer" type="radio" class="alerg_yes" value="1"
-							       name="alerg"><?php echo __( 'Igen' ); ?> <input style="cursor: pointer" type="radio"
-							                                                       value="0" name="alerg"
-							                                                       class="alerg_no"
-							                                                       checked><?php echo __( 'Nem' ); ?>
-						</div>
-
-						<label style="display:none" for="last-name"
-						       id="al_label"><?php echo __( 'Ha igen, mire?' ); ?></label>
-						<input style="display:none" type="text" name="alerg_descr" class="rounded" id="alerg_descr">
-
-						<p style="padding-top:20px;"><?php echo __( '*Kötelező adatok' ); ?></p>
-						<input type="hidden" name="order1" value="1">
-						<input type="hidden" name="selected_size" class="selected_size">
-					</form>
-					<script>
-						$(".process-form").validate({
-							rules: {
-								puppy_name: {
-									required: true,
-								},
-								alerg_descr: {
-									required: true,
-								},
-								email: {
-									myCustomRule: true
-								}
-							},
-							messages: {
-								puppy_name: "<?php echo __('ez az információ szükséges'); ?>",
-								alerg_descr: "<?php echo __('ez az információ szükséges'); ?>",
-								email: "<?php echo __('Helytelen e-mail cím!'); ?>"
-							}
-						});
-					</script>
+	<!-- end .row.flx-center-->
+</section>
+<div class="row flx-center">
+	<div class="content-box my-cart">
+		<section>
+			<div class="row flx-center step-counter">
+				<div class="step-one active">
+					<h2>Puppies detail</h2>
+				</div>
+				<div class="step-two">
+					<h2>Goodiebox type</h2>
 				</div>
 			</div>
-		</div>
-		<script>
-			$("#collapse-content").collapse({
-				accordion: true,
-				open: function () {
-					this.addClass("open");
-					this.css({height: this.children().outerHeight()});
-				},
-				close: function () {
-					this.css({height: "0px"});
-					this.removeClass("open");
-				}
-			});
-		</script>
-		<div class="claim-form-btn">
-			<input type="submit" name="tovabb" value="<?php echo __( 'TOVÁBB' ); ?>" id="submit_form"
-			       class="dark-btn claim-btn rounded" style="margin-right:20px;">
-		</div>
-		<div class="clear"></div>
+		</section>
+		<section id="step-one">
+			<form action="#" mathod="POST">
+				<!-- Select size =====================================-->
+				<h2 class="text-center">Tell us how big your puppy is!*</h2>
 
+				<div class="row flx-around select-size">
+					<div class="item-box text-center">
+						<input id="size_1" type="radio" name="group1" value="1">
+
+						<div class="size-img-1"></div>
+						<p class="text-bold">Tiny</p><span>MAX 9KG</span>
+						<label for="size_1" class="radio_green s1"></label>
+					</div>
+					<div class="item-box text-center">
+						<input id="size_2" type="radio" name="group1" value="2" checked>
+
+						<div class="size-img-2"></div>
+						<p class="text-bold">Just Right</p><span>MAX 10-24KG</span>
+						<label for="size_2" class="radio_green s2"></label>
+					</div>
+					<div class="item-box text-center">
+						<input id="size_3" type="radio" name="group1" value="3">
+
+						<div class="size-img-3"></div>
+						<p class="text-bold">Real Giant</p><span>MAX 25+KG</span>
+						<label for="size_3" class="radio_green s3"></label>
+					</div>
+				</div>
+				<!-- Registrtion Form ================================-->
+				<h2 class="text-center">For who are you buying Goodiebox?</h2>
+
+				<div class="row flx-center registration_pre">
+					<div class="container flx-column">
+						<label>Your e-mail adress*</label>
+						<input type="text" name="email" required>
+						<label>Puppy's name</label>
+						<input type="text" name="puppy_name" required>
+
+						<div class="gender-select"><span class="toggle">Gender</span>
+
+							<div class="drop-box">
+								<input id="gender_male" type="radio" name="gender" value="male">
+								<label for="gender_male">Male</label>
+								<input id="gender_female" type="radio" name="gender" value="Female">
+								<label for="gender_female">Female</label>
+							</div>
+						</div>
+						<div class="date-holder"><input type="text" id="datepicker"></div>
+					</div>
+				</div>
+				<div class="alergi-select">
+					<p class="text-center">Is your puppy allergic? (You need to fill these boxes!)</p>
+
+					<p class="text-center">
+						<input id="alerg_yes" type="radio" name="allergic" value="true" checked>
+						<label for="alerg_yes" class="radio_green a1">Yes</label>
+						<input id="alerg_no" type="radio" name="allergic" value="false">
+						<label for="alerg_no" class="radio_green a2">No</label>
+					</p>
+				</div>
+				<!-- Box select ======================================-->
+				<h2 class="text-center">Is this the box you really want?</h2>
+
+				<div class="row flx-around box-select">
+					<div class="item-box"><img src="<?php echo URL::base( true, false ); ?>assets/img/box-plus.jpg" class="responsive">
+						<input id="box-plus" type="radio" name="box-type" value="box-plus" checked>
+						<label for="box-plus" class="radio_green b1">Goodiebox Plus</label>
+
+						<p>Every month, 4-6 carefully selected items (food, snacks, toys, accessories, grooming items,
+							vitamins) are in the box.</p><span class="ammount">599</span>
+					</div>
+					<div class="item-box"><img src="<?php echo URL::base( true, false ); ?>assets/img/box-smart.jpg" class="responsive">
+						<input id="box-smart" type="radio" name="box-type" value="box-smart">
+						<label for="box-smart" class="radio_green b2">Goodiebox Plus</label>
+
+						<p>Every month, 4-6 carefully selected items (food, snacks, toys, accessories, grooming items,
+							vitamins) are in the box.</p><span class="ammount">599</span>
+					</div>
+				</div>
+				<div class="row flx-center resume">
+					<div class="container text-center">
+						<p>You have chosen <span class="show-selected-box text-pink">Goodiebox Smart!</span> If your
+							puppy likes to play or snack, this is just perfect! Contents: 3-5 items (depending on the
+							value)! Here, you will find tasty snacks and fun toys to keep your puppy busy for a while!
+						</p>
+
+						<p>You are just one step away from finishing your order! If this is your choice, click "Next"
+							and give your billing and delivery details!</p>
+					</div>
+				</div>
+				<div class="action text-center"><a id="order-next" href="#" class="btn bold solid green">NEXT <i
+							class="fa fa-angle-right"></i></a></div>
+			</form>
+		</section>
 	</div>
-</section>
+</div>
