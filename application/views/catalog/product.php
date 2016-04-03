@@ -29,13 +29,13 @@
 						</div>
 					</header>
 					<!-- end header-->
-					<!--<div class="row meta">
-						<div class="row compare-holder">
-							<form action="" method="POST">
-								<input id="compare" type="checkbox" name="compare">
-								<label for="compare" class="comp-label">Add to compare</label>
-							</form>
-						</div> -->
+					<div class="row meta">
+						<!--	<div class="row compare-holder">
+								<form action="" method="POST">
+									<input id="compare" type="checkbox" name="compare">
+									<label for="compare" class="comp-label">Add to compare</label>
+								</form>
+							</div> -->
 						<div class="row rate-holder"><span class="star solid"></span><span class="star solid"></span><span class="star solid"></span><span class="star solid"></span><span class="star"></span><span>(6 reviews)</span></div>
 					</div>
 					<!-- end .row.meta-->
