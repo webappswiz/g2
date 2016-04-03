@@ -25,17 +25,17 @@
 								<input type="hidden" name="product_qty" value="1">
 								<input type="submit" name="add_to_cart" value="add to cart" class="btn bold solid green">
 							</form>
-							<!--<div class="row flx-justify"><a id="hold-over" href="#" class="link blue lined">Hold over</a><a id="follow-price" href="#" class="link blue lined">Folow the price</a></div>-->
+							<div class="row flx-justify"><a id="hold-over" href="#" class="link blue lined">Hold over</a><a id="follow-price" href="#" class="link blue lined">Folow the price</a></div>
 						</div>
 					</header>
 					<!-- end header-->
 					<div class="row meta">
-					<!--	<div class="row compare-holder">
+						<div class="row compare-holder">
 							<form action="" method="POST">
 								<input id="compare" type="checkbox" name="compare">
 								<label for="compare" class="comp-label">Add to compare</label>
 							</form>
-						</div> -->
+						</div> 
 						<div class="row rate-holder"><span class="star solid"></span><span class="star solid"></span><span class="star solid"></span><span class="star solid"></span><span class="star"></span><span>(6 reviews)</span></div>
 					</div>
 					<!-- end .row.meta-->

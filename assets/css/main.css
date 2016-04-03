@@ -180,7 +180,7 @@ section {
     width: 50%;
     line-height: 36px; }
   .product-preview .ammount:after {
-    content: "$"; }
+    content: " HUF"; }
   .product-preview .btn {
     width: 50%;
     margin: 0; }
@@ -193,7 +193,7 @@ section {
   line-height: 36px; }
 
 .ammount:after {
-  content: " $"; }
+  content: " HUF"; }
 
 .box-shadow {
   box-shadow: 0px 3px 0px 0px rgba(232, 232, 232, 0.6);
@@ -773,11 +773,11 @@ section {
       vertical-align: middle;
       margin: 0 1em; }
     .cart-box .cart-item .item-total-ammount:after {
-      content: ' $'; }
+      content: ' HUF'; }
   .cart-box .cart-total h2 span {
     padding-left: 1em; }
   .cart-box .cart-total h2 span:after {
-    content: "$"; }
+    content: " HUF"; }
   .cart-box .cart-total .btn.large {
     padding: 0.8em 0; }
 

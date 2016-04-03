@@ -226,6 +226,7 @@ class Controller_Order extends Controller_Core {
 	}
 
 	public function action_index() {
+
 		$options = ORM::factory( 'Options', 1 );
 		$status  = $options->status;
 		if ( $status != 1 ) {
@@ -237,7 +238,7 @@ class Controller_Order extends Controller_Core {
 			$this->redirect( '/' );
 		}
 		$session = Session::instance()->as_array();
-		$this->set_title( 'Order - Step 1' );
+		$this->set_title( 'Order - Checkout' );
 		if ( isset( $_GET['smart'] ) ) {
 			Session::instance()->set( 'package', 'smart' );
 		}
