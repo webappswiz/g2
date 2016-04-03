@@ -43,10 +43,8 @@
 			$('form', div).submit();
 		});
 		$('.selected_size').val($('input:radio[id^="size"]:checked').val());
-		console.log($('input:radio[id^="size"]:checked').val());
 		$('input:radio[id^="size"]').on('click', function () {
 			$('.selected_size').val($(this).val());
-			console.log($(this).val());
 		});
 		$('.email').on('blur', function () {
 			$.post('/api/check', {'email': $(this).val()}).done(function (data) {
@@ -129,7 +127,7 @@
 			</div>
 		</section>
 		<section id="step-one">
-			<form action="" mathod="POST">
+			<form method="POST" class="single-order">
 				<!-- Select size =====================================-->
 				<h2 class="text-center"><?php echo __( 'Válaszd ki mekkora a kutyus!*' ); ?></h2>
 
@@ -175,7 +173,7 @@
 								<label for="gender_female"><?php echo __( 'Fiú' ); ?></label>
 							</div>
 						</div>
-						<div class="date-holder"><input type="text" id="datepicker"></div>
+						<div class="date-holder"><input type="text" id="datepicker" name="dateofb"></div>
 					</div>
 				</div>
 				<div class="alergi-select">
@@ -277,14 +275,36 @@
 
 					</div>
 				</div>
-			</form>
-			<form method="POST">
 				<div class="action text-center">
 					<input type="submit" name="tovabb" id="next" value="<?php echo __( 'TOVÁBB' ); ?>" class="btn bold solid green">
 				</div>
-				<input type="hidden" name="order" value="1">
+				<input type="hidden" name="order1" value="1">
 				<input type="hidden" name="selected_box" id="selected_box" value="">
+				<input type="hidden" name="selected_size" class="selected_size">
 			</form>
+			<script>
+				$(".single-order").validate({
+					rules: {
+						puppy_name: {
+							required: true,
+						},
+						alerg_descr: {
+							required: true,
+						},
+						dateofb:{
+							required: true,
+						},
+						email: {
+							myCustomRule: true
+						}
+					},
+					messages: {
+						puppy_name: "<?php echo __('ez az információ szükséges'); ?>",
+						alerg_descr: "<?php echo __('ez az információ szükséges'); ?>",
+						email: "<?php echo __('Helytelen e-mail cím!'); ?>"
+					}
+				});
+			</script>
 		</section>
 	</div>
 </div>

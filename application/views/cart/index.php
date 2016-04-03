@@ -47,7 +47,7 @@
 				<!-- end .row.flx-end.cart-total-->
 			</div>
 		<?php else: ?>
-			<h2>Cart is empty</h2>
+			<h2 class="text-center">Cart is empty</h2>
 		<?php endif; ?>
 		<!-- end .cart-box.cart-page-->
 	</div>

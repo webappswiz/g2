@@ -213,7 +213,13 @@ $time       = explode( ':', $date_array[1] );
 				$session = Session::instance();
 				?>
 				<a href="<?php echo URL::base( true, false ) . 'cart' ?>">
-					<div class="cart-holder col-4"><span class="cart-count"><?php echo (isset($_SESSION['cart']))?count($_SESSION['cart']):0;?></span></div>
+					<div class="cart-holder col-4">
+						<?php if(isset($_SESSION['cart']) && count($_SESSION['cart'])>0):?>
+						<span class="cart-count">
+							<?php echo count($_SESSION['cart']);?>
+						</span>
+						<?php endif;?>
+					</div>
 				</a>
 			</div>
 		</div>

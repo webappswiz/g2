@@ -35,7 +35,7 @@
 								<input id="compare" type="checkbox" name="compare">
 								<label for="compare" class="comp-label">Add to compare</label>
 							</form>
-						</div> 
+						</div>
 						<div class="row rate-holder"><span class="star solid"></span><span class="star solid"></span><span class="star solid"></span><span class="star solid"></span><span class="star"></span><span>(6 reviews)</span></div>
 					</div>
 					<!-- end .row.meta-->

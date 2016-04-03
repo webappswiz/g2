@@ -162,6 +162,8 @@ $(document).ready(function() {
       }
     });
 
+
+
 // Swich to Second Step Order
   $('#order-next').click(function(){
     $('#step-one').animate({'height' : '0', 'width' : '0', 'opacity' : '0'});

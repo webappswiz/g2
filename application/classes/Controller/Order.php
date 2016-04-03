@@ -225,56 +225,6 @@ class Controller_Order extends Controller_Core {
 		}
 	}
 
-	public function action_index() {
-
-		$options = ORM::factory( 'Options', 1 );
-		$status  = $options->status;
-		if ( $status != 1 ) {
-			$this->redirect( '/' );
-		}
-		if ( $options->current_smart >= $options->smart && $options->current_plus >= $options->plus ) {
-			$options->status = 0;
-			$options->save();
-			$this->redirect( '/' );
-		}
-		$session = Session::instance()->as_array();
-		$this->set_title( 'Order - Checkout' );
-		if ( isset( $_GET['smart'] ) ) {
-			Session::instance()->set( 'package', 'smart' );
-		}
-		if ( isset( $_GET['plus'] ) ) {
-			Session::instance()->set( 'package', 'plus' );
-		}
-		if ( isset( $_POST['order1'] ) || isset( $_POST['order2'] ) || isset( $_POST['order3'] ) ) {
-			Session::instance()->set( 'step1', $_POST );
-			$this->redirect( 'order/step2' );
-		} elseif ( isset( $this->current_user ) ) {
-			$this->redirect( '/user_account' );
-		}
-	}
-
-	public function action_step2() {
-		$options = ORM::factory( 'Options', 1 );
-		$status  = $options->status;
-		if ( $status != 1 ) {
-			$this->redirect( '/' );
-		}
-		if ( $options->current_smart >= $options->smart && $options->current_plus >= $options->plus ) {
-			$options->status = 0;
-			$options->save();
-			$this->redirect( '/' );
-		}
-		$session = Session::instance()->as_array();
-		$this->set_title( 'Order - Step 2' );
-		if ( isset( $_POST['order'] ) && isset( $session['step1'] ) ) {
-			Session::instance()->set( 'step2', $_POST );
-			$this->redirect( 'order/step3' );
-		}
-		if ( ! isset( $session['step1'] ) ) {
-			Flash::set( 'alert', 'Please fill the form' );
-			$this->redirect( 'order/index' );
-		}
-	}
 
 	private function register() {
 		if ( empty( $_POST['customer_password'] ) || $_POST['customer_password'] != $_POST['password_confirm'] ) {
@@ -647,113 +597,36 @@ class Controller_Order extends Controller_Core {
 		return $order;
 	}
 
-	private function shelter_order() {
-		$session         = Session::instance();
-		$step1           = $session->get( 'step1' );
-		$step2           = $session->get( 'step2' );
-		$global_discount = 0;
-		if ( $this->current_user ) {
-			$global_discount = ORM::factory( 'Discounts' )
-			                      ->where( 'user_id', '=', $this->current_user->id )
-			                      ->find();
-			if ( $global_discount->loaded() ) {
-				$g_discount = $global_discount->discount;
-			} else {
-				if ( isset( $_POST['invite_code'] ) ) {
-					$coupon = ORM::factory( 'Coupons' )
-					             ->where( 'coupon', '=', $_POST['invite_code'] )
-					             ->find();
-					if ( $coupon->loaded() ) {
-						$global_discount = 10;
-						$coupon->delete();
-					} else {
-						$g_discount = 0;
-					}
-				} else {
-					$g_discount = 0;
-				}
-			}
-			$invites        = ORM::factory( 'Invites' )
-			                     ->where( 'user_id', '=', $this->current_user->id )
-			                     ->and_where( 'is_used', '=', 0 )
-			                     ->and_where( 'is_paid', '=', 1 )
-			                     ->and_where( 'is_registered', '=', 1 )
-			                     ->find_all();
-			$inv_count      = $invites;
-			$this->discount = 0;
-			if ( count( $invites ) > 0 || $g_discount > 0 ) {
-				$this->discount = $this->price->price * ( ( count( $invites ) * 5 + $g_discount ) / 100 );
-			}
-			$this->append_js_var( 'discount', round( $this->discount ) );
-		} else {
-			$invites = 0;
-		}
+	public function action_index() {
 
-		$shelter = ORM::factory( 'ShelterDog' )
-		              ->where( 'shelter_id', '=', $step1['option-name'] )
-		              ->and_where( 'doggy_name', '=', $step1['doggy_name'] )
-		              ->and_where( 'doggy_gender', '=', $step1['gender'] )
-		              ->and_where( 'selected_size', '=', $step1['selected_size'] )
-		              ->find();
-		if ( ! $shelter->loaded() ) {
-			$shelter                = ORM::factory( 'ShelterDog' );
-			$shelter->selected_size = $step1['selected_size'];
-			$shelter->shelter_id    = $step1['option-name'];
-			$shelter->doggy_name    = $step1['doggy_name'];
-			$shelter->doggy_gender  = $step1['gender'];
-			$shelter->user_id       = $this->current_user->id;
-			$shelter->save();
+		$options = ORM::factory( 'Options', 1 );
+		$status  = $options->status;
+		if ( $status != 1 ) {
+			$this->redirect( '/' );
 		}
-		$s_order                     = ORM::factory( 'User_Shelter' );
-		$s_order->user_id            = $this->current_user->id;
-		$s_order->dog                = $shelter->id;
-		$s_order->selected_box       = $step2['selected_box'];
-		$s_order->delivery_address   = '';
-		$s_order->delivery_address2  = '';
-		$s_order->delivery_city      = '';
-		$s_order->delivery_postcode  = '';
-		$s_order->delivery_telephone = '';
-		$s_order->last_modified      = date( 'Y-m-d H:i:s' );
-		$s_order->date_purchased     = date( 'Y-m-d H:i:s' );
-		$s_order->save();
-		$order                     = ORM::factory( 'Order' );
-		$order->user_id            = $this->current_user->id;
-		$order->selected_box       = $step2['selected_box'];
-		$order->delivery_firstname = $this->current_user->customer_firstname;
-		$order->delivery_lastname  = $this->current_user->customer_lastname;
-		$order->delivery_address   = $this->current_user->customer_address;
-		$order->delivery_address2  = $this->current_user->customer_address2;
-		$order->delivery_city      = $this->current_user->customer_city;
-		$order->delivery_postcode  = $this->current_user->customer_zip;
-		$order->delivery_telephone = $this->current_user->customer_telephone;
-		$order->company_name       = $this->current_user->customer_company;
-		$order->tax_code           = $this->current_user->customer_taxcode;
-		$order->type               = 3;
-		$order->orders_status      = 1;
-		$order->shelter_order      = $s_order->id;
-		$order->last_modified      = date( 'Y-m-d H:i:s' );
-		$order->message            = $_POST['msg'];
-		$order->payment_status     = 0;
-		$order->date_purchased     = date( 'Y-m-d H:i:s' );
-		if ( $_POST['discount'] == 1 ) {
-			if ( count( $invites ) > 0 && empty( $step1['coupon_code'] ) ) {
-				$order->discount = 1;
-				$pkg             = ORM::factory( 'Packages', $step2['selected_box'] );
-				$discount        = ( $pkg->price * ( ( ( count( $invites ) * 5 ) + $g_discount ) / 100 ) );
-			} elseif ( $g_discount > 0 ) {
-				$order->discount = 1;
-				$pkg             = ORM::factory( 'Packages', $step2['selected_box'] );
-				$discount        = $pkg->price * ( $g_discount / 100 );
-			}
+		if ( $options->current_smart >= $options->smart && $options->current_plus >= $options->plus ) {
+			$options->status = 0;
+			$options->save();
+			$this->redirect( '/' );
 		}
-		$order->save();
-		$order->total_price = round( $order->package->price - $discount );
-		$order->save();
-
-		return $order;
+		$session = Session::instance()->as_array();
+		$this->set_title( 'Order - Checkout' );
+		if ( isset( $_GET['smart'] ) ) {
+			Session::instance()->set( 'package', 'smart' );
+		}
+		if ( isset( $_GET['plus'] ) ) {
+			Session::instance()->set( 'package', 'plus' );
+		}
+		if ( isset( $_POST['order1'] ) || isset( $_POST['order2'] ) || isset( $_POST['order3'] ) ) {
+			Session::instance()->set( 'step1', $_POST );
+			$this->redirect( 'order/step3' );
+		} elseif ( isset( $this->current_user ) ) {
+			$this->redirect( '/user_account' );
+		}
 	}
 
 	public function action_step3() {
+
 		$options = ORM::factory( 'Options', 1 );
 		$status  = $options->status;
 		if ( $status != 1 ) {
@@ -766,9 +639,8 @@ class Controller_Order extends Controller_Core {
 		}
 		$session = Session::instance();
 		$step1   = $session->get( 'step1' );
-		$step2   = $session->get( 'step2' );
-		$this->set_title( 'Order - Step 3' );
-		$this->price = ORM::factory( 'Packages', $step2['selected_box'] );
+		$this->set_title( 'Order - Checkout' );
+		$this->price = ORM::factory( 'Packages', $step1['selected_box'] );
 		$this->append_js_var( 'total_price', round( $this->price->price ) );
 		$global_discount = 0;
 		$g_discount      = 0;
