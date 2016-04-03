@@ -1,8 +1,8 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 
-		$('#selected_box').val($('input[type="radio"]:checked').val());
-		$('input:radio').on('click', function () {
+		$('#selected_box').val($('input:radio[name^="box"]:checked').val());
+		$('input:radio[name^="box"]').on('click', function () {
 			$('#selected_box').val($(this).val());
 		});
 		$('#next').on('click', function () {

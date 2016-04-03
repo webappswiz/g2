@@ -200,20 +200,38 @@ if ( isset( $session['step2'] ) ) {
 		<section id="step-two" style="display: block">
 			<div class="row flx-justify">
 				<aside class="order-detail">
+					<?php
+					$step1 = $session['step1'];
+					if ($step1['selected_size'] == 1)
+						$size = __('Icipici');
+					if ($step1['selected_size'] == 2)
+						$size = __('Éppen jó');
+					if ($step1['selected_size'] == 3)
+						$size = __('Igazi óriás');
+					$package = ORM::factory('Packages', $step1['selected_box']);
+					if ($package->term == 1) {
+						$term = '1';
+					} elseif ($package->term == 2) {
+						$term = '3';
+					} else {
+						$term = '6';
+					}
+					?>
 					<div class="cart-box">
 						<div class="cart-item">
-							<div class="row"><img src="assets/images/cart-img.jpg"></div>
-							<div class="row"><a href="#">Box_1 Goodiebox Plus</a></div>
-							<div class="row"><span>Big Dog</span></div>
-							<div class="row"><span>11 Month</span></div>
+							<div class="row"><img src="<?= URL::base( true, false ) ?>assets/img/cart-img.jpg"></div>
+							<div class="row"><a href="#"><?= $package->package_name ?> <?= $term ?> <?php echo __('hónapra'); ?></a></div>
+							<div class="row"><span><?php echo $size ?></span></div>
+							<div class="row"><span></span></div>
+							<div class="row"><span class="text-bold"><?= $price->price ?> HUF</div>
 							<div class="row"><a href="#" class="del">Delete</a></div>
 						</div>
 						<div class="shipping">
-							<div class="row"><span>Shipping</span></div>
-							<div class="row"><span class="text-bold">FREE</span></div>
+							<div class="row"><span><?php echo __('Házhozszállítás'); ?></span></div>
+							<div class="row"><span class="text-bold" id="ship"><?php echo __('Ingyenes'); ?></span></div>
 						</div>
 						<div class="cart-total">
-							<h2>Total<span>25100</span></h2>
+							<h2>Total<span id="total_price"><?= round($price->price) ?></span></h2>
 						</div>
 					</div>
 				</aside>
@@ -372,7 +390,7 @@ if ( isset( $session['step2'] ) ) {
 						<div class="row">
 							<div class="col-6">
 								<input type="radio" name="cc" id="cc" value="online" checked>
-								<label for="online-pay" class="radio_green op text-bold"> <span><?php echo __('Bankkártyával azonnal (SIMPLE Online Fizetési Rendszer)'); ?></span></label>
+								<label for="cc" class="radio_green op text-bold"> <span><?php echo __('Bankkártyával azonnal (SIMPLE Online Fizetési Rendszer)'); ?></span></label>
 
 								<p><?php echo __('Azonnali bankkártyás fizetés esetén automatikusan a SIMPLE Online Fizetési Rendszer felületre navigálunk és a bankkártya adataid kitöltésével rendelhetsz. Mint szolgáltató, mi semmilyen a bankkártyádra vonatkozó adatot nem tárolunk. Ilyen esetben többlet költség nem kerül felszámításra. '); ?></p>
 								<a href="<?= URL::base(TRUE, FALSE) ?>SIMPLE.pdf" target="_blank"><img
@@ -381,7 +399,7 @@ if ( isset( $session['step2'] ) ) {
 							</div>
 							<div class="col-6">
 								<input id="cod" type="radio" name="cc" value="ondelivery">
-								<label for="delivery-pay" class="radio_green od text-bold"> <span><?php echo __('Utánvét (Extra költséget számolunk fel:'); ?> +<?= $cost ?> Ft)</span></label>
+								<label for="cod" class="radio_green od text-bold"> <span><?php echo __('Utánvét (Extra költséget számolunk fel:'); ?> +<?= $cost ?> Ft)</span></label>
 
 								<p><?php echo __('Megrendelést követően két email üzenetet fogsz kapni: egyik a Goodiebox regisztrációról szól, a másik pedig a rendelésed megerősítése. Ha 24 órán belül nem érkezik meg mindkét üzenet, kérlek vedd fel velünk a kapcsolatot az alábbi email címen:info@goodiebox.hu Köszönjük!'); ?></p>
 							</div>
