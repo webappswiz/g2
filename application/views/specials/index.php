@@ -1,4 +1,6 @@
-<section id="faq" class="rounded">
+<section>
+	<div class="row flx-center">
+		<div class="content-box faq">
 	<h1><?php echo __( 'Speciális ajánlatok' ); ?></h1>
 	<br/><br/>
 
@@ -11,7 +13,8 @@
 	<p style="padding-top: 5px;font-family: 'franklin_gothic_bookregular'; font-size: 18px; line-height: 30px;"><?php echo __( 'Minden megrendelt Goodiebox tartalmaz egy direkt erre a célra gyártott <span style="color:#ec2366">kedvezmény kártyát</span>. Ha kinézted a listából, hogy melyik szolgáltató ajánlata a legszimpatikusabb az adott hónapban, nincs más dolog, mint kezedbe venni a kedvezmény kártyát, öledbe kapni a kutyusodat és már indulhattok is beváltani! Mivel a kártyát le kell adnod az általad választott szolgáltatónál, így minden megrendelt Goodiebox meglepidobozzal csak egy szolgáltatás vehető kedvezményesen igénybe egy adott hónapban. De ne aggódjatok, mindig lesz újabb hónap, újabb Goodiebox és újabb speciális ajánlatokra beváltható kedvezmény kártya is! :)<br/><br/>Kattints a "<strong>Neked</strong>"-re, hogy láthatóvá váljanak a kedvezményeid, a "<strong>Neki</strong>" alatt pedig a kutyusodnak találhatsz szuper engedményes szolgáltatásokat!' ); ?></p>
 
 	<div class="neki-neked_container">
-		<center><h1 id="neked" class="neked"><?php echo __( 'NEKED' ) ?></h1><img class="specials-image"
+		<center><h1 id="neked" class="neked"><?php echo __( 'NEKED' ) ?></h1>
+			<img width="200" class="specials-image"
 		                                                                          src="<?= URL::base( true, false ) ?>assets/img/<?php echo __( 'ok-main-page-pink.jpg' ); ?>">
 
 			<h1 id="neki" class="neki"><?php echo __( 'NEKI' ); ?></h1></center>
@@ -330,4 +333,6 @@
 			}
 		});
 	</script>
-</section>
+</div>
+		</div>
+	</section>
