@@ -351,7 +351,7 @@ class Controller_Order extends Controller_Core {
 			$puppy->save();
 		}
 		$order->puppy_id       = ( isset( $step1['puppy_id'] ) ) ? $step1['puppy_id'] : $puppy->id;
-		$order->selected_box   = $step2['selected_box'];
+		$order->selected_box   = $step1['selected_box'];
 		$order->last_modified  = date( 'Y-m-d H:i:s' );
 		$order->date_purchased = date( 'Y-m-d H:i:s' );
 		$order->type           = 1;
@@ -416,7 +416,7 @@ class Controller_Order extends Controller_Core {
 				$order->coupon_code  = $step1['coupon_code'];
 				$order->puppy_id     = $step1['puppy_id'];
 				$friend->coupon_code = '';
-				$order->selected_box = $step2['selected_box'];
+				$order->selected_box = $step1['selected_box'];
 				$friend->save();
 			} else {
 				$this->redirect( '/user_account' );
@@ -429,16 +429,16 @@ class Controller_Order extends Controller_Core {
 			          ->find();
 			if ( count( $inv_count ) > 0 && empty( $step1['coupon_code'] ) ) {
 				$order->discount = 1;
-				$pkg             = ORM::factory( 'Packages', $step2['selected_box'] );
+				$pkg             = ORM::factory( 'Packages', $step1['selected_box'] );
 				$discount        = ( $pkg->price * ( ( ( count( $invites ) * 5 ) + $g_discount ) / 100 ) );
 			} elseif ( $g_discount > 0 ) {
 				$order->discount = 1;
-				$pkg             = ORM::factory( 'Packages', $step2['selected_box'] );
+				$pkg             = ORM::factory( 'Packages', $step1['selected_box'] );
 				$discount        = $pkg->price * ( $g_discount / 100 );
 			}
 			if ( $new->loaded() ) {
 				$order->discount = 1;
-				$pkg             = ORM::factory( 'Packages', $step2['selected_box'] );
+				$pkg             = ORM::factory( 'Packages', $step1['selected_box'] );
 				$discount        = $pkg->price * 0.05 + $discount;
 				$new->count      = $new->count + 1;
 				$new->save();
@@ -536,12 +536,12 @@ class Controller_Order extends Controller_Core {
 			$friend->friends_lastname  = $step1['lastname'];
 			$friend->user_id           = $this->current_user->id;
 		}
-		$friend->selected_box   = $step2['selected_box'];
+		$friend->selected_box   = $step1['selected_box'];
 		$friend->coupon_code    = $this->generateRandomString();
 		$friend->date_purchased = date( 'Y-m-d H:i:s' );
 		$friend->save();
 		$order->user_id            = $this->current_user->id;
-		$order->selected_box       = $step2['selected_box'];
+		$order->selected_box       = $step1['selected_box'];
 		$order->puppy_id           = 0;
 		$order->friend_id          = $friend->id;
 		$order->last_modified      = date( 'Y-m-d H:i:s' );
@@ -568,11 +568,11 @@ class Controller_Order extends Controller_Core {
 			if ( count( $invites ) > 0 && empty( $step1['coupon_code'] ) ) {
 				echo 1;
 				$order->discount = 1;
-				$pkg             = ORM::factory( 'Packages', $step2['selected_box'] );
+				$pkg             = ORM::factory( 'Packages', $step1['selected_box'] );
 				$discount        = ( $pkg->price * ( ( ( count( $invites ) * 5 ) + $g_discount ) / 100 ) );
 			} elseif ( $g_discount > 0 ) {
 				$order->discount = 1;
-				$pkg             = ORM::factory( 'Packages', $step2['selected_box'] );
+				$pkg             = ORM::factory( 'Packages', $step1['selected_box'] );
 				$discount        = $pkg->price * ( $g_discount / 100 );
 			}
 		}
@@ -698,13 +698,6 @@ class Controller_Order extends Controller_Core {
 
 			if ( isset( $step1['order2'] ) ) {
 				$order = $this->gift_order();
-				Session::instance()->set( 'success', '1' );
-				Session::instance()->set( 'order', $order );
-				$this->redirect( '/order/payment' );
-			}
-
-			if ( isset( $step1['order3'] ) ) {
-				$order = $this->shelter_order();
 				Session::instance()->set( 'success', '1' );
 				Session::instance()->set( 'order', $order );
 				$this->redirect( '/order/payment' );

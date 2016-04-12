@@ -13,13 +13,22 @@
   display: inline-block;
   width: 55px;
   height: 55px;
-  font-size: 36px; }
+  font-size: 36px;
+  z-index: 5; }
 
 .la-arrow-left {
-  margin-right: 1em; }
+  position: absolute;
+  left: -100px;
+  top: 0; }
 
 .la-arrow-right {
-  margin-left: 1em; }
+  position: absolute;
+  right: -100px;
+  top: 0; }
+
+.la-arrow-left:hover,
+.la-arrow-right:hover {
+  cursor: pointer; }
 
 .la-arrow-left:before {
   content: '\f104';
@@ -37,11 +46,16 @@
   height: 55px;
   display: inline-block;
   line-height: 55px;
-  text-align: center; }
+  text-align: center;
+  margin-left: 3px; }
 
 .la-rounded {
   border-radius: 50%;
   border: 2px solid #f79320; }
 
-.la-orange {
+.la-color {
   color: #f79320; }
+
+.la-viewport {
+  width: 100%;
+  overflow: hidden; }

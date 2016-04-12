@@ -1,3 +1,6 @@
 .my-cart .order-form .billing-info #cc:checked ~ .radio_green.op:before,
 .my-cart .order-form .billing-info #cod:checked ~ .radio_green.od:before {
     background-position: center bottom; }
+
+.my-cart .order-form #company:checked ~ .radio_green.op:before {
+    background-position: center bottom; }

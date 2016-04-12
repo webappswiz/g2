@@ -60,7 +60,7 @@ if ( $package->term == 1 ) {
 			$('#ship').html(ship_cost + ' HUF');
 			var price = $('#total_price').html().split(' ');
 			var ship_price = parseInt(price[0]) + ship_cost;
-			$('#total_price').html(ship_price + ' HUF');
+			$('#total_price').html(ship_price + '');
 			$('#pt').val('cod');
 			$('#cod').attr('disabled', 'disabled');
 		});
@@ -70,7 +70,7 @@ if ( $package->term == 1 ) {
 				$('#ship').html('<?php echo __('Ingyenes'); ?>');
 				var price = $('#total_price').html().split(' ');
 				var ship_price = parseInt(price[0]) - ship_cost;
-				$('#total_price').html(ship_price + ' HUF');
+				$('#total_price').html(ship_price + '');
 
 				$('#cod').removeAttr('disabled');
 			}
@@ -93,7 +93,7 @@ if ( $package->term == 1 ) {
 		});
 		$('#company').on('click', function () {
 			if ($('#company').is(':checked')) {
-				$('#tax').show();
+				$('#tax').slideDown(600);
 				$('#company_name').attr('required', 'required');
 				$('#company_street').attr('required', 'required');
 				$('#company_house').attr('required', 'required');
@@ -101,7 +101,7 @@ if ( $package->term == 1 ) {
 				$('#company_city').attr('required', 'required');
 				$('#tax_code').attr('required', 'required');
 			} else {
-				$('#tax').hide();
+				$('#tax').slideUp(600);
 				$('#company_name').removeAttr('required');
 				$('#company_street').removeAttr('required');
 				$('#company_house').removeAttr('required');
@@ -221,17 +221,19 @@ if ( isset( $session['step2'] ) ) {
 						<div class="cart-item">
 							<div class="row"><img src="<?= URL::base( true, false ) ?>assets/img/cart-img.jpg"></div>
 							<div class="row"><a href="#"><?= $package->package_name ?> <?= $term ?> <?php echo __('hónapra'); ?></a></div>
-							<div class="row"><span><?php echo $size ?></span></div>
-							<div class="row"><span></span></div>
+							<div class="row"><span><?php echo __('Választott kutyus méret:'); ?></span></div>
+							<div class="row"><span class="text-bold"><?php echo $size ?></span></div>
+							<div class="row"><span><?php echo __('Kedvezmény'); ?>:</span></div>
+							<div class="row"><span class="text-bold" id="discount1">0000 HUF</div>
+							<div class="row"><span><?php echo __('Összeg'); ?>:</span></div>
 							<div class="row"><span class="text-bold"><?= $price->price ?> HUF</div>
-							<div class="row"><a href="#" class="del">Delete</a></div>
 						</div>
 						<div class="shipping">
-							<div class="row"><span><?php echo __('Házhozszállítás'); ?></span></div>
+							<div class="row"><span><?php echo __('Házhozszállítás'); ?>:</span></div>
 							<div class="row"><span class="text-bold" id="ship"><?php echo __('Ingyenes'); ?></span></div>
 						</div>
 						<div class="cart-total">
-							<h2>Total<span id="total_price"><?= round($price->price) ?></span></h2>
+							<h2><?php echo __('Összesen'); ?>:<span id="total_price"><?= round($price->price) ?></span></h2>
 						</div>
 					</div>
 				</aside>

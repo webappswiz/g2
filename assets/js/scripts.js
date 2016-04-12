@@ -11,21 +11,24 @@ $(function() {
     }
   });
   $( "#amount-1" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) );
-  $( "#amount-2" ).val( "$" + $( "#slider-range" ).slider( "values", 1 ) );
 });
+
+
 
 // Slider age filter
 $(function() {
     $( "#slider-range-max-1" ).slider({
       range: "max",
       min: 1,
-      max: 10,
-      value: 2,
+      max: 84,
+      value: 14,
       slide: function( event, ui ) {
-        $( "#age-1" ).val( ui.value );
+        $( "#age-1" ).val( Math.floor(ui.value / 12) );
+        $( "#age-2" ).val( ui.value % 12);
       }
     });
-    $( "#age-1" ).val( $( "#slider-range-max-1" ).slider( "value" ) );
+    $( "#age-1" ).val( Math.floor(+($( "#slider-range-max-1" ).slider( "value" )) / 12) );
+    $( "#age-2" ).val( +($( "#slider-range-max-1" ).slider( "value" )) % 12 );
   });
 
 // Slider size-filter
@@ -162,8 +165,6 @@ $(document).ready(function() {
       }
     });
 
-
-
 // Swich to Second Step Order
   $('#order-next').click(function(){
     $('#step-one').animate({'height' : '0', 'width' : '0', 'opacity' : '0'});
@@ -183,4 +184,100 @@ $(document).ready(function() {
   })
 });
 
- 
+// Preview puppy image
+$(document).ready(function(){
+  function readURL(input) {
+
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              $('#uploadImg').css({'opacity' : '1'}).attr('src', e.target.result);
+          };
+
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+
+  $("#puppy-img-load").change(function(){
+      readURL(this);
+  });
+});
+
+// FAQ Accordion
+$(document).ready(function(){
+  $('.faq li').click(function(){
+      console.log($(this).find(':after'));
+      $(this).find('h3.rad-5').toggleClass('active');
+      $(this).find('div').animate({
+        'opacity' : 'toggle',
+        'height' : 'toggle'
+      });
+      $(this).toggleClass('open');
+    });
+});
+
+// Home Page Carusel
+$(function() {
+   $('#carusel-1').responsiveCarusel(
+    {
+    'items' : '4',
+    'controlPosition' : 'beside',
+    'controlPositionY' : '95',      // Margin top
+    'controlPositionX' : '40',      // Margin inner / outer  
+    'controlColor' : '#ed1968'
+  });
+});
+
+// Catalog Carusel
+$(function() {
+   $('#slider_catalog').responsiveCarusel(
+    {
+    'items' : '1',
+    'controlPosition' : 'above',
+    'controlPositionX' : '40',       // Margin inner / outer
+    'controlColor' : '#fff'
+  });
+});
+
+// Aside Filter / Cart Toggle
+$(function() {
+  
+  function _asideToggle(elem) {
+     if ($('.catalog-aside').width() == 0 && elem) {
+      $('.catalog-aside').animate({'width' : '278', 'opacity' : '1'});
+      elem.show().prev().show();
+      control = elem;
+     } else if (elem.is(':hidden')) {
+      elem.show().prev().show();
+     } else {
+      $('.catalog-aside').animate({'width' : '0', 'opacity' : '0'});
+      elem.hide().prev().hide();
+      
+     }
+  }
+
+  $('.sidebar-toggle .fa-filter').click(function(){
+    $(this).toggleClass('active');
+    _asideToggle($('.catalog-aside .product-filter'));
+    $('.fa-shopping-cart.active').removeClass('active');
+  });
+
+  $('.sidebar-toggle .fa-shopping-cart').click(function() {
+    $(this).toggleClass('active');
+    $('.catalog-aside .cart-box').toggleClass('active');
+    _asideToggle($('.catalog-aside .cart-box'));
+    $('.fa-filter.active').removeClass('active');
+  })
+});
+
+// Mobile menu
+$(function(){
+  $('.nav-toggle').click(function() {
+    if ($('.top-nav').is(':hidden')) {
+      $('.top-nav').show(500);
+    } else {
+      $('.top-nav').hide(400);
+  }
+  })
+})

@@ -25,6 +25,7 @@ return array(
 			'jquery.bxslider.min',
 			'bootstrap-datepicker',
 			'scripts',
+			'jquery.lanacarusel',
 		),
 		'css' => array(
 			'jquery-ui.min'                                                              => null,

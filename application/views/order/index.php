@@ -173,16 +173,30 @@
 								<label for="gender_female"><?php echo __( 'Fiú' ); ?></label>
 							</div>
 						</div>
-						<div class="date-holder"><input type="text" id="datepicker" name="dateofb"></div>
+						<?php
+						for ($i = 1994; $i <= date('Y'); $i++)
+							$years[$i] = $i;
+
+						for ($i = 1; $i <= 12; $i++)
+							$months[$i] = $i;
+						?>
+						<div class="date-holder">
+							<?php
+							echo Form::select('years', $years, '', array('required', 'class' => '')) . ' ';
+							?>
+							<?php
+							echo Form::select('months', $months, '', array('required', 'class' => ''));
+							?>
+						</div>
 					</div>
 				</div>
 				<div class="alergi-select">
 					<p class="text-center"><?php echo __( 'Allergiás a kutyusod?*' ); ?></p>
 
 					<p class="text-center">
-						<input id="alerg_yes" type="radio" name="allergic" value="true">
+						<input id="alerg_yes" type="radio" name="alerg" value="1">
 						<label for="alerg_yes" class="radio_green a1"><?php echo __( 'Igen' ); ?></label>
-						<input id="alerg_no" type="radio" name="allergic" value="false" checked>
+						<input id="alerg_no" type="radio" name="alerg" value="0" checked>
 						<label for="alerg_no" class="radio_green a2"><?php echo __( 'Nem' ); ?></label>
 					</p>
 
