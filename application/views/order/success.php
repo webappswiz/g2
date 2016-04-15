@@ -51,12 +51,12 @@
 	}
 </script>
 
-<div class="clear"></div>
 <section class="thanku" class="rounded">
-	<h1><?php echo __( 'Köszönjük a rendelésedet!' ); ?></h1>
-
-	<h2><?php echo __( 'E-mail címedre visszaigazolást küldtünk.' ); ?></h2>
-	<br/><br/>
+	<div class="row flx-center">
+		<h1><?php echo __( 'Köszönjük a rendelésedet!' ); ?></h1>
+		<br>
+		<h2><?php echo __( 'E-mail címedre visszaigazolást küldtünk.' ); ?></h2>
+		<br/><br/>
     <span style="font-size:18px;font-family:'FranklinGothic-Heavy';"><a
 		    href="<?php echo URL::base( true, false ) . 'user_account/?new' ?>"><?php echo __( 'Rendelnél még másik dobozt is?' ); ?></a>
     <br/>
@@ -70,7 +70,8 @@
 		    src="<?= URL::base( true, false ) ?>assets/img/share_tw.png" style="margin-top: 0px;padding: 0px;"
 		    width="64" height="" alt="twitter"></a>
 
-
+</span>
+	</div>
 </section>
 <script>
 	$('.btnShare').click(function () {

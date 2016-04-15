@@ -43,12 +43,16 @@ class Controller_Order extends Controller_Core {
 		}
 		if ( $order->payment_status == 5 ) {
 			$cost = ORM::factory( 'ShippingCost', 1 );
-			if ( $order->package->term == 1 ) {
+			if($order->type==3){
 				$cod = $cost->cost;
-			} elseif ( $order->package->term == 2 ) {
-				$cod = $cost->cost * 3;
-			} elseif ( $order->package->term == 3 ) {
-				$cod = $cost->cost * 6;
+			} else {
+				if ( $order->package->term == 1 ) {
+					$cod = $cost->cost;
+				} elseif ( $order->package->term == 2 ) {
+					$cod = $cost->cost * 3;
+				} elseif ( $order->package->term == 3 ) {
+					$cod = $cost->cost * 6;
+				}
 			}
 			$pr     = $cod;
 			$method = __( 'Utánvét' );
@@ -57,9 +61,30 @@ class Controller_Order extends Controller_Core {
 			$method = __( 'Átutalás' );
 		}
 
+		if($order->type==3){
+			$discount = 0;
+			$products = ORM::factory('OrderProducts')->where('order_id','=',$order->id)->find_all();
+			$total_cart_price = 0;
+			$prods = array();
+			foreach($products as $product){
+				$prod = ORM::factory('Products',$product->product_id);
+				$subtotal     = $prod->price * $product->product_qty;
+				$total_cart_price += $subtotal;
+				$temp = array(
+						'prod_code' =>   $prod->product_number,
+						'prod_qty' => $product->product_qty,
+						'prod_name' => $prod->product_name,
+						'prod_price' => $prod->price,
+						'prod_subtotal' => $subtotal
+				);
+				$prods[] = $temp;
+			}
+			$total_price = $total_cart_price;
+		} else {
+			$discount    = $order->package->price - $order->total_price + $pr;
+			$total_price = $order->package->price - $discount;
+		}
 
-		$discount    = $order->package->price - $order->total_price + $pr;
-		$total_price = $order->package->price - $discount;
 		if ( $order->company_name <> '' ) {
 			$company = __( 'Cégnév:' ) . ' ' . $order->company_name . '<br/>';
 			$company .= __( 'Cím:' ) . ' ' . $order->company_zip . ', ' . $order->company_city . '<br/>
@@ -79,6 +104,37 @@ class Controller_Order extends Controller_Core {
 		} else {
 			$term = '6';
 		}
+
+		$invoice_products = '';
+		if($order->type!=3){
+			$invoice_products .= '<tr>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px; border-left: 2px solid;">' . $order->package->product_number . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">GOODIEBOX ' . $s . '<br/>' . $order->package->package_name . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . $term . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">db</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . number_format( (float) $order->package->price / $term, 2, ',', '' ) . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . number_format( (float) $order->package->price, 2, ',', '' ) . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">AM</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">0,00</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px; border-right: 2px solid;">' . number_format( (float) $order->package->price, 2, ',', '' ) . '</td>
+                        </tr>';
+		} else {
+			foreach($prods as $prod1){
+				$invoice_products .= '<tr>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px; border-left: 2px solid;">' . $prod1['prod_code'] . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . $prod1['prod_name'] . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . $prod1['prod_qty'] . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">db</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . number_format( (float) $prod1['prod_price'], 2, ',', '' ) . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . number_format( (float) $prod1['prod_subtotal'], 2, ',', '' ) . '</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">AM</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">0,00</td>
+                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px; border-right: 2px solid;">' . number_format( (float) $prod1['prod_subtotal'], 2, ',', '' ) . '</td>
+                        </tr>';
+			}
+		}
+
+
 
 		$invoice = '<!DOCTYPE html>
 <html lang="hu">
@@ -145,18 +201,8 @@ class Controller_Order extends Controller_Core {
                         <tr>
                             <td colspan="9" style="height: 15px; border-left: 2px solid; border-right: 2px solid;"></td>
                         </tr>
-                        <tr>
-                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px; border-left: 2px solid;">' . $order->package->product_number . '</td>
-                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">GOODIEBOX ' . $s . '<br/>' . $order->package->package_name . '</td>
-                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . $term . '</td>
-                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">db</td>
-                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . number_format( (float) $order->package->price / $term, 2, ',', '' ) . '</td>
-                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">' . number_format( (float) $order->package->price, 2, ',', '' ) . '</td>
-                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">AM</td>
-                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px;">0,00</td>
-                            <td style="font-size: 10px;font-weight: 600;text-align: center;vertical-align: central;letter-spacing: 2px;padding-top: 15px;padding-left: 3px;padding-right: 0px;line-height: 15px; border-right: 2px solid;">' . number_format( (float) $order->package->price, 2, ',', '' ) . '</td>
-                        </tr>
-                    </table>
+                        '.$invoice_products.'
+                        </table>
                 </td>
             </tr>
             <tr style="padding: 0px">
@@ -480,6 +526,103 @@ class Controller_Order extends Controller_Core {
 		return $order;
 	}
 
+	private function webshop_order() {
+		$session = Session::instance();
+		$cart    = $session->get( 'cart' );
+
+
+		$order = ORM::factory( 'Order' );
+		$order->puppy_id       = 0;
+		$order->selected_box   = 0;
+		$order->last_modified  = date( 'Y-m-d H:i:s' );
+		$order->date_purchased = date( 'Y-m-d H:i:s' );
+		$order->type           = 3;
+		$order->user_id        = $this->current_user->id;
+		$address               = ORM::factory( 'AddressBook' )
+		                            ->where( 'user_id', '=', $this->current_user->id )
+		                            ->find();
+		if ( isset( $_POST['customer_firstname'] ) && ! isset( $_POST['shipping'] ) ) {
+			$order->delivery_firstname = ( $address->loaded() ) ? $address->customer_firstname : $_POST['customer_firstname'];
+			$order->delivery_lastname  = ( $address->loaded() ) ? $address->customer_lastname : $_POST['customer_lastname'];
+			$order->delivery_street    = ( $address->loaded() ) ? $address->customer_street : $_POST['customer_street'];
+			$order->delivery_house     = ( $address->loaded() ) ? $address->customer_house : $_POST['customer_house'];
+			$order->delivery_city      = ( $address->loaded() ) ? $address->customer_city : $_POST['customer_city'];
+			$order->delivery_postcode  = ( $address->loaded() ) ? $address->customer_zip : $_POST['customer_zip'];
+			$order->delivery_telephone = ( $address->loaded() ) ? $address->customer_telephone : $_POST['customer_telephone'];
+			$order->company_name       = $_POST['company_name'];
+			$order->company_street     = $_POST['company_street'];
+			$order->company_house      = $_POST['company_house'];
+			$order->company_zip        = $_POST['company_zip'];
+			$order->company_city       = $_POST['company_city'];
+			$order->tax_code           = $_POST['tax_code'];
+			$order->message            = $_POST['msg'];
+		} elseif ( isset( $_POST['shipping'] ) ) {
+			if ( empty( $_POST['delivery_firstname'] ) || empty( $_POST['delivery_lastname'] ) || empty( $_POST['delivery_city'] ) || empty( $_POST['delivery_street'] ) || empty( $_POST['delivery_house'] ) || empty( $_POST['delivery_zip'] ) ) {
+				Flash::set( 'alert', 'Please fill the shipping form' );
+				$this->redirect( 'order/step3' );
+			}
+			$order->delivery_firstname = $_POST['delivery_firstname'];
+			$order->delivery_lastname  = $_POST['delivery_lastname'];
+			$order->delivery_street    = $_POST['delivery_street'];
+			$order->delivery_house     = $_POST['delivery_house'];
+			$order->delivery_city      = $_POST['delivery_city'];
+			$order->delivery_postcode  = $_POST['delivery_zip'];
+			$order->delivery_telephone = $_POST['delivery_telephone'];
+			$order->company_name       = $_POST['company_name'];
+			$order->company_street     = $_POST['company_street'];
+			$order->company_house      = $_POST['company_house'];
+			$order->company_zip        = $_POST['company_zip'];
+			$order->company_city       = $_POST['company_city'];
+			$order->tax_code           = $_POST['tax_code'];
+			$order->message            = $_POST['msg'];
+			$address                   = ORM::factory( 'AddressBook', $this->current_user->id );
+			if ( ! $address->loaded() ) {
+				$address = ORM::factory( 'AddressBook' );
+			}
+			$address->user_id            = $this->current_user->id;
+			$address->customer_firstname = $_POST['delivery_firstname'];
+			$address->customer_lastname  = $_POST['delivery_lastname'];
+			$address->customer_zip       = $_POST['delivery_zip'];
+			$address->customer_city      = $_POST['delivery_city'];
+			$address->customer_street    = $_POST['delivery_street'];
+			$address->customer_house     = $_POST['delivery_house'];
+			$address->customer_telephone = $_POST['delivery_telephone'];
+			$address->save();
+		}
+
+		$order->orders_status = 1;
+		if ( $_POST['pt'] == 'cod' ) {
+			$order->payment_status = 5;
+		} else {
+			$order->payment_status = 0;
+		}
+		$total_cart_price = 0;
+		foreach($cart as $id => $qty){
+			$product_info = ORM::factory( 'Products', $id );
+			$subtotal     = $product_info->price * $qty;
+			$total_cart_price += $subtotal;
+		}
+
+		if ( $_POST['pt'] == 'cod' ) {
+			$cost = ORM::factory( 'ShippingCost', 1 );
+			$order->total_price = round( $total_cart_price  + $cost->cost );
+		} else {
+			$order->total_price = round($total_cart_price );
+		}
+		$order->save();
+
+		reset($cart);
+
+		foreach($cart as $id => $qty){
+			$order_products = ORM::factory('OrderProducts');
+			$order_products->order_id = $order->id;
+			$order_products->product_id = $id;
+			$order_products->product_qty = $qty;
+			$order_products->save();
+		}
+		return $order;
+	}
+
 	private function gift_order() {
 		$session         = Session::instance();
 		$step1           = $session->get( 'step1' );
@@ -611,9 +754,11 @@ class Controller_Order extends Controller_Core {
 			$this->redirect( '/' );
 		}
 		$session = Session::instance()->as_array();
-		if(isset($session['step1'])){
-			$step1   = $session['step1'];
-		} else $step1 = array();
+		if ( isset( $session['step1'] ) ) {
+			$step1 = $session['step1'];
+		} else {
+			$step1 = array();
+		}
 
 		$this->set_title( 'Order - Checkout' );
 		if ( isset( $_GET['smart'] ) ) {
@@ -623,10 +768,10 @@ class Controller_Order extends Controller_Core {
 			Session::instance()->set( 'package', 'plus' );
 		}
 		if ( isset( $_POST['order1'] ) || isset( $_POST['order2'] ) || isset( $_POST['order3'] ) ) {
-			$full_array = array_merge($_POST, $step1);
+			$full_array = array_merge( $_POST, $step1 );
 			Session::instance()->set( 'step1', $full_array );
 			$this->redirect( 'order/step3' );
-		} elseif ( isset( $this->current_user ) && !isset($step1['puppy_id'])) {
+		} elseif ( isset( $this->current_user ) && ! isset( $step1['puppy_id'] ) ) {
 			$this->redirect( '/user_account' );
 		}
 	}
@@ -635,19 +780,38 @@ class Controller_Order extends Controller_Core {
 
 		$options = ORM::factory( 'Options', 1 );
 		$status  = $options->status;
-		if ( $status != 1 ) {
-			$this->redirect( '/' );
-		}
-		if ( $options->current_smart >= $options->smart && $options->current_plus >= $options->plus ) {
+		$session = Session::instance();
+		$this->status = $status;
+		if ( $options->current_smart >= $options->smart && $options->current_plus >= $options->plus && $status == 1 ) {
 			$options->status = 0;
 			$options->save();
 			$this->redirect( '/' );
 		}
-		$session = Session::instance();
-		$step1   = $session->get( 'step1' );
 		$this->set_title( 'Order - Checkout' );
-		$this->price = ORM::factory( 'Packages', $step1['selected_box'] );
-		$this->append_js_var( 'total_price', round( $this->price->price ) );
+
+		if ( $status == 1 ) {
+			$step1       = $session->get( 'step1' );
+			if(empty($step1)){
+				$this->redirect( '/' );
+			}
+			$this->price = ORM::factory( 'Packages', $step1['selected_box'] );
+			$price       = $this->price->price;
+		} else {
+			$total_cart_price = 0;
+			if ( isset( $_SESSION['cart'] ) && count( $_SESSION['cart'] ) > 0 ):
+				$this->cart = $_SESSION['cart'];
+				foreach ( $this->cart as $id => $qty ):
+					$product_info = ORM::factory( 'Products', $id );
+					$subtotal     = $product_info->price * $qty;
+					$total_cart_price += $subtotal;
+				endforeach;
+				$price = $total_cart_price;
+			else:
+				$this->redirect( '/' );
+			endif;
+
+		}
+		$this->append_js_var( 'total_price', round( $price ) );
 		$global_discount = 0;
 		$g_discount      = 0;
 		if ( $this->current_user ) {
@@ -707,6 +871,17 @@ class Controller_Order extends Controller_Core {
 				Session::instance()->set( 'success', '1' );
 				Session::instance()->set( 'order', $order );
 				$this->redirect( '/order/payment' );
+			}
+
+			if ( isset( $this->cart ) ) {
+				$order = $this->webshop_order();
+				Session::instance()->set( 'success', '1' );
+				Session::instance()->set( 'order', $order );
+				if ( ! empty( $step1['coupon_code'] ) || $_POST['pt'] == 'cod' ) {
+					$this->redirect( '/order/success' );
+				} else {
+					$this->redirect( '/order/payment' );
+				}
 			}
 		}
 	}
@@ -840,6 +1015,8 @@ class Controller_Order extends Controller_Core {
 				$ord->save();
 				$this->receipt_email( $ord, $ord->user, 1 );
 			} elseif ( $ord->type == 1 && $ord->payment_status == 5 ) {
+				$this->receipt_email( $ord, $ord->user, 1 );
+			} elseif($ord->type == 3 && $ord->payment_status == 5){
 				$this->receipt_email( $ord, $ord->user, 1 );
 			}
 		}

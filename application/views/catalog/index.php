@@ -30,14 +30,6 @@
 					<div class="category-chekbox"><span class="filter-block">Product category:</span>
 						<ul class="text-gray">
 							<li>
-								<input id="category-1" type="checkbox" name="category-1" value="1">
-								<label for="category-1" class="gray-box__green-check">Smart Goodiebox</label>
-							</li>
-							<li>
-								<input id="category-2" type="checkbox" name="category-2" value="2">
-								<label for="category-2" class="gray-box__green-check">Plus Goodiebox </label>
-							</li>
-							<li>
 								<input id="category-3" type="checkbox" name="category-3" value="3">
 								<label for="category-3" class="gray-box__green-check">Toys</label>
 							</li>

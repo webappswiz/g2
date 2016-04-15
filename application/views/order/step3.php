@@ -8,6 +8,7 @@ if ( $auth->logged_in() ) {
 $shipping = ORM::factory( 'ShippingCost', 1 );
 $cost     = $shipping->cost;
 $session  = Session::instance()->as_array();
+if ( !isset( $_SESSION['cart'] ) || count( $_SESSION['cart'] ) < 1 ):
 $step1    = $session['step1'];
 $package  = ORM::factory( 'Packages', $step1['selected_box'] );
 if ( $package->term == 1 ) {
@@ -17,6 +18,9 @@ if ( $package->term == 1 ) {
 } else {
 	$term = '6';
 }
+else:
+$term = 1;
+endif;
 ?>
 <script type="text/javascript">
 	$(document).ready(function () {
@@ -56,7 +60,7 @@ if ( $package->term == 1 ) {
 		});
 
 		$('#cod').on('click', function () {
-			ship_cost = <?= $cost * $term ?>;
+			ship_cost = <?php echo $cost * $term ?>;
 			$('#ship').html(ship_cost + ' HUF');
 			var price = $('#total_price').html().split(' ');
 			var ship_price = parseInt(price[0]) + ship_cost;
@@ -65,7 +69,7 @@ if ( $package->term == 1 ) {
 			$('#cod').attr('disabled', 'disabled');
 		});
 		$('#cc').on('click', function () {
-			ship_cost = <?= $cost * $term ?>;
+			ship_cost = <?php echo  $cost * $term ?>;
 			if ($('#ship').html() !== '<?php echo __('Ingyenes'); ?>') {
 				$('#ship').html('<?php echo __('Ingyenes'); ?>');
 				var price = $('#total_price').html().split(' ');
@@ -200,7 +204,9 @@ if ( isset( $session['step2'] ) ) {
 		<section id="step-two" style="display: block">
 			<div class="row flx-justify">
 				<aside class="order-detail">
+					<div class="cart-box">
 					<?php
+					if ( $status==1 ):
 					$step1 = $session['step1'];
 					if ($step1['selected_size'] == 1)
 						$size = __('Icipici');
@@ -217,7 +223,7 @@ if ( isset( $session['step2'] ) ) {
 						$term = '6';
 					}
 					?>
-					<div class="cart-box">
+
 						<div class="cart-item">
 							<div class="row"><img src="<?= URL::base( true, false ) ?>assets/img/cart-img.jpg"></div>
 							<div class="row"><a href="#"><?= $package->package_name ?> <?= $term ?> <?php echo __('hónapra'); ?></a></div>
@@ -235,6 +241,29 @@ if ( isset( $session['step2'] ) ) {
 						<div class="cart-total">
 							<h2><?php echo __('Összesen'); ?>:<span id="total_price"><?= round($price->price) ?></span></h2>
 						</div>
+					<?php else: ?>
+						<?php
+						$total_cart_price = 0;
+						foreach($cart as $id => $qty):
+							$product_info = ORM::factory( 'Products', $id );
+							$subtotal     = $product_info->price * $qty;
+							$total_cart_price += $subtotal;
+							?>
+							<div class="cart-item">
+								<div class="row"><img src="<?= URL::base( true, false ) ?>assets/img/cart-img.jpg"></div>
+								<div class="row"><a href="#"><?php echo $product_info->product_name; ?> X <?= $qty ?></a></div>
+								<div class="row"><span><?php echo __('Összeg'); ?>:</span></div>
+								<div class="row"><span class="text-bold"><?= $subtotal ?> HUF</div>
+							</div>
+						<?php endforeach;?>
+						<div class="shipping">
+							<div class="row"><span><?php echo __('Házhozszállítás'); ?>:</span></div>
+							<div class="row"><span class="text-bold" id="ship"><?php echo __('Ingyenes'); ?></span></div>
+						</div>
+						<div class="cart-total">
+							<h2><?php echo __('Összesen'); ?>:<span id="total_price"><?= round($total_cart_price) ?></span></h2>
+						</div>
+					<?php endif; ?>
 					</div>
 				</aside>
 				<main class="order-form">
@@ -271,7 +300,12 @@ if ( isset( $session['step2'] ) ) {
 
 							<div class="row flx-justify">
 								<?php if ( ! $auth->logged_in() ):
-									$email = $session['step1']['email'];
+									if($status==1){
+										$email = $session['step1']['email'];
+									} else {
+										$email = '';
+									}
+
 									?>
 									<input type="text" name="customer_email" id="customer_email" value="<?= $email ?>"
 									       placeholder="<?php echo __( 'E-mail cím*' ); ?>" required>

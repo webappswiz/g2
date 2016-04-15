@@ -40,7 +40,11 @@
 				<?php endforeach; ?>
 				<div class="row flx-end cart-total">
 					<div class="container">
-						<h2 class="text-right">Total<span><?php echo $total_cart_price;?></span></h2><a href="#" class="btn large solid pink">order
+						<h2 class="text-right">Total<span><?php echo $total_cart_price;?></span></h2>
+						<form action="/cart/checkout" method="post">
+							<input type="submit" name="order_now" value="order now" class="btn large solid pink">
+						</form>
+						<a href="#" class="btn large solid pink">order
 							now</a>
 					</div>
 				</div>
@@ -48,6 +52,9 @@
 			</div>
 		<?php else: ?>
 			<h2 class="text-center">Cart is empty</h2>
+			<form action="/cart/checkout" method="post">
+				<input type="submit" name="order_now" value="order now" class="btn large solid pink">
+			</form>
 		<?php endif; ?>
 		<!-- end .cart-box.cart-page-->
 	</div>

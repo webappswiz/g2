@@ -50,4 +50,20 @@ class Controller_Cart extends Controller_Core {
 		$this->redirect($this->request->referrer());
 	}
 
+
+	public function action_checkout() {
+
+		if(!$this->is_post())
+			$this->redirect($this->request->referrer());
+		$this->set_title( 'Order - Checkout' );
+		if ( isset( $_GET['smart'] ) ) {
+			Session::instance()->set( 'package', 'smart' );
+		}
+		if ( isset( $_GET['plus'] ) ) {
+			Session::instance()->set( 'package', 'plus' );
+		}
+		if ( isset( $_POST['order_now'] ) ) {
+			$this->redirect( 'order/step3' );
+		}
+	}
 }
