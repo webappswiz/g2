@@ -26,12 +26,14 @@ return array(
 			'bootstrap-datepicker',
 			'scripts',
 			'jquery.lanacarusel',
+				'jquery.lanagallery'
 		),
 		'css' => array(
 			'jquery-ui.min'                                                              => null,
 			'lightbox'                                                                   => null,
 			'jquery.bxslider'                                                            => null,
 			'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' => null,
+			'jquery.lanagallery'=> null,
 			'style'                                                                      => null,
 		),
 	),

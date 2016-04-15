@@ -89,6 +89,7 @@ $(document).ready(function(){
   });
   $('.gender-select .drop-box input').click(function(){
     $('.gender-select .toggle').text(this.value);
+    $('.gender-select .drop-box').slideUp(400);
   });
 
 });
@@ -112,6 +113,7 @@ $(document).ready(function() {
 
   $('ul.option.state li').click(function(){
     $('.shipping-form input[name="state"]').attr('value', ($(this).text()));
+    $('ul.option.state').slideUp(400);
   })
 
   $('.shipping-form input[name="country"]').click(
@@ -126,6 +128,7 @@ $(document).ready(function() {
 
   $('ul.option.country li').click(function(){
     $('.shipping-form input[name="country"]').attr('value', ($(this).text()));
+    $('ul.option.state').slideUp(400);
   })
 
 
@@ -141,6 +144,7 @@ $(document).ready(function() {
 
   $('ul.option.state_ship li').click(function(){
     $('.shipping-form input[name="ship_state"]').attr('value', ($(this).text()));
+    $('ul.option.state').slideUp(400);
   })
 
   $('.shipping-form input[name="ship_country"]').click(
@@ -155,6 +159,7 @@ $(document).ready(function() {
 
   $('ul.option.country_ship li').click(function(){
     $('.shipping-form input[name="ship_country"]').attr('value', ($(this).text()));
+    $('ul.option.state').slideUp(400);
   });
 
   $('#dif-shipping').click(function() {
@@ -240,6 +245,29 @@ $(function() {
   });
 });
 
+// Product Detail Carusel
+$(function() {
+   $('#carusel-2').responsiveCarusel(
+    {
+    'items' : '4',
+    'controlPosition' : 'beside',
+    'controlPositionY' : '95',      // Margin top
+    'controlPositionX' : '40',      // Margin inner / outer  
+    'controlColor' : '#ed1968'
+  });
+});
+
+// Gallery Goodybox Carusel
+$(function() {
+   $('#carusel-goodiebox').responsiveCarusel(
+    {
+    'items' : '1',
+    'controlPosition' : 'beside',
+    'controlPositionX' : '40',      // Margin inner / outer  
+    'controlColor' : '#f79320'
+  });
+});
+
 // Aside Filter / Cart Toggle
 $(function() {
   
@@ -280,4 +308,14 @@ $(function(){
       $('.top-nav').hide(400);
   }
   })
-})
+});
+
+// Gallery on Home Page
+$(function(){
+  $('.content-box.photo').responsiveGallery();
+});
+
+// Gallery on Catalog Page
+$(function(){
+  $('.product-detail .col-left .thumb-line').responsiveGallery();
+});

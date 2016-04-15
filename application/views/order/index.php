@@ -16,33 +16,47 @@
 		});
 		if ($('#box-smart').is(':checked')) {
 			$('.step2-text').html('<?php echo __('<p>A <span style="color:red"><b>Goodiebox Smart</b></span> dobozt választottad! Ha kutyusod játékos és szereti a hasát, akkor ez a doboz biztosan nagy örömöt okoz majd nektek!</p>'); ?>'
-					+ '<?php echo __('<p>Tartalom: 3-5 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet!</p>'); ?>'
-					+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
+				+ '<?php echo __('<p>Tartalom: 3-5 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet!</p>'); ?>'
+				+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
 		}
 		if ($('#box-plus').is(':checked')) {
 			$('.step2-text').html('<?php echo __('<p>A <span style="color:red"><b>Goodiebox Plus</b></span> dobozt választottad! Ha kutyusod játékos, szereti a hasát és az extra meglepiket is, akkor ez a doboz egészen biztosan nagy örömöt okoz majd nektek!</p>'); ?>'
-					+ '<?php echo __('<p>Tartalom: 4-6 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet! A Plus doboz a legjobb választás ha valamilyen extra kényeztetésre vágynátok! Mi több, a szülinapos kutyusok Plus meglepidoboz vásárlásakor ajándékot is kapnak tőlünk a doboz értékén felül!</p>'); ?>'
-					+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
+				+ '<?php echo __('<p>Tartalom: 4-6 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet! A Plus doboz a legjobb választás ha valamilyen extra kényeztetésre vágynátok! Mi több, a szülinapos kutyusok Plus meglepidoboz vásárlásakor ajándékot is kapnak tőlünk a doboz értékén felül!</p>'); ?>'
+				+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
 		}
 
 		$('#box-smart').on('click', function () {
 			$('.step2-text').html('<?php echo __('<p>A <span style="color:red"><b>Goodiebox Smart</b></span> dobozt választottad! Ha kutyusod játékos és szereti a hasát, akkor ez a doboz biztosan nagy örömöt okoz majd nektek!</p>'); ?>'
-					+ '<?php echo __('<p>Tartalom: 3-5 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet!</p>'); ?>'
-					+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
+				+ '<?php echo __('<p>Tartalom: 3-5 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet!</p>'); ?>'
+				+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
 
 		});
 
 		$('#box-plus').on('click', function () {
 			$('.step2-text').html('<?php echo __('<p>A <span style="color:red"><b>Goodiebox Plus</b></span> dobozt választottad! Ha kutyusod játékos, szereti a hasát és az extra meglepiket is, akkor ez a doboz egészen biztosan nagy örömöt okoz majd nektek!</p>'); ?>'
-					+ '<?php echo __('<p>Tartalom: 4-6 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet! A Plus doboz a legjobb választás ha valamilyen extra kényeztetésre vágynátok! Mi több, a szülinapos kutyusok Plus meglepidoboz vásárlásakor ajándékot is kapnak tőlünk a doboz értékén felül!</p>'); ?>'
-					+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
+				+ '<?php echo __('<p>Tartalom: 4-6 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet! A Plus doboz a legjobb választás ha valamilyen extra kényeztetésre vágynátok! Mi több, a szülinapos kutyusok Plus meglepidoboz vásárlásakor ajándékot is kapnak tőlünk a doboz értékén felül!</p>'); ?>'
+				+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
 		});
 
 		$('#submit_form').on('click', function () {
 			div = $('.content').filter(':visible');
 			$('form', div).submit();
 		});
-		$('.selected_size').val($('input:radio[id^="size"]:checked').val());
+
+
+		<?php $session = Session::instance()->as_array();?>
+		<?php
+
+		if(isset($session['step1']['puppy_id'])){
+			$puppy         = ORM::factory( 'Puppy', $session['step1']['puppy_id'] );
+			$selected_size = $puppy->selected_size;
+		}
+		?>
+		<?php if(isset($selected_size)): ?>
+			$('.selected_size').val(<?php echo $selected_size; ?>);
+		<?php else:?>
+			$('.selected_size').val($('input:radio[id^="size"]:checked').val());
+		<?php endif; ?>
 		$('input:radio[id^="size"]').on('click', function () {
 			$('.selected_size').val($(this).val());
 		});
@@ -128,85 +142,92 @@
 		</section>
 		<section id="step-one">
 			<form method="POST" class="single-order">
-				<!-- Select size =====================================-->
-				<h2 class="text-center"><?php echo __( 'Válaszd ki mekkora a kutyus!*' ); ?></h2>
 
-				<div class="row flx-around select-size">
-					<div class="item-box text-center">
-						<input id="size_1" type="radio" name="group1" value="1">
+				<?php if ( ! isset( $session['step1']['puppy_id'] ) ): ?>
+					<!-- Select size =====================================-->
+					<h2 class="text-center"><?php echo __( 'Válaszd ki mekkora a kutyus!*' ); ?></h2>
 
-						<div class="size-img-1"></div>
-						<p class="text-bold"><?php echo __( 'Icipici' ); ?></p><span>MAX 9KG</span>
-						<label for="size_1" class="radio_green s1"></label>
+					<div class="row flx-around select-size">
+						<div class="item-box text-center">
+							<input id="size_1" type="radio" name="group1" value="1">
+
+							<div class="size-img-1"></div>
+							<p class="text-bold"><?php echo __( 'Icipici' ); ?></p><span>MAX 9KG</span>
+							<label for="size_1" class="radio_green s1"></label>
+						</div>
+						<div class="item-box text-center">
+							<input id="size_2" type="radio" name="group1" value="2" checked>
+
+							<div class="size-img-2"></div>
+							<p class="text-bold"><?php echo __( 'Éppen jó' ); ?></p><span>MAX 10-24KG</span>
+							<label for="size_2" class="radio_green s2"></label>
+						</div>
+						<div class="item-box text-center">
+							<input id="size_3" type="radio" name="group1" value="3">
+
+							<div class="size-img-3"></div>
+							<p class="text-bold"><?php echo __( 'Igazi óriás' ); ?></p><span>MAX 25+KG</span>
+							<label for="size_3" class="radio_green s3"></label>
+						</div>
 					</div>
-					<div class="item-box text-center">
-						<input id="size_2" type="radio" name="group1" value="2" checked>
+					<!-- Registrtion Form ================================-->
+					<h2 class="text-center"><?php echo __( 'Kinek veszed a Goodiebox-ot?' ); ?></h2>
 
-						<div class="size-img-2"></div>
-						<p class="text-bold"><?php echo __( 'Éppen jó' ); ?></p><span>MAX 10-24KG</span>
-						<label for="size_2" class="radio_green s2"></label>
-					</div>
-					<div class="item-box text-center">
-						<input id="size_3" type="radio" name="group1" value="3">
+					<div class="row flx-center registration_pre">
+						<div class="container flx-column">
+							<label><?php echo __( 'E-mail címed*' ); ?></label>
+							<input class="email" type="text" name="email" required>
+							<label><?php echo __( 'Kutyus neve*' ); ?></label>
+							<input type="text" name="puppy_name" required>
 
-						<div class="size-img-3"></div>
-						<p class="text-bold"><?php echo __( 'Igazi óriás' ); ?></p><span>MAX 25+KG</span>
-						<label for="size_3" class="radio_green s3"></label>
-					</div>
-				</div>
-				<!-- Registrtion Form ================================-->
-				<h2 class="text-center"><?php echo __( 'Kinek veszed a Goodiebox-ot?' ); ?></h2>
+							<div class="gender-select"><span class="toggle"><?php echo __( 'Kutyus neme*' ); ?></span>
 
-				<div class="row flx-center registration_pre">
-					<div class="container flx-column">
-						<label><?php echo __( 'E-mail címed*' ); ?></label>
-						<input class="email" type="text" name="email" required>
-						<label><?php echo __( 'Kutyus neve*' ); ?></label>
-						<input type="text" name="puppy_name" required>
+								<div class="drop-box">
+									<input id="gender_male" type="radio" data-gender="<?php echo __( 'Lány' ); ?>"
+									       name="gender" value="<?php echo __( 'Lány' ); ?>">
+									<label for="gender_male"><?php echo __( 'Lány' ); ?></label>
+									<input id="gender_female" type="radio" data-gender="<?php echo __( 'Fiú' ); ?>"
+									       name="gender" value="<?php echo __( 'Fiú' ); ?>">
+									<label for="gender_female"><?php echo __( 'Fiú' ); ?></label>
+								</div>
+							</div>
+							<?php
+							for ( $i = 1994; $i <= date( 'Y' ); $i ++ ) {
+								$years[ $i ] = $i;
+							}
 
-						<div class="gender-select"><span class="toggle"><?php echo __( 'Kutyus neme*' ); ?></span>
-
-							<div class="drop-box">
-								<input id="gender_male" type="radio" data-gender="<?php echo __( 'Lány' ); ?>" name="gender" value="<?php echo __( 'Lány' ); ?>">
-								<label for="gender_male"><?php echo __( 'Lány' ); ?></label>
-								<input id="gender_female" type="radio" data-gender="<?php echo __( 'Fiú' ); ?>" name="gender" value="<?php echo __( 'Fiú' ); ?>">
-								<label for="gender_female"><?php echo __( 'Fiú' ); ?></label>
+							for ( $i = 1; $i <= 12; $i ++ ) {
+								$months[ $i ] = $i;
+							}
+							?>
+							<div class="date-holder">
+								<?php
+								echo Form::select( 'years', $years, '', array( 'required', 'class' => '' ) ) . ' ';
+								?>
+								<?php
+								echo Form::select( 'months', $months, '', array( 'required', 'class' => '' ) );
+								?>
 							</div>
 						</div>
-						<?php
-						for ($i = 1994; $i <= date('Y'); $i++)
-							$years[$i] = $i;
-
-						for ($i = 1; $i <= 12; $i++)
-							$months[$i] = $i;
-						?>
-						<div class="date-holder">
-							<?php
-							echo Form::select('years', $years, '', array('required', 'class' => '')) . ' ';
-							?>
-							<?php
-							echo Form::select('months', $months, '', array('required', 'class' => ''));
-							?>
-						</div>
 					</div>
-				</div>
-				<div class="alergi-select">
-					<p class="text-center"><?php echo __( 'Allergiás a kutyusod?*' ); ?></p>
+					<div class="alergi-select">
+						<p class="text-center"><?php echo __( 'Allergiás a kutyusod?*' ); ?></p>
 
-					<p class="text-center">
-						<input id="alerg_yes" type="radio" name="alerg" value="1">
-						<label for="alerg_yes" class="radio_green a1"><?php echo __( 'Igen' ); ?></label>
-						<input id="alerg_no" type="radio" name="alerg" value="0" checked>
-						<label for="alerg_no" class="radio_green a2"><?php echo __( 'Nem' ); ?></label>
-					</p>
+						<p class="text-center">
+							<input id="alerg_yes" type="radio" name="alerg" value="1">
+							<label for="alerg_yes" class="radio_green a1"><?php echo __( 'Igen' ); ?></label>
+							<input id="alerg_no" type="radio" name="alerg" value="0" checked>
+							<label for="alerg_no" class="radio_green a2"><?php echo __( 'Nem' ); ?></label>
+						</p>
 
-					<p class="text-center">
-						<label style="display:none" for="last-name"
-						       id="al_label"><?php echo __( 'Ha igen, mire?' ); ?></label>
-						<input style="display:none" type="text" name="alerg_descr" class="rounded" id="alerg_descr">
-					</p>
+						<p class="text-center">
+							<label style="display:none" for="last-name"
+							       id="al_label"><?php echo __( 'Ha igen, mire?' ); ?></label>
+							<input style="display:none" type="text" name="alerg_descr" class="rounded" id="alerg_descr">
+						</p>
 
-				</div>
+					</div>
+				<?php endif; ?>
 				<!-- Box select ======================================-->
 				<h2 class="text-center"><?php echo __( 'Biztosan a kiválasztott doboznál maradsz?' ); ?></h2>
 
@@ -263,7 +284,7 @@
 									       class="radio_green b2"><?php echo $econ->package_name; ?></label>
 
 									<p><?php echo $econ->description; ?></p>
-									<span class="ammount"><?php echo  $econ->price; ?></span>
+									<span class="ammount"><?php echo $econ->price; ?></span>
 								</div>
 
 								<?php
@@ -290,11 +311,13 @@
 					</div>
 				</div>
 				<div class="action text-center">
-					<input type="submit" name="tovabb" id="next" value="<?php echo __( 'TOVÁBB' ); ?>" class="btn bold solid green">
+					<input type="submit" name="tovabb" id="next" value="<?php echo __( 'TOVÁBB' ); ?>"
+					       class="btn bold solid green">
 				</div>
 				<input type="hidden" name="order1" value="1">
 				<input type="hidden" name="selected_box" id="selected_box" value="">
-				<input type="hidden" name="selected_size" class="selected_size">
+				<input type="hidden" name="selected_size" class="selected_size"
+				       value="">
 			</form>
 			<script>
 				$(".single-order").validate({
@@ -305,7 +328,7 @@
 						alerg_descr: {
 							required: true,
 						},
-						dateofb:{
+						dateofb: {
 							required: true,
 						},
 						email: {

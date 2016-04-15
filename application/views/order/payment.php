@@ -71,8 +71,8 @@
 		<input type='hidden' name='BILL_LNAME' id='BILL_LNAME' value='<?= $current_user->customer_lastname ?>'/>
 		<input type='hidden' name='BILL_EMAIL' id='BILL_EMAIL' value='<?= $current_user->email ?>'/>
 		<input type='hidden' name='BILL_PHONE' id='BILL_PHONE' value='<?= $current_user->customer_telephone ?>'/>
-		<input type='hidden' name='BILL_ADDRESS' id='BILL_ADDRESS' value='<?= $current_user->customer_address ?>'/>
-		<input type='hidden' name='BILL_ADDRESS2' id='BILL_ADDRESS2' value='<?= $current_user->customer_address2 ?>'/>
+		<input type='hidden' name='BILL_ADDRESS' id='BILL_ADDRESS' value='<?= $current_user->customer_street ?>' />
+		<input type='hidden' name='BILL_ADDRESS2' id='BILL_ADDRESS2' value='<?= $current_user->customer_house ?>' />
 		<input type='hidden' name='BILL_ZIPCODE' id='BILL_ZIPCODE' value='<?= $current_user->customer_zip ?>'/>
 		<input type='hidden' name='BILL_CITY' id='BILL_CITY' value='<?= $current_user->customer_city ?>'/>
 		<input type='hidden' name='BILL_STATE' id='BILL_STATE' value=''/>
@@ -82,8 +82,8 @@
 		<input type='hidden' name='DELIVERY_FNAME' id='DELIVERY_FNAME' value='<?= $o->delivery_firstname ?>'/>
 		<input type='hidden' name='DELIVERY_LNAME' id='DELIVERY_LNAME' value='<?= $o->delivery_lastname ?>'/>
 		<input type='hidden' name='DELIVERY_PHONE' id='DELIVERY_PHONE' value='<?= $o->delivery_telephone ?>'/>
-		<input type='hidden' name='DELIVERY_ADDRESS' id='DELIVERY_ADDRESS' value='<?= $o->delivery_address ?>'/>
-		<input type='hidden' name='DELIVERY_ADDRESS2' id='DELIVERY_ADDRESS2' value='<?= $o->delivery_address2 ?>'/>
+		<input type='hidden' name='DELIVERY_ADDRESS' id='DELIVERY_ADDRESS' value='<?= $o->delivery_street ?>' />
+		<input type='hidden' name='DELIVERY_ADDRESS2' id='DELIVERY_ADDRESS2' value='<?= $o->delivery_house ?>' />
 		<input type='hidden' name='DELIVERY_ZIPCODE' id='DELIVERY_ZIPCODE' value='<?= $o->delivery_postcode ?>'/>
 		<input type='hidden' name='DELIVERY_CITY' id='DELIVERY_CITY' value='<?= $o->delivery_city ?>'/>
 		<input type='hidden' name='DELIVERY_STATE' id='DELIVERY_STATE' value=''/>

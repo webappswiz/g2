@@ -149,7 +149,7 @@ $time       = explode( ':', $date_array[1] );
 						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
-					<a href="#" class="btn large solid pink">order now</a>
+					<a href="/order" class="btn large solid pink">order now</a>
 				</div>
 				<!-- end .col-6-->
 				<div class="col-6"><img
@@ -275,7 +275,7 @@ $time       = explode( ':', $date_array[1] );
 				grooming items, vitamins). This is a highly personalized service. Based on your pup's size, age and
 				allergies, we carefully select premium products which will be delivered to your doorstep.</h3><img
 				src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/home-img-3.png' ); ?>" class="resposive"><a
-				a href="#" class="btn large solid orange">order now</a>
+				a href="/order" class="btn large solid orange">order now</a>
 		</div>
 		<!-- end .content-box.call-to-action-2-->
 	</div>

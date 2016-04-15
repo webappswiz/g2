@@ -148,7 +148,15 @@
   .cart-box.cart-page .cart-item form {
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex; }
+  .my-office .delivery-inf .col-4,
+  .my-office .delivery-inf .col-6,
+  .my-office .delivery-inf .col-12 {
+    width: 100%; }
+  .my-office .my-puppies .col-6 {
+    width: 100%; }
+  .my-office .invite-form input[type="text"] {
+    width: auto; } }
 
 @media screen and (max-width: 560px) {
   .header-mainbox .content-box {

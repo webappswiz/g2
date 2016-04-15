@@ -210,6 +210,7 @@ $time       = explode( ':', $date_array[1] );
 					</div>
 				</div>
 				<?php
+				if($status!=1):
 				$session = Session::instance();
 				?>
 				<a href="<?php echo URL::base( true, false ) . 'cart' ?>">
@@ -221,6 +222,7 @@ $time       = explode( ':', $date_array[1] );
 						<?php endif;?>
 					</div>
 				</a>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

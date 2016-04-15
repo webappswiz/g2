@@ -37,7 +37,8 @@ class Controller_Main extends Controller_Core {
 				}
 			}
 		}
-		$this->redirect( '/' );
+		$this->redirect($this->request->referrer());
+
 	}
 
 }

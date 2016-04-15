@@ -6,6 +6,11 @@ class Controller_Catalog extends Controller_Core {
 	public function before() {
 		parent::before();
 		$this->set_title( __( 'Catalog' ) );
+		$options = ORM::factory( 'Options', 1 );
+		$status  = $options->status;
+		if ( $status == 1 ) {
+			$this->redirect( '/' );
+		}
 		$this->session = Session::instance();
 	}
 

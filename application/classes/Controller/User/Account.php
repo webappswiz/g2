@@ -96,7 +96,7 @@ class Controller_User_Account extends Controller_Core {
 			$puppy->months        = (int) $_POST['months'];
 			$puppy->alerg         = (int) $_POST['alerg'];
 			$puppy->alerg_descr   = $_POST['alerg_descr'];
-			$puppy->selected_size = $_POST['size'];
+			$puppy->selected_size = $_POST['selected_size'];
 			$puppy->save();
 			Flash::set( 'notice', __( 'Sikeresen hozzáadtad a kutyust a profilodhoz!' ) );
 			$this->redirect( '/user_account' );
@@ -120,7 +120,8 @@ class Controller_User_Account extends Controller_Core {
 			$puppy1['alerg_descr']   = $puppy->alerg_descr;
 			$puppy1['selected_size'] = $puppy->selected_size;
 			Session::instance()->set( 'step1', $puppy1 );
-			$this->redirect( '/order/step2' );
+
+			$this->redirect( '/order/' );
 		} elseif ( ! empty( $_POST['gift'] ) ) {
 			$coupon_code = $_POST['gift'];
 			$puppy_id    = $_POST['puppy_id'];
@@ -149,7 +150,7 @@ class Controller_User_Account extends Controller_Core {
 			$step2['order']        = 1;
 			$step2['selected_box'] = $friend->selected_box;
 			Session::instance()->set( 'step2', $step2 );
-			$this->redirect( '/order/step3' );
+			$this->redirect( '/order/' );
 		}
 		$this->render_nothing();
 	}

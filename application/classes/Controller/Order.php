@@ -602,14 +602,19 @@ class Controller_Order extends Controller_Core {
 		$options = ORM::factory( 'Options', 1 );
 		$status  = $options->status;
 		if ( $status != 1 ) {
-			$this->redirect( '/' );
+			$this->redirect( '/catalog' );
 		}
+
 		if ( $options->current_smart >= $options->smart && $options->current_plus >= $options->plus ) {
 			$options->status = 0;
 			$options->save();
 			$this->redirect( '/' );
 		}
 		$session = Session::instance()->as_array();
+		if(isset($session['step1'])){
+			$step1   = $session['step1'];
+		} else $step1 = array();
+
 		$this->set_title( 'Order - Checkout' );
 		if ( isset( $_GET['smart'] ) ) {
 			Session::instance()->set( 'package', 'smart' );
@@ -618,9 +623,10 @@ class Controller_Order extends Controller_Core {
 			Session::instance()->set( 'package', 'plus' );
 		}
 		if ( isset( $_POST['order1'] ) || isset( $_POST['order2'] ) || isset( $_POST['order3'] ) ) {
-			Session::instance()->set( 'step1', $_POST );
+			$full_array = array_merge($_POST, $step1);
+			Session::instance()->set( 'step1', $full_array );
 			$this->redirect( 'order/step3' );
-		} elseif ( isset( $this->current_user ) ) {
+		} elseif ( isset( $this->current_user ) && !isset($step1['puppy_id'])) {
 			$this->redirect( '/user_account' );
 		}
 	}

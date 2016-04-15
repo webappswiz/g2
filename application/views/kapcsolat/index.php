@@ -23,43 +23,65 @@
 		});
 	});
 </script>
-<div class="clear"></div>
-<section class="contact" class="rounded">
-	<h1><?php echo __( 'Írj nekünk!' ); ?></h1>
 
-	<div class="contact-text">
-		<p><?php echo __( 'Mindig örülünk, ha üzenetet kapunk! </br>Van egy jó ötleted? Valami nem tetszett vagy nagyon is? </br>Vannak kérdéseid és a választ nem találod a GYIK menü pontban?</br>Ne rejtegesd a véleményed, oszd meg velünk és mi válaszolunk neked!' ); ?></p>
+
+<!-- Contact Form ======================================-->
+<section>
+	<div class="row flx-center">
+		<div class="content-box">
+			<h1 class="text-center"><?php echo __( 'Írj nekünk!' ); ?></h1>
+
+			<p class="text-center text-gray"><?php echo __( 'Mindig örülünk, ha üzenetet kapunk! </br>Van egy jó ötleted? Valami nem tetszett vagy nagyon is? </br>Vannak kérdéseid és a választ nem találod a GYIK menü pontban?</br>Ne rejtegesd a véleményed, oszd meg velünk és mi válaszolunk neked!' ); ?></p>
+		</div>
+		<!-- end .content-box-->
 	</div>
-	<div class="contact-cont-left">
-		<div class="contact-address">
-			<?php echo __( 'Kapcsolat információ:' ); ?></br>
-            <span>GOODIEBOX </br>
-	            Web Apps Consult Kft.</span></br>
-            <span>1053 Budapest </br>
-	            Kossuth Lajos utca 7-9.</span> </br>
-			<?php echo __( 'E-mail cím:' ); ?> </br>
-			<span>info@goodiebox.hu</span>
-		</div> <!--End cotact address-->
+	<!-- end .row.flx-center-->
+	<div class="row flx-center">
+		<div class="contact-form">
+			<form action="" method="POST" class="row flx-justify" id="contact">
+				<div class="col-6 col-xs-12">
+					<p><?php echo __( 'Kapcsolat információ:' ); ?></p>
 
-		<div class="contact-us-form">
-			<form action="" method="POST" id="contact">
-				<div><label for="customer_firstname"><?php echo __( 'Vezetéknév*' ); ?></label>
-					<input type="text" name="customer_firstname" id="customer_firstname" class="rounded"
-					       value="<?= ( $current_user ) ? $current_user->customer_firstname : '' ?>" required></div>
-				<div><label for="customer_lastname"><?php echo __( 'Keresztnév*' ); ?></label>
-					<input type="text" name="customer_lastname" id="customer_lastname" class="rounded"
-					       value="<?= ( $current_user ) ? $current_user->customer_lastname : '' ?>" required></div>
-				<div><label for="customer_email"><?php echo __( 'E-mail cím*' ); ?></label>
-					<input type="text" name="customer_email" id="customer_email" class="rounded"
-					       value="<?= ( $current_user ) ? $current_user->email : '' ?>" required></div>
-				<div><label for="subject"><?php echo __( 'Tárgy' ); ?></label>
-					<input type="text" name="subject" id="subject" class="rounded" value="" required></div>
-				<div><textarea name="message" id="message" placeholder="<?php echo __( 'Kezdj egy gépelni...' ); ?>"
-				               class="rounded" required></textarea></div>
+					<p class="text-bold">GOODIEBOX</p>
 
+					<p class="text-bold">Web Apps Consult Kft.</p><br>
+
+					<p class="text-bold">1053 Budapest</p>
+
+					<p class="text-bold">Kossuth Lajos utca 7-9.</p><br>
+
+					<p><?php echo __( 'E-mail cím:' ); ?></p><a href="mailto:info@goodiebox.hu" class="text-bold email">info@goodiebox.hu</a>
+
+					<div class="field-holder">
+						<input type="text" id="customer_firstname" name="customer_firstname"
+						       placeholder="<?php echo __( 'Vezetéknév*' ); ?>"
+						       value="<?= ( $current_user ) ? $current_user->customer_firstname : '' ?>" required
+						       aria-required="true">
+						<input type="text" id="customer_lastname" name="customer_lastname"
+						       placeholder="<?php echo __( 'Keresztnév*' ); ?>"
+						       value="<?= ( $current_user ) ? $current_user->customer_lastname : '' ?>" required
+						       aria-required="true">
+						<input type="text" id="customer_email" name="customer_email"
+						       placeholder="<?php echo __( 'E-mail cím*' ); ?>"
+						       value="<?= ( $current_user ) ? $current_user->email : '' ?>" required
+						       aria-required="true">
+						<input type="text" id="subject" value="" name="subject"
+						       placeholder="<?php echo __( 'Tárgy' ); ?>">
+						<textarea id="message" name="message" placeholder="<?php echo __( 'Kezdj egy gépelni...' ); ?>"
+						          required aria-required="true"></textarea>
+						<input id="submit" type="submit" value="<?php echo __( 'ELKÜLDÖM' ); ?>" class="btn large solid pink">
+					</div>
+					<!-- end .field-holder-->
+				</div>
+				<!-- end .col-6.col-xs-12-->
+				<div class="col-4 col-xs-12">
+					<img src="<?= URL::base( true, false ) ?>assets/img/contact-img1.jpg" class="responsive">
+					<img src="<?= URL::base( true, false ) ?>assets/img/contact-img2.jpg" class="responsive">
+					<img src="<?= URL::base( true, false ) ?>assets/img/contact-img3.jpg" class="responsive">
+					<a href="http://goodiebox.hu/signup" class="btn large solid orange"><?php echo __( 'Feliratkozok a hírlevélre!' ); ?></a>
+				</div>
+				<!-- end .col-4.col-xs-12-->
 			</form>
-			<?php echo __( '*Kötelező mezők' ); ?>
-			<input type="submit" id="submit" value="<?php echo __( 'ELKÜLDÖM' ); ?>" class="dark-btn rounded">
 			<script>
 				$("#contact").validate({
 					rules: {
@@ -72,16 +94,6 @@
 				});
 			</script>
 		</div>
-	</div> <!--End contact-cont-left-->
-	<div class="contact-cont-right">
-		<ul>
-			<li><img src="<?= URL::base( true, false ) ?>/assets/img/contact-img1.jpg"></li>
-			<li><img src="<?= URL::base( true, false ) ?>/assets/img/contact-img2.jpg"></li>
-			<li><img src="<?= URL::base( true, false ) ?>/assets/img/contact-img3.jpg"></li>
-			<li style="text-align: center"><a href="http://goodiebox.hu/signup">
-					<button type="button" class="top-btn rounded"
-					        style="width:175px;"><?php echo __( 'Feliratkozok<br>a hírlevélre!' ); ?></button>
-				</a></li>
-		</ul>
-	</div> <!--End contact-cont-right-->
+	</div>
 </section>
+

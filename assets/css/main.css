@@ -680,7 +680,10 @@ section {
     width: 250px;
     height: 250px;
     object-fit: cover;
-    margin: 10px 5px; }
+    margin: 10px 5px;
+    display: block; }
+  .photo img:before {
+    content: 'kokko'; }
 
 .gallery .photo {
   padding: 0 0 4em; }
@@ -1515,14 +1518,26 @@ section {
   /* My puppies */
   /* Invite form */
   /* Order */ }
-  .my-office #tabs li a {
-    border-bottom: 1px dashed #2a1010;
-    padding: 7px 0 2px;
-    margin: 0 14px; }
-  .my-office #tabs li a:hover {
-    border-bottom: none;
-    padding: 7px 14px;
-    margin: 0; }
+  .my-office #tabs .ui-widget-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .my-office #tabs li {
+    margin: 5px 1px; }
+    .my-office #tabs li a {
+      border-bottom: 1px dashed #2a1010;
+      padding: 7px 0 2px;
+      margin: 0 14px; }
+    .my-office #tabs li a:hover {
+      border-bottom: none;
+      padding: 7px 14px;
+      margin: 0; }
   .my-office #tabs .ui-state-active a {
     border-bottom: none;
     padding-bottom: 7px;
@@ -1540,24 +1555,26 @@ section {
     margin: 10px 0; }
   .my-office .my-puppies .col-6 {
     padding: 0 10px; }
-  .my-office .my-puppies .puppies-item .puppies-avatar {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
-    vertical-align: middle; }
-  .my-office .my-puppies .puppies-item h3 {
-    margin: 0;
-    vertical-align: middle;
-    line-height: 80px; }
-  .my-office .my-puppies .puppies-item table {
-    margin: 20px 0 0; }
-    .my-office .my-puppies .puppies-item table td {
-      padding: 6px 0; }
-  .my-office .my-puppies .puppies-item a.btn {
-    color: #fff;
-    margin-right: 10px;
-    text-transform: none; }
+  .my-office .my-puppies .puppies-item {
+    margin-bottom: 20px; }
+    .my-office .my-puppies .puppies-item .puppies-avatar {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+      vertical-align: middle; }
+    .my-office .my-puppies .puppies-item h3 {
+      margin: 0;
+      vertical-align: middle;
+      line-height: 80px; }
+    .my-office .my-puppies .puppies-item table {
+      margin: 20px 0 0; }
+      .my-office .my-puppies .puppies-item table td {
+        padding: 6px 0; }
+    .my-office .my-puppies .puppies-item a.btn {
+      color: #fff;
+      margin-right: 10px;
+      text-transform: none; }
   .my-office .my-puppies .new-puppy {
     /*--Image load --*/
     /*--Size select--*/
