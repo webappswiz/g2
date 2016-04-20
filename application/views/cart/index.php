@@ -44,17 +44,12 @@
 						<form action="/cart/checkout" method="post">
 							<input type="submit" name="order_now" value="order now" class="btn large solid pink">
 						</form>
-						<a href="#" class="btn large solid pink">order
-							now</a>
 					</div>
 				</div>
 				<!-- end .row.flx-end.cart-total-->
 			</div>
 		<?php else: ?>
 			<h2 class="text-center">Cart is empty</h2>
-			<form action="/cart/checkout" method="post">
-				<input type="submit" name="order_now" value="order now" class="btn large solid pink">
-			</form>
 		<?php endif; ?>
 		<!-- end .cart-box.cart-page-->
 	</div>

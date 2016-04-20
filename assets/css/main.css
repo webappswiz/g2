@@ -245,6 +245,46 @@ section {
     cursor: pointer;
     width: 80px; }
 
+.date-dropdown-holder {
+  display: inline-block;
+  width: 180px; }
+  .date-dropdown-holder .container {
+    width: 80px;
+    display: inline-block;
+    margin: 0;
+    position: relative; }
+  .date-dropdown-holder .container:first-of-type {
+    margin-right: 16px; }
+  .date-dropdown-holder .icon {
+    display: inline-block;
+    position: absolute;
+    top: 33px;
+    right: 1em; }
+  .date-dropdown-holder .icon:after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    display: inline-block;
+    position: absolute; }
+  .date-dropdown-holder input[type="text"] {
+    box-sizing: border-box; }
+  .date-dropdown-holder input[type="text"]:hover {
+    cursor: pointer; }
+  .date-dropdown-holder input[type="text"]::-webkit-input-placeholder {
+    color: #2a1010; }
+  .date-dropdown-holder ul.option {
+    position: absolute;
+    display: none;
+    width: 100%;
+    padding: 0 1em;
+    background-color: #f5f4f4;
+    box-sizing: border-box;
+    top: 50px;
+    z-index: 2; }
+    .date-dropdown-holder ul.option li {
+      padding: 1em 0; }
+    .date-dropdown-holder ul.option li:hover {
+      cursor: pointer; }
+
 /*-- END MAIN ELEMENTS & BLOCKS ##########################*/
 /*-- BUTTONS #############################################*/
 .btn {
@@ -1198,6 +1238,46 @@ section {
     background-color: #f5f4f4;
     padding: 1.3em; }
 
+.my-cart .date-dropdown-holder {
+  display: inline-block;
+  width: 180px; }
+  .my-cart .date-dropdown-holder .container {
+    width: 80px;
+    display: inline-block;
+    margin: 0;
+    position: relative; }
+  .my-cart .date-dropdown-holder .container:first-of-type {
+    margin-right: 16px; }
+  .my-cart .date-dropdown-holder .icon {
+    display: inline-block;
+    position: absolute;
+    top: 33px;
+    right: 1em; }
+  .my-cart .date-dropdown-holder .icon:after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    display: inline-block;
+    position: absolute; }
+  .my-cart .date-dropdown-holder input[type="text"] {
+    box-sizing: border-box; }
+  .my-cart .date-dropdown-holder input[type="text"]:hover {
+    cursor: pointer; }
+  .my-cart .date-dropdown-holder input[type="text"]::-webkit-input-placeholder {
+    color: #2a1010; }
+  .my-cart .date-dropdown-holder ul.option {
+    position: absolute;
+    display: none;
+    width: 100%;
+    padding: 0 1em;
+    background-color: #f5f4f4;
+    box-sizing: border-box;
+    top: 50px;
+    z-index: 2; }
+    .my-cart .date-dropdown-holder ul.option li {
+      padding: 1em 0; }
+    .my-cart .date-dropdown-holder ul.option li:hover {
+      cursor: pointer; }
+
 .my-cart .date-holder {
   display: inline-block;
   width: 180px;
@@ -1639,12 +1719,15 @@ section {
     .my-office .my-puppies .new-puppy .size-select #size_2:checked ~ .radio_green.s2:before,
     .my-office .my-puppies .new-puppy .size-select #size_3:checked ~ .radio_green.s3:before {
       background-position: center bottom; }
-    .my-office .my-puppies .new-puppy .date-holder {
-      width: 60%;
-      position: relative; }
-      .my-office .my-puppies .new-puppy .date-holder input[type="text"] {
-        box-sizing: border-box;
-        font-size: 16px; }
+    .my-office .my-puppies .new-puppy .date-dropdown-holder {
+      width: 220px; }
+      .my-office .my-puppies .new-puppy .date-dropdown-holder .container {
+        width: 100px; }
+        .my-office .my-puppies .new-puppy .date-dropdown-holder .container input[type="text"] {
+          padding: 1.3em; }
+      .my-office .my-puppies .new-puppy .date-dropdown-holder .icon {
+        top: 26px;
+        right: 2em; }
     .my-office .my-puppies .new-puppy .date-holder:after {
       content: '\f073';
       font-family: 'FontAwesome';

@@ -97,10 +97,45 @@ class Controller_User_Account extends Controller_Core {
 			$puppy->alerg         = (int) $_POST['alerg'];
 			$puppy->alerg_descr   = $_POST['alerg_descr'];
 			$puppy->selected_size = $_POST['selected_size'];
+
+			if ( isset( $_FILES['puppy_img'] ) ) {
+				$filename = $this->_save_image( $_FILES['puppy_img'] );
+				if ( ! $filename){
+					$puppy->img_name = '';
+				} else
+				$puppy->img_name = $filename;
+			}
 			$puppy->save();
 			Flash::set( 'notice', __( 'Sikeresen hozzáadtad a kutyust a profilodhoz!' ) );
 			$this->redirect( '/user_account' );
 		}
+	}
+
+	protected function _save_image( $image ) {
+		if (
+			! Upload::valid( $image ) OR
+			! Upload::not_empty( $image ) OR
+			! Upload::type( $image, array( 'jpg', 'jpeg', 'png', 'gif' ) )
+		) {
+			return false;
+		}
+
+		$directory = DOCROOT . 'uploads/puppies/';
+
+		if ( $file = Upload::save( $image, null, $directory ) ) {
+			$filename = strtolower( Text::random( 'alnum', 20 ) ) . '.jpg';
+
+			Image::factory( $file )
+			     ->resize( 200, 200, Image::AUTO )
+			     ->save( $directory . $filename );
+
+			// Delete the temporary file
+			unlink( $file );
+
+			return $filename;
+		}
+
+		return false;
 	}
 
 	public function action_order() {
@@ -243,10 +278,6 @@ class Controller_User_Account extends Controller_Core {
 		$this->send( $email, 'info@goodiebox.hu', __( 'Meghívó: gyere és te is lepd meg a kutyusodat!' ), $body );
 		Flash::set( 'notice', __( 'A meghívót sikeresen elküldtük!' ) );
 		$this->redirect( '/user_account' );
-	}
-
-	public function action_test() {
-
 	}
 
 }

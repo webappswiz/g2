@@ -184,29 +184,38 @@
 
 								<div class="drop-box">
 									<input id="gender_male" type="radio" data-gender="<?php echo __( 'Lány' ); ?>"
-									       name="gender" value="<?php echo __( 'Lány' ); ?>">
+									       name="gender" value="0">
 									<label for="gender_male"><?php echo __( 'Lány' ); ?></label>
 									<input id="gender_female" type="radio" data-gender="<?php echo __( 'Fiú' ); ?>"
-									       name="gender" value="<?php echo __( 'Fiú' ); ?>">
+									       name="gender" value="1">
 									<label for="gender_female"><?php echo __( 'Fiú' ); ?></label>
 								</div>
 							</div>
-							<?php
-							for ( $i = 1994; $i <= date( 'Y' ); $i ++ ) {
-								$years[ $i ] = $i;
-							}
+							<div class="date-dropdown-holder">
+								<div class="container">
+									<input type="text" name="years" placeholder="Year" readonly><span class="icon"></span>
+									<ul class="option year">
+										<?php
 
-							for ( $i = 1; $i <= 12; $i ++ ) {
-								$months[ $i ] = $i;
-							}
-							?>
-							<div class="date-holder">
-								<?php
-								echo Form::select( 'years', $years, '', array( 'required', 'class' => '' ) ) . ' ';
-								?>
-								<?php
-								echo Form::select( 'months', $months, '', array( 'required', 'class' => '' ) );
-								?>
+										for ( $i = 1994; $i <= date( 'Y' ); $i ++ ) {
+											echo '<li>'.$i.'</li>';
+										}
+
+										?>
+									</ul>
+								</div>
+								<div class="container">
+									<input type="text" name="months" placeholder="Month" readonly><span class="icon"></span>
+									<ul class="option month">
+										<?php
+
+										for ( $i = 1; $i <= 12; $i ++ ) {
+											echo '<li>'.$i.'</li>';
+										}
+
+										?>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>

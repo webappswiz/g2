@@ -113,7 +113,7 @@
 					<h2 class="text-center"><?php echo __('Kutyusaim'); ?></h2>
 
 					<div class="row">
-
+					<div class="col-6">
 						<?php
 						$puppies = ORM::factory( 'Puppy' )
 						              ->where( 'user_id', '=', $current_user->id )
@@ -122,9 +122,17 @@
 							$i = 0;
 							foreach ( $puppies as $puppy ):
 								?>
-								<div class="col-6 puppies-item">
-									<div class="row"><img src="<?php echo URL::base( true, false ); ?>assets/img/puppies-avatar.jpg"
-									                      class="puppies-avatar rounded">
+								<div class="row puppies-item">
+									<div class="row">
+
+										<?php if($puppy->img_name!=''):?>
+											<img src="<?php echo URL::base( true, false ); ?>uploads/puppies/<?php echo $puppy->img_name?>"
+											     class="puppies-avatar rounded">
+										<?php else:?>
+											<img src="<?php echo URL::base( true, false ); ?>assets/img/puppies-avatar.jpg"
+											     class="puppies-avatar rounded">
+										<?php endif;?>
+
 
 										<h3><?= $puppy->puppy_name ?></h3>
 									</div>
@@ -171,6 +179,7 @@
 							endforeach;
 						endif;
 						?>
+						</div>
 						<div class="col-6 new-puppy">
 							<h3 class="text-center bgc-orange rad-3">Add a new puppies profile</h3>
 
@@ -178,7 +187,7 @@
 								<div class="row flx-middle">
 									<div class="img-upload-holder"><img id="uploadImg" src="#"
 									                                    class="puppies-avatar rounded"></div>
-									<input id="puppy-img-load" type="file" name="puppy_img">
+									<input id="puppy-img-load" type="file" name="puppy_img" accept="image/*">
 									<label for="puppy-img-load" class="btn solid green">Add photo</label>
 								</div>
 								<div class="row input-name-holder">
@@ -211,30 +220,40 @@
 									<div class="gender-select"><span class="toggle"><?php echo __('Kutyus neme*'); ?></span>
 
 										<div class="drop-box">
-											<input id="gender_male" type="radio" name="gender" value="0">
+											<input id="gender_male" type="radio" name="gender" value="0" data-gender="<?php echo __('Lány'); ?>">
 											<label for="gender_male"><?php echo __('Lány'); ?></label>
-											<input id="gender_female" type="radio" name="gender" value="1">
+											<input id="gender_female" type="radio" name="gender" value="1" data-gender="<?php echo __('Fiú'); ?>">
 											<label for="gender_female"><?php echo __('Fiú'); ?></label>
 										</div>
 									</div>
-									<?php
-									for ( $i = 1994; $i <= date( 'Y' ); $i ++ ) {
-										$years[ $i ] = $i;
-									}
+									<div class="date-dropdown-holder">
+										<div class="container">
+											<input type="text" name="years" placeholder="Year" readonly><span class="icon"></span>
+											<ul class="option year">
+												<?php
 
-									for ( $i = 1; $i <= 12; $i ++ ) {
-										$months[ $i ] = $i;
-									}
-									?>
-									<div class="date-holder">
-										<?php
-										echo Form::select( 'years', $years, '', array( 'required', 'class' => '' ) ) . ' ';
-										?>
-										<?php
-										echo Form::select( 'months', $months, '', array( 'required', 'class' => '' ) );
-										?>
+												for ( $i = 1994; $i <= date( 'Y' ); $i ++ ) {
+													echo '<li>'.$i.'</li>';
+												}
+
+												?>
+											</ul>
+										</div>
+										<div class="container">
+											<input type="text" name="months" placeholder="Month" readonly><span class="icon"></span>
+											<ul class="option month">
+												<?php
+
+												for ( $i = 1; $i <= 12; $i ++ ) {
+													echo '<li>'.$i.'</li>';
+												}
+
+												?>
+											</ul>
+										</div>
 									</div>
 								</div>
+
 								<div class="row">
 									<div class="radiobox-holder alergi-select">
 										<p class="text-center"><?php echo __('Allergiás a kutyusod?*'); ?></p>
@@ -256,7 +275,7 @@
 								<input type="hidden" name="order1" value="1">
 							</form>
 						</div>
-					</div>
+						</div>
 				</div>
 				<div id="tabs-3">
 					<h2 class="text-center">Invite your friend!</h2>

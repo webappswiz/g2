@@ -88,8 +88,41 @@ $(document).ready(function(){
     }
   });
   $('.gender-select .drop-box input').click(function(){
-    $('.gender-select .toggle').text(this.value);
+    $('.gender-select .toggle').text($(this).data('gender'));
     $('.gender-select .drop-box').slideUp(400);
+  });
+
+  // Date dropdown select
+  $('.date-dropdown-holder input[name="years"]').click(
+    function() {
+      console.log('click!');
+      if ($('ul.option.year').is(':hidden')) {
+        $('ul.option.year').slideDown(400);
+      } else {
+        $('ul.option.year').slideUp(400);
+      }
+    }
+  );
+
+  $('ul.option.year li').click(function(){
+    $('.date-dropdown-holder input[name="years"]').attr('value', ($(this).text()));
+    $('ul.option.year').slideUp(400);
+  });
+
+  $('.date-dropdown-holder input[name="months"]').click(
+    function() {
+      console.log('click!');
+      if ($('ul.option.month').is(':hidden')) {
+        $('ul.option.month').slideDown(400);
+      } else {
+        $('ul.option.month').slideUp(400);
+      }
+    }
+  );
+
+  $('ul.option.month li').click(function(){
+    $('.date-dropdown-holder input[name="months"]').attr('value', ($(this).text()));
+    $('ul.option.month').slideUp(400);
   });
 
 });

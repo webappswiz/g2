@@ -31,11 +31,19 @@
 	} else {
 		$discount = 0;
 	}
+		if($o->type==3){
+			$pname = 'Goodiebox webshop';
+			$pnumber = 'gwebshop';
+		} else {
+			$pname = 'Goodiebox ' . $o->package->package_name;
+			$pnumber = $o->package->product_number;
+		}
+
 	$hash['MERCHANT']        = 'P120701';
 	$hash['ORDER_REF']       = $o->id;
 	$hash['ORDER_DATE']      = $o->date_purchased;
-	$hash['ORDER_PNAME']     = 'Goodiebox ' . $o->package->package_name;
-	$hash['ORDER_PCODE']     = $o->package->product_number;
+	$hash['ORDER_PNAME']     = $pname;
+	$hash['ORDER_PCODE']     = $pnumber;
 	$hash['ORDER_PINFO']     = '';
 	$hash['ORDER_PRICE']     = $o->total_price;
 	$hash['ORDER_QTY']       = '1';
