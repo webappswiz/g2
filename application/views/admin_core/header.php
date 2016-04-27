@@ -18,7 +18,11 @@ $time       = explode( ':', $date_array[1] );
 	<link rel="stylesheet" href="/assets/css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="/assets/css/admin_css.css">
 	<link rel="stylesheet" href="/assets/css/datetimepicker.css">
-
+	<link rel="stylesheet" href="/assets/css/jquery.fileupload.css">
+	<link rel="stylesheet" href="/assets/css/jquery.fileupload-ui.css">
+	<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+	<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+	<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
 	<script>
 		var url_base = '<?php echo URL::base(true, true) ?>';
 	</script>
@@ -29,6 +33,14 @@ $time       = explode( ':', $date_array[1] );
 	echo Media::inline_script();
 	?>
 	<script src="/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="/assets/js/vendor/jquery.ui.widget.js"></script>
+	<script src="/assets/js/vendor/jquery.iframe-transport.js"></script>
+	<script src="/assets/js/vendor/jquery.fileupload.js"></script>
+	<script src="/assets/js/vendor/jquery.fileupload-process.js"></script>
+	<script src="/assets/js/vendor/jquery.fileupload-image.js"></script>
+	<script src="/assets/js/vendor/jquery.fileupload-audio.js"></script>
+	<script src="/assets/js/vendor/jquery.fileupload-video.js"></script>
+	<script src="/assets/js/vendor/jquery.fileupload-validate.js"></script>
 </head>
 <body>
 <div class="navbar navbar-fixed-top">

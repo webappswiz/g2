@@ -12,8 +12,25 @@
 	<div class="content-box product-detail">
 		<section>
 			<div class="row flx-justify main">
-				<div class="col-left"><img src="<?php echo URL::base( true, false ); ?>assets/img/product-det-img-1.jpg" class="product-img">
-					<div class="row flx-justify thumb-line"><img src="<?php echo URL::base( true, false ); ?>assets/img/product-det-img-1.jpg"><img src="<?php echo URL::base( true, false ); ?>assets/img/product-det-img-1.jpg"><img src="<?php echo URL::base( true, false ); ?>assets/img/product-det-img-1.jpg"><img src="<?php echo URL::base( true, false ); ?>assets/img/product-det-img-1.jpg"></div>
+
+				<div class="col-left">
+					<?php if(count($images)>0):?>
+						<?php
+						$i=0;
+						foreach($images as $image){
+							if($i==0){
+								echo '<img src="'.URL::base( true, false ).'uploads/products/'.$image->img_name.'" class="product-img">';
+								echo '<div class="row flx-justify thumb-line">';
+							} else {
+								echo '<img src="'.URL::base( true, false ).'uploads/products/'.$image->img_name.'">';
+							}
+							$i++;
+						}
+						echo '</div>';
+						?>
+					<?php else:?>
+						<img src="<?php echo URL::base( true, false ); ?>assets/img/product-det-img-1.jpg" class="product-img">
+					<?php endif;?>
 				</div>
 				<!-- end .col-left-->
 				<div class="col-center">

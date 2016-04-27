@@ -13,8 +13,6 @@ $(function() {
   $( "#amount-1" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) );
 });
 
-
-
 // Slider age filter
 $(function() {
     $( "#slider-range-max-1" ).slider({
@@ -47,6 +45,7 @@ $(function() {
   $( "#size-2" ).val( $( "#slider-range-3" ).slider( "values", 1 ) );
 });
 
+// Tabs
 $(function() {
     $( "#tabs" ).tabs();
   });
@@ -54,7 +53,7 @@ $(function() {
 // Quantity select
 $(function(){
   itemQuantity = $('div[id*="item-id"]'); // Нахожу все блоки корзины
-  itemQuantity.each(function(i){          // В каждо блоке к элеиентам .btn и input
+  itemQuantity.each(function(i){          // В каждом блоке к элеиентам .btn и input
       box = $(this);                      // добавляю data с счетчиком
       curentClass = 'inp-'+i;
       box.find('input').attr('data-box-count', curentClass);
@@ -88,12 +87,12 @@ $(document).ready(function(){
     }
   });
   $('.gender-select .drop-box input').click(function(){
-    $('.gender-select .toggle').text($(this).data('gender'));
+    $('.gender-select .toggle').text(this.value);
     $('.gender-select .drop-box').slideUp(400);
   });
 
   // Date dropdown select
-  $('.date-dropdown-holder input[name="years"]').click(
+  $('.date-dropdown-holder input[name="year"]').click(
     function() {
       console.log('click!');
       if ($('ul.option.year').is(':hidden')) {
@@ -105,11 +104,11 @@ $(document).ready(function(){
   );
 
   $('ul.option.year li').click(function(){
-    $('.date-dropdown-holder input[name="years"]').attr('value', ($(this).text()));
+    $('.date-dropdown-holder input[name="year"]').attr('value', ($(this).text()));
     $('ul.option.year').slideUp(400);
   });
 
-  $('.date-dropdown-holder input[name="months"]').click(
+  $('.date-dropdown-holder input[name="month"]').click(
     function() {
       console.log('click!');
       if ($('ul.option.month').is(':hidden')) {
@@ -121,7 +120,7 @@ $(document).ready(function(){
   );
 
   $('ul.option.month li').click(function(){
-    $('.date-dropdown-holder input[name="months"]').attr('value', ($(this).text()));
+    $('.date-dropdown-holder input[name="month"]').attr('value', ($(this).text()));
     $('ul.option.month').slideUp(400);
   });
 
@@ -214,10 +213,8 @@ $(document).ready(function() {
 // Confirm order
   $('#submit-order').click(function(){
     if ($('#confirm').is(':checked')) {
-      console.log('go!');
     } else {
       event.preventDefault();
-      console.log('huyak-huyak');
     }
   })
 });
@@ -351,4 +348,14 @@ $(function(){
 // Gallery on Catalog Page
 $(function(){
   $('.product-detail .col-left .thumb-line').responsiveGallery();
+});
+
+// See detail hover link add
+$(document).ready(function () {
+    var link;
+    var linkElem = $('.product-preview');
+    for ( i = 0; i < linkElem.length; i++ ) {
+        link = $(linkElem[i]).find("a").attr("href");
+        $(linkElem[i]).find('img').wrap('<a href="' + link + '" class="preview-link">');
+    }
 });

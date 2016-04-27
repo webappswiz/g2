@@ -1,9 +1,31 @@
-/*! Lana Carusel - v0.0.1 - 2016-03-29
+/*! Lana Carusel - v0.1.2 - 2016-04-24
 * http://lanadev.com/
 * Includes: 
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 
 (function($){
+  $.fn.touchScrolling = function(){
+    var startPos = 0,
+    semiPos = 0,
+    x = 0,
+    self = $(this);
+ 
+    self.bind('touchstart', function(event) {
+        var e = event.originalEvent;
+        startPos = self.scrollLeft() + e.touches[0].pageX
+    });
+
+    self.bind('touchmove', function(event) {
+        var e = event.originalEvent;
+        x = semiPos + e.touches[0].pageX - startPos;
+        self.css({"transform": "translateX(" + x + "px)"});
+        e.preventDefault();
+    });
+
+    self.bind('touchend', function(event) {
+        semiPos = x;
+    });
+};
   jQuery.fn.responsiveCarusel = function(options){
   	
   	// Defaul Settings
@@ -55,7 +77,6 @@
 
     // Set Resposive Viewport Width & Controls Position
    	if (((viewportWidth + 10) >= $('body').width()) && itemWidth < ($('body').width() - 150)) {
-   		console.log("первое условие" + itemWidth < ($('body').width() - 150));
    		$('.la-viewport').width($('body').width() - 150);
    		$('.la-arrow-left').css("left", "5px");
    		$('.la-arrow-right').css("right", "5px");
@@ -107,10 +128,12 @@
     		count--;
     	} else {
     		x = -(itemLength * slideWidth - settings.items * slideWidth);
-    		console.log(x);
-    		$(this).next().find('ul').css({"transform": "translateX(" + x + "px)"});
+     		$(this).next().find('ul').css({"transform": "translateX(" + x + "px)"});
     		count = itemLength - settings.items;
     	}
     });
+
+    // Touch Move
+    $(this).find('ul').touchScrolling();
   };
 })(jQuery);
