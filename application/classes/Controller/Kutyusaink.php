@@ -14,4 +14,16 @@ class Controller_Kutyusaink extends Controller_Core {
 
 	}
 
+	public function action_fotok(){
+
+	}
+
+	public function action_video(){
+
+	}
+
+	public function action_doboz(){
+
+	}
+
 }
