@@ -15,7 +15,7 @@
 	</div>
 	<!-- end .footer-top-->
 	<div class="row footer-bottom">
-		<div class="row content-box">
+		<div class="row flx-around content-box">
 			<div class="col-4">
 				<p><span class="address">1053 Budapest Kossuth L. u. 7-9.</span></p>
 
