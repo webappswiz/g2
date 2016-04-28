@@ -274,7 +274,7 @@ $time       = explode( ':', $date_array[1] );
 			<h3 class="text-center">Every month, 3-6 different items are in the box (food, snacks, toys, accessories,
 				grooming items, vitamins). This is a highly personalized service. Based on your pup's size, age and
 				allergies, we carefully select premium products which will be delivered to your doorstep.</h3><img
-				src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/home-img-3.png' ); ?>" class="resposive"><a
+				src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/fotobox-2.png' ); ?>" class="resposive"><a
 				a href="/order" class="btn large solid orange">order now</a>
 		</div>
 		<!-- end .content-box.call-to-action-2-->
