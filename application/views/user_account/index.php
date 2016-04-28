@@ -129,7 +129,7 @@
 											<img src="<?php echo URL::base( true, false ); ?>uploads/puppies/<?php echo $puppy->img_name?>"
 											     class="puppies-avatar rounded">
 										<?php else:?>
-											<img src="<?php echo URL::base( true, false ); ?>assets/img/puppies-avatar.jpg"
+											<img src="<?php echo URL::base( true, false ); ?>assets/css/images/puppies-background.jpg"
 											     class="puppies-avatar rounded">
 										<?php endif;?>
 
@@ -170,7 +170,7 @@
 										<form action="/user_account/order" method="POST">
 											<input type="hidden" name="puppy_id" value="<?= $puppy->id ?>">
 											<input type="submit" name="submit" value="<?php echo __('GYERÜNK'); ?>" class="btn solid green">
-										</form>
+										</form>&nbsp;&nbsp;
 										<a href="#" class="btn solid orange">Edit info</a>
 									</div>
 								</div>
