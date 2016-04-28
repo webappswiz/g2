@@ -32,8 +32,6 @@ class Controller_Kapcsolat extends Controller_Core {
 			$contact->date      = date( 'Y-m-d H:i' );
 			$contact->save();
 			$this->send( 'info@goodiebox.hu', 'info@goodiebox.hu', 'You got a new message from the contact form', 'Hi Admin, please check a new incoming message from the admin area.' );
-			echo 1;
-			$this->render_nothing();
 		}
 	}
 

@@ -282,6 +282,7 @@ $time       = explode( ':', $date_array[1] );
 	<!-- end .row.flx-center.bgc-yellow_light-->
 </section>
 
+<?php if($options->status!=1):?>
 <!-- Shop Carusel =================================-->
 <section>
 	<div class="row flx-center bgc-pink_light box-shadow">
@@ -293,8 +294,14 @@ $time       = explode( ':', $date_array[1] );
 					<?php
 					$products = ORM::factory( 'Products' )->order_by( 'id', 'DESC' )->limit( 6 )->find_all();
 					foreach ( $products as $product ):
+						$image = ORM::factory('ProductImages')->where('product_id','=',$product->id)->limit(1)->find();
 						?>
-						<li class="item product-preview"><img src="<?= URL::base( true, false ) ?>assets/img/product-img-1.jpg">
+						<li class="item product-preview">
+							<?php if($image->img_name!=''):?>
+								<img src="<?= URL::base( true, false ) ?>uploads/products/<?php echo $image->img_name;?>">
+							<?php else:?>
+								<img src="<?= URL::base( true, false ) ?>assets/img/placeholder.png">
+							<?php endif;?>
 							<div class="row">
 								<h2><?php echo $product->product_name; ?></h2><span class="ammount"><?php echo $product->price; ?></span><a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>" class="btn solid pink">BUY NOW</a>
 							</div>
@@ -310,16 +317,19 @@ $time       = explode( ':', $date_array[1] );
 	</div>
 	<!-- end .row.flx-center.bgc-pink_light-->
 </section>
+<?php endif; ?>
 <!-- Photo ========================================-->
 <section>
 	<div class="row flx-center bgc-yellow_light">
 		<div class="content-box photo">
-			<h1 class="text-center">Goodiebox photo</h1>
+			<h1 class="text-center"><?php echo __( 'Goodiebox fotók' ); ?></h1>
 
-			<div class="row flx-justify"><img src="<?= URL::base( true, false ) ?>assets/img/photo-1.jpg"><img
-					src="<?= URL::base( true, false ) ?>assets/img/photo-2.jpg"><img
-					src="<?= URL::base( true, false ) ?>assets/img/photo-3.jpg"><img
-					src="<?= URL::base( true, false ) ?>assets/img/photo-4.jpg"></div>
+			<div class="row flx-justify">
+				<img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-366.jpg">
+				<img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-367.jpg">
+				<img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-368.jpg">
+				<img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-369.jpg">
+			</div>
 			<!-- end .row.flx-justify-->
 		</div>
 		<!-- end .content-box.photo-->
@@ -330,72 +340,57 @@ $time       = explode( ':', $date_array[1] );
 <section>
 	<div class="row flx-center">
 		<div class="content-box feedback">
-			<h1 class="text-center">Feedback</h1>
+			<h1 class="text-center"><?php echo __('Megrendelőink véleménye a Goodiebox-ról...'); ?></h1>
 
 			<div class="row flx-justify">
 				<div class="item feed">
-					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-1.jpg"></header>
+					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/IMG_0061.JPG"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
-							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
-							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							rhoncus, leo at pretium commodo.</p>
+						<p>"Kedves Goodiebox-os Csapat, Megszeretném mégegyszer köszönni a kedvességetek, mind a többszöri egyeztetés, mind amiatt, hogy tényleg minden szempontból odafigyeltetek a kutyusom gyomorbetegségére. A játékok pedig egyszerűen fantasztikusak, nagy volt az öröm. Továbbra is maradunk hű vásárlótok :-)"</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
 
-						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+						<div><span class="author">Zsanett,</span><span class="name">Kozármisleny</span></div>
 					</footer>
 				</div>
 				<div class="item feed">
-					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-2.jpg"></header>
+					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/IMG_0065.JPG"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
-							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
-							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							rhoncus, leo at pretium commodo.</p>
+						<p>"Ismét nagyon tetszett a doboz tartalma. Ez a száraztáp igazi újdonság volt számomra, mert ezt a márkát eddig még nem ismertem, de Rustynak nagyon ízlik, ahogy természetesen a jutalomfalatok is."</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
 
-						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+						<div><span class="author">@Nikolett,</span><span class="name">Budapest</span></div>
 					</footer>
 				</div>
 				<div class="item feed">
-					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-3.jpg"></header>
+					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/1460135_911183998914557_5797755493820555406_n.jpg"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
-							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
-							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							rhoncus, leo at pretium commodo.</p>
+						<p>"Nagyszerű dolognak tartom, és hihetetlen nagy meglepetést okozott Tóbiásnak, minden nagyszerű a csomagban! Ami nagyon tetszett, hogy szinte személyre szóló <span style="color:#D931F7;font-weight:900;">volt</span> benne minden, főleg, hogy mi allergiások vagyunk! A játék nagy kedvenc, a táp szuper, a takarót imádjuk, a névre szóló biléta és a csomagolás pazar! KÖSZÖNJÜK"</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-3.jpg" class="avatar">
 
-						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+						<div><span class="author">@Ancsa,</span><span class="name">Sümeg</span></div>
 					</footer>
 				</div>
 				<div class="item feed">
-					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-1.jpg"></header>
+					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/20141224_173208.jpg"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
-							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
-							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							rhoncus, leo at pretium commodo.</p>
+						<p>"Nagyon jónak tartom. Tényleg személyre szabott odafigyeléssel állítottátok össze a csomagot, még telefonon is egyeztettetek, hogy a táp megfelel­e Oszkárnak. A rénszarvast azonnal kivette és azóta is cipeli. Köszönjük!"</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
 
-						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+						<div><span class="author">@Rita,</span><span class="name">Budapest</span></div>
 					</footer>
 				</div>
 				<div class="item feed">
-					<header><img src="<?= URL::base( true, false ) ?>assets/img/feed-2.jpg"></header>
+					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/2015-01-31_0146.png"></header>
 					<div class="content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium
-							commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat
-							volutpat elit quis dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							rhoncus, leo at pretium commodo.</p>
+						<p>"Nagy örömmel vettük át és bontottuk ki az általatok küldött csomagot. Izgatottan fedtük fel a titkot rejtő dobozt. "</p>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
 
-						<div><span class="author">@Zsófia,</span><span class="name">Szigetmonostor</span></div>
+						<div><span class="author">@Viktória,</span><span class="name">Tiszaszentimre</span></div>
 					</footer>
 				</div>
 			</div>
