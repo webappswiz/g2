@@ -4,13 +4,13 @@
 	<h1><?php echo __( 'Speciális ajánlatok' ); ?></h1>
 	<br/><br/>
 
-	<p style="padding-top: 5px;font-family: 'franklin_gothic_bookregular'; font-size: 18px; line-height: 30px;">
+	<p>
 		<?php echo __( 'Ha <span style="color:#ec2366">Goodiebox meglepidobozt</span> vásárolsz, akkor ezentúl extra kedvezménnyel jutalmazunk! Összegyűjtöttük azokat a partnereinket, akik speciális ajánlatokkal csábítanak, hogy kipróbáljátok őket! A lista folyamatosan bővül, így érdemes gyakran visszalátogatni erre az oldalra!' ); ?>
 	</p>
 
-	<p style="padding-top: 5px;font-family: 'franklin_gothic_bookregular'; font-size: 18px; line-height: 30px;margin-top:10px;font-weight:bold;"><?php echo __( 'HOGYAN MŰKÖDIK?' ); ?></p>
+	<p><?php echo __( 'HOGYAN MŰKÖDIK?' ); ?></p>
 
-	<p style="padding-top: 5px;font-family: 'franklin_gothic_bookregular'; font-size: 18px; line-height: 30px;"><?php echo __( 'Minden megrendelt Goodiebox tartalmaz egy direkt erre a célra gyártott <span style="color:#ec2366">kedvezmény kártyát</span>. Ha kinézted a listából, hogy melyik szolgáltató ajánlata a legszimpatikusabb az adott hónapban, nincs más dolog, mint kezedbe venni a kedvezmény kártyát, öledbe kapni a kutyusodat és már indulhattok is beváltani! Mivel a kártyát le kell adnod az általad választott szolgáltatónál, így minden megrendelt Goodiebox meglepidobozzal csak egy szolgáltatás vehető kedvezményesen igénybe egy adott hónapban. De ne aggódjatok, mindig lesz újabb hónap, újabb Goodiebox és újabb speciális ajánlatokra beváltható kedvezmény kártya is! :)<br/><br/>Kattints a "<strong>Neked</strong>"-re, hogy láthatóvá váljanak a kedvezményeid, a "<strong>Neki</strong>" alatt pedig a kutyusodnak találhatsz szuper engedményes szolgáltatásokat!' ); ?></p>
+	<p><?php echo __( 'Minden megrendelt Goodiebox tartalmaz egy direkt erre a célra gyártott <span style="color:#ec2366">kedvezmény kártyát</span>. Ha kinézted a listából, hogy melyik szolgáltató ajánlata a legszimpatikusabb az adott hónapban, nincs más dolog, mint kezedbe venni a kedvezmény kártyát, öledbe kapni a kutyusodat és már indulhattok is beváltani! Mivel a kártyát le kell adnod az általad választott szolgáltatónál, így minden megrendelt Goodiebox meglepidobozzal csak egy szolgáltatás vehető kedvezményesen igénybe egy adott hónapban. De ne aggódjatok, mindig lesz újabb hónap, újabb Goodiebox és újabb speciális ajánlatokra beváltható kedvezmény kártya is! :)<br/><br/>Kattints a "<strong>Neked</strong>"-re, hogy láthatóvá váljanak a kedvezményeid, a "<strong>Neki</strong>" alatt pedig a kutyusodnak találhatsz szuper engedményes szolgáltatásokat!' ); ?></p>
 
 	<div class="neki-neked_container">
 		<center><h1 id="neked" class="neked"><?php echo __( 'NEKED' ) ?></h1>
@@ -26,8 +26,7 @@
 					<h3 class="collapse_content2"><?php echo __( 'Kávézók' ); ?></h3>
 
 					<div class="cnt">
-						<div class="content"
-						     style="text-align:justify;margin-left:0!important;padding-left:5px!important;">
+						<div class="content">
 							<table>
 								<tr>
 									<td><a href="http://alapcafe.hu/" target="_blank">ALAP Café</a><br/>
