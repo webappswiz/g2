@@ -338,6 +338,7 @@
 										<td><?php echo $status; ?></td>
 									</tr>
 								</table>
+								<hr>
 						<?php
 							}
 						endif;
