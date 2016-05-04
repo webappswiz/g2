@@ -141,15 +141,11 @@ $time       = explode( ':', $date_array[1] );
 		<div class="content-box call-to-action-1">
 			<div class="row">
 				<div class="col-6">
-					<h1>Special surprise boxes for dogs</h1>
+					<h1><?php echo __("Legyen kutyusodnak is saját doboza"); ?></h1>
 
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<p>Mi is az a Goodiebox? Egyedi és kreatív módon meglepi dobozokat készítünk kutyusodnak! Ha szülinapja közeleg, örökbe fogadtad, levizsgázott vagy csak annyira imádod, hogy a legédesebb dologgal lepnéd meg, akkor a legjobb helyen jársz! Trendi és ízléses módon segítünk neked, hogy időt és pénzt spórolva a Te kutyusod lehessen a legmenőbb az utcában!
 					</p>
-					<a href="/order" class="btn large solid pink">order now</a>
+					<a href="/order" class="btn large solid pink"><?php echo _("MEGRENDELEM");?></a>
 				</div>
 				<!-- end .col-6-->
 				<div class="col-6"><img
@@ -194,7 +190,7 @@ $time       = explode( ':', $date_array[1] );
 <section>
 	<div class="row flx-center box-shadow">
 		<div class="content-box hiw">
-			<h1 class="text-center">How it works?</h1>
+			<h1 class="text-center"><?php echo __('Hogyan működik?'); ?></h1>
 
 			<div class="row flx-justify">
 				<div class="container col-3"><img
@@ -203,18 +199,14 @@ $time       = explode( ':', $date_array[1] );
 					<div class="row"><span class="round">1</span>
 
 						<div class="header">
-							<h2>Choose</h2>
+							<h2>Mutasd be nekünk</h2>
 
-							<h3>your puppy size!</h3>
+							<h3>a kutyusodat!</h3>
 						</div>
 						<!-- end .header-->
 					</div>
 					<!-- end .row-->
-					<p>Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items,
-						vitamins). This is a highly personalized service. Based on your pup's size, age and allergies,
-						we carefully select premium products which will be delivered to your doorstep. Every month, 3-6
-						different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This
-						is a highly personalized service.</p>
+					<p>Ahhoz, hogy kis kedvenced a lehető legszuperebb dobozt kapja, tudnunk kell néhány fontos infót! Szokás mondani, hogy nem a méret a lényeg, de a Goodiebox összeállításakor azért mégis csak szükségünk van rá! Add meg kutyusod nevét és születési adatait is! Ügyelj arra, hogy minden adat helyes legyen, mi ebből dolgozunk! Gyere és rendelj MOST!</p>
 				</div>
 				<!-- end .container.col-3-->
 				<div class="container col-3"><img
@@ -223,18 +215,14 @@ $time       = explode( ':', $date_array[1] );
 					<div class="row"><span class="round">2</span>
 
 						<div class="header">
-							<h2>Choose</h2>
+							<h2>Válaszd ki</h2>
 
-							<h3>the box type!</h3>
+							<h3>a goodiebox típusát!</h3>
 						</div>
 						<!-- end .header-->
 					</div>
 					<!-- end .row-->
-					<p>Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items,
-						vitamins). This is a highly personalized service. Based on your pup's size, age and allergies,
-						we carefully select premium products which will be delivered to your doorstep. Every month, 3-6
-						different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This
-						is a highly personalized service.</p>
+					<p>Összesen két doboz típus közül tudsz választani. A PLUS dobozt szerezd be, ha egyszerre több szuper dolgot szeretnél, nagyobb értékben! Ha szülinapos kutyusod, akkor ebben a dobozban extra meglepi is várja! Ha a SMART dobozzal kezdenéd, szintén érkezik az elmaradhatatlan „Goodiebox kutyajó érzés”, amiből kiderül számodra is, miért jó közénk tartozni!</p>
 				</div>
 				<!-- end .container.col-3-->
 				<div class="container col-3"><img
@@ -243,18 +231,14 @@ $time       = explode( ':', $date_array[1] );
 					<div class="row"><span class="round">3</span>
 
 						<div class="header">
-							<h2>Get</h2>
+							<h2>Fizess és vedd</h2>
 
-							<h3>your package!</h3>
+							<h3>át a goodiebox dobozt!</h3>
 						</div>
 						<!-- end .header-->
 					</div>
 					<!-- end .row-->
-					<p>Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items,
-						vitamins). This is a highly personalized service. Based on your pup's size, age and allergies,
-						we carefully select premium products which will be delivered to your doorstep. Every month, 3-6
-						different items are in the box (food, snacks, toys, accessories, grooming items, vitamins). This
-						is a highly personalized service.</p>
+					<p>Ha befejezted a megrendelést, teljes értékű tagja leszel a Goodieboxosok közösségének! Megtörténik a regisztráció, létrejön a saját profilod és ha szeretnél, következő hónapban már innen indíthatsz gyorsított rendelést! Ha minden adatot helyesen adtál meg, pár napon belül csenget nálad a futárunk a megrendelt Goodiebox dobozzal! Jó mókázást kívánunk hozzá!</p>
 				</div>
 				<!-- end .container.col-3-->
 			</div>
@@ -269,13 +253,11 @@ $time       = explode( ':', $date_array[1] );
 <section>
 	<div class="row flx-center bgc-yellow_light box-shadow">
 		<div class="content-box call-to-action-2">
-			<h1 class="text-center text-orange">What can you find in a Goodiebox?</h1>
+			<h1 class="text-center text-orange">Mit találsz egy igazi goodiebox dobozban?</h1>
 
-			<h3 class="text-center">Every month, 3-6 different items are in the box (food, snacks, toys, accessories,
-				grooming items, vitamins). This is a highly personalized service. Based on your pup's size, age and
-				allergies, we carefully select premium products which will be delivered to your doorstep.</h3><img
+			<h3 class="text-center">Minden hónapban változnak a dobozban található termékek! Ezt mi is imádjuk, hiszen így bármikor is rendelsz egy éven belül, ugyanazt biztosan nem kapod vissza! Általában 4-7 db gondosan válogatott, itthon kevésbé ismert különféle (többnyire játék, jutalomfalat, snack, rágcsálnivaló, de esetenként higiénés termék és kiegészítő is) termék kerül a dobozodba, persze ez függ a típusától (Smart vagy Plus) és az adott havi koncepciótól is! Ha lemaradtál egy korábbi Goodieboxról, de szeretted volna ami benne volt, a termékeket megtalálhatod a GOODIESHOPban is!</h3><img
 				src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/fotobox-2.png' ); ?>" class="responsive"><a
-				a href="/order" class="btn large solid orange">order now</a>
+				a href="/order" class="btn large solid orange"><?php echo _("MEGRENDELEM");?></a>
 		</div>
 		<!-- end .content-box.call-to-action-2-->
 	</div>
@@ -287,8 +269,8 @@ $time       = explode( ':', $date_array[1] );
 <section>
 	<div class="row flx-center bgc-pink_light box-shadow">
 		<div class="content-box shop-carusel">
-			<h1 class="text-center text-pink">Shop</h1>
-			<h3 class="text-center">Every month, 3-6 different items are in the box (food, snacks, toys, accessories, grooming items, vitamins)</h3>
+			<h1 class="text-center text-pink">Goodieshop</h1>
+			<h3 class="text-center">Lemaradtál a nyitásról? Imádtál egy korábbi Goodiebox dobozba került terméket és ideje lenne megszerezned? Most itt a nagyszerű lehetőség, válogass az egyedülálló Goodieshop online boltunkból és lepd meg a kutyusodat azzal, aminek szerinted biztosan örülne!</h3>
 			<div id="carusel-1" class="carusel-container">
 				<ul id="carusel-line">
 					<?php
@@ -322,7 +304,7 @@ $time       = explode( ':', $date_array[1] );
 <section>
 	<div class="row flx-center bgc-yellow_light">
 		<div class="content-box photo">
-			<h1 class="text-center"><?php echo __( 'Goodiebox fotók' ); ?></h1>
+			<h1 class="text-center"><?php echo __( 'Goodiebox fotótár' ); ?></h1>
 
 			<div class="row flx-justify">
 				<img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-366.jpg">
@@ -340,13 +322,14 @@ $time       = explode( ':', $date_array[1] );
 <section>
 	<div class="row flx-center">
 		<div class="content-box feedback">
-			<h1 class="text-center"><?php echo __('Megrendelőink véleménye a Goodiebox-ról...'); ?></h1>
+			<h1 class="text-center"><?php echo __('Ez a ti véleményetek!'); ?></h1>
 
 			<div class="row flx-justify">
 				<div class="item feed">
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/IMG_0061.JPG"></header>
 					<div class="content">
 						<p>"Kedves Goodiebox-os Csapat, Megszeretném mégegyszer köszönni a kedvességetek, mind a többszöri egyeztetés, mind amiatt, hogy tényleg minden szempontból odafigyeltetek a kutyusom gyomorbetegségére. A játékok pedig egyszerűen fantasztikusak, nagy volt az öröm. Továbbra is maradunk hű vásárlótok :-)"</p>
+						<a href="#" class="link">Read more</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
 
@@ -357,6 +340,7 @@ $time       = explode( ':', $date_array[1] );
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/IMG_0065.JPG"></header>
 					<div class="content">
 						<p>"Ismét nagyon tetszett a doboz tartalma. Ez a száraztáp igazi újdonság volt számomra, mert ezt a márkát eddig még nem ismertem, de Rustynak nagyon ízlik, ahogy természetesen a jutalomfalatok is."</p>
+						<a href="#" class="link">Read more</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
 
@@ -367,6 +351,7 @@ $time       = explode( ':', $date_array[1] );
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/1460135_911183998914557_5797755493820555406_n.jpg"></header>
 					<div class="content">
 						<p>"Nagyszerű dolognak tartom, és hihetetlen nagy meglepetést okozott Tóbiásnak, minden nagyszerű a csomagban! Ami nagyon tetszett, hogy szinte személyre szóló <span style="color:#D931F7;font-weight:900;">volt</span> benne minden, főleg, hogy mi allergiások vagyunk! A játék nagy kedvenc, a táp szuper, a takarót imádjuk, a névre szóló biléta és a csomagolás pazar! KÖSZÖNJÜK"</p>
+						<a href="#" class="link">Read more</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-3.jpg" class="avatar">
 
@@ -377,6 +362,7 @@ $time       = explode( ':', $date_array[1] );
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/20141224_173208.jpg"></header>
 					<div class="content">
 						<p>"Nagyon jónak tartom. Tényleg személyre szabott odafigyeléssel állítottátok össze a csomagot, még telefonon is egyeztettetek, hogy a táp megfelel­e Oszkárnak. A rénszarvast azonnal kivette és azóta is cipeli. Köszönjük!"</p>
+						<a href="#" class="link">Read more</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
 
@@ -387,6 +373,7 @@ $time       = explode( ':', $date_array[1] );
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/2015-01-31_0146.png"></header>
 					<div class="content">
 						<p>"Nagy örömmel vettük át és bontottuk ki az általatok küldött csomagot. Izgatottan fedtük fel a titkot rejtő dobozt. "</p>
+						<a href="#" class="link">Read more</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
 

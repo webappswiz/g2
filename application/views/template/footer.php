@@ -3,40 +3,37 @@
 <footer class="main-footer">
 	<div class="row flx-center footer-top">
 		<div class="content-box text-center">
-			<h1 class="text-center">Join now</h1>
+			<h1 class="text-center">Csatlakozz most!</h1>
 
 			<div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui
-					ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo.</p>
+				<p>Ha igazi kutyabarát vagy, érdekel a Goodiebox és vele minden újdonság, itt a helyed! Iratkozz fel a hírlevelünkre, amiben minden fontos infót megosztunk veletek a dobozainkról, az általunk forgalmazott termékekről és nagy becsben tartott partnereinkről! Veled vagyunk egész, legyél Te is Goodieboxos!</p>
 			</div>
-			<a href="#" class="btn large border pink">SUBSCRIBE NOW</a>
+			<a href="#" class="btn large border pink">FELIRATKOZOK!</a>
 		</div>
 	</div>
 	<!-- end .footer-top-->
 	<div class="row footer-bottom">
 		<div class="row flx-around content-box">
 			<div class="col-4">
-				<p><span class="address">1053 Budapest Kossuth L. u. 7-9.</span></p>
+				<p>ÍRJ NEKÜNK:</p>
 
 				<p><span><a href="mailto:info@goodiebox.hu">info@goodiebox.hu</a></span></p>
 
-				<p><a href="http://facebook.com/goodieboxhu">facebook.com/goodieboxhu</a></p>
+
 			</div>
 			<div class="col-4">
-				<h3>Folow us:</h3>
+				<h3>KÖVESS MINKET:</h3>
+				<div class="row flx-justify">
 				<a href="http://facebook.com/goodieboxhu"><i class="fa fa-facebook"></i></a>
 				<a href="http://twitter.com/goodieboxhu"><i class="fa fa-twitter"></i></a>
 				<a href="https://instagram.com/goodieboxhu"><i class="fa fa-instagram"></i></a>
 				<a href="https://www.youtube.com/channel/UCAnqUKt9dkY7Tw2kndO9JAA/feed"><i
 						class="fa fa-youtube-square"></i></a>
+					</div>
 			</div>
 			<div class="col-4 text-right">
 				<p><span><a href="/adatkezelesi.pdf">Adatvédelem</a></p>
-
-				<p><span><a href="mailto:info@goodiebox.hu">info@goodiebox.hu</a></span></p>
-
-				<p><a href="http://facebook.com/goodieboxhu">facebook.com/goodieboxhu</a></p>
+				<p><span><a href="/aszf.pdf">ÁLTALÁNOS SZERZŐDÉSI FELTÉTELEK</a></span></p>
 			</div>
 		</div>
 	</div>

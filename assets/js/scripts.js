@@ -359,3 +359,15 @@ $(document).ready(function () {
         $(linkElem[i]).find('img').wrap('<a href="' + link + '" class="preview-link">');
     }
 });
+
+// Feedback read more toggle
+$(document).ready(function () {
+    $('.item.feed').find('a.link').click(function() {
+      event.preventDefault();
+      if ($(this).prev().hasClass("open")) {
+        $(this).prev().height("6em").toggleClass("open");
+      } else {
+        $(this).prev().height("auto").toggleClass("open");
+      }
+    });
+});

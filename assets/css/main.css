@@ -477,6 +477,9 @@ section {
 .main-footer .footer-top {
   background-color: #fff;
   padding: 4em 0 6em; }
+  .main-footer .footer-top .btn.large.border.pink:hover {
+    background-color: #ed1968;
+    color: #fff; }
 
 .main-footer .footer-bottom {
   background-color: #f3f3f3;
@@ -488,7 +491,6 @@ section {
     height: 50px;
     width: 50px;
     border-radius: 5px;
-    margin-right: 10px;
     line-height: 50px;
     color: #fff;
     font-size: 30px;
@@ -644,6 +646,9 @@ section {
     max-width: 540px; }
   .timer .container .btn {
     margin-top: 0; }
+  .timer .container .btn.border.white:hover {
+    background-color: #fff;
+    color: #ed1968; }
   .timer .counter-holder {
     min-width: 316px; }
     .timer .counter-holder .counter {
@@ -713,7 +718,7 @@ section {
   text-align: center; }
   .call-to-action-2 .btn {
     position: absolute;
-    bottom: 46px;
+    bottom: 15px;
     left: calc(50% - 142px); }
 
 /*- Shop Carusel -*/
@@ -754,6 +759,16 @@ section {
       width: 200px;
       height: 200px;
       object-fit: cover; }
+    .feedback .feed .content {
+      margin-bottom: 1em; }
+      .feedback .feed .content p {
+        height: 6em;
+        overflow: hidden;
+        transition: .2s; }
+      .feedback .feed .content a.link {
+        color: #ed1968; }
+      .feedback .feed .content a.link:hover {
+        font-weight: 700; }
     .feedback .feed footer .avatar {
       border-radius: 50%;
       width: 55px;

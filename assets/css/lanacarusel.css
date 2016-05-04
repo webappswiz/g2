@@ -10,21 +10,18 @@
 
 .la-arrow-left,
 .la-arrow-right {
+  position: absolute;
   display: inline-block;
   width: 55px;
   height: 55px;
   font-size: 36px;
-  z-index: 5; }
-
-.la-arrow-left {
-  position: absolute;
-  left: -100px;
+  z-index: 5;
   top: 0; }
 
-.la-arrow-right {
-  position: absolute;
-  right: -100px;
-  top: 0; }
+.la-arrow-left.slim,
+.la-arrow-right.slim {
+  width: auto;
+  height: auto; }
 
 .la-arrow-left:hover,
 .la-arrow-right:hover {
@@ -48,6 +45,12 @@
   line-height: 55px;
   text-align: center;
   margin-left: 3px; }
+
+.la-arrow-left.slim:before,
+.la-arrow-right.slim:before {
+  width: inherit;
+  height: inherit;
+  line-height: inherit; }
 
 .la-rounded {
   border-radius: 50%;
