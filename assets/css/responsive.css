@@ -124,6 +124,10 @@
     padding-bottom: 6em; }
     .call-to-action-2 .btn {
       bottom: 0px; }
+  .specials-image{margin: 0 auto!important;width:100px;display: inline!important;}
+  .neked {cursor:pointer;position: relative;display: inline;top:-20px;font-size:18px;margin-right:10px;}
+  .neki{cursor:pointer;display: inline;position: relative;display: inline;top:-20px;font-size:18px;margin-left:15px;}
+  .specials-cats{padding-left:2px;}
   .catalog.col-9 .slider-holder {
     display: none; } }
 

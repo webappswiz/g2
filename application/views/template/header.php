@@ -178,7 +178,7 @@ $time       = explode( ':', $date_array[1] );
 			<div class="logo-holder"><a href="<?= URL::base( true, false ) ?>"><img
 						src="<?= URL::base( true, false ) ?><?php echo __( '/assets/img/logo.png' ); ?>"
 						alt="Goodiebox - Special surprise boxes for dogs"></a></div>
-			<div class="nav-holder">
+			<div class="nav-holder"><span class="nav-toggle"><i class="fa fa-bars"></i></span>
 				<nav class="top-nav">
 					<ul class="flx flx-justify">
 						<?php echo View::factory( 'template/menu', get_defined_vars() )->render(); ?>
