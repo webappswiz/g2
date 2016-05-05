@@ -1,3 +1,8 @@
+<!-- Sidebar toggle-->
+<div class="sidebar-toggle">
+	<div class="row"><i class="fa fa-filter"></i></div>
+	<div class="row"><i class="fa fa-shopping-cart"></i></div>
+</div>
 <!-- Page Title ======================================-->
 <section>
 	<div class="row flx-center">
@@ -10,7 +15,7 @@
 </section>
 <div class="row flx-center">
 	<div class="content-box">
-		<div class="row">
+		<div class="row flx-around">
 			<!-- Aside ===========================================-->
 			<aside class="catalog-aside col-3">
 				<!-- Fiter =======-->
@@ -79,18 +84,21 @@
 							?>
 							<div id="item-id" class="cart-item">
 								<div class="row"><img
-											src="<?php echo URL::base( true, false ); ?>assets/img/filter-cart-thumb-1.jpg"
-											class="thumbnail"><a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product_info->id ?>"><?php echo $product_info->product_name; ?></a>
+										src="<?php echo URL::base( true, false ); ?>assets/img/filter-cart-thumb-1.jpg"
+										class="thumbnail"><a
+										href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product_info->id ?>"><?php echo $product_info->product_name; ?></a>
 								</div>
 								<div class="row">
 									<form action="#" method="POST"><span class="btn-minus">-</span>
 										<input type="text" name="quantity" value="<?php echo $cart_item; ?>"
 										       readonly><span
-												class="btn-plus">+</span><span
-												class="item-total-ammount"><?php echo $subtotal; ?></span>
+											class="btn-plus">+</span><span
+											class="item-total-ammount"><?php echo $subtotal; ?></span>
 									</form>
 								</div>
-								<div class="row"><a href="<?php echo URL::base( true, false ); ?>cart/delete/<?php echo $product_info->id ?>" class="del">Delete</a></div>
+								<div class="row"><a
+										href="<?php echo URL::base( true, false ); ?>cart/delete/<?php echo $product_info->id ?>"
+										class="del">Delete</a></div>
 							</div>
 						<?php endforeach; ?>
 						<div class="cart-total">
@@ -103,10 +111,17 @@
 
 			</aside>
 			<!-- Content ========================================-->
-			<div class="col-9">
-				<div id="slider_catalog"><img
-						src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg"
-						class="responsive"></div>
+			<div class="catalog col-9">
+				<div class="slider-holder">
+					<div id="slider_catalog">
+						<ul>
+							<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive"></li>
+							<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive"></li>
+							<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive"></li>
+						</ul>
+
+					</div>
+				</div>
 				<?php foreach ( $categories as $category ): ?>
 					<div class="category-box">
 						<div class="category-title"><a
@@ -122,13 +137,16 @@
 										<li>
 											<div class="item product-preview">
 												<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><img
-													src="<?php echo URL::base( true, false ); ?>assets/img/product-img-4.jpg"></a>
+														src="<?php echo URL::base( true, false ); ?>assets/img/product-img-4.jpg"></a>
 
 												<div class="row">
-													<h2><a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><?php echo $product->product_name ?></a></h2><span
+													<h2>
+														<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><?php echo $product->product_name ?></a>
+													</h2><span
 														class="ammount"><?php echo $product->price ?></span>
 
-													<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>" class="btn solid pink">BUY NOW</a>
+													<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"
+													   class="btn solid pink">BUY NOW</a>
 
 												</div>
 											</div>
