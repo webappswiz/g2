@@ -5,6 +5,7 @@ $menus = array(
 	'/admin/categories' => array( 'Categories', 'product_cats' ),
 	'/admin/products' => array( 'Products', 'products' ),
 	'/admin/packages'   => array( 'Packages', 'packages' ),
+	'/admin/reviews'   => array( 'Reviews', 'reviews' ),
 	'/admin/orders'     => array( 'Orders', 'orders' ),
 	//'/admin/settings'   => array( 'Statuses', 'settings' ),
 	//'/admin/shelters' => array('Shelters', 'shelters'),

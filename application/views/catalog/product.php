@@ -64,6 +64,7 @@
 								foreach ( $reviews as $review ) {
 									$total_rating += $review->rating;
 								}
+								reset( $reviews );
 								$total_rating = abs( $total_rating / count( $reviews ) );
 							endif;
 							?>
@@ -249,25 +250,28 @@
 	<div class="row flx-center">
 		<div class="content-box shop-carusel">
 			<h1 class="text-center">Popular boxes</h1>
+
 			<div id="carusel-2" class="carusel-container">
 				<ul>
 					<?php
 					$products = ORM::factory( 'Products' )->order_by( 'sales', 'DESC' )->limit( 6 )->find_all();
 					foreach ( $products as $product ):
-					$image = ORM::factory('ProductImages')->where('product_id','=',$product->id)->limit(1)->find();
-					?>
-					<li class="item product-preview">
-						<?php if($image->img_name!=''):?>
-							<img src="<?= URL::base( true, false ) ?>uploads/products/<?php echo $image->img_name;?>">
-						<?php else:?>
-							<img src="<?= URL::base( true, false ) ?>assets/img/placeholder.png">
-						<?php endif;?>
-						<div class="row">
-							<h2><?php echo $product->product_name; ?></h2>
-							<span class="ammount"><?php echo $product->price; ?></span>
-							<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>" class="btn solid pink">BUY NOW</a>
-						</div>
-					</li>
+						$image = ORM::factory( 'ProductImages' )->where( 'product_id', '=', $product->id )->limit( 1 )->find();
+						?>
+						<li class="item product-preview">
+							<?php if ( $image->img_name != '' ): ?>
+								<img
+									src="<?= URL::base( true, false ) ?>uploads/products/<?php echo $image->img_name; ?>">
+							<?php else: ?>
+								<img src="<?= URL::base( true, false ) ?>assets/img/placeholder.png">
+							<?php endif; ?>
+							<div class="row">
+								<h2><?php echo $product->product_name; ?></h2>
+								<span class="ammount"><?php echo $product->price; ?></span>
+								<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"
+								   class="btn solid pink">BUY NOW</a>
+							</div>
+						</li>
 					<?php endforeach; ?>
 				</ul>
 				<!-- end .viewport-->

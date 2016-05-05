@@ -54,3 +54,23 @@
 #8 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #9 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
 #10 {main} in /var/www/vhosts/g2.priv/public_html/application/views/catalog/product.php:72
+2016-05-05 15:33:34 --- EMERGENCY: View_Exception [ 0 ]: The requested view admin/reviews/index could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Base/Core.php:545
+2016-05-05 15:33:34 --- DEBUG: #0 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Base/Core.php(545): Kohana_View->set_filename('admin/reviews/i...')
+#1 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Base/Core.php(495): Controller_Base_Core->set_view()
+#2 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Controller.php(87): Controller_Base_Core->after()
+#3 [internal function]: Kohana_Controller->execute()
+#4 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin_Reviews))
+#5 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
+#8 {main} in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Base/Core.php:545
+2016-05-05 15:44:35 --- EMERGENCY: Kohana_Exception [ 0 ]: The approve property does not exist in the Model_ProductReviews class ~ MODPATH/orm/classes/Kohana/ORM.php [ 760 ] in /var/www/vhosts/g2.priv/public_html/modules/orm/classes/Kohana/ORM.php:702
+2016-05-05 15:44:35 --- DEBUG: #0 /var/www/vhosts/g2.priv/public_html/modules/orm/classes/Kohana/ORM.php(702): Kohana_ORM->set('approve', 1)
+#1 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Admin/Reviews.php(18): Kohana_ORM->__set('approve', 1)
+#2 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Controller.php(84): Controller_Admin_Reviews->action_approve()
+#3 [internal function]: Kohana_Controller->execute()
+#4 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin_Reviews))
+#5 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
+#8 {main} in /var/www/vhosts/g2.priv/public_html/modules/orm/classes/Kohana/ORM.php:702
