@@ -1,8 +1,7 @@
 <section>
 	<div class="row flx-center">
-		<div class="content-box faq">
-			<h1><?php echo __( 'Speciális ajánlatok' ); ?></h1>
-			<br/><br/>
+		<div class="content-box ">
+			<h1 class="text-center"><?php echo __( 'Speciális ajánlatok' ); ?></h1>
 
 			<p>
 				<?php echo __( 'Ha <span style="color:#ec2366">Goodiebox meglepidobozt</span> vásárolsz, akkor ezentúl extra kedvezménnyel jutalmazunk! Összegyűjtöttük azokat a partnereinket, akik speciális ajánlatokkal csábítanak, hogy kipróbáljátok őket! A lista folyamatosan bővül, így érdemes gyakran visszalátogatni erre az oldalra!' ); ?>
@@ -12,18 +11,12 @@
 
 			<p><?php echo __( 'Minden megrendelt Goodiebox tartalmaz egy direkt erre a célra gyártott <span style="color:#ec2366">kedvezmény kártyát</span>. Ha kinézted a listából, hogy melyik szolgáltató ajánlata a legszimpatikusabb az adott hónapban, nincs más dolog, mint kezedbe venni a kedvezmény kártyát, öledbe kapni a kutyusodat és már indulhattok is beváltani! Mivel a kártyát le kell adnod az általad választott szolgáltatónál, így minden megrendelt Goodiebox meglepidobozzal csak egy szolgáltatás vehető kedvezményesen igénybe egy adott hónapban. De ne aggódjatok, mindig lesz újabb hónap, újabb Goodiebox és újabb speciális ajánlatokra beváltható kedvezmény kártya is! :)<br/><br/>Kattints a "<strong>Neked</strong>"-re, hogy láthatóvá váljanak a kedvezményeid, a "<strong>Neki</strong>" alatt pedig a kutyusodnak találhatsz szuper engedményes szolgáltatásokat!' ); ?></p>
 
-			<div class="neki-neked_container" style="width: 100%;text-align: center">
-				<table>
-					<tr>
-						<td style="vertical-align: middle"><h1 id="neked" class="neked"><?php echo __( 'NEKED' ) ?></h1>
-						</td>
-						<td><img width="200" class="specials-image"
-						         src="<?= URL::base( true, false ) ?>assets/img/<?php echo __( 'ok-main-page-pink.jpg' ); ?>">
-						</td>
-						<td style="vertical-align: middle"><h1 id="neki" class="neki"><?php echo __( 'NEKI' ); ?></h1>
-						</td>
-					</tr>
-				</table>
+			<div class="neki-neked_container">
+				<center><h1 id="neked" class="neked"><?php echo __( 'NEKED' ) ?></h1>
+					<img class="specials-image"
+				                                                                          src="<?= URL::base( true, false ) ?>assets/img/<?php echo __( 'ok-main-page-pink.jpg' ); ?>">
+
+					<h1 id="neki" class="neki"><?php echo __( 'NEKI' ); ?></h1></center>
 			</div>
 			<div id="collapse-content" class="specials-cats">
 				<div class="main-collapse1" style="display: none">
@@ -48,7 +41,7 @@
 												alapcafe@gmail.com<br/>
 												<span class="kedvezmeny">10% <?php echo __( 'kedvezmény' ); ?></span>
 											</td>
-											<td>
+											<td style="vertical-align: middle">
 												<img style="margin: 0px 0px 0px 45px;" width="72" height="72"
 												     src="<?= URL::base( true, false ) ?>assets/img/10-icon.jpg">
 											</td>
@@ -69,7 +62,7 @@
 												javacaffe@gmail.com<br/>
 												<span class="kedvezmeny">10% <?php echo __( 'kedvezmény' ); ?></span>
 											</td>
-											<td>
+											<td style="vertical-align: middle">
 												<img style="margin: 0px 0px 0px 45px;" width="72" height="72"
 												     src="<?= URL::base( true, false ) ?>assets/img/10-icon.jpg">
 											</td>
@@ -128,7 +121,7 @@
 												info@flashkutyapekseg.hu<br/>
 												<span class="kedvezmeny">5% <?php echo __( 'kedvezmény' ); ?></span>
 											</td>
-											<td>
+											<td style="vertical-align: middle">
 												<img style="margin: 0px 0px 0px 45px;" width="72" height="72"
 												     src="<?= URL::base( true, false ) ?>assets/img/5-icon.jpg">
 											</td>
@@ -174,7 +167,7 @@
 												info@dogmopolite.hu<br/>
 												<span class="kedvezmeny">5% <?php echo __( 'kedvezmény' ); ?></span>
 											</td>
-											<td>
+											<td style="vertical-align: middle">
 												<img style="margin: 0px 0px 0px 45px;" width="72" height="72"
 												     src="<?= URL::base( true, false ) ?>assets/img/5-icon.jpg">
 											</td>
@@ -195,7 +188,7 @@
 												info@ohmydogspa.hu<br/>
 												<span class="kedvezmeny">8% <?php echo __( 'kedvezmény' ); ?></span>
 											</td>
-											<td><img style="margin: 0px 0px 0px 45px;" width="72" height="72"
+											<td style="vertical-align: middle"><img style="margin: 0px 0px 0px 45px;" width="72" height="72"
 											         src="<?= URL::base( true, false ) ?>assets/img/8-icon.jpg"></td>
 										</tr>
 										<tr>
@@ -213,7 +206,7 @@
 													70 560 5543</a><br/>
 												<span class="kedvezmeny">6% <?php echo __( 'kedvezmény' ); ?></span>
 											</td>
-											<td><img style="margin: 0px 0px 0px 45px;" width="72" height="72"
+											<td style="vertical-align: middle"><img style="margin: 0px 0px 0px 45px;" width="72" height="72"
 											         src="<?= URL::base( true, false ) ?>assets/img/6-icon.jpg"></td>
 										</tr>
 									</table>
@@ -265,7 +258,7 @@
 												info@dogmopolite.hu<br/>
 												<span class="kedvezmeny">5% <?php echo __( 'kedvezmény' ); ?></span>
 											</td>
-											<td>
+											<td style="vertical-align: middle">
 												<img style="margin: 0px 0px 0px 45px;" width="72" height="72"
 												     src="<?= URL::base( true, false ) ?>assets/img/5-icon.jpg">
 											</td>
@@ -295,7 +288,7 @@
 												info@ebfizio.hu<br/>
 												<span class="kedvezmeny">20% <?php echo __( 'kedvezmény' ); ?></span>
 											</td>
-											<td>
+											<td style="vertical-align: middle">
 												<img style="margin: 0px 0px 0px 45px;" width="72" height="72"
 												     src="<?= URL::base( true, false ) ?>assets/img/20-icon.jpg">
 											</td>
@@ -321,42 +314,6 @@
 					$('.main-collapse1').hide();
 					$('#neki').css('color', '#ec2366');
 					$('#neked').css('color', '#330000');
-				});
-				$('.collapse_content').on('click', function () {
-					if ($(this).next().hasClass('open')) {
-						$('.main-collapse.open').outerHeight($('.main-collapse.open').outerHeight() - $('.cnt.open').outerHeight());
-						$('.cnt.open').outerHeight(0);
-						$('.cnt.open').removeClass('open');
-					} else if ($('.cnt.open').outerHeight() > 0) {
-						$('.main-collapse.open').outerHeight($('.main-collapse.open').outerHeight() - $('.cnt.open').outerHeight());
-						$('.cnt.open').outerHeight(0);
-						$('.cnt.open').removeClass('open');
-						$(this).next().addClass("open");
-						$(this).next().outerHeight($(this).next().children().outerHeight());
-						$('.main-collapse.open').outerHeight($('.main-collapse.open').outerHeight() + $(this).next().outerHeight());
-					} else {
-						$(this).next().addClass("open");
-						$(this).next().outerHeight($(this).next().children().outerHeight());
-						$('.main-collapse.open').outerHeight($('.main-collapse.open').outerHeight() + $(this).next().children().outerHeight());
-					}
-				});
-				$('.collapse_content2').on('click', function () {
-					if ($(this).next().hasClass('open')) {
-						$('.main-collapse1.open').outerHeight($('.main-collapse1.open').outerHeight() - $('.cnt.open').outerHeight());
-						$('.cnt.open').outerHeight(0);
-						$('.cnt.open').removeClass('open');
-					} else if ($('.cnt.open').outerHeight() > 0) {
-						$('.main-collapse1.open').outerHeight($('.main-collapse1.open').outerHeight() - $('.cnt.open').outerHeight());
-						$('.cnt.open').outerHeight(0);
-						$('.cnt.open').removeClass('open');
-						$(this).next().addClass("open");
-						$(this).next().outerHeight($(this).next().children().outerHeight());
-						$('.main-collapse1.open').outerHeight($('.main-collapse1.open').outerHeight() + $(this).next().outerHeight());
-					} else {
-						$(this).next().addClass("open");
-						$(this).next().outerHeight($(this).next().children().outerHeight());
-						$('.main-collapse1.open').outerHeight($('.main-collapse1.open').outerHeight() + $(this).next().children().outerHeight());
-					}
 				});
 			</script>
 		</div>
