@@ -58,6 +58,7 @@ class Controller_Admin_Products extends Controller_Admin {
 		$this->model->product_cat = $_REQUEST['product_cat'];
 		$this->model->product_size = $_REQUEST['product_size'];
 		$this->model->product_age = $_REQUEST['dog_age'];
+		$this->model->video_link = $_REQUEST['video_link'];
 		if ( isset( $_REQUEST['package_enabled'] ) ) {
 			$this->model->status = 1;
 		} else {

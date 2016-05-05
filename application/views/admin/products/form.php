@@ -124,6 +124,14 @@
 					          name="product_composition"><?= $model->product_composition ?></textarea>
 				</div>
 			</div>
+			<div class="control-group">
+				<label class="control-label" for="package_code">Video link</label>
+
+				<div class="controls">
+					<input class="input-xxlarge" type="text" id="video_link" name="video_link"
+					       value="<?= $model->video_link ?>">
+				</div>
+			</div>
 			<div class="form-actions">
 				<button type="submit" class="btn btn-primary">Submit</button>
 				<button type="button" class="btn cancel">Cancel</button>
@@ -136,18 +144,19 @@
 		?>
 	</form><br/>
 	<?php if($model->id):?>
-
+	<div class="control-group" style="text-align: center">
 	<?php
 		if(count($product_images)>0){
 			echo '<h3>Product Images</h3>';
 			foreach($product_images as $image){
-				echo '<div><img src="'.URL::base(true, true).'uploads/products/'.$image->img_name.'" style="width:200px;height:200px"><br/>
+				echo '<div><img src="'.URL::base(true, true).'uploads/products/'.$image->img_name.'" style="width:100px;height:100px"><br/>
 				<a href="'.URL::base(true, true).'admin/products/del_img/'.$image->id.'">Delete</a>
-				</div><br/>';
+				</div>';
 			}
 		}
 		?>
-
+		</div>
+		<div style="clear: both;"></div>
 	<h3>Upload images</h3>
 	<script>
 		/*jslint unparam: true, regexp: true */

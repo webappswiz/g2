@@ -98,7 +98,9 @@
 					<li> <a href="#tabs-1">About</a></li>
 					<li> <a href="#tabs-2">Composition</a></li>
 					<li> <a href="#tabs-3">Photo</a></li>
+					<?php if($product->video_link<>''):?>
 					<li> <a href="#tabs-4">Video</a></li>
+					<?php endif;?>
 					<li> <a href="#tabs-5">Reviews (6)</a></li>
 				</ul>
 				<div id="tabs-1">
@@ -110,9 +112,11 @@
 				<div id="tabs-3">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod			</p>
 				</div>
+				<?php if($product->video_link<>''):?>
 				<div id="tabs-4">
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div class="video-box"><iframe width="1140" height="640" src="<?php echo $product->video_link;?>" frameborder="0" allowfullscreen></iframe></div>
 				</div>
+				<?php endif;?>
 				<div id="tabs-5">
 					<div class="row flx-column comment-box">
 						<div id="comment-1" class="row comment-item">
