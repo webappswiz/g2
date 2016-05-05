@@ -264,6 +264,30 @@ $(function() {
   });
 });
 
+// Home Page Gallery Carusel
+$(function() {
+   $('#gallery-carusel').responsiveCarusel(
+    {
+    'items' : '4',
+    'controlPosition' : 'beside',
+    'controlPositionY' : '95',      // Margin top
+    'controlPositionX' : '40',      // Margin inner / outer  
+    'controlColor' : '#ed1968'
+  });
+});
+
+// Gallery Page Gallery Carusel
+$(function() {
+   $('#gallery-carusel-2').responsiveCarusel(
+    {
+    'items' : '4',
+    'controlPosition' : 'beside',
+    'controlPositionY' : '95',      // Margin top
+    'controlPositionX' : '40',      // Margin inner / outer  
+    'controlColor' : '#ed1968'
+  });
+});
+
 // Catalog Carusel
 $(function() {
    $('#slider_catalog').responsiveCarusel(
@@ -370,4 +394,43 @@ $(document).ready(function () {
         $(this).prev().height("auto").toggleClass("open");
       }
     });
+});
+
+// Resposive YouToube video
+$(document).ready(function() {
+  // Find all YouTube videos
+  var $allVideos = $("iframe[src^='https://www.youtube.com']"),
+
+      // The element that is fluid width
+      $fluidEl = $(".video-box");
+
+  // Figure out and save aspect ratio for each video
+  $allVideos.each(function() {
+
+    $(this)
+      .data('aspectRatio', this.height / this.width)
+
+      // and remove the hard coded width/height
+      .removeAttr('height')
+      .removeAttr('width');
+
+  });
+
+  // When the window is resized
+  $(window).resize(function() {
+
+    var newWidth = $fluidEl.width();
+
+    // Resize all videos according to their own aspect ratio
+    $allVideos.each(function() {
+
+      var $el = $(this);
+      $el
+        .width(newWidth)
+        .height(newWidth * $el.data('aspectRatio'));
+
+    });
+
+  // Kick off one resize to fix all videos on page load
+  }).resize();
 });

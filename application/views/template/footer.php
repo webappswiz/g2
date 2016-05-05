@@ -32,13 +32,20 @@
 					</div>
 			</div>
 			<div class="col-4 text-right">
-				<p><span><a href="/adatkezelesi.pdf">Adatvédelem</a></p>
+				<p><span><a href="/adatkezelesi.pdf">ADATVÉDELEM</a></p>
 				<p><span><a href="/aszf.pdf">ÁLTALÁNOS SZERZŐDÉSI FELTÉTELEK</a></span></p>
 			</div>
 		</div>
+		<div class="row flx-center flx-column">
+			<p class="text-center">Külön köszönet a weboldalon felhasznált professzionális fotókért:</p>
+			<p class="text-center"><a href="http://kutyabolondfotostudio.hu" class="link blue">Kutyabolond Fotóstúdió</a></p>
+			<p class="text-center"><a href="https://www.facebook.com/SB-Photography-Videography-715181318498178/" class="link blue">Simics Balu   </a></p>
+		</div>
 	</div>
 	<!-- end .footer-bottom       -->
-	<div class="row footer-copyright"></div>
+	<div class="row flx-center flx-column footer-copyright">
+		<p>COPYRIGHT 2014-<?php echo date('Y');?> &#169 Web Apps Consult Kft</p>
+	</div>
 	<!-- end .footer-copyright-->
 </footer>
 <!-- end .main-footer-->

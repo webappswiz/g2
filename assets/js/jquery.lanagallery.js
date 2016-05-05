@@ -11,9 +11,11 @@
 
     // Create Gallery Frame
   	$('body').append('<div id="gallery_owerlay"><div id="la-space"><div class="gallery-viewport">');
+
   	$('#la-space .gallery-viewport').prepend('<span class="la-arrow-right la-rounded la-color">');
   	$('#la-space .gallery-viewport').append('<span class="la-arrow-left la-rounded la-color">');
-  	$(this).find('img').clone().prependTo('#gallery_owerlay #la-space .gallery-viewport');
+    $(this).find('img').clone().prependTo('#gallery_owerlay #la-space .gallery-viewport');
+  	
     
     // Add Hover effects to original images    
     $(this).find('img').wrap('<div class="la-hover-effect">');

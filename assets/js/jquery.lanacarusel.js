@@ -103,20 +103,25 @@
       if (settings.controlPosition == 'beside') {
         ctrlLeft.css("left", "-65px");
         ctrlRight.css("right", "-65px");
+
+        console.log("first");
       }
    		
    		var viewportWidth = $('.la-viewport').width();
 
    	} else if (itemWidth >= ($('body').width() - 150) && itemWidth <= ($('body').width() - 40)) {
    		$('.la-viewport').width(itemWidth);
+      
       if (settings.controlPosition == 'beside') {
         ctrlLeft.removeClass('la-rounded').addClass('slim');
         ctrlRight.removeClass('la-rounded').addClass('slim');
    		  $('.la-arrow-left').css("left", "0px");
    		  $('.la-arrow-right').css("right", "0px");
+
+        console.log('scnd');
       }
    		var viewportWidth = $('.la-viewport').width();
-   	} else {
+   	} else if (itemWidth >= ($('body').width() - 40)) {
       $(this).find('li').width($('body').width() - 40);
       itemWidth = $(this).find('li').width();
       $('.la-viewport').width($('body').width() - 40);
@@ -125,6 +130,7 @@
         ctrlRight.removeClass('la-rounded').addClass('slim');
         $('.la-arrow-left').css("left", "0px");
         $('.la-arrow-right').css("right", "0px");
+        console.log("wthf?");
       }
     }
 

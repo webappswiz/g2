@@ -18,6 +18,12 @@
   z-index: 5;
   top: 0; }
 
+.la-arrow-left {
+  left: -65px; }
+
+.la-arrow-right {
+  right: -65px; }
+
 .la-arrow-left.slim,
 .la-arrow-right.slim {
   width: auto;
