@@ -1867,6 +1867,9 @@ section {
     width: 140px; }
 
 /*-- CONTACT --*/
+
+
+
 .contact-form {
   max-width: 800px;
   margin-top: 40px; }
@@ -1898,6 +1901,10 @@ section {
     margin-bottom: 0; }
   .contact-form p.text-bold + p.text-bold {
     margin-top: 0; }
+
+.review-form {
+  margin-top: 10px;
+}
 
 /*-- PARTNERS --*/
 .partners img {

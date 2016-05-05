@@ -30,7 +30,22 @@ class Controller_Catalog extends Controller_Core {
 		$this->product = ORM::factory('Products',(int)$this->request->param( 'id' ));
 		$this->images = ORM::factory('ProductImages')->where('product_id','=',(int)$this->product->id)->and_where('img_type','=',1)->find_all();
 		$this->aimages = ORM::factory('ProductImages')->where('product_id','=',(int)$this->product->id)->and_where('img_type','=',2)->find_all();
+		if(isset($_REQUEST['product_review'])){
+			$this->review();
+		}
+		$this->reviews = ORM::factory('ProductReviews')->where('product_id','=',(int)$this->product->id)->and_where('approved','=',1)->find_all();
+	}
 
+	protected function review(){
+		if(isset($_REQUEST['product_id']) && isset($_REQUEST['customer_firstname']) && isset($_REQUEST['product_review']) && isset($_REQUEST['rating'])){
+			$review = ORM::factory('ProductReviews');
+			$review->firstname = $_REQUEST['customer_firstname'];
+			$review->review = $_REQUEST['product_review'];
+			$review->product_id = $_REQUEST['product_id'];
+			$review->rating = $_REQUEST['rating'];
+			$review->date = date('d.m.Y');
+			$review->save();
+		}
 	}
 
 }
