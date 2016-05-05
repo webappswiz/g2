@@ -113,7 +113,7 @@
 
 												<img
 													src="<?php echo URL::base( true, false ); ?>assets/img/product-img-4.jpg">
-											
+
 
 											<div class="row">
 												<h2>

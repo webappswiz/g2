@@ -1,7 +1,7 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 		$(':button.cancel').on('click', function () {
-			return window.location.replace("" + url_base + "admin/packages");
+			return window.location.replace("" + url_base + "admin/products");
 		});
 
 	});
@@ -72,6 +72,26 @@
 							<?php
 						}
 						?>
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="product_cat">Product size</label>
+				<div class="controls">
+					<select id="product_size" name="product_size" class="input-xxlarge">
+						<option value="1" <?php echo ( $model->product_size == 1 ) ? 'selected="selected"' : '' ?>>Small</option>
+						<option value="2" <?php echo ( $model->product_size == 2 ) ? 'selected="selected"' : '' ?>>Medium</option>
+						<option value="3" <?php echo ( $model->product_size == 3 ) ? 'selected="selected"' : '' ?>>Large</option>
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="product_cat">Dog age</label>
+				<div class="controls">
+					<select id="dog_age" name="dog_age" class="input-xxlarge">
+						<option value="1" <?php echo ( $model->product_age == 1 ) ? 'selected="selected"' : '' ?>>From 0 to 3 years</option>
+						<option value="2" <?php echo ( $model->product_age == 2 ) ? 'selected="selected"' : '' ?>>From 3 years to 7 years</option>
+						<option value="3" <?php echo ( $model->product_age == 3 ) ? 'selected="selected"' : '' ?>>7 + years</option>
 					</select>
 				</div>
 			</div>
