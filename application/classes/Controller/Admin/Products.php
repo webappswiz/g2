@@ -15,7 +15,8 @@ class Controller_Admin_Products extends Controller_Admin {
 		if ( ! $this->model->loaded() ) {
 			throw new Kohana_HTTP_Exception_404;
 		}
-		$this->product_images = ORM::factory('ProductImages')->where('product_id','=',$this->model->id)->find_all();
+		$this->product_images = ORM::factory('ProductImages')->where('product_id','=',$this->model->id)->and_where('img_type','=',1)->find_all();
+		$this->product_add_images = ORM::factory('ProductImages')->where('product_id','=',$this->model->id)->and_where('img_type','=',2)->find_all();
 	}
 
 	public function action_index() {
@@ -69,7 +70,7 @@ class Controller_Admin_Products extends Controller_Admin {
 	}
 
 	public function action_upload() {
-
+		print_r($_REQUEST);
 		if ( isset( $_FILES['files'] ) && !empty($_FILES['files']) && !empty($_REQUEST['product_id']) ) {
 			$file_object = array();
 			$file_object['name'] = $_FILES['files']['name']['0'];
@@ -82,6 +83,7 @@ class Controller_Admin_Products extends Controller_Admin {
 			if($filename){
 				$product_image->product_id = (int) $_REQUEST['product_id'];
 				$product_image->img_name = $filename;
+				$product_image->img_type = ((int) $_REQUEST['upload_type']==1)?1:2;
 				$product_image->save();
 			} else {
 				return false;

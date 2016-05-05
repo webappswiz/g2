@@ -63,12 +63,27 @@
 					<footer>
 						<div class="gray-wall size-checkbox-holder">
 							<h3>Available size</h3>
-							<input id="size_1" type="radio" name="size" value="1">
-							<label for="size_1" class="radio_green s1">Tiny</label>
-							<input id="size_2" type="radio" name="size" value="1" checked>
-							<label for="size_2" class="radio_green s2">Just right</label>
-							<input id="size_3" type="radio" name="size" value="1">
-							<label for="size_3" class="radio_green s3">Just right</label>
+							<?php
+							if($product->product_size==1){
+								echo 'Small';
+							} elseif($product->product_size==2){
+								echo 'Medium';
+							} else {
+								echo 'Large';
+							}
+							?>
+							</div>
+							<div class="gray-wall size-checkbox-holder">
+							<h3>Available age</h3>
+							<?php
+							if($product->product_age==1){
+								echo 'From 0 to 3 years';
+							} elseif($product->product_age==2){
+								echo 'From 3 to 7 years';
+							} else {
+								echo 'From 7 + years';
+							}
+							?>
 						</div>
 					</footer>
 					<!-- end footer-->
@@ -97,7 +112,9 @@
 				<ul>
 					<li> <a href="#tabs-1">About</a></li>
 					<li> <a href="#tabs-2">Composition</a></li>
+					<?php if(count($aimages)>0):?>
 					<li> <a href="#tabs-3">Photo</a></li>
+					<?php endif; ?>
 					<?php if($product->video_link<>''):?>
 					<li> <a href="#tabs-4">Video</a></li>
 					<?php endif;?>
@@ -109,9 +126,13 @@
 				<div id="tabs-2">
 					<?php echo $product->product_composition; ?>
 				</div>
+				<?php if(count($aimages)>0):?>
 				<div id="tabs-3">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod			</p>
+					<?php foreach($aimages as $img):?>
+							<img src="<?php echo URL::base( true, false ); ?>uploads/products/<?php echo $img->img_name;?>">
+					<?php endforeach;?>
 				</div>
+				<?php endif;?>
 				<?php if($product->video_link<>''):?>
 				<div id="tabs-4">
 					<div class="video-box"><iframe width="1140" height="640" src="<?php echo $product->video_link;?>" frameborder="0" allowfullscreen></iframe></div>

@@ -28,7 +28,9 @@ class Controller_Catalog extends Controller_Core {
 			throw new Kohana_HTTP_Exception_404;
 		}
 		$this->product = ORM::factory('Products',(int)$this->request->param( 'id' ));
-		$this->images = ORM::factory('ProductImages')->where('product_id','=',(int)$this->product->id)->find_all();
+		$this->images = ORM::factory('ProductImages')->where('product_id','=',(int)$this->product->id)->and_where('img_type','=',1)->find_all();
+		$this->aimages = ORM::factory('ProductImages')->where('product_id','=',(int)$this->product->id)->and_where('img_type','=',2)->find_all();
+
 	}
 
 }

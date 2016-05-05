@@ -157,6 +157,20 @@
 		?>
 		</div>
 		<div style="clear: both;"></div>
+
+		<div class="control-group" style="text-align: center">
+			<?php
+			if(count($product_add_images)>0){
+				echo '<h3>Product Addon Images</h3>';
+				foreach($product_add_images as $a_image){
+					echo '<div><img src="'.URL::base(true, true).'uploads/products/'.$a_image->img_name.'" style="width:100px;height:100px"><br/>
+				<a href="'.URL::base(true, true).'admin/products/del_img/'.$a_image->id.'">Delete</a>
+				</div>';
+				}
+			}
+			?>
+		</div>
+		<div style="clear: both;"></div>
 	<h3>Upload images</h3>
 	<script>
 		/*jslint unparam: true, regexp: true */
@@ -183,7 +197,7 @@
 							$this.remove();
 						});
 					});
-			$('#fileupload').fileupload({
+			$('.fileupload').fileupload({
 				url: url,
 				dataType: 'json',
 				autoUpload: false,
@@ -199,7 +213,9 @@
 				previewMaxHeight: 100,
 				previewCrop: true
 			}).on('fileuploadadd', function (e, data) {
-				data.formData = {product_id: <?php echo $model->id; ?>}
+				var upload_type = $(this).data('value');
+				data.formData = {"product_id": <?php echo $model->id; ?>,"upload_type": upload_type};
+
 				data.context = $('<div/>').appendTo('#files');
 				$.each(data.files, function (index, file) {
 					var node = $('<p/>')
@@ -267,11 +283,19 @@
         <i class="glyphicon glyphicon-plus"></i>
         <span>Add files...</span>
 	    <!-- The file input field used as target for the file upload widget -->
-        <input id="fileupload" type="file" name="files[]" multiple>
+        <input class="fileupload" type="file" name="files[]" data-value="1" multiple accept=".jpg,.png,.PNG,.JPG">
+
+    </span>
+	<h3>Upload photos for the photos tab</h3>
+		<span class="btn btn-success fileinput-button">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>Add additional photos...</span>
+			<!-- The file input field used as target for the file upload widget -->
+        <input class="fileupload" type="file" name="files[]" data-value="2" multiple accept=".jpg,.png,.PNG,.JPG">
 
     </span>
 	<br>
-	<br>
+		<br>
 	<!-- The global progress bar -->
 	<div id="progress" class="progress">
 		<div class="progress-bar progress-bar-success"></div>
