@@ -89,11 +89,16 @@
 
 			</aside>
 			<!-- Content ========================================-->
-			<div class="col-9">
-				<div id="slider_catalog"><img
-						src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg"
-						class="responsive"></div>
-
+			<div class="catalog col-9">
+				<div class="slider-holder">
+				<div id="slider_catalog">
+					<ul>
+						<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive"></li>
+						<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive"></li>
+						<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive"></li>
+					</ul>
+				</div>
+				</div>
 				<div class="category-box">
 					<div class="category-title"><?php echo $category->cat_name; ?></div>
 					<div class="product-line">
@@ -105,10 +110,10 @@
 								<?php foreach ( $products as $product ): ?>
 									<li>
 										<div class="item product-preview">
-											<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>">
+
 												<img
 													src="<?php echo URL::base( true, false ); ?>assets/img/product-img-4.jpg">
-											</a>
+											
 
 											<div class="row">
 												<h2>

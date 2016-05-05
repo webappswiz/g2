@@ -136,8 +136,8 @@
 									<?php foreach ( $products as $product ): ?>
 										<li>
 											<div class="item product-preview">
-												<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><img
-														src="<?php echo URL::base( true, false ); ?>assets/img/product-img-4.jpg"></a>
+												<img
+														src="<?php echo URL::base( true, false ); ?>assets/img/product-img-4.jpg">
 
 												<div class="row">
 													<h2>
