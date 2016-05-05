@@ -249,65 +249,30 @@
 	<div class="row flx-center">
 		<div class="content-box shop-carusel">
 			<h1 class="text-center">Popular boxes</h1>
-
-			<div id="carusel-1" class="carusel-container">
-				<div class="left-btn"></div>
-				<div class="viewport">
-					<div id="carusel-line">
-						<div class="item product-preview"><img
-								src="<?php echo URL::base( true, false ); ?>assets/img/product-img-1.jpg">
-
-							<div class="row">
-								<h2>Goodiebox Smart</h2><span class="ammount">499</span><a class="btn solid pink">BUY
-									NOW</a>
-							</div>
+			<div id="carusel-2" class="carusel-container">
+				<ul>
+					<?php
+					$products = ORM::factory( 'Products' )->order_by( 'sales', 'DESC' )->limit( 6 )->find_all();
+					foreach ( $products as $product ):
+					$image = ORM::factory('ProductImages')->where('product_id','=',$product->id)->limit(1)->find();
+					?>
+					<li class="item product-preview">
+						<?php if($image->img_name!=''):?>
+							<img src="<?= URL::base( true, false ) ?>uploads/products/<?php echo $image->img_name;?>">
+						<?php else:?>
+							<img src="<?= URL::base( true, false ) ?>assets/img/placeholder.png">
+						<?php endif;?>
+						<div class="row">
+							<h2><?php echo $product->product_name; ?></h2>
+							<span class="ammount"><?php echo $product->price; ?></span>
+							<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>" class="btn solid pink">BUY NOW</a>
 						</div>
-						<div class="item product-preview"><img
-								src="<?php echo URL::base( true, false ); ?>assets/img/product-img-2.jpg">
-
-							<div class="row">
-								<h2>Goodiebox Smart</h2><span class="ammount">499</span><a class="btn solid pink">BUY
-									NOW</a>
-							</div>
-						</div>
-						<div class="item product-preview"><img
-								src="<?php echo URL::base( true, false ); ?>assets/img/product-img-3.jpg">
-
-							<div class="row">
-								<h2>Goodiebox Smart</h2><span class="ammount">499</span><a class="btn solid pink">BUY
-									NOW</a>
-							</div>
-						</div>
-						<div class="item product-preview"><img
-								src="<?php echo URL::base( true, false ); ?>assets/img/product-img-1.jpg">
-
-							<div class="row">
-								<h2>Goodiebox Smart</h2><span class="ammount">499</span><a class="btn solid pink">BUY
-									NOW</a>
-							</div>
-						</div>
-						<div class="item product-preview"><img
-								src="<?php echo URL::base( true, false ); ?>assets/img/product-img-2.jpg">
-
-							<div class="row">
-								<h2>Goodiebox Smart</h2><span class="ammount">499</span><a class="btn solid pink">BUY
-									NOW</a>
-							</div>
-						</div>
-						<div class="item product-preview"><img
-								src="<?php echo URL::base( true, false ); ?>assets/img/product-img-3.jpg">
-
-							<div class="row">
-								<h2>Goodiebox Smart</h2><span class="ammount">499</span><a class="btn solid pink">BUY
-									NOW</a>
-							</div>
-						</div>
-					</div>
-				</div>
+					</li>
+					<?php endforeach; ?>
+				</ul>
 				<!-- end .viewport-->
-				<div class="right-btn"></div>
 			</div>
-			<!-- end #carusel-1.carusel-container-->
+			<!-- end #carusel-2.carusel-container-->
 		</div>
 		<!-- end .content-box.shop-carusel-->
 	</div>

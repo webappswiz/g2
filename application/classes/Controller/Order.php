@@ -599,6 +599,8 @@ class Controller_Order extends Controller_Core {
 		$total_cart_price = 0;
 		foreach($cart as $id => $qty){
 			$product_info = ORM::factory( 'Products', $id );
+			$product_info->sales =$product_info->sales+1;
+			$product_info->save();
 			$subtotal     = $product_info->price * $qty;
 			$total_cart_price += $subtotal;
 		}
@@ -610,9 +612,7 @@ class Controller_Order extends Controller_Core {
 			$order->total_price = round($total_cart_price );
 		}
 		$order->save();
-
 		reset($cart);
-
 		foreach($cart as $id => $qty){
 			$order_products = ORM::factory('OrderProducts');
 			$order_products->order_id = $order->id;

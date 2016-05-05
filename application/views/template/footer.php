@@ -37,9 +37,9 @@
 			</div>
 		</div>
 		<div class="row flx-center flx-column">
-			<p class="text-center">Külön köszönet a weboldalon felhasznált professzionális fotókért:</p>
-			<p class="text-center"><a href="http://kutyabolondfotostudio.hu" class="link blue">Kutyabolond Fotóstúdió</a></p>
-			<p class="text-center"><a href="https://www.facebook.com/SB-Photography-Videography-715181318498178/" class="link blue">Simics Balu   </a></p>
+			<p class="text-center --no-margin-bottom">Külön köszönet a weboldalon felhasznált professzionális fotókért:</p>
+			<p class="text-center --no-margin"><a href="http://kutyabolondfotostudio.hu" class="link blue">Kutyabolond Fotóstúdió</a></p>
+			<p class="text-center --no-margin-top"><a href="https://www.facebook.com/SB-Photography-Videography-715181318498178/" class="link blue">Simics Balu   </a></p>
 		</div>
 	</div>
 	<!-- end .footer-bottom       -->
