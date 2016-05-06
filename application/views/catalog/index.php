@@ -140,10 +140,19 @@
 								?>
 								<ul>
 									<?php foreach ( $products as $product ): ?>
+										<?php
+										$img_path = '';
+										$image = ORM::factory('ProductImages')->where('product_id','=',$product->id)->and_where('img_type','=',1)->limit(1)->find_all();
+										if(count($image)>0){
+											$img_path = URL::base( true, false ).'uploads/products/'.$image[0]->img_name;
+										} else {
+											$img_path = URL::base( true, false ).'assets/img/product-img-4.jpg';
+										}
+										?>
 										<li>
-											<div class="item product-preview">
+											<div class="item product-preview <?php echo ($product->on_sale==1)?'label-sale ':''; echo ($product->new==1)?'label-new ':''; ?>">
 												<img
-														src="<?php echo URL::base( true, false ); ?>assets/img/product-img-4.jpg">
+														src="<?php echo $img_path; ?>">
 
 												<div class="row">
 													<h2>

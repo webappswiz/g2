@@ -273,7 +273,7 @@
 					foreach ( $products as $product ):
 						$image = ORM::factory( 'ProductImages' )->where( 'product_id', '=', $product->id )->limit( 1 )->find();
 						?>
-						<li class="item product-preview">
+						<li class="item product-preview <?php echo ($product->on_sale==1)?'label-sale ':''; echo ($product->new==1)?'label-new ':''; ?>">
 							<?php if ( $image->img_name != '' ): ?>
 								<img
 									src="<?= URL::base( true, false ) ?>uploads/products/<?php echo $image->img_name; ?>">

@@ -103,6 +103,16 @@
 
 			</div>
 			<div class="control-group">
+				<input type="checkbox" id="package_new" name="package_new"
+						<?php echo ( $model->new == 1 ) ? 'checked="checked"' : '' ?> value="1"> Is new product?
+
+			</div>
+			<div class="control-group">
+				<input type="checkbox" id="package_onsale" name="package_onsale"
+						<?php echo ( $model->on_sale == 1 ) ? 'checked="checked"' : '' ?> value="1"> Is on-sale
+
+			</div>
+			<div class="control-group">
 				<label class="control-label" for="product_description">Product description</label>
 
 				<div class="controls">

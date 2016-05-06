@@ -65,6 +65,16 @@ class Controller_Admin_Products extends Controller_Admin {
 		} else {
 			$this->model->status = 0;
 		}
+		if ( isset( $_REQUEST['package_onsale'] ) ) {
+			$this->model->on_sale = 1;
+		} else {
+			$this->model->on_sale = 0;
+		}
+		if ( isset( $_REQUEST['package_new'] ) ) {
+			$this->model->new = 1;
+		} else {
+			$this->model->new = 0;
+		}
 		$this->model->save();
 		$this->redirect( '/admin/products/' );
 	}
