@@ -94,8 +94,10 @@
 								echo 'Small';
 							} elseif ( $product->product_size == 2 ) {
 								echo 'Medium';
-							} else {
+							} elseif($product->product_size == 3) {
 								echo 'Large';
+							} else {
+								echo 'Good for all dog sizes';
 							}
 							?>
 						</div>
@@ -103,11 +105,13 @@
 							<h3>Available age</h3>
 							<?php
 							if ( $product->product_age == 1 ) {
-								echo 'From 0 to 3 years';
+								echo 'From 3 months +';
 							} elseif ( $product->product_age == 2 ) {
-								echo 'From 3 to 7 years';
+								echo 'From 4 months +';
+							} elseif ( $product->product_age == 3 ) {
+								echo 'From 1 year +';
 							} else {
-								echo 'From 7 + years';
+								echo 'Good for all ages';
 							}
 							?>
 						</div>
