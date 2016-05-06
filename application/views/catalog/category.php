@@ -60,18 +60,24 @@
 						foreach ( $_SESSION['cart'] as $key => $cart_item ):
 							$product_info = ORM::factory( 'Products', $key );
 							$subtotal     = $product_info->price * $cart_item;
+							$image = ORM::factory('ProductImages')->where('product_id','=',$product_info->id)->and_where('img_type','=',1)->limit(1)->find_all();
+							if(count($image)>0){
+								$img_path = URL::base( true, false ).'uploads/products/'.$image[0]->img_name;
+							} else {
+								$img_path = URL::base( true, false ).'assets/img/product-img-4.jpg';
+							}
 							$total_cart_price += $subtotal;
 							?>
 							<div id="item-id" class="cart-item">
 								<div class="row"><img
-										src="<?php echo URL::base( true, false ); ?>assets/img/filter-cart-thumb-1.jpg"
+										src="<?php echo $img_path; ?>"
 										class="thumbnail"><a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product_info->id ?>"><?php echo $product_info->product_name; ?></a>
 								</div>
 								<div class="row">
-									<form action="#" method="POST"><span class="btn-minus">-</span>
-										<input type="text" name="quantity" value="<?php echo $cart_item; ?>"
+									<form action="#" method="POST"><span class="btn-minus" data-productid="<?php echo $product_info->id; ?>">-</span>
+										<input type="text" class="qty" name="quantity" value="<?php echo $cart_item; ?>"
 										       readonly><span
-											class="btn-plus">+</span><span
+											class="btn-plus" data-productid="<?php echo $product_info->id; ?>">+</span><span
 											class="item-total-ammount"><?php echo $subtotal; ?></span>
 									</form>
 								</div>

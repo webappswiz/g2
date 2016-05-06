@@ -66,4 +66,22 @@ class Controller_Cart extends Controller_Core {
 			$this->redirect( 'order/step3' );
 		}
 	}
+
+	public function action_update(){
+		if(!$this->is_post())
+			return;
+		if(!isset($_REQUEST['product_id']) || !isset($_REQUEST['product_qty'])){
+			throw new Kohana_HTTP_Exception_404;
+		}
+		$product_id = (int)Arr::get($_REQUEST,'product_id');
+		$product_qty = (int)Arr::get($_REQUEST,'product_qty');
+		$prod_id = ORM::factory('Products',$product_id);
+		if(!$prod_id->loaded()) return;
+		if(isset($_SESSION['cart'][$product_id])){
+			$_SESSION['cart'][$product_id] = $product_qty;
+
+		}
+		echo '{"msg":1}';
+		$this->render_nothing();
+	}
 }
