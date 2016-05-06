@@ -3,14 +3,15 @@ $(function() {
   $( "#slider-range" ).slider({
     range: true,
     min: 20,
-    max: 899,
-    values: [ 90, 790 ],
+    max: 5000,
+    values: [ 90, 5000 ],
     slide: function( event, ui ) {
-      $( "#amount-1" ).val( "$" + ui.values[ 0 ] );
-      $( "#amount-2" ).val( "$" + ui.values[ 1 ] );
+      $( "#amount-1" ).val( ui.values[ 0 ]);
+      $( "#amount-2" ).val( ui.values[ 1 ]);
     }
   });
-  $( "#amount-1" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) );
+  $( "#amount-1" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+    $( "#amount-2" ).val( $( "#slider-range" ).slider( "values", 1 ) );
 });
 
 // Slider age filter

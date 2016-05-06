@@ -21,41 +21,36 @@
 				<!-- Fiter =======-->
 				<h2>Filter</h2>
 
-				<form class="product-filter">
+				<form class="product-filter" method="GET">
 					<div class="slide-filter amount"><span class="filter-block">Price:</span>
 
 						<div id="slider-range"></div>
-						<div class="row flx-justify"><span class="min-amount text-gray">20 $</span><span
-								class="max-amount text-gray">899 $</span></div>
+						<div class="row flx-justify"><span class="min-amount text-gray">20 Ft</span><span
+								class="max-amount text-gray">5000 Ft</span></div>
 						<div class="row flx-justify">
-							<input type="text" id="amount-1" readonly>
-							<input type="text" id="amount-2" readonly>
+							<input type="text" id="amount-1" name="price_from" readonly>
+							<input type="text" id="amount-2" name="price_to" readonly>
 						</div>
 					</div>
 					<div class="category-chekbox"><span class="filter-block">Product category:</span>
+						<?php $all_cats = ORM::factory('Categories')->find_all(); ?>
 						<ul class="text-gray">
+							<?php foreach($all_cats as $cat):?>
 							<li>
-								<input id="category-3" type="checkbox" name="category-3" value="3">
-								<label for="category-3" class="gray-box__green-check">Toys</label>
+								<input id="category-<?php echo $cat->id; ?>" type="checkbox" name="category[]" value="<?php echo $cat->id; ?>">
+								<label for="category-<?php echo $cat->id; ?>" class="gray-box__green-check"><?php echo $cat->cat_name;?></label>
 							</li>
-							<li>
-								<input id="category-4" type="checkbox" name="category-4" value="4">
-								<label for="category-4" class="gray-box__green-check">Snacks</label>
-							</li>
-							<li>
-								<input id="category-5" type="checkbox" name="category-5" value="5">
-								<label for="category-5" class="gray-box__green-check">Chews</label>
-							</li>
+							<?php endforeach; ?>
 						</ul>
 					</div>
 					<div class="slide-filter age"><span class="filter-block">Age:</span>
 
 						<div id="slider-range-max-1"></div>
 						<div class="row flx-justify"><span class="min-amount text-gray">1 month</span><span
-								class="max-amount text-gray">7+ year</span></div>
+								class="max-amount text-gray">1+ year</span></div>
 						<div class="row flx-justify">
-							<input type="text" id="age-1" readonly>
-							<input type="text" id="age-2" readonly>
+							<input type="text" id="age-1" name="age_from" readonly>
+							<input type="text" id="age-2" name="age_to" readonly>
 						</div>
 					</div>
 					<div class="slide-filter size"><span class="filter-block">Size:</span>
@@ -64,11 +59,11 @@
 						<div class="row flx-justify"><span class="min-amount text-gray">1 kg</span><span
 								class="max-amount text-gray">25+ kg</span></div>
 						<div class="row flx-justify">
-							<input type="text" id="size-1" readonly>
-							<input type="text" id="size-2" readonly>
+							<input type="text" id="size-1" name="size_from" readonly>
+							<input type="text" id="size-2" name="size_to"  readonly>
 						</div>
 					</div>
-					<a class="btn large solid gray">SAVE</a>
+					<input type="submit" class="btn large solid gray" value="SAVE">
 				</form>
 
 				<?php if ( isset( $_SESSION['cart'] ) && count( $_SESSION['cart'] ) > 0 ): ?>
@@ -135,11 +130,52 @@
 								href="#">SEE MORE</a></div>
 						<div class="product-line">
 							<?php
-							$products = $category->products->order_by( 'id', 'DESC' )->limit( 3 )->find_all();
-							if ( count( $products ) > 0 ):
+							$products =$category->products;
+							//order_by( 'id', 'DESC' )->limit( 3 )->find_all();
+							if(isset($_REQUEST['price_from']) && isset($_REQUEST['price_to'])){
+								$products->where('price','>=',(int)$_REQUEST['price_from'])
+									->and_where('price','<=',(int)$_REQUEST['price_to']);
+							}
+							if(isset($_REQUEST['age_from']) && isset($_REQUEST['age_to'])){
+								$afrom = $_REQUEST['age_from'];
+								$ato = $_REQUEST['age_to'];
+								$age = array();
+								$age[] = 4;
+								if($afrom<1 and $ato<=3){
+									$age[] = 4;
+								}
+								if($afrom<1 and $ato>3 && $ato<4){
+									$age[] = 1;
+								}
+								if($afrom<1 and $ato>=4 && $ato<=12){
+									$age[] = 2;
+								}
+								if($afrom>=1){
+									$age[] = 3;
+								}
+								$products->and_where('product_age','IN',$age);
+							}
+							if(isset($_REQUEST['size_from']) && isset($_REQUEST['size_to'])){
+								$sfrom = $_REQUEST['size_from'];
+								$sto = $_REQUEST['size_to'];
+								$size = array();
+								$size[] = 4;
+								if($sto<=9){
+									$size[] = 1;
+								}
+								if($sto>9 && $sto<24){
+									$size[] = 2;
+								}
+								if($sto>=24){
+									$size[] = 3;
+								}
+								$products->and_where('product_size','IN',$size);
+							}
+							$prods = $products->order_by( 'id', 'DESC' )->limit( 3 )->find_all();
+							if ( count( $prods ) > 0 ):
 								?>
 								<ul>
-									<?php foreach ( $products as $product ): ?>
+									<?php foreach ( $prods as $product ): ?>
 										<?php
 										$img_path = '';
 										$image = ORM::factory('ProductImages')->where('product_id','=',$product->id)->and_where('img_type','=',1)->limit(1)->find_all();

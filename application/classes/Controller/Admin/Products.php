@@ -75,6 +75,7 @@ class Controller_Admin_Products extends Controller_Admin {
 		} else {
 			$this->model->new = 0;
 		}
+		$this->model->qty = $_REQUEST['product_qty'];
 		$this->model->save();
 		$this->redirect( '/admin/products/' );
 	}

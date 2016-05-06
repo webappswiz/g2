@@ -98,6 +98,15 @@
 				</div>
 			</div>
 			<div class="control-group">
+				<label class="control-label" for="package_code">Product quantity</label>
+
+				<div class="controls">
+					<input class="input-xxlarge" type="text" id="product_qty" name="product_qty"
+					       placeholder=""
+					       value="<?= $model->qty ?>">
+				</div>
+			</div>
+			<div class="control-group">
 				<input type="checkbox" id="package_enabled" name="package_enabled"
 					<?php echo ( $model->status == 1 ) ? 'checked="checked"' : '' ?> value="1"> Is available
 

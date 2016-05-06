@@ -15,7 +15,11 @@ class Controller_Catalog extends Controller_Core {
 	}
 
 	public function action_index() {
-		$this->categories =  ORM::factory('Categories')->find_all();
+		$this->model =  ORM::factory('Categories');
+		if(isset($_REQUEST['category']) and count($_REQUEST['category'])>0){
+			$this->model->where('id','IN',array_values($_REQUEST['category']));
+		}
+		$this->categories = $this->model->find_all();
 	}
 
 	public function action_category() {
