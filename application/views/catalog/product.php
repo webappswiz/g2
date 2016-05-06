@@ -148,22 +148,32 @@
 			<div class="row tabs"></div>
 			<div id="tabs">
 				<ul>
-					<li><a href="#tabs-1">About</a></li>
-					<li><a href="#tabs-2">Composition</a></li>
+					<?php if($product->product_about<>''): ?>
+						<li><a href="#tabs-1">About</a></li>
+					<?php endif; ?>
+					<?php if($product->product_composition<>''): ?>
+						<li><a href="#tabs-2">Composition</a></li>
+					<?php endif; ?>
 					<?php if ( count( $aimages ) > 0 ): ?>
 						<li><a href="#tabs-3">Photo</a></li>
 					<?php endif; ?>
 					<?php if ( $product->video_link <> '' ): ?>
 						<li><a href="#tabs-4">Video</a></li>
 					<?php endif; ?>
-					<li><a href="#tabs-5">Reviews (<?php echo count( $reviews ); ?>)</a></li>
+					<?php if($current_user || count( $reviews )>0):?>
+						<li><a href="#tabs-5">Reviews (<?php echo count( $reviews ); ?>)</a></li>
+					<?php endif;?>
 				</ul>
+				<?php if($product->product_about<>''): ?>
 				<div id="tabs-1">
 					<?php echo $product->product_about; ?>
 				</div>
+				<?php endif; ?>
+				<?php if($product->product_composition<>''): ?>
 				<div id="tabs-2">
 					<?php echo $product->product_composition; ?>
 				</div>
+				<?php endif; ?>
 				<?php if ( count( $aimages ) > 0 ): ?>
 					<div id="tabs-3">
 						<?php foreach ( $aimages as $img ): ?>
@@ -180,6 +190,7 @@
 						</div>
 					</div>
 				<?php endif; ?>
+				<?php if($current_user || count( $reviews )>0):?>
 				<div id="tabs-5">
 					<div class="row flx-column comment-box">
 						<div class="contact-form review-form">
@@ -238,9 +249,9 @@
 								</div>
 							<?php endforeach; ?>
 						<?php endif; ?>
-
 					</div>
 				</div>
+				<?php endif; ?>
 			</div>
 			<!-- end .row.tabs-->
 		</section>
