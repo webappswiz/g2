@@ -1596,6 +1596,8 @@ section {
       margin-right: 12px; }
     .my-cart .order-form .shipping-form #dif-shipping:checked ~ label.gray-box__green-check[for="dif-shipping"]:before {
       background-position: center bottom; }
+.my-cart .order-form .shipping-form #company:checked ~ label.gray-box__green-check[for="company"]:before {
+  background-position: center bottom; }
     .my-cart .order-form .shipping-form textarea {
       border: none;
       width: 100%;
@@ -1632,8 +1634,8 @@ section {
       background-repeat: no-repeat;
       background-position: center 0;
       margin-right: 1em; }
-    .my-cart .order-form .billing-info #online-pay:checked ~ .radio_green.op:before,
-    .my-cart .order-form .billing-info #delivery-pay:checked ~ .radio_green.od:before {
+    .my-cart .order-form .billing-info #cc:checked ~ .radio_green.op:before,
+    .my-cart .order-form .billing-info #cod:checked ~ .radio_green.od:before {
       background-position: center bottom; }
     .my-cart .order-form .billing-info span {
       display: inline-block;
