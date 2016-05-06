@@ -108,7 +108,7 @@ class Controller_Admin_Products extends Controller_Admin {
 			$filename = strtolower( Text::random( 'alnum', 25 ) ) . '.jpg';
 
 			Image::factory( $file )
-			     ->resize( 200, 200, Image::AUTO )
+			     ->resize( 800, '', Image::AUTO )
 			     ->save( $directory . $filename );
 
 			// Delete the temporary file
