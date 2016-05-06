@@ -1347,6 +1347,7 @@ section {
   border-radius: 5px;
   outline-color: #209b20;
   width: 108px;
+  cursor: pointer;
   margin: 1em 2em 1.5em 0; }
   .my-cart .gender-select .toggle:after {
     content: '\f107';
@@ -1875,6 +1876,7 @@ section {
       padding: 1.3em;
       position: relative;
       border-radius: 5px;
+      cursor: pointer;
       outline-color: #209b20;
       width: 108px;
       margin: 7px 0; }
