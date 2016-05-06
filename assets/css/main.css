@@ -754,13 +754,13 @@ section {
       position: absolute;
       top: 50px; }
     .timer .counter-holder #days:after {
-      content: "Days"; }
+      content: "Napok"; }
     .timer .counter-holder #hours:after {
-      content: "Hours"; }
+      content: "Órák"; }
     .timer .counter-holder #minutes:after {
-      content: "Minutes"; }
+      content: "Percek"; }
     .timer .counter-holder #seconds:after {
-      content: "Seconds"; }
+      content: "Mpercek"; }
 
 /*- How it works -*/
 .hiw {

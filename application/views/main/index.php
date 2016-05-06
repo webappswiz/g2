@@ -142,9 +142,7 @@ $time       = explode( ':', $date_array[1] );
 			<div class="row">
 				<div class="col-6">
 					<h1><?php echo __("Legyen kutyusodnak is saját doboza"); ?></h1>
-
-					<p>Mi is az a Goodiebox? Egyedi és kreatív módon meglepi dobozokat készítünk kutyusodnak! Ha szülinapja közeleg, örökbe fogadtad, levizsgázott vagy csak annyira imádod, hogy a legédesebb dologgal lepnéd meg, akkor a legjobb helyen jársz! Trendi és ízléses módon segítünk neked, hogy időt és pénzt spórolva a Te kutyusod lehessen a legmenőbb az utcában!
-					</p>
+					<p>Mi is az a Goodiebox? Egyedi és kreatív módon meglepi dobozokat készítünk kutyusodnak! Ha szülinapja közeleg, örökbe fogadtad, levizsgázott vagy csak annyira imádod, hogy a legédesebb dologgal lepnéd meg, akkor a legjobb helyen jársz! Trendi és ízléses módon segítünk neked, hogy időt és pénzt spórolva a Te kutyusod lehessen a legmenőbb az utcában!</p>
 					<a href="/order" class="btn large solid pink"><?php echo _("MEGRENDELEM");?></a>
 				</div>
 				<!-- end .col-6-->
@@ -168,10 +166,15 @@ $time       = explode( ':', $date_array[1] );
 						src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/home-img-2.png' ); ?>"></div>
 				<!-- end .image-holder-->
 				<div class="container text-white">
+					<?php if($status==1):?>
 					<h2><?php echo $text ?></h2>
-
-					<h3>Get our Xmas box for your pup!</h3><a id="subscribe" href="#" class="btn border white bold">subscribe
-						now</a>
+					<h3>Get our Xmas box for your pup!</h3>
+					<a id="subscribe" href="#" class="btn border white bold">subscribe now</a>
+					<?php else:?>
+						<h2>Visszaszámolunk a következő szupercuki goodieboxig!</h2>
+						<h3>Addig nézz szét a goodieshopban, ami most is nyitva van!</h3>
+						<a id="subscribe" href="/order" class="btn border white bold">Irány goodieshoppingolni!</a>
+					<?php endif;?>
 				</div>
 				<!-- end .container.text-white-->
 				<div class="counter-holder"><span id="days" class="counter">12</span><span id="hours"
