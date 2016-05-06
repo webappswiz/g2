@@ -371,7 +371,7 @@ $(function(){
 
 // Gallery on Catalog Page
 $(function(){
-  $('.product-detail .col-left .thumb-line').responsiveGallery();
+  $('.product-detail .col-left .thumb-line').responsiveGallery($('#top-img'));
 });
 
 // See detail hover link add
@@ -433,4 +433,10 @@ $(document).ready(function() {
 
   // Kick off one resize to fix all videos on page load
   }).resize();
+});
+
+// Label for product-preview
+$(document).ready(function(){
+  $('.product-preview.label-sale').append('<div class="label sale">');
+  $('.product-preview.label-new').append('<div class="label new">');
 });

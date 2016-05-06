@@ -20,7 +20,7 @@
 						$i = 0;
 						foreach ( $images as $image ) {
 							if ( $i == 0 ) {
-								echo '<img src="' . URL::base( true, false ) . 'uploads/products/' . $image->img_name . '" class="product-img">';
+								echo '<img id="top-img" src="' . URL::base( true, false ) . 'uploads/products/' . $image->img_name . '" class="product-img">';
 								echo '<div class="row flx-justify thumb-line">';
 							} else {
 								echo '<img src="' . URL::base( true, false ) . 'uploads/products/' . $image->img_name . '">';

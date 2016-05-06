@@ -1,10 +1,10 @@
-/*! Lana Gallery - v0.0.2 - 2016-03-29
+/*! Lana Gallery - v0.0.3 - 2016-05-06
 * http://lanadev.com/
 * Includes: 
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 
 (function($){
-  jQuery.fn.responsiveGallery = function(){
+  jQuery.fn.responsiveGallery = function(topImg){
     if ($(this).length == 0) {
       return;
     }
@@ -15,14 +15,24 @@
   	$('#la-space .gallery-viewport').prepend('<span class="la-arrow-right la-rounded la-color">');
   	$('#la-space .gallery-viewport').append('<span class="la-arrow-left la-rounded la-color">');
     $(this).find('img').clone().prependTo('#gallery_owerlay #la-space .gallery-viewport');
+    
+    if (topImg != undefined) {topImg.clone().prependTo('#gallery_owerlay #la-space .gallery-viewport');}
   	
     
-    // Add Hover effects to original images    
+    // Add Hover effects to original images
     $(this).find('img').wrap('<div class="la-hover-effect">');
-    $(this).find('.la-hover-effect').mouseover(function(){
+    if (topImg != undefined) {topImg.wrap('<div class="la-hover-effect top-img">');}
+    // $(this).find('.la-hover-effect').mouseover(function(){
+    //   $(this).toggleClass('x');
+    // });
+    // $(this).find('.la-hover-effect').mouseout(function(){
+    //   $(this).toggleClass('x');
+    // });
+
+    $('.la-hover-effect').mouseover(function(){
       $(this).toggleClass('x');
     });
-    $(this).find('.la-hover-effect').mouseout(function(){
+    $('.la-hover-effect').mouseout(function(){
       $(this).toggleClass('x');
     });
 
@@ -32,6 +42,13 @@
   		activeImg = $('#la-space .gallery-viewport img[src="' + $(this).find('img').attr('src') + '"]').show(400);
       $('.gallery-viewport .la-arrow-left, .gallery-viewport .la-arrow-right').css({'top' : 'calc(50% - 30px)' });
   	});
+
+    if (topImg != undefined) {
+        $(this).prev('.la-hover-effect.top-img').click(function(){
+          $('#gallery_owerlay').fadeIn(400);
+          activeImg = $('#la-space .gallery-viewport img[src="' + $(this).find('img').attr('src') + '"]').show(400);
+          $('.gallery-viewport .la-arrow-left, .gallery-viewport .la-arrow-right').css({'top' : 'calc(50% - 30px)' });
+        });}
 
     // Navigations
   	$('.gallery-viewport .la-arrow-right').click(function(){
@@ -67,3 +84,7 @@
   	});
   }
   })(jQuery);
+
+  // Version log
+  // 0.0.3 - add Top images to gallery via arguments;
+  //       - chenge click() handler on .la-hover-effect;
