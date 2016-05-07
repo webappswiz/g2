@@ -172,7 +172,7 @@ $time       = explode( ':', $date_array[1] );
 					<a id="subscribe" href="#" class="btn border white bold">subscribe now</a>
 					<?php else:?>
 						<h2>Visszaszámolunk a következő szupercuki goodieboxig!</h2>
-						<h3>Addig nézz szét a goodieshopban, ami most is nyitva van!</h3>
+						<h3>Addig nézelődj a Goodieshopban, ami most is nyitva van!</h3>
 						<a id="subscribe" href="/order" class="btn border white bold">Irány goodieshoppingolni!</a>
 					<?php endif;?>
 				</div>
