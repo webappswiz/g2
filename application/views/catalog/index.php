@@ -104,8 +104,7 @@
 						<?php endforeach; ?>
 						<div class="cart-total">
 							<h2>Total<span><?php echo $total_cart_price; ?></span></h2><a href="#"
-							                                                              class="btn large solid green">order
-								now</a>
+							                                                              class="btn large solid green">KOSÁRBA</a>
 						</div>
 					</div>
 				<?php endif; ?>
@@ -127,7 +126,7 @@
 					<div class="category-box">
 						<div class="category-title"><a
 								href="<?php echo URL::base( true, false ); ?>catalog/category/<?php echo $category->id ?>"><?php echo $category->cat_name; ?></><a
-								href="#">SEE MORE</a></div>
+								href="#">Olvass tovább</a></div>
 						<div class="product-line">
 							<?php
 							$products =$category->products;
@@ -199,7 +198,7 @@
 													</span>
 
 													<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"
-													   class="btn solid pink">BUY NOW</a>
+													   class="btn solid pink">KOSÁRBA</a>
 
 												</div>
 											</div>

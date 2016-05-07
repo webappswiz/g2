@@ -288,7 +288,7 @@ $time       = explode( ':', $date_array[1] );
 								<img src="<?= URL::base( true, false ) ?>assets/img/placeholder.png">
 							<?php endif;?>
 							<div class="row">
-								<h2><?php echo $product->product_name; ?></h2><span class="ammount"><?php echo $product->price; ?></span><a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>" class="btn solid pink">BUY NOW</a>
+								<h2><?php echo $product->product_name; ?></h2><span class="ammount"><?php echo $product->price; ?></span><a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>" class="btn solid pink">KOSÁRBA</a>
 							</div>
 						</li>
 					<?php endforeach; ?>
@@ -343,7 +343,7 @@ $time       = explode( ':', $date_array[1] );
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/IMG_0061.JPG"></header>
 					<div class="content">
 						<p>"Kedves Goodiebox-os Csapat, Megszeretném mégegyszer köszönni a kedvességetek, mind a többszöri egyeztetés, mind amiatt, hogy tényleg minden szempontból odafigyeltetek a kutyusom gyomorbetegségére. A játékok pedig egyszerűen fantasztikusak, nagy volt az öröm. Továbbra is maradunk hű vásárlótok :-)"</p>
-						<a href="#" class="link">Read more</a>
+						<a href="#" class="link">Olvass tovább</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
 
@@ -354,7 +354,7 @@ $time       = explode( ':', $date_array[1] );
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/IMG_0065.JPG"></header>
 					<div class="content">
 						<p>"Ismét nagyon tetszett a doboz tartalma. Ez a száraztáp igazi újdonság volt számomra, mert ezt a márkát eddig még nem ismertem, de Rustynak nagyon ízlik, ahogy természetesen a jutalomfalatok is."</p>
-						<a href="#" class="link">Read more</a>
+						<a href="#" class="link">Olvass tovább</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
 
@@ -365,7 +365,7 @@ $time       = explode( ':', $date_array[1] );
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/1460135_911183998914557_5797755493820555406_n.jpg"></header>
 					<div class="content">
 						<p>"Nagyszerű dolognak tartom, és hihetetlen nagy meglepetést okozott Tóbiásnak, minden nagyszerű a csomagban! Ami nagyon tetszett, hogy szinte személyre szóló <span style="color:#D931F7;font-weight:900;">volt</span> benne minden, főleg, hogy mi allergiások vagyunk! A játék nagy kedvenc, a táp szuper, a takarót imádjuk, a névre szóló biléta és a csomagolás pazar! KÖSZÖNJÜK"</p>
-						<a href="#" class="link">Read more</a>
+						<a href="#" class="link">Olvass tovább</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-3.jpg" class="avatar">
 
@@ -376,7 +376,7 @@ $time       = explode( ':', $date_array[1] );
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/20141224_173208.jpg"></header>
 					<div class="content">
 						<p>"Nagyon jónak tartom. Tényleg személyre szabott odafigyeléssel állítottátok össze a csomagot, még telefonon is egyeztettetek, hogy a táp megfelel­e Oszkárnak. A rénszarvast azonnal kivette és azóta is cipeli. Köszönjük!"</p>
-						<a href="#" class="link">Read more</a>
+						<a href="#" class="link">Olvass tovább</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
 
@@ -387,7 +387,7 @@ $time       = explode( ':', $date_array[1] );
 					<header><img src="<?= URL::base(TRUE, FALSE) ?>assets/img/feedbacks/2015-01-31_0146.png"></header>
 					<div class="content">
 						<p>"Nagy örömmel vettük át és bontottuk ki az általatok küldött csomagot. Izgatottan fedtük fel a titkot rejtő dobozt. "</p>
-						<a href="#" class="link">Read more</a>
+						<a href="#" class="link">Olvass tovább</a>
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-2.jpg" class="avatar">
 

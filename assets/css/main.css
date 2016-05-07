@@ -125,7 +125,7 @@ a.preview-link {
     transition: .2s; }
 
 a.preview-link:after {
-  content: 'See details';
+  content: 'Részletek';
   color: #fff;
   background-color: #f79320;
   position: absolute;
@@ -152,7 +152,7 @@ a.gallery-link {
     margin: 0; }
 
 a.gallery-link:after {
-  content: 'See more';
+  content: 'Olvass tovább';
   color: #fff;
   background-color: #f79320;
   position: absolute;
@@ -265,7 +265,7 @@ section {
   .product-preview .label.sale {
     border-bottom: 2em solid #e54731; }
   .product-preview .label.sale:after {
-    content: 'SALE';
+    content: 'Akció';
     color: #fff;
     position: absolute;
     top: 21px;
@@ -273,7 +273,7 @@ section {
   .product-preview .label.new {
     border-bottom: 2em solid #16b63f; }
   .product-preview .label.new:after {
-    content: 'NEW';
+    content: 'Új';
     color: #fff;
     position: absolute;
     top: 21px;

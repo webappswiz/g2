@@ -187,7 +187,10 @@ $time       = explode( ':', $date_array[1] );
 			</div>
 			<div class="right-box flx">
 				<div class="social-holder col-8 text-center">
+					<a href='#'>&nbsp;</a>
 					<?php
+
+					/*
 					if ( Cookie::get( 'lang', 'hu' ) == 'hu' ) {
 						?>
 						<a
@@ -198,7 +201,7 @@ $time       = explode( ':', $date_array[1] );
 						<a
 							href="<?php echo URL::base( true, false ) . 'main/chg_lang/hu' ?>"><span>magyar</span></a>
 						<?php
-					}
+					}*/
 					?>
 
 					<div class="row">

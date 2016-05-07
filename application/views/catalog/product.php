@@ -284,7 +284,7 @@
 								<h2><?php echo $product->product_name; ?></h2>
 								<span class="ammount"><?php echo $product->price; ?></span>
 								<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"
-								   class="btn solid pink">BUY NOW</a>
+								   class="btn solid pink">KOSÁRBA</a>
 							</div>
 						</li>
 					<?php endforeach; ?>
