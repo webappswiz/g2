@@ -15,9 +15,8 @@
 	<div class="row footer-bottom">
 		<div class="row flx-around content-box">
 			<div class="col-4">
-				<p>ÍRJ NEKÜNK:</p>
-
-				<p><span><a href="mailto:info@goodiebox.hu">info@goodiebox.hu</a></span></p>
+				<p><a href="http://forum.goodiebox.hu">GOODIEBOX PLACC</a></p>
+				<p><span>ÜZENJ: <a href="mailto:info@goodiebox.hu">info@goodiebox.hu</a></span></p>
 
 
 			</div>
