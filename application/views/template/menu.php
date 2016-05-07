@@ -2,14 +2,13 @@
 $auth  = Auth::instance();
 $menus = array();
 $menus = array(
-	'/'                         => array( __( 'Főoldal' ), 'home' ),
 	'/specials'                 => array( __( 'Kedvezmények' ), 'special' ),
 	'/kutyusaink'               => array( __( 'Kutyusaink' ), 'kutyusaink' ),
+	'/catalog'                  => array( __( 'Goodieshop' ), 'catalog' ),
 	'http://blog.goodiebox.hu'  => array( __( 'Blog' ), 'blog' ),
 	'/gyik'                     => array( __( 'GYIK' ), 'gyik' ),
-	'http://forum.goodiebox.hu' => array( __( 'Placc' ), 'forum' ),
 	'/partnerek'                => array( __( 'Partnereink' ), 'partnerek' ),
-	'/kapcsolat'                => array( __( 'Hello' ), 'kapcsolat' ),
+	'/kapcsolat'                => array( __( 'Üzenj' ), 'kapcsolat' ),
 );
 if ( $auth->logged_in() ) {
 	$menus['user_account']        = array( __( 'Profilom' ), 'arcél' );
