@@ -116,6 +116,15 @@
 				</div>
 			</div>
 			<div class="control-group">
+				<label class="control-label" for="package_code">Product weight</label>
+
+				<div class="controls">
+					<input class="input-xxlarge" type="text" id="package_weight" name="package_weight"
+					       placeholder="Package weight"
+					       value="<?= $model->weight ?>">
+				</div>
+			</div>
+			<div class="control-group">
 				<input type="checkbox" id="package_enabled" name="package_enabled"
 					<?php echo ( $model->status == 1 ) ? 'checked="checked"' : '' ?> value="1"> Is available
 
