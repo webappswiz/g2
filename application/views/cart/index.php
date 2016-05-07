@@ -47,9 +47,9 @@
 				<?php endforeach; ?>
 				<div class="row flx-end cart-total">
 					<div class="container">
-						<h2 class="text-right">Total<span><?php echo $total_cart_price;?></span></h2>
+						<h2 class="text-right">Összeg<span><?php echo $total_cart_price;?></span></h2>
 						<form action="/cart/checkout" method="post">
-							<input type="submit" name="order_now" value="order now" class="btn large solid pink">
+							<input type="submit" name="order_now" value="TOVÁBB A PÉNZTÁRHOZ" class="btn large solid pink">
 						</form>
 					</div>
 				</div>
