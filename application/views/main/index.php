@@ -256,7 +256,7 @@ $time       = explode( ':', $date_array[1] );
 <section>
 	<div class="row flx-center bgc-yellow_light">
 		<div class="content-box call-to-action-2">
-			<h1 class="text-center text-orange">Mit találsz egy igazi goodiebox dobozban?</h1>
+			<h1 class="text-center text-orange">Mit találhatsz egy Goodiebox dobozban?</h1>
 
 			<h3 class="text-center">Minden hónapban változnak a dobozban található termékek! Ezt mi is imádjuk, hiszen így bármikor is rendelsz egy éven belül, ugyanazt biztosan nem kapod vissza! Általában 4-7 db gondosan válogatott, itthon kevésbé ismert különféle (többnyire játék, jutalomfalat, snack, rágcsálnivaló, de esetenként higiénés termék és kiegészítő is) termék kerül a dobozodba, persze ez függ a típusától (Smart vagy Plus) és az adott havi koncepciótól is! Ha lemaradtál egy korábbi Goodieboxról, de szeretted volna ami benne volt, a termékeket megtalálhatod a GOODIESHOPban is!</h3><img
 				src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/fotobox-2.png' ); ?>" class="responsive"><a
