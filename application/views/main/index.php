@@ -225,7 +225,7 @@ $time       = explode( ':', $date_array[1] );
 						<!-- end .header-->
 					</div>
 					<!-- end .row-->
-					<p>Összesen két doboz típus közül tudsz választani. A PLUS dobozt szerezd be, ha egyszerre több szuper dolgot szeretnél, nagyobb értékben! Ha szülinapos kutyusod, akkor ebben a dobozban extra meglepi is várja! Ha a SMART dobozzal kezdenéd, szintén érkezik az elmaradhatatlan „Goodiebox kutyajó érzés”, amiből kiderül számodra is, miért jó közénk tartozni!</p>
+					<p>Összesen két doboz típus közül tudsz választani. A PLUS dobozt szerezd be, ha egyszerre több szuper dolgot szeretnél, nagyobb értékben! Ha szülinapos kutyusod, akkor ebben a dobozban extra meglepi is várja! Ha a SMART dobozzal kezdenéd, szintén érkezik az elmaradhatatlan „Goodiebox kutyajó érzés”, amiből számodra is kiderül, miért jó közénk tartozni!</p>
 				</div>
 				<!-- end .container.col-3-->
 				<div class="container col-3"><img

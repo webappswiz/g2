@@ -88,8 +88,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5232558">
-              <caret line="263" column="14" selection-start-line="263" selection-start-column="14" selection-end-line="263" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.33222592">
+              <caret line="227" column="348" selection-start-line="227" selection-start-column="348" selection-end-line="227" selection-end-column="348" />
               <folding />
             </state>
           </provider>
@@ -827,8 +827,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5232558">
-          <caret line="263" column="14" selection-start-line="263" selection-start-column="14" selection-end-line="263" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.33222592">
+          <caret line="227" column="348" selection-start-line="227" selection-start-column="348" selection-end-line="227" selection-end-column="348" />
           <folding />
         </state>
       </provider>
