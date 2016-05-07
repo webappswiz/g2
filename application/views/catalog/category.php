@@ -174,8 +174,12 @@
 											<div class="row">
 												<h2>
 													<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><?php echo $product->product_name ?></a>
-												</h2><span
-													class="ammount"><?php echo $product->price ?></span>
+												</h2><?php if ($product->on_sale==1): ?>
+													<span class="ammount old"><?php echo $product->price; ?></span>
+													<span class="ammount"><?php echo $product->sale_price; ?></span>
+												<?php else: ?>
+													<span class="ammount"><?php echo $product->price; ?></span>
+												<?php endif;?>
 
 												<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"
 												   class="btn solid pink">KOSÁRBA</a>

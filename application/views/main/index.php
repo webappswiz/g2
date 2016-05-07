@@ -288,7 +288,14 @@ $time       = explode( ':', $date_array[1] );
 								<img src="<?= URL::base( true, false ) ?>assets/img/placeholder.png">
 							<?php endif;?>
 							<div class="row">
-								<h2><?php echo $product->product_name; ?></h2><span class="ammount"><?php echo $product->price; ?></span><a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>" class="btn solid pink">KOSÁRBA</a>
+								<h2><?php echo $product->product_name; ?></h2>
+								<?php if ($product->on_sale==1): ?>
+									<span class="ammount old"><?php echo $product->price; ?></span>
+									<span class="ammount"><?php echo $product->sale_price; ?></span>
+								<?php else: ?>
+									<span class="ammount"><?php echo $product->price; ?></span>
+								<?php endif;?>
+								<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>" class="btn solid pink">KOSÁRBA</a>
 							</div>
 						</li>
 					<?php endforeach; ?>
@@ -310,7 +317,7 @@ $time       = explode( ':', $date_array[1] );
 			<h1 class="text-center"><?php echo __( 'Goodiebox fotótár' ); ?></h1>
 			<div class="row flx-center gallery-carusel-holder">
 				<div id="gallery-carusel" class="carusel-container">
-					<ul>
+					<ul class="flx flx-justify">
 						<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?jan" class="gallery-link"><img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-366.jpg"></a>
 							<h2 class="text-center">Januar 2016</h2>
 						</li>

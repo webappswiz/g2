@@ -3,8 +3,6 @@
 input[type="file"],
 select,
 textarea, .progress, code, pre {
-   -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-   -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
    -o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
    background: #202020;
@@ -29,8 +27,6 @@ body {
 
 /* line 48, ../sass/darkstrap.scss */
 .page-header {
-   -moz-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
-   -webkit-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
    -o-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
    box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
    border-bottom: 1px solid #121212;
@@ -202,8 +198,6 @@ textarea {
 /* line 163, ../sass/darkstrap.scss */
 legend {
    color: white;
-   -moz-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
-   -webkit-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
    -o-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
    box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
    border-bottom: 1px solid #121212;
@@ -238,8 +232,6 @@ legend {
 .control-group.warning select:focus,
 .control-group.warning textarea:focus {
    border-color: #faa732;
-   -moz-box-shadow: 0 0 6px #faa732;
-   -webkit-box-shadow: 0 0 6px #faa732;
    -o-box-shadow: 0 0 6px #faa732;
    box-shadow: 0 0 6px #faa732;
 }
@@ -258,8 +250,6 @@ legend {
 /* line 20, ../sass/mixins.scss */
 .control-group.success input:focus, .control-group.success select:focus, .control-group.success textarea:focus {
    border-color: #5bb75b;
-   -moz-box-shadow: 0 0 6px #5bb75b;
-   -webkit-box-shadow: 0 0 6px #5bb75b;
    -o-box-shadow: 0 0 6px #5bb75b;
    box-shadow: 0 0 6px #5bb75b;
 }
@@ -278,8 +268,6 @@ legend {
 /* line 20, ../sass/mixins.scss */
 .control-group.error input:focus, .control-group.error select:focus, .control-group.error textarea:focus {
    border-color: #fc5b5e;
-   -moz-box-shadow: 0 0 6px #fc5b5e;
-   -webkit-box-shadow: 0 0 6px #fc5b5e;
    -o-box-shadow: 0 0 6px #fc5b5e;
    box-shadow: 0 0 6px #fc5b5e;
 }
@@ -412,8 +400,6 @@ legend {
 .modal-footer {
    background-color: #373737;
    border-top: 1px solid #222;
-   -moz-box-shadow: 0 1px 0 #333333 inset;
-   -webkit-box-shadow: 0 1px 0 #333333 inset;
    -o-box-shadow: 0 1px 0 #333333 inset;
    box-shadow: 0 1px 0 #333333 inset;
 }
@@ -430,8 +416,6 @@ blockquote.pull-right {
 
 /* line 271, ../sass/darkstrap.scss */
 hr {
-   -moz-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
-   -webkit-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
    -o-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
    box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
    border-bottom: 1px solid #121212;

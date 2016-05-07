@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-- TYPOGRAPHY ##########################################*/
 body {
   color: #2a1010;
@@ -22,11 +23,11 @@ p {
   margin: 0; }
 
 .--no-margin-bottom {
-  margin-top:40px;
   margin-bottom: 0; }
 
 .--no-margin-top {
-  margin-top: 0; }
+  margin-top: 0;
+  margin-top: 40px; }
 
 address, .date {
   font-family: inherit;
@@ -41,8 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 55px;
-  line-height: 1.1em;
-}
+  line-height: 1.1em; }
 
 h2 {
   font-size: 22px; }
@@ -246,7 +246,13 @@ section {
     width: 50%;
     line-height: 36px; }
   .product-preview .ammount:after {
-    content: " Ft"; }
+    content: "Ft"; }
+  .product-preview .ammount.old {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    text-decoration: line-through;
+    color: #E54731; }
   .product-preview .btn {
     width: 50%;
     margin: 0; }
@@ -1225,7 +1231,8 @@ section {
   .cart-box.cart-page .row.flx-end.cart-total .container {
     padding-right: 2em; }
     .cart-box.cart-page .row.flx-end.cart-total .container .btn.large {
-      width: 250px; }
+      padding-left: 2em;
+      padding-right: 2em; }
 
 /*-- GALLERY --*/
 .gallery .gallery-carusel-holder {
@@ -1350,8 +1357,8 @@ section {
   border-radius: 5px;
   outline-color: #209b20;
   width: 108px;
-  cursor: pointer;
-  margin: 1em 2em 1.5em 0; }
+  margin: 1em 2em 1.5em 0;
+  cursor: pointer; }
   .my-cart .gender-select .toggle:after {
     content: '\f107';
     font-family: 'FontAwesome';
@@ -1600,8 +1607,8 @@ section {
       margin-right: 12px; }
     .my-cart .order-form .shipping-form #dif-shipping:checked ~ label.gray-box__green-check[for="dif-shipping"]:before {
       background-position: center bottom; }
-.my-cart .order-form .shipping-form #company:checked ~ label.gray-box__green-check[for="company"]:before {
-  background-position: center bottom; }
+    .my-cart .order-form .shipping-form #company:checked ~ label.gray-box__green-check[for="company"]:before {
+      background-position: center bottom; }
     .my-cart .order-form .shipping-form textarea {
       border: none;
       width: 100%;
@@ -1638,6 +1645,8 @@ section {
       background-repeat: no-repeat;
       background-position: center 0;
       margin-right: 1em; }
+    .my-cart .order-form .billing-info #online-pay:checked ~ .radio_green.op:before,
+    .my-cart .order-form .billing-info #delivery-pay:checked ~ .radio_green.od:before,
     .my-cart .order-form .billing-info #cc:checked ~ .radio_green.op:before,
     .my-cart .order-form .billing-info #cod:checked ~ .radio_green.od:before {
       background-position: center bottom; }
@@ -1879,10 +1888,10 @@ section {
       padding: 1.3em;
       position: relative;
       border-radius: 5px;
-      cursor: pointer;
       outline-color: #209b20;
       width: 108px;
-      margin: 7px 0; }
+      margin: 7px 0;
+      cursor: pointer; }
       .my-office .my-puppies .new-puppy .gender-select .toggle:after {
         content: '\f107';
         font-family: 'FontAwesome';
@@ -2012,13 +2021,34 @@ section {
       display: none; }
 
 /*-- END PAGES ###########################################*/
+/***********************************/
+/*              SPECIALS PAGE CSS  */
+/***********************************/
+.neki-neked_container {
+  width: 100%; }
 
-/**********************************
-              SPECIALS PAGE CSS
-**********************************/
-.neki-neked_container{width: 100%;}
-.neked {cursor:pointer;position: relative;display: inline;top:-60px;}
-.neki{cursor:pointer;display: inline;position: relative;display: inline;top:-60px;}
-.specials-image{margin: 0 auto;width:250px;display: inline;margin-top:50px!important;}
-.specials-cats{padding-left: 160px}
-.kedvezmeny {font-weight:bold;color:#ec2366;}
+.neked {
+  cursor: pointer;
+  position: relative;
+  display: inline;
+  top: -60px; }
+
+.neki {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  display: inline;
+  top: -60px; }
+
+.specials-image {
+  margin: 0 auto;
+  width: 250px;
+  display: inline;
+  margin-top: 50px !important; }
+
+.specials-cats {
+  padding-left: 160px; }
+
+.kedvezmeny {
+  font-weight: bold;
+  color: #ec2366; }

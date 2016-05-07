@@ -266,17 +266,16 @@ $(function() {
 });
 
 // Home Page Gallery Carusel
-
-$(function() {
-   $('#gallery-carusel').responsiveCarusel(
-    {
-    'items' : '4',
-    'controlPosition' : 'beside',
-    'controlPositionY' : '95',      // Margin top
-    'controlPositionX' : '40',      // Margin inner / outer  
-    'controlColor' : '#ed1968'
-  });
-});
+// $(function() {
+//    $('#gallery-carusel').responsiveCarusel(
+//     {
+//     'items' : '4',
+//     'controlPosition' : 'beside',
+//     'controlPositionY' : '95',      // Margin top
+//     'controlPositionX' : '40',      // Margin inner / outer  
+//     'controlColor' : '#ed1968'
+//   });
+// });
 
 // Gallery Page Gallery Carusel
 $(function() {
@@ -367,9 +366,9 @@ $(function(){
 });
 
 // Gallery on Home Page
-$(function(){
-  $('.content-box.photo').responsiveGallery();
-});
+// $(function(){
+//   $('.content-box.photo').responsiveGallery();
+// });
 
 // Gallery on Catalog Page
 $(function(){
