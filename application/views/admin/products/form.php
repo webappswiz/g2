@@ -51,6 +51,15 @@
 				</div>
 			</div>
 			<div class="control-group">
+				<label class="control-label" for="package_price">Package sale price</label>
+
+				<div class="controls">
+					<input class="input-xxlarge" type="text" id="package_sale_price" name="package_sale_price"
+					       placeholder="Package sale price"
+					       value="<?= $model->sale_price ?>">
+				</div>
+			</div>
+			<div class="control-group">
 				<label class="control-label" for="package_code">Product code</label>
 
 				<div class="controls">

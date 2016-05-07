@@ -52,6 +52,7 @@ class Controller_Admin_Products extends Controller_Admin {
 		$this->model->product_name   = $_REQUEST['product_name'];
 		$this->model->product_subtitle   = $_REQUEST['product_subtitle'];
 		$this->model->price          = $_REQUEST['package_price'];
+		$this->model->sale_price          = $_REQUEST['package_sale_price'];
 		$this->model->product_number = $_REQUEST['package_code'];
 		$this->model->product_description    = $_REQUEST['product_description'];
 		$this->model->product_about    = $_REQUEST['product_about'];

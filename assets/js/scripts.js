@@ -266,6 +266,7 @@ $(function() {
 });
 
 // Home Page Gallery Carusel
+
 $(function() {
    $('#gallery-carusel').responsiveCarusel(
     {
