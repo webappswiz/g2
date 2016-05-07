@@ -176,8 +176,8 @@ $time       = explode( ':', $date_array[1] );
 	<div class="row flx-center">
 		<div class="content-box flx flx-justify">
 			<div class="logo-holder"><a href="<?= URL::base( true, false ) ?>"><img
-						src="<?= URL::base( true, false ) ?><?php echo __( '/assets/img/logo.png' ); ?>"
-						alt="Goodiebox - Special surprise boxes for dogs"></a></div>
+						src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/logo-valentine.png' ); ?>"
+						alt="Goodiebox - Special surprise boxes for dogs" width="285" height="58"></a></div>
 			<div class="nav-holder"><span class="nav-toggle"><i class="fa fa-bars"></i></span>
 				<nav class="top-nav">
 					<ul class="flx flx-justify">

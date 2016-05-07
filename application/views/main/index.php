@@ -142,7 +142,7 @@ $time       = explode( ':', $date_array[1] );
 			<div class="row">
 				<div class="col-6">
 					<h1><?php echo __("Legyen kutyusodnak is saját doboza"); ?></h1>
-					<p>Mi is az a Goodiebox? Egyedi és kreatív módon meglepi dobozokat készítünk kutyusodnak! Ha szülinapja közeleg, örökbe fogadtad, levizsgázott vagy csak annyira imádod, hogy a legédesebb dologgal lepnéd meg, akkor a legjobb helyen jársz! Trendi és ízléses módon segítünk neked, hogy időt és pénzt spórolva a Te kutyusod lehessen a legmenőbb az utcában!</p>
+					<p>Mi is az a Goodiebox? Magyarország első és egyedülálló meglepidoboza kifejezetten kutyáknak! Ha a szülinapja közeleg, örökbe fogadtad, levizsgázott vagy csak annyira imádod, hogy a legédesebb dologgal lepnéd meg, akkor a legjobb helyen jársz! Trendi, ízléses és kreatív módon segítünk neked, hogy időt és pénzt spórolva a Te kutyusod lehessen a legmenőbb az utcában!</p>
 					<a href="/order" class="btn large solid pink"><?php echo _("MEGRENDELEM");?></a>
 				</div>
 				<!-- end .col-6-->
@@ -168,7 +168,7 @@ $time       = explode( ':', $date_array[1] );
 				<div class="container text-white">
 					<?php if($status==1):?>
 					<h2><?php echo $text ?></h2>
-					<h3>Get our Xmas box for your pup!</h3>
+					<h3>Addig nézelődj a Goodieshopban, ami most is nyitva van!</h3>
 					<a id="subscribe" href="#" class="btn border white bold">subscribe now</a>
 					<?php else:?>
 						<h2>Visszaszámolunk a következő szupercuki goodieboxig!</h2>
