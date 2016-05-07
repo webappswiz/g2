@@ -220,7 +220,7 @@ $time       = explode( ':', $date_array[1] );
 						<div class="header">
 							<h2>Válaszd ki</h2>
 
-							<h3>a goodiebox típusát!</h3>
+							<h3>a Goodiebox típusát!</h3>
 						</div>
 						<!-- end .header-->
 					</div>
@@ -236,7 +236,7 @@ $time       = explode( ':', $date_array[1] );
 						<div class="header">
 							<h2>Fizess és vedd</h2>
 
-							<h3>át a goodiebox dobozt!</h3>
+							<h3>át a Goodiebox dobozt!</h3>
 						</div>
 						<!-- end .header-->
 					</div>
