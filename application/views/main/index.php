@@ -191,7 +191,7 @@ $time       = explode( ':', $date_array[1] );
 
 <!-- How It Works =================================-->
 <section>
-	<div class="row flx-center box-shadow">
+	<div class="row flx-center">
 		<div class="content-box hiw">
 			<h1 class="text-center"><?php echo __('Hogyan működik?'); ?></h1>
 
@@ -254,7 +254,7 @@ $time       = explode( ':', $date_array[1] );
 
 <!-- Call to Action #2 ============================-->
 <section>
-	<div class="row flx-center bgc-yellow_light box-shadow">
+	<div class="row flx-center bgc-yellow_light">
 		<div class="content-box call-to-action-2">
 			<h1 class="text-center text-orange">Mit találsz egy igazi goodiebox dobozban?</h1>
 
@@ -270,7 +270,7 @@ $time       = explode( ':', $date_array[1] );
 <?php if($options->status!=1):?>
 <!-- Shop Carusel =================================-->
 <section>
-	<div class="row flx-center bgc-pink_light box-shadow">
+	<div class="row flx-center bgc-pink_light">
 		<div class="content-box shop-carusel">
 			<h1 class="text-center text-pink">Goodieshop</h1>
 			<h3 class="text-center">Lemaradtál a nyitásról? Imádtál egy korábbi Goodiebox dobozba került terméket és ideje lenne megszerezned? Most itt a nagyszerű lehetőség, válogass az egyedülálló Goodieshop online boltunkból és lepd meg a kutyusodat azzal, aminek szerinted biztosan örülne!</h3>
