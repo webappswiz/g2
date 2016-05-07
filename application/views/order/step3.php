@@ -246,7 +246,11 @@ if ( isset( $session['step2'] ) ) {
 						$total_cart_price = 0;
 						foreach($cart as $id => $qty):
 							$product_info = ORM::factory( 'Products', $id );
-							$subtotal     = $product_info->price * $qty;
+							if($product_info->on_sale==1){
+								$subtotal     = $product_info->sale_price * $qty;
+							} else {
+								$subtotal     = $product_info->price * $qty;
+							}
 							$total_cart_price += $subtotal;
 							?>
 							<div class="cart-item">

@@ -141,7 +141,7 @@
 			<!-- end .row.flx-justify.main-->
 		</section>
 		<section>
-			<div class="row share"><span>Share</span><i class="fa fa-facebook"></i><i class="fa fa-twitter"></i></div>
+			<!--<div class="row share"><span>Share</span><i class="fa fa-facebook"></i><i class="fa fa-twitter"></i></div>-->
 			<!-- end .row.share-->
 		</section>
 		<section>
@@ -274,12 +274,14 @@
 						$image = ORM::factory( 'ProductImages' )->where( 'product_id', '=', $product->id )->limit( 1 )->find();
 						?>
 						<li class="item product-preview <?php echo ($product->on_sale==1)?'label-sale ':''; echo ($product->new==1)?'label-new ':''; ?>">
+							<a class="preview-link" href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>">
 							<?php if ( $image->img_name != '' ): ?>
 								<img
 									src="<?= URL::base( true, false ) ?>uploads/products/<?php echo $image->img_name; ?>">
 							<?php else: ?>
 								<img src="<?= URL::base( true, false ) ?>assets/img/placeholder.png">
 							<?php endif; ?>
+								</a>
 							<div class="row">
 								<h2><?php echo $product->product_name; ?></h2>
 								<?php if ($product->on_sale==1): ?>
@@ -288,8 +290,12 @@
 								<?php else: ?>
 									<span class="ammount"><?php echo $product->price; ?></span>
 								<?php endif;?>
-								<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"
-								   class="btn solid pink">KOSÁRBA</a>
+								<form action="<?php echo URL::base( true, false ); ?>cart/add" method="POST">
+									<input type="hidden" name="product_id" value="<?php echo $product->id; ?>">
+									<input type="hidden" name="product_qty" value="1">
+									<input type="submit" name="add_to_cart" value="KOSÁRBA"
+									       class="btn solid pink">
+								</form>
 							</div>
 						</li>
 					<?php endforeach; ?>

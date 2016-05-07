@@ -251,7 +251,7 @@ section {
     text-decoration: line-through;
     color: #E54731; }
   .product-preview .btn {
-    width: 50%;
+    /*width: 50%; */
     margin: 0; }
   .product-preview .label {
     position: absolute;

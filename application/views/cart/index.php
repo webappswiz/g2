@@ -27,10 +27,16 @@
 				</div>
 				<?php
 				$total_cart_price = 0;
+				$weight = 0;
 				foreach ( $_SESSION['cart'] as $id => $qty ):
 					$img_path = '';
 					$product_info = ORM::factory( 'Products', $id );
-					$subtotal     = $product_info->price * $qty;
+					if($product_info->on_sale==1){
+						$subtotal     = $product_info->sale_price * $qty;
+					} else {
+						$subtotal     = $product_info->price * $qty;
+					}
+					$weight += $product_info->weight;
 					$total_cart_price += $subtotal;
 					$image = ORM::factory('ProductImages')->where('product_id','=',$product_info->id)->and_where('img_type','=',1)->limit(1)->find_all();
 					if(count($image)>0){
@@ -47,7 +53,7 @@
 						</div>
 						<!-- end .flx.flx-center.left-box-->
 						<div class="flx flx-center left-box">
-							<form action="#" method="POST"><span class="item-total-ammount"><?php echo $product_info->price; ?></span><span
+							<form action="#" method="POST"><span class="item-total-ammount"><?php echo ($product_info->on_sale==1)?$product_info->sale_price:$product_info->price; ?></span><span
 									class="btn-minus" data-productid="<?php echo $product_info->id; ?>">-</span>
 								<input type="text" name="quantity" class="qty" value="<?php echo $qty; ?>" readonly><span
 									class="btn-plus" data-productid="<?php echo $product_info->id; ?>">+</span><span class="item-total-ammount summ"><?php echo $subtotal;?></span>
@@ -59,6 +65,8 @@
 				<?php endforeach; ?>
 				<div class="row flx-end cart-total">
 					<div class="container">
+						<h2 class="text-right">Részösszeg<span><?php echo $total_cart_price;?></span></h2>
+						<h2 class="text-right">Házhozszállítás<span><?php echo $weight;?></span></h2>
 						<h2 class="text-right">Összeg<span><?php echo $total_cart_price;?></span></h2>
 						<form action="/cart/checkout" method="post">
 							<input type="submit" name="order_now" value="TOVÁBB A PÉNZTÁRHOZ" class="btn large solid pink">

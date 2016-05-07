@@ -74,7 +74,11 @@
 						$total_cart_price = 0;
 						foreach ( $_SESSION['cart'] as $key => $cart_item ):
 							$product_info = ORM::factory( 'Products', $key );
-							$subtotal     = $product_info->price * $cart_item;
+							if($product_info->on_sale==1){
+								$subtotal     = $product_info->sale_price * $cart_item;
+							} else {
+								$subtotal     = $product_info->price * $cart_item;
+							}
 							$total_cart_price += $subtotal;
 							$image = ORM::factory('ProductImages')->where('product_id','=',$product_info->id)->and_where('img_type','=',1)->limit(1)->find_all();
 							if(count($image)>0){
@@ -186,8 +190,8 @@
 										?>
 										<li>
 											<div class="item product-preview <?php echo ($product->on_sale==1)?'label-sale ':''; echo ($product->new==1)?'label-new ':''; ?>">
-												<img
-														src="<?php echo $img_path; ?>">
+												<a class="preview-link" href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><img
+														src="<?php echo $img_path; ?>"></a>
 
 												<div class="row">
 													<h2>
@@ -200,8 +204,12 @@
 														<span class="ammount"><?php echo $product->price; ?></span>
 													<?php endif;?>
 
-													<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"
-													   class="btn solid pink">KOSÁRBA</a>
+													<form action="<?php echo URL::base( true, false ); ?>cart/add" method="POST">
+														<input type="hidden" name="product_id" value="<?php echo $product->id; ?>">
+														<input type="hidden" name="product_qty" value="1">
+														<input type="submit" name="add_to_cart" value="KOSÁRBA"
+														       class="btn solid pink">
+													</form>
 
 												</div>
 											</div>

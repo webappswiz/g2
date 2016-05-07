@@ -376,14 +376,14 @@ $(function(){
 });
 
 // See detail hover link add
-$(document).ready(function () {
+/*$(document).ready(function () {
     var link;
     var linkElem = $('.product-preview');
     for ( i = 0; i < linkElem.length; i++ ) {
         link = $(linkElem[i]).find("a").attr("href");
         $(linkElem[i]).find('img').wrap('<a href="' + link + '" class="preview-link">');
     }
-});
+});*/
 
 // Feedback read more toggle
 $(document).ready(function () {
