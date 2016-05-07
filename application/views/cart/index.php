@@ -13,6 +13,18 @@
 		<?php if ( isset( $_SESSION['cart'] ) && count( $_SESSION['cart'] ) > 0 ): ?>
 			<!-- Cart ========-->
 			<div class="cart-box cart-page">
+				<div id="header" class="row flx-center flx-justify cart-item">
+					<div class="flx flx-center left-box">
+						<h3>Termék						</h3>
+					</div>
+					<!-- end .flx.flx-center.left-box-->
+					<div class="flx flx-justify left-box">
+						<h3 class="text-center">Ár</h3>
+						<h3 class="text-center">Mennyiség</h3>
+						<h3 class="text-center">Összeg</h3>
+					</div>
+					<!-- end .flx.flx-center.left-box-->
+				</div>
 				<?php
 				$total_cart_price = 0;
 				foreach ( $_SESSION['cart'] as $id => $qty ):
