@@ -245,8 +245,9 @@ section {
     content: "Ft"; }
   .product-preview .ammount.old {
     position: absolute;
-    bottom: 20px;
+    bottom: -13px;
     left: 0;
+    font-size:12px;
     text-decoration: line-through;
     color: #E54731; }
   .product-preview .btn {

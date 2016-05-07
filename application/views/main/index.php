@@ -290,8 +290,8 @@ $time       = explode( ':', $date_array[1] );
 							<div class="row">
 								<h2><?php echo $product->product_name; ?></h2>
 								<?php if ($product->on_sale==1): ?>
-									<span class="ammount old"><?php echo $product->price; ?></span>
 									<span class="ammount"><?php echo $product->sale_price; ?></span>
+									<span class="ammount old"><?php echo $product->price; ?></span>
 								<?php else: ?>
 									<span class="ammount"><?php echo $product->price; ?></span>
 								<?php endif;?>
