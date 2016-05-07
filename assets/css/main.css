@@ -245,7 +245,7 @@ section {
     width: 50%;
     line-height: 36px; }
   .product-preview .ammount:after {
-    content: "Ft"; }
+    content: " Ft"; }
   .product-preview .btn {
     width: 50%;
     margin: 0; }
