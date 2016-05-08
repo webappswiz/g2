@@ -58,7 +58,7 @@ endif;
 				$('#discount').val('0');
 			}
 		});
-
+		<?php if($status==1):?>
 		$('#cod').on('click', function () {
 			ship_cost = <?php echo $cost * $term ?>;
 			$('#ship').html(ship_cost + ' HUF');
@@ -80,6 +80,7 @@ endif;
 			}
 			$('#pt').val('cc');
 		});
+		<?php endif; ?>
 
 		$('#confirm').on('click', function () {
 			if ($(this).is(':checked')) {
@@ -257,15 +258,15 @@ if ( isset( $session['step2'] ) ) {
 								<div class="row"><img src="<?= URL::base( true, false ) ?>assets/img/cart-img.jpg"></div>
 								<div class="row"><a href="#"><?php echo $product_info->product_name; ?> X <?= $qty ?></a></div>
 								<div class="row"><span><?php echo __('Összeg'); ?>:</span></div>
-								<div class="row"><span class="text-bold"><?= $subtotal ?> HUF</div>
+								<div class="row"><span class="text-bold"><?= $subtotal ?> Ft</div>
 							</div>
 						<?php endforeach;?>
 						<div class="shipping">
 							<div class="row"><span><?php echo __('Házhozszállítás'); ?>:</span></div>
-							<div class="row"><span class="text-bold" id="ship"><?php echo __('Ingyenes'); ?></span></div>
+							<div class="row"><span class="text-bold" id="ship"><?php echo $shipping_calc; ?> Ft</span></div>
 						</div>
 						<div class="cart-total">
-							<h2><?php echo __('Összesen'); ?>:<span id="total_price"><?= round($total_cart_price) ?></span></h2>
+							<h2><?php echo __('Összesen'); ?>:<span id="total_price"><?= round($total_cart_price+$shipping_calc) ?></span></h2>
 						</div>
 					<?php endif; ?>
 					</div>
@@ -438,10 +439,12 @@ if ( isset( $session['step2'] ) ) {
 
 							</div>
 							<div class="col-6">
+								<?php if($status==1):?>
 								<input id="cod" type="radio" name="cc" value="ondelivery">
 								<label for="cod" class="radio_green od text-bold"> <span><?php echo __('Utánvét (Extra költséget számolunk fel:'); ?> +<?= $cost ?> Ft)</span></label>
 
 								<p><?php echo __('Megrendelést követően két email üzenetet fogsz kapni: egyik a Goodiebox regisztrációról szól, a másik pedig a rendelésed megerősítése. Ha 24 órán belül nem érkezik meg mindkét üzenet, kérlek vedd fel velünk a kapcsolatot az alábbi email címen:info@goodiebox.hu Köszönjük!'); ?></p>
+								<?php endif;?>
 							</div>
 						</div>
 					</div>

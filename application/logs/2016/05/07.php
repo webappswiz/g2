@@ -12,3 +12,36 @@
 #8 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #9 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
 #10 {main} in /var/www/vhosts/g2.priv/public_html/application/views/catalog/category.php:79
+2016-05-07 23:44:35 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined function shipping_calc() ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:44:35 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:45:03 --- EMERGENCY: ErrorException [ 1 ]: Cannot access parent:: when current class scope has no parent ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:45:03 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:45:05 --- EMERGENCY: ErrorException [ 1 ]: Cannot access parent:: when current class scope has no parent ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:45:05 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:45:31 --- EMERGENCY: ErrorException [ 1 ]: Class 'Cart' not found ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:45:31 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:46:39 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined function shipping_calc() ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:46:39 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:46:40 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined function shipping_calc() ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:46:40 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:46:40 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined function shipping_calc() ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:46:40 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:46:41 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined function shipping_calc() ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:46:41 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:46:41 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined function shipping_calc() ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:46:41 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:46:41 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined function shipping_calc() ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:46:41 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2016-05-07 23:46:41 --- EMERGENCY: ErrorException [ 1 ]: Call to undefined function shipping_calc() ~ APPPATH/views/cart/index.php [ 69 ] in file:line
+2016-05-07 23:46:41 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line

@@ -30,7 +30,23 @@ $time       = explode( ':', $date_array[1] );
 	}
 	echo Media::inline_script();
 	?>
-	<!-- Facebook Conversion Code for Goodiebox Prelaunch -->
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.greenbutton').on('mouseover', function () {
+				$('.greenbutton').stop();
+				$('.greenbutton').animate({left: '0px'}, 500);
+			});
+			$('.greenbutton').on('mouseout', function () {
+				$('.greenbutton').stop();
+				$('.greenbutton').animate({left: '-35px'}, 500);
+
+			});
+		});
+	</script>
+	<!-- End Facebook Pixel Code -->
+
+	<!-- Facebook Conversion Code for goodiebox checkout -->
 	<script>(function () {
 			var _fbq = window._fbq || (window._fbq = []);
 			if (!_fbq.loaded) {
@@ -43,12 +59,12 @@ $time       = explode( ':', $date_array[1] );
 			}
 		})();
 		window._fbq = window._fbq || [];
-		window._fbq.push(['track', '6014782475522', {'value': '0.00', 'currency': 'GBP'}]);
+		window._fbq.push(['track', '6015691752322', {'value': '0.00', 'currency': 'GBP'}]);
 	</script>
 	<noscript><img height="1" width="1" alt="" style="display:none"
-	               src="https://www.facebook.com/tr?ev=6014782475522&amp;cd[value]=0.00&amp;cd[currency]=GBP&amp;noscript=1"/>
+	               src="https://www.facebook.com/tr?ev=6015691752322&amp;cd[value]=0.00&amp;cd[currency]=GBP&amp;noscript=1"/>
 	</noscript>
-
+	<script src='http://connect.facebook.net/en_US/all.js'></script>
 	<script>
 
 		window.fbAsyncInit = function () {
@@ -70,10 +86,10 @@ $time       = explode( ':', $date_array[1] );
 		function postToFeed(title, desc, url, image) {
 			var obj = {
 				method: 'feed',
-				link: 'http://blog.goodiebox.hu',
-				picture: 'http://blog.goodiebox.hu/logo.jpg',
+				link: 'http://goodiebox.hu',
+				picture: 'http://goodiebox.hu/assets/img/bark.jpg',
 				name: 'Goodiebox',
-				description: 'Meglepet&#233;s csomag kutyusodnak minden h&oacute;napban'
+				description: 'Hurrá, megrendeltem a legújabb Goodiebox-ot a kutyámnak! Ha Te is szeretnéd megajándékozni kis kedvencedet a legszuperebb meglepidobozzal, akkor kattints a weboldalukra http://goodiebox.hu'
 			};
 
 			function callback(response) {
@@ -83,52 +99,6 @@ $time       = explode( ':', $date_array[1] );
 		}
 	</script>
 	<script>
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function () {
-					(i[r].q = i[r].q || []).push(arguments)
-				}, i[r].l = 1 * new Date();
-			a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-		ga('create', 'UA-53180118-1', 'auto');
-		ga('require', 'displayfeatures');
-		ga('send', 'pageview');
-	</script>
-	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-	<!--<script src="//load.sumome.com/" data-sumo-site-id="13f38ebb1d7ae2e9b0cf60d4e0fdd9eca282dd8682115a92cfe65269a474d136" async></script> -->
-	<!-- Facebook Pixel Code -->
-	<script>
-		!function (f, b, e, v, n, t, s) {
-			if (f.fbq)
-				return;
-			n = f.fbq = function () {
-				n.callMethod ?
-					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-			};
-			if (!f._fbq)
-				f._fbq = n;
-			n.push = n;
-			n.loaded = !0;
-			n.version = '2.0';
-			n.queue = [];
-			t = b.createElement(e);
-			t.async = !0;
-			t.src = v;
-			s = b.getElementsByTagName(e)[0];
-			s.parentNode.insertBefore(t, s)
-		}(window,
-			document, 'script', '//connect.facebook.net/en_US/fbevents.js');
-		fbq('init', '676982215724170');
-		fbq('track', "PageView");</script>
-	<noscript><img height="1" width="1" style="display:none"
-	               src="https://www.facebook.com/tr?id=676982215724170&ev=PageView&noscript=1"
-		/></noscript>
-	<script src="https://apis.google.com/js/platform.js"></script>
-	<script>
 		$('.btnShare').click(function () {
 			elem = $(this);
 			postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
@@ -136,39 +106,26 @@ $time       = explode( ':', $date_array[1] );
 			return false;
 		});
 	</script>
-
 	<script>
 		$('.popup').click(function (event) {
 			var width = 575,
-				height = 400,
-				left = ($(window).width() - width) / 2,
-				top = ($(window).height() - height) / 2,
-				url = this.href,
-				opts = 'status=1' +
-					',width=' + width +
-					',height=' + height +
-					',top=' + top +
-					',left=' + left;
+					height = 400,
+					left = ($(window).width() - width) / 2,
+					top = ($(window).height() - height) / 2,
+					url = this.href,
+					opts = 'status=1' +
+							',width=' + width +
+							',height=' + height +
+							',top=' + top +
+							',left=' + left;
 
 			window.open(url, 'twitter', opts);
 
 			return false;
 		});
 	</script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('.greenbutton').on('mouseover', function () {
-				$('.greenbutton').stop();
-				$('.greenbutton').animate({left: '0px'}, 500);
-			});
-			$('.greenbutton').on('mouseout', function () {
-				$('.greenbutton').stop();
-				$('.greenbutton').animate({left: '-35px'}, 500);
 
-			});
-		});
-	</script>
-	<!-- End Facebook Pixel Code -->
+
 </head>
 <body>
 <!-- HEADER-->
@@ -205,8 +162,8 @@ $time       = explode( ':', $date_array[1] );
 					?>
 
 					<div class="row">
-						<a href="<?= URL::base( true, false ) ?>" class="btnShare" data-title="Goodie"
-						   data-desc="Goodie"><i class="fa fa-facebook"></i></a>
+						<a href="<?= URL::base( true, false ) ?>" class="btnShare" data-title="goodiebox"
+						   data-desc="Meglepet&#233;s csomag kutyusodnak minden h&oacute;napban"><i class="fa fa-facebook"></i></a>
 						<a class="popup" href="http://twitter.com/share"><i class="fa fa-twitter"></i></a>
 						<a href="https://instagram.com/goodieboxhu" data-title="Goodie" data-desc="Goodie"
 						   target="blank"><i class="fa fa-instagram"></i></a>

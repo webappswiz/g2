@@ -38,10 +38,10 @@
 	function postToFeed(title, desc, url, image) {
 		var obj = {
 			method: 'feed',
-			link: 'http://goodiebox.hu',
-			picture: 'http://goodiebox.hu/assets/img/bark.jpg',
+			link: 'http://blog.goodiebox.hu',
+			picture: 'http://blog.goodiebox.hu/logo.jpg',
 			name: 'Goodiebox',
-			description: 'Hurrá, megrendeltem a legújabb Goodiebox-ot a kutyámnak! Ha Te is szeretnéd megajándékozni kis kedvencedet a legszuperebb meglepidobozzal, akkor kattints a weboldalukra http://goodiebox.hu'
+			description: 'Meglepet&#233;s csomag kutyusodnak minden h&oacute;napban'
 		};
 
 		function callback(response) {

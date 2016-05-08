@@ -597,9 +597,11 @@ class Controller_Order extends Controller_Core {
 			$order->payment_status = 0;
 		}
 		$total_cart_price = 0;
+		$weight = 0;
 		foreach($cart as $id => $qty){
 			$product_info = ORM::factory( 'Products', $id );
 			$product_info->sales =$product_info->sales+1;
+			$weight += $product_info->weight;
 			$product_info->save();
 			$subtotal     = $product_info->price * $qty;
 			$total_cart_price += $subtotal;
@@ -609,7 +611,7 @@ class Controller_Order extends Controller_Core {
 			$cost = ORM::factory( 'ShippingCost', 1 );
 			$order->total_price = round( $total_cart_price  + $cost->cost );
 		} else {
-			$order->total_price = round($total_cart_price );
+			$order->total_price = round($total_cart_price + $this->shipping_calc($weight));
 		}
 		$order->save();
 		reset($cart);
@@ -780,6 +782,7 @@ class Controller_Order extends Controller_Core {
 
 		$options = ORM::factory( 'Options', 1 );
 		$status  = $options->status;
+		$this->status = $status;
 		$session = Session::instance();
 		$this->status = $status;
 		if ( $options->current_smart >= $options->smart && $options->current_plus >= $options->plus && $status == 1 ) {
@@ -800,12 +803,15 @@ class Controller_Order extends Controller_Core {
 			$total_cart_price = 0;
 			if ( isset( $_SESSION['cart'] ) && count( $_SESSION['cart'] ) > 0 ):
 				$this->cart = $_SESSION['cart'];
+				$weight = 0;
 				foreach ( $this->cart as $id => $qty ):
 					$product_info = ORM::factory( 'Products', $id );
 					$subtotal     = $product_info->price * $qty;
 					$total_cart_price += $subtotal;
+					$weight += $product_info->weight;
 				endforeach;
 				$price = $total_cart_price;
+				$this->shipping_calc = $this->shipping_calc($weight);
 			else:
 				$this->redirect( '/' );
 			endif;
@@ -1191,6 +1197,37 @@ class Controller_Order extends Controller_Core {
 			}
 		}
 		$this->render_nothing();
+	}
+
+	public static function shipping_calc($weight){
+		if($weight<=2000){
+			$price = 1030;
+		}
+		if($weight>=2100 && $weight<=3000){
+			$price = 1160;
+		}
+		if($weight>=3100 && $weight<=5000){
+			$price = 1300;
+		}
+		if($weight>=5100 && $weight<=10000){
+			$price = 1420;
+		}
+		if($weight>=10100 && $weight<=15000){
+			$price = 1550;
+		}
+		if($weight>=15100 && $weight<=20000){
+			$price = 1740;
+		}
+		if($weight>=20100 && $weight<=25000){
+			$price = 1940;
+		}
+		if($weight>=25100 && $weight<=30000){
+			$price = 2260;
+		}
+		if($weight>=30100 && $weight<=40000){
+			$price = 2580;
+		}
+		return $price;
 	}
 
 }

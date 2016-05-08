@@ -15,7 +15,12 @@ class Controller_Cart extends Controller_Core {
 	}
 
 	public function action_index() {
-
+		$weight = 0;
+		foreach ( $_SESSION['cart'] as $id => $qty ){
+			$product_info = ORM::factory( 'Products', $id );
+			$weight += $product_info->weight;
+		}
+		$this->shipping = $this->shipping_calc($weight);
 	}
 
 	public function action_add() {
@@ -83,5 +88,36 @@ class Controller_Cart extends Controller_Core {
 		}
 		echo '{"msg":1}';
 		$this->render_nothing();
+	}
+
+	public static function shipping_calc($weight){
+		if($weight<=2000){
+			$price = 1030;
+		}
+		if($weight>=2100 && $weight<=3000){
+			$price = 1160;
+		}
+		if($weight>=3100 && $weight<=5000){
+			$price = 1300;
+		}
+		if($weight>=5100 && $weight<=10000){
+			$price = 1420;
+		}
+		if($weight>=10100 && $weight<=15000){
+			$price = 1550;
+		}
+		if($weight>=15100 && $weight<=20000){
+			$price = 1740;
+		}
+		if($weight>=20100 && $weight<=25000){
+			$price = 1940;
+		}
+		if($weight>=25100 && $weight<=30000){
+			$price = 2260;
+		}
+		if($weight>=30100 && $weight<=40000){
+			$price = 2580;
+		}
+		return $price;
 	}
 }
