@@ -46,6 +46,12 @@
 		<p>COPYRIGHT 2014-<?php echo date('Y');?> &#169 Web Apps Consult Kft</p>
 	</div>
 	<!-- end .footer-copyright-->
+	<div id="modal_window"><span id="modal_close"><i class="fa fa-times"></i></span>
+		<h1 class="text-center text-orange">
+		<p>Visszaszámolunk a következő Goodieboxig, addig nézz szét a Goodieshopban!</p>
+		<p class="text-center"><a href="<?= URL::base( true, false ) ?>catalog" class="btn solid green">IRÁNY GOODIESHOPPINGOLNI!</a></p>
+	</div>
+	<div id="overlay"></div>
 </footer>
 <!-- end .main-footer-->
 <!-- END FOOTER

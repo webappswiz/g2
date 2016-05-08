@@ -211,7 +211,14 @@ $time       = explode( ':', $date_array[1] );
 						<!-- end .header-->
 					</div>
 					<!-- end .row-->
-					<p>Ahhoz, hogy kis kedvenced a lehető legszuperebb dobozt kapja, tudnunk kell néhány fontos infót! Szokás mondani, hogy nem a méret a lényeg, de a Goodiebox összeállításakor azért mégis csak szükségünk van rá! Add meg kutyusod nevét és születési adatait is! Ügyelj arra, hogy minden adat helyes legyen, mi ebből dolgozunk! Gyere és rendelj MOST!</p>
+					<p>
+						Ahhoz, hogy kis kedvenced a lehető legszuperebb dobozt kapja, tudnunk kell néhány fontos infót! Szokás mondani, hogy nem a méret a lényeg, de a Goodiebox összeállításakor azért mégis csak szükségünk van rá! Add meg kutyusod nevét és születési adatait is! Ügyelj arra, hogy minden adat helyes legyen, mi ebből dolgozunk!
+						<?php if($status==1):?>
+						<a style="color: deeppink" href="<?= URL::base( true, false ) ?>order">Gyere és rendelj MOST!</a>
+						<?php else:?>
+						<a style="color: deeppink" class="gyere" href="#">Gyere és rendelj MOST!</a>
+						<?php endif; ?>
+					</p>
 				</div>
 				<!-- end .container.col-3-->
 				<div class="container col-3"><img

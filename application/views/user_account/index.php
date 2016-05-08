@@ -181,9 +181,9 @@
 						?>
 						</div>
 						<div class="col-6 new-puppy">
-							<h3 class="text-center bgc-orange rad-3">Add a new puppies profile</h3>
+							<button class="btn large text-center bgc-orange rad-3">Add a new puppies profile</button>
 
-							<form action="/user_account/addDog" method="POST" name="order" enctype="multipart/form-data">
+							<form action="/user_account/addDog" method="POST" name="order" enctype="multipart/form-data" style="display: none">
 								<div class="row flx-middle">
 									<div class="img-upload-holder"><img id="uploadImg" src="#"
 									                                    class="puppies-avatar rounded"></div>
