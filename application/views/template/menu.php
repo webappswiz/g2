@@ -1,5 +1,7 @@
 <?php
 $auth  = Auth::instance();
+$options = ORM::factory( 'Options', 1 );
+$status     = $options->status;
 $menus = array();
 $menus = array(
 	'/specials'                 => array( __( 'Kedvezmények' ), 'special' ),
@@ -16,6 +18,11 @@ if ( $auth->logged_in() ) {
 } else {
 	$menus['user_session/login'] = array( __( 'Belépés' ), 'login' );
 }
+
+if($status==1){
+	unset($menus['/catalog']);
+}
+
 if ( ! $menus ) {
 	return;
 }
