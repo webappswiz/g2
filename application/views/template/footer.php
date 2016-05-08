@@ -56,7 +56,7 @@
 			<p>Tovább válogatok vagy megnézem a kosarat!</p>
 			<p class="text-center">
 				<a class="tovabb btn solid green">Tovább válogatok</a>
-				<a href="<?= URL::base( true, false ) ?>catalog" class="btn solid green">Megnézem a kosarat!</a>
+				<a href="<?= URL::base( true, false ) ?>cart" class="btn solid green">Megnézem a kosarat!</a>
 			</p>
 	</div>
 	<div id="modal_window"><span id="modal_close"><i class="fa fa-times"></i></span>
