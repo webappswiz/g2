@@ -60,7 +60,7 @@
 		<input type='hidden' name='ORDER_DATE' id='ORDER_DATE' value='<?= $o->date_purchased ?>'/>
 		<input type='hidden' name='ORDER_PNAME[]' id='ORDER_PNAME'
 		       value='<?= 'Goodiebox ' . $o->package->package_name ?>'/>
-		<input type='hidden' name='ORDER_PCODE[]' id='ORDER_PCODE' value='<?= $o->package->product_number ?>'/>
+		<input type='hidden' name='ORDER_PCODE[]' id='ORDER_PCODE' value='<?= $pnumber ?>'/>
 		<input type='hidden' name='ORDER_PINFO[]' id='ORDER_PINFO' value=''/>
 		<input type='hidden' name='ORDER_PRICE[]' id='ORDER_PRICE' value='<?= $o->total_price ?>'/>
 		<input type='hidden' name='ORDER_QTY[]' id='ORDER_QTY' value='1'/>
