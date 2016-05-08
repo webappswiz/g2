@@ -38,13 +38,13 @@
 				<div class="col-center">
 					<header class="flx flx-justify">
 						<div class="price-holder"><span class="ammount"><?php echo $product->price; ?></span><span
-								class="avail">Available</span></div>
+								<?php echo ($product->status!=0)?'class="avail"':'class="notavail"'?>><?php echo ($product->status!=0)?'Available':'Not Available'?></span></div>
 						<div class="action-holder">
 							<form action="<?php echo URL::base( true, false ); ?>cart/add" method="POST">
 								<input type="hidden" name="product_id" value="<?php echo $product->id; ?>">
 								<input type="hidden" name="product_qty" value="1">
 								<input type="submit" name="add_to_cart" value="add to cart"
-								       class="btn bold solid green">
+								       class="btn bold solid green" <?php echo ($product->status==0)?'disabled':'';?>>
 							</form>
 							<!--<div class="row flx-justify"><a id="hold-over" href="#" class="link blue lined">Hold over</a><a id="follow-price" href="#" class="link blue lined">Folow the price</a></div>-->
 						</div>
@@ -269,7 +269,7 @@
 			<div id="carusel-2" class="carusel-container">
 				<ul>
 					<?php
-					$products = ORM::factory( 'Products' )->order_by( 'sales', 'DESC' )->limit( 6 )->find_all();
+					$products = ORM::factory( 'Products' )->where('status','=',1)->order_by( 'sales', 'DESC' )->limit( 6 )->find_all();
 					foreach ( $products as $product ):
 						$image = ORM::factory( 'ProductImages' )->where( 'product_id', '=', $product->id )->limit( 1 )->find();
 						?>

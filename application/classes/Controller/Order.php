@@ -600,7 +600,12 @@ class Controller_Order extends Controller_Core {
 		$weight = 0;
 		foreach($cart as $id => $qty){
 			$product_info = ORM::factory( 'Products', $id );
-			$product_info->sales =$product_info->sales+1;
+			$product_info->sales = $product_info->sales+1;
+			$product_info->qty -= $qty;
+			if($product_info->qty<1){
+				$product_info->qty = 0;
+				$product_info->status = 0;
+			}
 			$weight += $product_info->weight;
 			$product_info->save();
 			$subtotal     = $product_info->price * $qty;

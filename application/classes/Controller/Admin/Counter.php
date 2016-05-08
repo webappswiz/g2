@@ -42,6 +42,8 @@ class Controller_Admin_Counter extends Controller_Admin {
 	public function update() {
 		$this->model->text     = arr::get( $_REQUEST, 'counting_text' );
 		$this->model->text_eng = arr::get( $_REQUEST, 'counting_text_eng' );
+		$this->model->sub_text     = arr::get( $_REQUEST, 'counting_subtext' );
+		$this->model->sub_text_eng = arr::get( $_REQUEST, 'counting_subtext_eng' );
 		$this->model->end_date = arr::get( $_REQUEST, 'end_date' );
 		$this->model->status   = arr::get( $_REQUEST, 'status' );
 		$this->model->smart    = arr::get( $_REQUEST, 'smart_limit' );

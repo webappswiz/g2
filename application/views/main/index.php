@@ -2,8 +2,10 @@
 $options = ORM::factory( 'Options', 1 );
 if ( Cookie::get( 'lang', 'hu' ) == 'hu' ) {
 	$text = $options->text;
+	$sub_text = $options->sub_text;
 } else {
 	$text = $options->text_eng;
+	$sub_text = $options->sub_text_eng;
 }
 
 
@@ -168,11 +170,11 @@ $time       = explode( ':', $date_array[1] );
 				<div class="container text-white">
 					<?php if($status==1):?>
 					<h2><?php echo $text ?></h2>
-					<h3>Addig nézelődj a Goodieshopban, ami most is nyitva van!</h3>
+					<h3><?php echo $sub_text; ?></h3>
 					<a id="subscribe" href="#" class="btn border white bold">subscribe now</a>
 					<?php else:?>
 						<h2><?php echo $text ?></h2>
-						<h3>Addig nézelődj a Goodieshopban, ami most is nyitva van!</h3>
+						<h3><?php echo $sub_text; ?></h3>
 						<a id="subscribe" href="/order" class="btn border white bold">Irány goodieshoppingolni!</a>
 					<?php endif;?>
 				</div>
@@ -277,7 +279,7 @@ $time       = explode( ':', $date_array[1] );
 			<div id="carusel-1" class="carusel-container">
 				<ul id="carusel-line">
 					<?php
-					$products = ORM::factory( 'Products' )->order_by( 'id', 'DESC' )->limit( 6 )->find_all();
+					$products = ORM::factory( 'Products' )->where('status','=',1)->order_by( 'id', 'DESC' )->limit( 6 )->find_all();
 					foreach ( $products as $product ):
 						$image = ORM::factory('ProductImages')->where('product_id','=',$product->id)->limit(1)->find();
 						?>

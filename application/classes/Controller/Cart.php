@@ -34,6 +34,10 @@ class Controller_Cart extends Controller_Core {
 			Flash::set( 'alert', __( 'Something went wrong. Please try again later.' ) );
 			$this->redirect($this->request->referrer());
 		}
+		if($prod_id->status==0){
+			Flash::set( 'alert', __( 'Something went wrong. Please try again later.' ) );
+			$this->redirect($this->request->referrer());
+		}
 		if(isset($_SESSION['cart'][$product_id])){
 			$_SESSION['cart'][$product_id]++;
 		} else {
@@ -82,9 +86,8 @@ class Controller_Cart extends Controller_Core {
 		$product_qty = (int)Arr::get($_REQUEST,'product_qty');
 		$prod_id = ORM::factory('Products',$product_id);
 		if(!$prod_id->loaded()) return;
-		if(isset($_SESSION['cart'][$product_id])){
+		if(isset($_SESSION['cart'][$product_id]) && $prod_id->qty>=$product_qty){
 			$_SESSION['cart'][$product_id] = $product_qty;
-
 		}
 		echo '{"msg":1}';
 		$this->render_nothing();

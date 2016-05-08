@@ -37,6 +37,20 @@
 				</div>
 			</div>
 			<div class="control-group">
+				<label class="control-label" for="counting_text">Counting subtext</label>
+
+				<div class="controls">
+					<input type="text" name="counting_subtext" value="<?= $model->sub_text ?>">
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="counting_text">Counting subtext English</label>
+
+				<div class="controls">
+					<input type="text" name="counting_subtext_eng" value="<?= $model->sub_text_eng ?>">
+				</div>
+			</div>
+			<div class="control-group">
 				<label class="control-label" for="enddate">End date</label>
 
 				<div class="controls">
