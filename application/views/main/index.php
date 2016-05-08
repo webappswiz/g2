@@ -110,6 +110,7 @@ $time       = explode( ':', $date_array[1] );
 	</div>
 	<!-- end .row.flx-center-->
 </section>
+<?php if($status==0):?>
 <!-- Timer ========================================-->
 <section>
 	<div class="row flx-center bgc-pink">
@@ -141,7 +142,7 @@ $time       = explode( ':', $date_array[1] );
 	</div>
 	<!-- .row.flx-center.bgc-pink-->
 </section>
-
+<?php endif;?>
 <!-- How It Works =================================-->
 <section>
 	<div class="row flx-center">
