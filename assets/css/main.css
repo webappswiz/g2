@@ -23,11 +23,13 @@ p {
   margin: 0; }
 
 .--no-margin-bottom {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-top: 40px;
+}
 
 .--no-margin-top {
   margin-top: 0;
-  margin-top: 40px; }
+   }
 
 address, .date {
   font-family: inherit;
