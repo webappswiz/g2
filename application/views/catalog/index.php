@@ -107,7 +107,7 @@
 							</div>
 						<?php endforeach; ?>
 						<div class="cart-total">
-							<h2>Total<span><?php echo $total_cart_price; ?></span></h2><a href="#"
+							<h2>Total<span><?php echo $total_cart_price; ?> Ft</span></h2><a href="#"
 							                                                              class="btn large solid green">KOSÁRBA</a>
 						</div>
 					</div>

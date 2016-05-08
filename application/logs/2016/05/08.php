@@ -174,3 +174,12 @@
 #12 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #13 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
 #14 {main} in /var/www/vhosts/g2.priv/public_html/application/views/template/footer.php:8
+2016-05-08 15:50:10 --- EMERGENCY: ErrorException [ 8 ]: Undefined index: cart ~ APPPATH/classes/Controller/Cart.php [ 19 ] in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php:19
+2016-05-08 15:50:10 --- DEBUG: #0 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php(19): Kohana_Core::error_handler(8, 'Undefined index...', '/var/www/vhosts...', 19, Array)
+#1 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Controller.php(84): Controller_Cart->action_index()
+#2 [internal function]: Kohana_Controller->execute()
+#3 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Cart))
+#4 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
+#7 {main} in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php:19

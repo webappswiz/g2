@@ -263,10 +263,10 @@ if ( isset( $session['step2'] ) ) {
 						<?php endforeach;?>
 						<div class="shipping">
 							<div class="row"><span><?php echo __('Házhozszállítás'); ?>:</span></div>
-							<div class="row"><span class="text-bold" id="ship"><?php echo $shipping_calc; ?> Ft</span></div>
+							<div class="row"><span class="text-bold" id="ship"><?php echo ($total_cart_price>=8000)?__('Ingyenes'):$shipping_calc.' Ft'; ?></span></div>
 						</div>
 						<div class="cart-total">
-							<h2><?php echo __('Összesen'); ?>:<span id="total_price"><?= round($total_cart_price+$shipping_calc) ?></span></h2>
+							<h2><?php echo __('Összesen'); ?>:<span id="total_price"><?= ($total_cart_price>=8000)?round($total_cart_price):round($total_cart_price+$shipping_calc) ?> Ft</span></h2>
 						</div>
 					<?php endif; ?>
 					</div>

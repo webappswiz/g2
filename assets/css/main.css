@@ -1154,8 +1154,6 @@ section {
       content: ' Ft'; }
   .cart-box .cart-total h2 span {
     padding-left: 0.5em; }
-  .cart-box .cart-total h2 span:after {
-    content: " Ft"; }
   .cart-box .cart-total .btn.large {
     padding: 0.8em 0; }
 
