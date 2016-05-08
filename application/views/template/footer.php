@@ -2,6 +2,10 @@
 </div> <!--End container-->
 <footer class="main-footer">
 	<div class="row flx-center footer-top">
+		<?php
+		$allowed = array('Main','Specials','Kutyusaink','Partnerek');
+		?>
+		<?php if(in_array(Request::current()->controller(),$allowed)): ?>
 		<div class="content-box text-center">
 			<h1 class="text-center">Csatlakozz most!</h1>
 
@@ -10,6 +14,7 @@
 			</div>
 			<a href="#" class="felirat btn large border pink">FELIRATKOZOK!</a>
 		</div>
+		<?php endif; ?>
 	</div>
 	<!-- end .footer-top-->
 	<div class="row footer-bottom">
