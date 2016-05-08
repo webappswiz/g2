@@ -16,16 +16,15 @@
 					<li><a href="#tabs-1"><?php echo __( 'Személyes adataim' ); ?></a></li>
 					<li><a href="#tabs-2"><?php echo __( 'Kutyusaim' ); ?></a></li>
 					<li><a href="#tabs-3"><?php echo __( 'Hívj meg egy barátot!' ); ?></a></li>
-					<li><a href="#tabs-4"><?php echo __( 'Megrendelés' ); ?></a></li>
-					<li> <a href="#tabs-5"><?php echo __('Kupon használat követése'); ?></a></li>
+					<li><a href="#tabs-4"><?php echo __( 'Korábbi megrendeléseim' ); ?></a></li>
+
 				</ul>
 				<div id="tabs-1" class="delivery-inf">
-					<h2 class="text-center">Delivery information</h2>
+					<h2 class="text-center">Szállítási információ</h2>
 
-					<h3 class="text-center">Country: Hungary</h3>
+					<h3 class="text-center">Ország: Magyarország</h3>
 
-					<p class="text-center text-gray">Before you make a new order, check to make sure your billing and
-						delivery information is correct!</p>
+					<p class="text-center text-gray">Új rendelés leadása előtt mindig ellenőrizd az adataid helyességét!</p>
 
 					<form action="/user_account/editShipping" method="POST" id="shipping">
 						<div class="row">
@@ -156,22 +155,14 @@
 											<tr>
 												<td><?= $puppy->years . '.' . $puppy->months ?></td>
 											</tr>
-								<?php if ($puppy->alerg == 1) : ?>
-											<tr>
-												<td><?php echo __('Allergiás:'); ?></td>
-											</tr>
-											<tr>
-												<td><?= $puppy->alerg_descr ?></td>
-											</tr>
-											<?php endif; ?>
 										</table>
 									</div>
 									<div class="row">
 										<form action="/user_account/order" method="POST">
 											<input type="hidden" name="puppy_id" value="<?= $puppy->id ?>">
-											<input type="submit" name="submit" value="<?php echo __('GYERÜNK'); ?>" class="btn solid green">
+											<input type="submit" name="submit" value="<?php echo __('Újra rendelem!'); ?>" class="btn solid green">
 										</form>&nbsp;&nbsp;
-										<a href="#" class="btn solid orange">Edit info</a>
+										<a href="#" class="btn solid orange">Szerkesztés</a>
 									</div>
 								</div>
 								<?php
@@ -181,9 +172,9 @@
 						?>
 						</div>
 						<div class="col-6 new-puppy">
-							<button class="btn large text-center bgc-orange rad-3">Add a new puppies profile</button>
+							<h3 class="text-center bgc-orange rad-3">Új kutyus hozzáadása</h3>
 
-							<form action="/user_account/addDog" method="POST" name="order" enctype="multipart/form-data" style="display: none">
+							<form action="/user_account/addDog" method="POST" name="order" enctype="multipart/form-data">
 								<div class="row flx-middle">
 									<div class="img-upload-holder"><img id="uploadImg" src="#"
 									                                    class="puppies-avatar rounded"></div>
@@ -243,31 +234,13 @@
 											<input type="text" name="months" placeholder="Month" readonly><span class="icon"></span>
 											<ul class="option month">
 												<?php
-
 												for ( $i = 1; $i <= 12; $i ++ ) {
 													echo '<li>'.$i.'</li>';
 												}
-
 												?>
 											</ul>
 										</div>
 									</div>
-								</div>
-
-								<div class="row">
-									<div class="radiobox-holder alergi-select">
-										<p class="text-center"><?php echo __('Allergiás a kutyusod?*'); ?></p>
-
-										<p class="text-center">
-											<input id="alerg_yes" type="radio" name="alerg" value="1" checked>
-											<label for="alerg_yes" class="radio_green a1">Yes</label>
-											<input id="alerg_no" type="radio" name="alerg" value="0">
-											<label for="alerg_no" class="radio_green a2">No</label>
-										</p>
-									</div>
-								</div>
-								<div class="row">
-									<textarea name="alerg_descr" placeholder="Your text here"></textarea>
 								</div>
 								<div class="row">
 									<input type="submit" value="<?php echo __('GYERÜNK'); ?>" class="btn large solid green">
@@ -278,8 +251,7 @@
 						</div>
 				</div>
 				<div id="tabs-3">
-					<h2 class="text-center">Invite your friend!</h2>
-					<p class="text-center text-gray">Before you make a new order, check to make sure your billing and delivery information is correct!</p>
+					<h2 class="text-center">Szerezz 5% kedvezményt a barátaid rendelései után!</h2>
 					<form action="/user_account/invite" name="invite" method="POST" class="invite-form">
 						<label><?php echo __('Barátod e-mail címe*'); ?></label>
 						<div class="row flx-middle">
@@ -301,8 +273,6 @@
 					</form>
 				</div>
 				<div id="tabs-4">
-					<h2 class="text-center"><?php echo __('Megrendeléss'); ?></h2>
-					<p class="text-center text-gray">Order information</p>
 					<div class="row flx-center order-info">
 						<?php
 						$orders = ORM::factory('Order')
@@ -344,26 +314,6 @@
 						endif;
 						?>
 
-					</div>
-				</div>
-				<div id="tabs-5">
-					<h2 class="text-center"><?php echo __('Kupon használat követése'); ?></h2>
-					<div class="row coupon-tracking">
-						<p>
-							<?php
-							$discounts = ORM::factory('CouponCodes')
-							                ->where('user_id', '=', $current_user->id)
-							                ->find_all();
-							if (count($discounts) > 0):
-								?>
-								<?php
-								foreach ($discounts as $discount) {
-									echo __('Kupon kód: ') . $discount->coupon_code . ' <br/>'.__('Megrendelések a kupon kóddal:').$discount->count;
-								}
-
-							endif;
-							?>
-						</p>
 					</div>
 				</div>
 			</div>

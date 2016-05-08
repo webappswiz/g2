@@ -442,6 +442,14 @@ $(document).ready(function () {
     $('.product-preview.label-new').append('<div class="label new">');
 });
 
+$(document).ready(function(){
+    $('.new-puppy h3').click(function(){
+        console.log('click');
+        $('.new-puppy form').show();
+        $('.my-puppies .col-12.row').removeClass("col-12", "row").addClass("col-6");
+        $(this).unbind();
+    });
+});
 
 $(function () {
     $('.subscribe').on('click', function () {

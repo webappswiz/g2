@@ -1739,6 +1739,9 @@ section {
       color: #fff;
       margin-right: 10px;
       text-transform: none; }
+/*.my-office .my-puppies .col-12 .puppies-item {
+  max-width: 50%;
+} */
   .my-office .my-puppies .new-puppy {
     /*--Image load --*/
     /*--Size select--*/
@@ -1749,6 +1752,14 @@ section {
       color: #fff;
       padding: 0.8em 0;
       margin-bottom: 20px; }
+
+.my-office .my-puppies .new-puppy h3:hover {
+  cursor: pointer;
+}
+.my-office .my-puppies .new-puppy form {
+  display: none;
+}
+
     .my-office .my-puppies .new-puppy input[type="text"],
     .my-office .my-puppies .new-puppy textarea {
       width: 100%;
