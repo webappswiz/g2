@@ -61,6 +61,7 @@
 	</div>
 	<div id="subscribe_window"><span id="subscribe_close"><i class="fa fa-times"></i></span>
 		<h1 class="text-center text-orange">Csatlakozz most!</h1>
+		<p class="text-center"><input type="text" id="subscr_name" name="subscr_name" placeholder="Keresztneved"></p>
 		<p class="text-center msg"><input type="text" id="subscr_email" name="subscr_email" placeholder="Email címed:"></p>
 		<p class="text-center"><a class="subscribe btn solid green">Tovább</a></p>
 		<p></p>

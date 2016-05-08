@@ -47,8 +47,10 @@ class Controller_Main extends Controller_Core {
 		}
 		require_once DOCROOT . 'application/vendor/mailchimp-api/mailchimp.php';
 		$email = Arr::get($_REQUEST,'email');
+		$name = Arr::get($_REQUEST,'firstname');
 		$result = $MailChimp->post("lists/$list_id/members", [
 			'email_address' => $email,
+			'merge_vars' => array('FNAME'=>$name),
 			'status'        => 'subscribed',
 		]);
 		if($result['status']=='subscribed'){
@@ -56,7 +58,7 @@ class Controller_Main extends Controller_Core {
 		} elseif($result['status']==400 && $result['title']=='Member Exists'){
 			echo '{"msg":"exists"}';
 		} else {
-			print_r($result);
+
 		}
 		$this->render_nothing();
 	}

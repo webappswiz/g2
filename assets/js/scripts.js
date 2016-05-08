@@ -446,18 +446,20 @@ $(document).ready(function () {
 $(function () {
     $('.subscribe').on('click', function () {
         var email = $('#subscr_email').val();
-
-        $.post('/main/subscribe', {'email': email}).done(function (data) {
+        var firstname = $('#subscr_name').val();
+        $.post('/main/subscribe', {'email': email,'firstname':firstname}).done(function (data) {
             var i = $.parseJSON(data);
             if(i.msg=='success'){
-                $('#subscribe_window p.text-center').html();
+                $('#subscribe_window p.text-center').text();
                 $('#subscribe_window a.subscribe').hide();
-                $('#subscribe_window p.msg').html('Subscribed');
+                $('#subscribe_window p').hide();
+                $('#subscribe_window h1').text('Sikeresen feliratkoztál!');
             }
             if(i.msg=='exists'){
-                $('#subscribe_window p.text-center').html();
+                $('#subscribe_window p.text-center').text();
                 $('#subscribe_window a.subscribe').hide();
-                $('#subscribe_window p.msg').html('Member exists');
+                $('#subscribe_window p').hide();
+                $('#subscribe_window h1').text('Ez az email cím már feliratkozott!');
             }
         });
     });
