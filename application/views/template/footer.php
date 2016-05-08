@@ -8,7 +8,7 @@
 			<div>
 				<p>Ha igazi kutyabarát vagy, érdekel a Goodiebox és vele minden újdonság, itt a helyed! Iratkozz fel a hírlevelünkre, amiben minden fontos infót megosztunk veletek a dobozainkról, az általunk forgalmazott termékekről és nagy becsben tartott partnereinkről! Veled vagyunk egész, legyél Te is Goodieboxos!</p>
 			</div>
-			<a href="#" class="btn large border pink">FELIRATKOZOK!</a>
+			<a href="#" class="felirat btn large border pink">FELIRATKOZOK!</a>
 		</div>
 	</div>
 	<!-- end .footer-top-->
@@ -59,7 +59,12 @@
 		<p>Visszaszámolunk a következő Goodieboxig, addig nézz szét a Goodieshopban!</p>
 		<p class="text-center"><a href="<?= URL::base( true, false ) ?>catalog" class="btn solid green">IRÁNY GOODIESHOPPINGOLNI!</a></p>
 	</div>
-
+	<div id="subscribe_window"><span id="subscribe_close"><i class="fa fa-times"></i></span>
+		<h1 class="text-center text-orange">Csatlakozz most!</h1>
+		<p class="text-center msg"><input type="text" id="subscr_email" name="subscr_email" placeholder="Email címed:"></p>
+		<p class="text-center"><a class="subscribe btn solid green">Tovább</a></p>
+		<p></p>
+	</div>
 	<div id="overlay"></div>
 
 </footer>

@@ -37,8 +37,28 @@ class Controller_Main extends Controller_Core {
 				}
 			}
 		}
-		$this->redirect($this->request->referrer());
+		$this->redirect( $this->request->referrer() );
 
+	}
+
+	public function action_subscribe() {
+		if ( ! $this->is_post() ) {
+			return;
+		}
+		require_once DOCROOT . 'application/vendor/mailchimp-api/mailchimp.php';
+		$email = Arr::get($_REQUEST,'email');
+		$result = $MailChimp->post("lists/$list_id/members", [
+			'email_address' => $email,
+			'status'        => 'subscribed',
+		]);
+		if($result['status']=='subscribed'){
+			echo '{"msg":"success"}';
+		} elseif($result['status']==400 && $result['title']=='Member Exists'){
+			echo '{"msg":"exists"}';
+		} else {
+			print_r($result);
+		}
+		$this->render_nothing();
 	}
 
 }

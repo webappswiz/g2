@@ -80,29 +80,7 @@ $time       = explode( ':', $date_array[1] );
 		});
 		$('#tab-container').easytabs();
 
-		function unloadPopupBox() {    // TO Unload the Popupbox
-			$('#dialog-form1').fadeOut("slow");
-			$("#container").css({// this is just for style
-				"opacity": "1"
-			});
-		}
 
-		function loadPopupBox() {    // To Load the Popupbox
-			$('#dialog-form1').slideDown("slow");
-
-			$("#container").css({// this is just for style
-				"opacity": "0.3"
-			});
-		}
-
-		$('#popupBoxClose1').on('click', function () {
-			unloadPopupBox();
-			$('p.text_message').html('');
-		});
-
-		$('#subscribe').on('click', function () {
-			loadPopupBox();
-		});
 
 		$('.disabled').on('click', function () {
 			$('p.text_message').html("<?php echo __('Jelenleg nincs rendelési időszakunk! Iratkozz fel a nyitási értesítőre és mi figyelmeztetünk, ha eljött az idő! :)')?>");
@@ -111,33 +89,6 @@ $time       = explode( ':', $date_array[1] );
 
 	});
 </script>
-
-<div id="dialog-form1" title="<?php echo __( 'Kérem az értesítést!' ); ?>" style="display:none;min-height:180px;">
-	<script>
-		$(".process-form").validate();
-	</script>
-	<div class="claim-form2">
-		<a id="popupBoxClose1"><img src="<?= URL::base( true, false ) ?>assets/img/delete.png"></a>
-
-		<p class="text_message"></p>
-
-		<form class="process-form" name="order" method="POST" action="/subscribe">
-			<div>
-				<label style="margin-top:10px;"><?php echo __( 'Keresztneved:' ); ?></label>
-				<input type="text" name="name" size="20" required/>
-			</div>
-			<div style="padding-bottom:10px;">
-				<label><?php echo __( 'Email címed:' ); ?></label>
-				<input type="email" name="email" size="20"/>
-			</div>
-			<div style="text-align: center;margin-bottom:10px;">
-				<input type="submit" value="<?php echo __( 'Kérem az értesítést!' ); ?>"
-				       class="dark-btn dog-prof-btn rounded">
-			</div>
-		</form>
-
-	</div>
-</div>
 <section>
 	<div class="row flx-center">
 		<div class="content-box call-to-action-1">
@@ -171,7 +122,7 @@ $time       = explode( ':', $date_array[1] );
 					<?php if($status==1):?>
 					<h2><?php echo $text ?></h2>
 					<h3><?php echo $sub_text; ?></h3>
-					<a id="subscribe" href="#" class="btn border white bold">subscribe now</a>
+					<a class="subscr btn border white bold">subscribe now</a>
 					<?php else:?>
 						<h2><?php echo $text ?></h2>
 						<h3><?php echo $sub_text; ?></h3>
