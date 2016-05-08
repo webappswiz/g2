@@ -1,0 +1,58 @@
+#gallery_owerlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+
+#la-space {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center; }
+  #la-space .gallery-viewport {
+    background-color: #fff;
+    padding: 1em;
+    position: relative; }
+    #la-space .gallery-viewport img {
+      display: none; }
+
+.la-hover-effect {
+  position: relative; }
+
+.la-hover-effect:hover {
+  cursor: pointer; }
+
+.la-hover-effect:after {
+  background-color: rgba(247, 147, 32, 0.6);
+  color: #fff;
+  content: '\f00e';
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 36px;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: .2s;
+  width: 100%; }
+
+.la-hover-effect.x:after {
+  opacity: 1; }
+
+.photo .la-hover-effect:after {
+  height: calc(100% - 20px);
+  left: 5px;
+  line-height: 250px;
+  top: 10px;
+  width: calc(100% - 10px); }
+
+.thumb-line .la-hover-effect:after {
+  font-size: 24px;
+  height: 70px;
+  line-height: 70px;
+  width: 70px; }

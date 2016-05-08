@@ -1,56 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/CHANGELOG.TXT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/LICENSE.TXT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/README.TXT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/config/tcpdf_config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/courier.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/courierb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/courierbi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/courieri.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/helvetica.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/helveticab.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/helveticabi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/helveticai.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/pdfahelvetica.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/symbol.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/times.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/timesb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/timesbi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/timesi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/fonts/zapfdingbats.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/barcodes/datamatrix.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/barcodes/pdf417.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/barcodes/qrcode.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/sRGB.icc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/tcpdf_colors.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/tcpdf_filters.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/tcpdf_font_data.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/tcpdf_fonts.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/tcpdf_images.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/include/tcpdf_static.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/tcpdf.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/tcpdf_autoconfig.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/tcpdf_barcodes_1d.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/tcpdf_barcodes_2d.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/tcpdf_import.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/tcpdf_parser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/tools/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/tools/convert_fonts_examples.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/vendor/tcpdf_min/tools/tcpdf_addfont.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/bootstrap.php" afterPath="$PROJECT_DIR$/application/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/Controller/Main.php" afterPath="$PROJECT_DIR$/application/classes/Controller/Main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/logs/2016/05/08.php" afterPath="$PROJECT_DIR$/application/logs/2016/05/08.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/index.php" afterPath="$PROJECT_DIR$/application/views/main/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/template/footer.php" afterPath="$PROJECT_DIR$/application/views/template/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/karam.css" afterPath="$PROJECT_DIR$/assets/css/karam.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/main.index.js" afterPath="$PROJECT_DIR$/assets/js/main.index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/scripts.js" afterPath="$PROJECT_DIR$/assets/js/scripts.js" />
-    </list>
+    <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="" />
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -82,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/template/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33222592">
-              <caret line="64" column="50" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="50" />
+            <state vertical-scroll-proportion="-27.225807">
+              <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -136,7 +87,17 @@
         <entry file="file://$PROJECT_DIR$/application/classes/Controller/Main.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MailChimp.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/vendor/mailchimp-api/MailChimp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.846762">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -274,56 +235,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -612,13 +523,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/tamogass/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/partnerek/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1128,14 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/Controller/Main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.129032">
@@ -1164,8 +1060,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/template/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33222592">
-          <caret line="64" column="50" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="50" />
+        <state vertical-scroll-proportion="-27.225807">
+          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/Controller/Main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/vendor/mailchimp-api/MailChimp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.846762">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
