@@ -46,11 +46,11 @@
 		<p>COPYRIGHT 2014-<?php echo date('Y');?> &#169 Web Apps Consult Kft</p>
 	</div>
 	<!-- end .footer-copyright-->
-	<div id=cart_window"><span id="cart_close"><i class="fa fa-times"></i></span>
+	<div id="cart_window"><span id="cart_close"><i class="fa fa-times"></i></span>
 		<h1 class="text-center text-orange">
 			<p>Tovább válogatok vagy megnézem a kosarat!</p>
 			<p class="text-center">
-				<a href="<?= URL::base( true, false ) ?>catalog" class="btn solid green">Tovább válogatok</a>
+				<a class="tovabb btn solid green">Tovább válogatok</a>
 				<a href="<?= URL::base( true, false ) ?>catalog" class="btn solid green">Megnézem a kosarat!</a>
 			</p>
 	</div>

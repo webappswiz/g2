@@ -87,7 +87,7 @@
 #cart_window a.btn {
     font-weight: 800;
     padding: 0.8em 3em;
-    margin: 0; }
+    margin: 3px; }
 
 /* Кнoпкa зaкрыть */
 #cart_window #cart_close {
@@ -102,3 +102,7 @@
     background-color: #fff;
     text-align: center;
     line-height: 50px; }
+
+.tovabb{
+    cursor: pointer;
+}
