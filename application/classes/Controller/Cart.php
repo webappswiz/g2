@@ -43,7 +43,7 @@ class Controller_Cart extends Controller_Core {
 		} else {
 			$_SESSION['cart'][$product_id] = $product_qty;
 		}
-		Flash::set( 'notice', __( 'Product has been added successfully' ) );
+		Flash::set( 'cart_added', __( 'added' ) );
 
 		$this->redirect($this->request->referrer());
 	}
