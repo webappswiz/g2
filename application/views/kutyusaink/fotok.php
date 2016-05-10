@@ -15,21 +15,22 @@
 			<h1 class="text-center"><?php echo __( 'Goodiebox fotók' ); ?></h1>
 			<div id="fotok">
 				<div id="navs">
-					<a class="months" data-month="jan" style="cursor: pointer" id="jan" class="active"
+
+					<a class="months <?php echo (!isset($_REQUEST['dec']) && !isset($_REQUEST['nov']) && !isset($_REQUEST['oct']))?'active':''?>" data-month="jan" style="cursor: pointer" id="jan"
 					   style="font-family: 'La-chata';font-size: 18px">2016 <?php echo __( 'Január' ); ?></a>
 					&nbsp;&nbsp;&nbsp;
-					<a class="months" data-month="dec" style="cursor: pointer" id="dec"
+					<a class="months <?php echo (isset($_REQUEST['dec']))?'active':'' ?>" data-month="dec" style="cursor: pointer" id="dec"
 					   style="font-family: 'La-chata';font-size: 18px">2015 <?php echo __( 'December' ); ?></a>
 					&nbsp;&nbsp;&nbsp;
-					<a class="months" data-month="nov" style="cursor: pointer" id="nov"
+					<a class="months <?php echo (isset($_REQUEST['nov']))?'active':'' ?>" data-month="nov" style="cursor: pointer" id="nov"
 					   style="font-family: 'La-chata';font-size: 18px">2015 <?php echo __( 'November' ); ?></a>
 					&nbsp;&nbsp;&nbsp;
-					<a class="months" data-month="oct" style="cursor: pointer" id="oct"
+					<a class="months <?php echo (isset($_REQUEST['oct']))?'active':'' ?>" data-month="oct" style="cursor: pointer" id="oct"
 					   style="font-family: 'La-chata';font-size: 18px">2015 <?php echo __( 'Október' ); ?></a>
 					<br/><br/><br/>
 				</div>
 
-				<div class="image-row" style="text-align: center;display:none;" id="oct_photos">
+				<div class="image-row" style="text-align: center;<?php echo (isset($_REQUEST['oct']))?'':'display:none;' ?>" id="oct_photos">
 					<div class="image-set">
 						<a class="example-image-link"
 						   href="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-260.jpg"
@@ -229,7 +230,7 @@
 								alt=""/></a>
 					</div>
 				</div>
-				<div class="image-row" style="text-align: center;display:none;" id="nov_photos">
+				<div class="image-row" style="text-align: center;<?php echo (isset($_REQUEST['nov']))?'':'display:none;' ?>" id="nov_photos">
 					<div class="image-set">
 						<a class="example-image-link"
 						   href="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-288.jpg"
@@ -501,7 +502,7 @@
 					</div>
 				</div>
 
-				<div class="image-row" style="text-align: center;display:none;" id="dec_photos">
+				<div class="image-row" style="text-align: center;<?php echo (isset($_REQUEST['dec']))?'':'display:none;' ?>" id="dec_photos">
 					<div class="image-set">
 						<a class="example-image-link"
 						   href="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-327.jpg"
@@ -780,7 +781,7 @@
 
 				</div>
 
-				<div class="image-row" style="text-align: center;" id="jan_photos">
+				<div class="image-row" style="text-align: center;<?php echo (!isset($_REQUEST['dec']) && !isset($_REQUEST['nov']) && !isset($_REQUEST['oct']))?'':'display:none;'?>" id="jan_photos">
 					<div class="image-set">
 						<a class="example-image-link"
 						   href="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-366.jpg"

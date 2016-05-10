@@ -38,3 +38,15 @@
 #9 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #10 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
 #11 {main} in /var/www/vhosts/g2.priv/public_html/modules/database/classes/Kohana/Database/Query.php:251
+2016-05-10 21:32:15 --- EMERGENCY: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH/views/catalog/product.php [ 93 ] in /var/www/vhosts/g2.priv/public_html/application/views/catalog/product.php:93
+2016-05-10 21:32:15 --- DEBUG: #0 /var/www/vhosts/g2.priv/public_html/application/views/catalog/product.php(93): Kohana_Core::error_handler(2, 'Invalid argumen...', '/var/www/vhosts...', 93, Array)
+#1 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/View.php(61): include('/var/www/vhosts...')
+#2 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/View.php(348): Kohana_View::capture('/var/www/vhosts...', Array)
+#3 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Base/Core.php(511): Kohana_View->render()
+#4 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Controller.php(87): Controller_Base_Core->after()
+#5 [internal function]: Kohana_Controller->execute()
+#6 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Catalog))
+#7 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#8 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#9 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
+#10 {main} in /var/www/vhosts/g2.priv/public_html/application/views/catalog/product.php:93
