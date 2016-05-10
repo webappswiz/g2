@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/Controller/User/Session.php" afterPath="$PROJECT_DIR$/application/classes/Controller/User/Session.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/order/step3.php" afterPath="$PROJECT_DIR$/application/views/order/step3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_session/login.php" afterPath="$PROJECT_DIR$/application/views/user_session/login.php" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="step3.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="step3.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/order/step3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.419354">
-              <caret line="35" column="208" selection-start-line="35" selection-start-column="208" selection-end-line="35" selection-end-column="208" />
+            <state vertical-scroll-proportion="0.4858569">
+              <caret line="35" column="209" selection-start-line="35" selection-start-column="209" selection-end-line="35" selection-end-column="209" />
               <folding />
             </state>
           </provider>
@@ -55,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Session.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Session.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/Controller/User/Session.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7278481">
+            <state vertical-scroll-proportion="0.0">
               <caret line="38" column="92" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="92" />
               <folding />
             </state>
@@ -129,9 +127,9 @@
         <option value="$PROJECT_DIR$/assets/css/main.css" />
         <option value="$PROJECT_DIR$/application/views/catalog/index.php" />
         <option value="$PROJECT_DIR$/application/views/catalog/category.php" />
-        <option value="$PROJECT_DIR$/application/views/order/step3.php" />
         <option value="$PROJECT_DIR$/application/views/user_session/login.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/User/Session.php" />
+        <option value="$PROJECT_DIR$/application/views/order/step3.php" />
       </list>
     </option>
   </component>
@@ -828,18 +826,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/order/step3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.419354">
-          <caret line="35" column="208" selection-start-line="35" selection-start-column="208" selection-end-line="35" selection-end-column="208" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user_session/form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/Controller/User/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="92" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="92" />
           <folding />
         </state>
       </provider>
@@ -852,10 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/Controller/User/Session.php">
+    <entry file="file://$PROJECT_DIR$/application/views/order/step3.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7278481">
-          <caret line="38" column="92" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="92" />
+        <state vertical-scroll-proportion="0.4858569">
+          <caret line="35" column="209" selection-start-line="35" selection-start-column="209" selection-end-line="35" selection-end-column="209" />
           <folding />
         </state>
       </provider>
