@@ -36,15 +36,25 @@
 							<input type="text" id="amount-2" name="price_to" readonly>
 						</div>
 					</div>
-					<div class="slide-filter age"><span class="filter-block">Kor:</span>
-
-						<div id="slider-range-max-1"></div>
-						<div class="row flx-justify"><span class="min-amount text-gray">1 Hónap</span><span
-									class="max-amount text-gray">1+ Év</span></div>
-						<div class="row flx-justify">
-							<input type="text" id="age-1" name="age_from" readonly>
-							<input type="text" id="age-2" name="age_to" readonly>
-						</div>
+					<div class="category-chekbox"><span class="filter-block">Kor:</span>
+						<ul class="text-gray">
+							<li>
+								<input id="age-1" type="checkbox" name="age[]" value="1">
+								<label for="age-1" class="gray-box__green-check">3 Hónap</label>
+							</li>
+							<li>
+								<input id="age-2" type="checkbox" name="age[]" value="2">
+								<label for="age-2" class="gray-box__green-check">4 Hónap</label>
+							</li>
+							<li>
+								<input id="age-3" type="checkbox" name="age[]" value="3">
+								<label for="age-3" class="gray-box__green-check">1+ Év</label>
+							</li>
+							<li>
+								<input id="age-4" type="checkbox" name="age[]" value="4">
+								<label for="age-4" class="gray-box__green-check">Good for all</label>
+							</li>
+						</ul>
 					</div>
 					<!--<div class="slide-filter size"><span class="filter-block">Size:</span>
 
@@ -127,24 +137,8 @@
 							$products->where('price','>=',(int)$_REQUEST['price_from'])
 							         ->and_where('price','<=',(int)$_REQUEST['price_to']);
 						}
-						if(isset($_REQUEST['age_from']) && isset($_REQUEST['age_to'])){
-							$afrom = $_REQUEST['age_from'];
-							$ato = $_REQUEST['age_to'];
-							$age = array();
-							$age[] = 4;
-							if($afrom<1 and $ato<=3){
-								$age[] = 4;
-							}
-							if($afrom<1 and $ato>3 && $ato<4){
-								$age[] = 1;
-							}
-							if($afrom<1 and $ato>=4 && $ato<=12){
-								$age[] = 2;
-							}
-							if($afrom>=1){
-								$age[] = 3;
-							}
-							$products->and_where('product_age','IN',$age);
+						if(isset($_REQUEST['age']) and count($_REQUEST['age'])>0){
+							$products->where('product_age','IN',array_values($_REQUEST['age']));
 						}
 						if(isset($_REQUEST['size_from']) && isset($_REQUEST['size_to'])){
 							$sfrom = $_REQUEST['size_from'];

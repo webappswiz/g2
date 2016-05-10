@@ -173,7 +173,7 @@
 
 								<div class="drop-box">
 									<input id="gender_male" type="radio" data-gender="<?php echo __( 'Lány' ); ?>"
-									       name="gender" value="0">
+									       name="gender" value="0" selected="selected">
 									<label for="gender_male"><?php echo __( 'Lány' ); ?></label>
 									<input id="gender_female" type="radio" data-gender="<?php echo __( 'Fiú' ); ?>"
 									       name="gender" value="1">
@@ -182,7 +182,7 @@
 							</div>
 							<div class="date-dropdown-holder">
 								<div class="container">
-									<input type="text" name="years" placeholder="Year" readonly><span class="icon"></span>
+									<input type="text" name="years" placeholder="Year" readonly required><span class="icon"></span>
 									<ul class="option year">
 										<?php
 
@@ -194,7 +194,7 @@
 									</ul>
 								</div>
 								<div class="container">
-									<input type="text" name="months" placeholder="Month" readonly><span class="icon"></span>
+									<input type="text" name="months" placeholder="Month" readonly required><span class="icon"></span>
 									<ul class="option month">
 										<?php
 

@@ -916,7 +916,18 @@ section {
   .catalog-aside .category-chekbox #category-2:checked ~ label.gray-box__green-check[for="category-2"]:before,
   .catalog-aside .category-chekbox #category-3:checked ~ label.gray-box__green-check[for="category-3"]:before,
   .catalog-aside .category-chekbox #category-4:checked ~ label.gray-box__green-check[for="category-4"]:before,
-  .catalog-aside .category-chekbox #category-5:checked ~ label.gray-box__green-check[for="category-5"]:before {
+  .catalog-aside .category-chekbox #category-5:checked ~ label.gray-box__green-check[for="category-5"]:before,
+  .catalog-aside .category-chekbox #category-6:checked ~ label.gray-box__green-check[for="category-6"]:before,
+  .catalog-aside .category-chekbox #category-7:checked ~ label.gray-box__green-check[for="category-7"]:before,
+  .catalog-aside .category-chekbox #category-8:checked ~ label.gray-box__green-check[for="category-8"]:before,
+  .catalog-aside .category-chekbox #category-9:checked ~ label.gray-box__green-check[for="category-9"]:before,
+  .catalog-aside .category-chekbox #category-10:checked ~ label.gray-box__green-check[for="category-10"]:before,
+  .catalog-aside .category-chekbox #category-11:checked ~ label.gray-box__green-check[for="category-11"]:before,
+  .catalog-aside .category-chekbox #age-1:checked ~ label.gray-box__green-check[for="age-1"]:before,
+  .catalog-aside .category-chekbox #age-2:checked ~ label.gray-box__green-check[for="age-2"]:before,
+  .catalog-aside .category-chekbox #age-3:checked ~ label.gray-box__green-check[for="age-3"]:before,
+  .catalog-aside .category-chekbox #age-4:checked ~ label.gray-box__green-check[for="age-4"]:before
+  {
     background-position: center bottom; }
 
 .category-box .category-title {

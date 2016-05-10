@@ -22,3 +22,6 @@
 #9 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #10 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
 #11 {main} in /var/www/vhosts/g2.priv/public_html/modules/orm/classes/Kohana/ORM.php:603
+2016-05-10 17:13:42 --- EMERGENCY: ErrorException [ 1 ]: Using $this when not in object context ~ APPPATH/views/catalog/index.php [ 152 ] in file:line
+2016-05-10 17:13:42 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
