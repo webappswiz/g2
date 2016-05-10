@@ -17,6 +17,14 @@
 				<h2>Filter</h2>
 
 				<form class="product-filter">
+					<div class="slide-filter amount"><span class="filter-block">Categories:</span>
+						<?php
+							foreach($categories as $category){
+								$prod_counts = ORM::factory('Products')->where('product_cat','=',$category->id)->count_all();
+								echo '<p>'.$category->cat_name.' ('.$prod_counts.')</p>';
+							}
+						?>
+					</div>
 					<div class="slide-filter amount"><span class="filter-block">Price:</span>
 
 						<div id="slider-range"></div>
@@ -37,7 +45,7 @@
 							<input type="text" id="age-2" name="age_to" readonly>
 						</div>
 					</div>
-					<div class="slide-filter size"><span class="filter-block">Size:</span>
+					<!--<div class="slide-filter size"><span class="filter-block">Size:</span>
 
 						<div id="slider-range-3"></div>
 						<div class="row flx-justify"><span class="min-amount text-gray">1 kg</span><span
@@ -46,7 +54,7 @@
 							<input type="text" id="size-1" name="size_from" readonly>
 							<input type="text" id="size-2" name="size_to"  readonly>
 						</div>
-					</div>
+					</div> -->
 					<input type="submit" class="btn large solid gray" value="SAVE">
 				</form>
 
