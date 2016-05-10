@@ -90,15 +90,18 @@
 						<div class="gray-wall size-checkbox-holder">
 							<h3>Méret szerint</h3>
 							<?php
-							if ( $product->product_size == 1 ) {
-								echo 'Icipici';
-							} elseif ( $product->product_size == 2 ) {
-								echo 'Éppen jó';
-							} elseif($product->product_size == 3) {
-								echo 'Óriás';
-							} else {
-								echo 'Nem méretfüggő';
+							foreach(json_decode($product->product_size) as $size){
+								if ( $size == 1 ) {
+									echo 'Icipici ';
+								} elseif ( $size == 2 ) {
+									echo 'Éppen jó ';
+								} elseif($size == 3) {
+									echo 'Óriás ';
+								} else {
+									echo 'Nem méretfüggő ';
+								}
 							}
+							/**/
 							?>
 						</div>
 						<div class="gray-wall size-checkbox-holder">

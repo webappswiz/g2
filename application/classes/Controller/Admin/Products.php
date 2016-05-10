@@ -58,7 +58,7 @@ class Controller_Admin_Products extends Controller_Admin {
 		$this->model->product_about    = $_REQUEST['product_about'];
 		$this->model->product_composition    = $_REQUEST['product_composition'];
 		$this->model->product_cat = $_REQUEST['product_cat'];
-		$this->model->product_size = $_REQUEST['product_size'];
+		$this->model->product_size = json_encode($_REQUEST['product_size']);
 		$this->model->product_age = $_REQUEST['dog_age'];
 		$this->model->weight = $_REQUEST['package_weight'];
 		$this->model->video_link = $_REQUEST['video_link'];
@@ -79,7 +79,7 @@ class Controller_Admin_Products extends Controller_Admin {
 		}
 		$this->model->qty = $_REQUEST['product_qty'];
 		$this->model->save();
-		$this->redirect( '/admin/products/' );
+		//$this->redirect( '/admin/products/' );
 	}
 
 	public function action_upload() {

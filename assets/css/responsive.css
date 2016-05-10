@@ -235,7 +235,11 @@
   .neki-neked_container .neki {
     top: 35px;
     display: block;
-    width: 100%; } }
+    width: 100%; }
+  .specials-cats {
+    padding-left: 0px;
+  }
+}
 
 @media screen and (max-width: 490px) {
   .main-footer .footer-bottom .row.content-box .col-4:first-child {

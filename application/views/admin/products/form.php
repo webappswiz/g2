@@ -87,7 +87,7 @@
 			<div class="control-group">
 				<label class="control-label" for="product_cat">Product size</label>
 				<div class="controls">
-					<select id="product_size" name="product_size" class="input-xxlarge">
+					<select id="product_size" name="product_size[]" class="input-xxlarge" multiple="multiple">
 						<option value="1" <?php echo ( $model->product_size == 1 ) ? 'selected="selected"' : '' ?>>Small</option>
 						<option value="2" <?php echo ( $model->product_size == 2 ) ? 'selected="selected"' : '' ?>>Medium</option>
 						<option value="3" <?php echo ( $model->product_size == 3 ) ? 'selected="selected"' : '' ?>>Large</option>
