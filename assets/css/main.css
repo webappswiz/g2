@@ -671,13 +671,21 @@ section {
 .carusel-container {
   position: relative;
   width: 100%; }
-  .carusel-container .viewport {
+  .carusel-container .la-viewport {
     width: 100%;
     overflow: hidden; }
-    .carusel-container .viewport #carusel-line {
+    .carusel-container .la-viewport #carusel-line {
       white-space: nowrap; }
-    .carusel-container .viewport .item {
-      display: inline-block; }
+    .carusel-container .la-viewport #carusel-line li {
+      width: 250px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .carusel-container .la-viewport .item{
+      display: inline-block;
+      width: 250px;
+    }
 
 /*-- END CARUSEL ##########################################*/
 /*-- PAGES ###############################################*/

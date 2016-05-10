@@ -36,20 +36,21 @@ class Controller_User_Account extends Controller_Core {
 			$this->shipping = null;
 		}
 
-    $invites = ORM::factory('Invites')
-                  ->where('user_id', '=', $this->current_user->id)
-                  ->and_where('is_registered', '=', 1)
-                  ->and_where('is_paid', '=', 1)
-                  ->and_where('is_used', '=', 0)
-                  ->count_all();
-    $global_discount = ORM::factory('Discounts')
-                          ->where('user_id', '=', $this->current_user->id)
-                          ->find();
-    if ($global_discount->loaded()) {
-	    $g_discount = $global_discount->discount;
-    } else
-	    $g_discount = 0;
-    $this->discount = $invites * 5 + $g_discount . '%';
+		$invites         = ORM::factory( 'Invites' )
+		                      ->where( 'user_id', '=', $this->current_user->id )
+		                      ->and_where( 'is_registered', '=', 1 )
+		                      ->and_where( 'is_paid', '=', 1 )
+		                      ->and_where( 'is_used', '=', 0 )
+		                      ->count_all();
+		$global_discount = ORM::factory( 'Discounts' )
+		                      ->where( 'user_id', '=', $this->current_user->id )
+		                      ->find();
+		if ( $global_discount->loaded() ) {
+			$g_discount = $global_discount->discount;
+		} else {
+			$g_discount = 0;
+		}
+		$this->discount = $invites * 5 + $g_discount . '%';
 	}
 
 	public function action_editShipping() {
@@ -115,10 +116,11 @@ class Controller_User_Account extends Controller_Core {
 
 			if ( isset( $_FILES['puppy_img'] ) ) {
 				$filename = $this->_save_image( $_FILES['puppy_img'] );
-				if ( ! $filename){
+				if ( ! $filename ) {
 					$puppy->img_name = '';
-				} else
-				$puppy->img_name = $filename;
+				} else {
+					$puppy->img_name = $filename;
+				}
 			}
 			$puppy->save();
 			Flash::set( 'notice', __( 'Sikeresen hozzáadtad a kutyust a profilodhoz!' ) );

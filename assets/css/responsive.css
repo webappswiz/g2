@@ -33,7 +33,7 @@
     -ms-flex-order: 3;
     order: 3;
     text-align: center; }
-  .photo > .row.flx-justify {
+  #gallery-carusel > .row.flx-justify {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around; }
