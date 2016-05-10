@@ -451,6 +451,8 @@ $(document).ready(function(){
     });
 });
 
+$('#dog_size').responsiveGallery();
+
 $(function () {
     $('.subscribe').on('click', function () {
         var email = $('#subscr_email').val();
@@ -491,5 +493,7 @@ $(function () {
                 }
             );
     });
+
+
 
 });

@@ -97,17 +97,6 @@
 				}
 			});
 		});
-		$('#alerg_yes').on('click', function () {
-			console.log('test');
-			$('#al_label').show();
-			$('#alerg_descr').show();
-			$('#alerg_descr').attr('required', 'required');
-		});
-		$('#alerg_no').on('click', function () {
-			$('#al_label').hide();
-			$('#alerg_descr').hide();
-			$('#alerg_descr').removeAttr('required');
-		});
 		$.extend($.validator.messages, {
 			required: "<?php echo __('ez az információ szükséges'); ?>",
 			equalTo: "<?php echo __('Kérjük, adja ugyanazt az értéket újra'); ?>"
@@ -122,7 +111,7 @@
 <section>
 	<div class="row flx-center">
 		<div class="content-box page-title">
-			<h1 class="text-center">My Cart</h1>
+			<h1 class="text-center">Rendelés</h1>
 		</div>
 		<!-- end .content-box-->
 	</div>
@@ -133,10 +122,10 @@
 		<section>
 			<div class="row flx-center step-counter">
 				<div class="step-one active">
-					<h2>Order details</h2>
+					<h2>Rendelés adatok</h2>
 				</div>
 				<div class="step-two">
-					<h2>Checkout</h2>
+					<h2>Pénztár</h2>
 				</div>
 			</div>
 		</section>
@@ -147,7 +136,7 @@
 					<!-- Select size =====================================-->
 					<h2 class="text-center"><?php echo __( 'Válaszd ki mekkora a kutyus!*' ); ?></h2>
 
-					<div class="row flx-around select-size">
+					<div id="dog_size" class="row flx-around select-size">
 						<div class="item-box text-center">
 							<input id="size_1" type="radio" name="group1" value="1">
 
@@ -171,7 +160,7 @@
 						</div>
 					</div>
 					<!-- Registrtion Form ================================-->
-					<h2 class="text-center"><?php echo __( 'Kinek veszed a Goodiebox-ot?' ); ?></h2>
+					<h2 class="text-center"><?php echo __( 'Kinek veszed a Goodieboxot?' ); ?></h2>
 
 					<div class="row flx-center registration_pre">
 						<div class="container flx-column">
@@ -219,28 +208,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="alergi-select">
-						<p class="text-center"><?php echo __( 'Allergiás a kutyusod?*' ); ?></p>
-
-						<p class="text-center">
-							<input id="alerg_yes" type="radio" name="alerg" value="1">
-							<label for="alerg_yes" class="radio_green a1"><?php echo __( 'Igen' ); ?></label>
-							<input id="alerg_no" type="radio" name="alerg" value="0" checked>
-							<label for="alerg_no" class="radio_green a2"><?php echo __( 'Nem' ); ?></label>
-						</p>
-
-						<p class="text-center">
-							<label style="display:none" for="last-name"
-							       id="al_label"><?php echo __( 'Ha igen, mire?' ); ?></label>
-							<input style="display:none" type="text" name="alerg_descr" class="rounded" id="alerg_descr">
-						</p>
-
-					</div>
 				<?php endif; ?>
 				<!-- Box select ======================================-->
-				<h2 class="text-center"><?php echo __( 'Biztosan a kiválasztott doboznál maradsz?' ); ?></h2>
+				<h2 class="text-center"><?php echo __( 'Melyik Goodiebox típust választod?' ); ?></h2>
 
-				<div class="row flx-around box-select">
+				<div id="pkg" class="row flx-around box-select">
 					<?php
 					$products = ORM::factory( 'Packages' )
 					               ->where( 'type', '=', 1 )
@@ -261,9 +233,9 @@
 							            ->and_where( 'enabled', '=', 1 )
 							            ->find();
 							if ( $product->term == 1 ) {
-								$image  = '<img src="' . URL::base( true, false ) . 'assets/img/box-plus.jpg"
+								$image  = '<img src="' . URL::base( true, false ) . 'assets/img/orange_box.png"
 						                           class="responsive">';
-								$image1 = '<img src="' . URL::base( true, false ) . 'assets/img/box-smart.jpg"
+								$image1 = '<img src="' . URL::base( true, false ) . 'assets/img/pink_box.png"
 						                           class="responsive">';
 							}
 							$box1 = ( trim( Session::instance()->get( 'package' ) ) == 'plus' ) ? 'checked' : '';
@@ -274,13 +246,13 @@
 							if ( $limits->current_smart >= $limits->smart ) {
 								$box2   = 'disabled';
 								$box1   = 'checked';
-								$image1 = '<img src="' . URL::base( true, false ) . 'assets/img/smart-2nd-order-page-overok.png">';
+								$image1 = '<img src="' . URL::base( true, false ) . 'assets/img/gray_box.png">';
 							}
 
 							if ( $limits->current_plus >= $limits->plus ) {
 								$box1  = 'disabled';
 								$box2  = 'checked';
-								$image = '<img src="' . URL::base( true, false ) . 'assets/img/plus-2nd-order-page-overok.png">';
+								$image = '<img src="' . URL::base( true, false ) . 'assets/img/gray_box.png">';
 							}
 
 							if ( $econ->id <> '' ) {
