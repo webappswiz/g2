@@ -39,7 +39,9 @@ $time       = explode( ':', $date_array[1] );
 
 			hours = daysLeft * 24;
 			hours = (hoursLeft - hours) < 0 ? 0 : hoursLeft - hours;
-			days = daysLeft;
+			days = (daysLeft) < 0 ? 0 : daysLeft;
+			minutes = (minutes) < 0 ? 0 : minutes;
+			seconds = (seconds) < 0 ? 0 : seconds;
 			startCount(days, hours, minutes, seconds, status);
 		}, 100);
 	}

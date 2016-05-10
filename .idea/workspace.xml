@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/catalog/category.php" afterPath="$PROJECT_DIR$/application/views/catalog/category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/catalog/index.php" afterPath="$PROJECT_DIR$/application/views/catalog/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/index.php" afterPath="$PROJECT_DIR$/application/views/main/index.php" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,87 +23,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Catalog.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/Controller/Catalog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/catalog/index.php">
+        <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8023256">
-              <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/catalog/category.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.870968">
-              <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.7266983">
+              <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
               <folding>
-                <marker date="1462879262646" expanded="true" signature="887:1303" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="997:1108" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="1050:1102" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="1144:1291" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="1339:1752" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="1456:1567" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="1511:1561" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="1603:1740" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="1763:2208" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="2405:2522" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="3271:4166" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="3297:3539" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="3312:3381" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="3565:4005" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="3606:3990" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="3780:3806" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="3812:3898" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="3904:3973" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="4224:4429" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="4306:4416" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="4566:5011" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="4598:4798" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="4628:4787" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="4638:4776" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="4829:5011" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="4935:5011" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="6247:6334" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="6727:6805" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="6994:7047" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="6999:7043" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="7078:7971" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="7095:7259" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="7667:7953" placeholder="..." />
-                <marker date="1462879262646" expanded="true" signature="7890:7933" placeholder="..." />
+                <marker date="1462879667426" expanded="true" signature="10663:10698" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/Controller/Cart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/cart/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="41" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="41" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -164,7 +90,6 @@
         <option value="$PROJECT_DIR$/application/views/order/index.php" />
         <option value="$PROJECT_DIR$/assets/js/scripts.js" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
-        <option value="$PROJECT_DIR$/application/views/main/index.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Order.php" />
         <option value="$PROJECT_DIR$/application/views/cart/index.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Cart.php" />
@@ -176,6 +101,7 @@
         <option value="$PROJECT_DIR$/application/classes/Controller/Catalog.php" />
         <option value="$PROJECT_DIR$/application/views/catalog/category.php" />
         <option value="$PROJECT_DIR$/application/views/catalog/index.php" />
+        <option value="$PROJECT_DIR$/application/views/main/index.php" />
       </list>
     </option>
   </component>
@@ -326,7 +252,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -819,16 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39968404">
-          <caret line="238" column="37" selection-start-line="238" selection-start-column="20" selection-end-line="238" selection-end-column="37" />
-          <folding>
-            <marker date="1462872884182" expanded="true" signature="10558:10593" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/catalog/product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7524917">
@@ -1058,14 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/Controller/Catalog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/Controller/Cart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1127,9 +1035,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/catalog/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8023256">
-          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.45847178">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/Controller/Catalog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5276461">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7266983">
+          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+          <folding>
+            <marker date="1462879667426" expanded="true" signature="10663:10698" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
