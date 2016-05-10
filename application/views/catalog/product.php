@@ -43,7 +43,7 @@
 							<form action="<?php echo URL::base( true, false ); ?>cart/add" method="POST">
 								<input type="hidden" name="product_id" value="<?php echo $product->id; ?>">
 								<input type="hidden" name="product_qty" value="1">
-								<input type="submit" name="add_to_cart" value="add to cart"
+								<input type="submit" name="add_to_cart" value="Kosárba"
 								       class="btn bold solid green" <?php echo ($product->status==0)?'disabled':'';?>>
 							</form>
 							<!--<div class="row flx-justify"><a id="hold-over" href="#" class="link blue lined">Hold over</a><a id="follow-price" href="#" class="link blue lined">Folow the price</a></div>-->
@@ -88,30 +88,30 @@
 					<!-- end .content-->
 					<footer>
 						<div class="gray-wall size-checkbox-holder">
-							<h3>Available size</h3>
+							<h3>Méret szerint</h3>
 							<?php
 							if ( $product->product_size == 1 ) {
-								echo 'Small';
+								echo 'Icipici';
 							} elseif ( $product->product_size == 2 ) {
-								echo 'Medium';
+								echo 'Éppen jó';
 							} elseif($product->product_size == 3) {
-								echo 'Large';
+								echo 'Óriás';
 							} else {
-								echo 'Good for all dog sizes';
+								echo 'Nem méretfüggő';
 							}
 							?>
 						</div>
 						<div class="gray-wall size-checkbox-holder">
-							<h3>Available age</h3>
+							<h3>Kor szerint</h3>
 							<?php
 							if ( $product->product_age == 1 ) {
-								echo 'From 3 months +';
+								echo '3 hónaposnál idősebb';
 							} elseif ( $product->product_age == 2 ) {
-								echo 'From 4 months +';
+								echo '4 hónaposnál idősebb';
 							} elseif ( $product->product_age == 3 ) {
-								echo 'From 1 year +';
+								echo '1 évesnél idősebb';
 							} else {
-								echo 'Good for all ages';
+								echo 'Nem korfüggő';
 							}
 							?>
 						</div>
@@ -149,19 +149,19 @@
 			<div id="tabs">
 				<ul>
 					<?php if($product->product_about<>''): ?>
-						<li><a href="#tabs-1">About</a></li>
+						<li><a href="#tabs-1">Leírás</a></li>
 					<?php endif; ?>
 					<?php if($product->product_composition<>''): ?>
-						<li><a href="#tabs-2">Composition</a></li>
+						<li><a href="#tabs-2">Összetevők</a></li>
 					<?php endif; ?>
 					<?php if ( count( $aimages ) > 0 ): ?>
 						<li><a href="#tabs-3">Photo</a></li>
 					<?php endif; ?>
 					<?php if ( $product->video_link <> '' ): ?>
-						<li><a href="#tabs-4">Video</a></li>
+						<li><a href="#tabs-4">Videó</a></li>
 					<?php endif; ?>
 					<?php if($current_user || count( $reviews )>0):?>
-						<li><a href="#tabs-5">Reviews (<?php echo count( $reviews ); ?>)</a></li>
+						<li><a href="#tabs-5">Értékelések (<?php echo count( $reviews ); ?>)</a></li>
 					<?php endif;?>
 				</ul>
 				<?php if($product->product_about<>''): ?>
@@ -264,7 +264,7 @@
 <section>
 	<div class="row flx-center">
 		<div class="content-box shop-carusel">
-			<h1 class="text-center">Popular boxes</h1>
+			<h1 class="text-center">Népszerű termékek</h1>
 
 			<div id="carusel-2" class="carusel-container">
 				<ul id="carusel-line">
