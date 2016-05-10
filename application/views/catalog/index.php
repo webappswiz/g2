@@ -63,16 +63,6 @@
 							<input type="text" id="age-2" name="age_to" readonly>
 						</div>
 					</div>
-					<div class="slide-filter size"><span class="filter-block">Size:</span>
-
-						<div id="slider-range-3"></div>
-						<div class="row flx-justify"><span class="min-amount text-gray">1 kg</span><span
-								class="max-amount text-gray">25+ kg</span></div>
-						<div class="row flx-justify">
-							<input type="text" id="size-1" name="size_from" readonly>
-							<input type="text" id="size-2" name="size_to"  readonly>
-						</div>
-					</div>
 					<input type="submit" class="btn large solid gray" value="SAVE">
 				</form>
 
