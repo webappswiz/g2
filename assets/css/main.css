@@ -239,6 +239,9 @@ section {
     width: 100%;
     white-space: normal;
   }
+
+.item.product-preview > .row {flex-grow: 1;}
+
   .product-preview .ammount {
     display: inline-block;
     font-size: 18px;
