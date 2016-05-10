@@ -2,15 +2,15 @@
 	$(function () {
 		$("#tabs").tabs({
 			defaultTab: "#puppy",
-				<?php
+			updateHash: false,
+
+		});
+		<?php
 				if(isset($_REQUEST['new'])){
-					//echo 'defaultTab: "li#puppy",
-					//tabs: "> ul > li"
-					//';
+					echo "$('#puppy_tab').trigger('click');";
 				}
 
 				?>
-		});
 		console.log($('li#puppy').html());
 	});
 
@@ -33,7 +33,7 @@
 			<div id="tabs">
 				<ul>
 					<li id="addr"><a href="#tabs-1"><?php echo __( 'Személyes adataim' ); ?></a></li>
-					<li id="puppy"><a href="#tabs-2"><?php echo __( 'Kutyusaim' ); ?></a></li>
+					<li id="puppy"><a id="puppy_tab" href="#tabs-2"><?php echo __( 'Kutyusaim' ); ?></a></li>
 					<li><a href="#tabs-3"><?php echo __( 'Hívj meg egy barátot!' ); ?></a></li>
 					<li><a href="#tabs-4"><?php echo __( 'Korábbi megrendeléseim' ); ?></a></li>
 				</ul>
