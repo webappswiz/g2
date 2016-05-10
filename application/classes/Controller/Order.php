@@ -1034,6 +1034,7 @@ class Controller_Order extends Controller_Core {
 		$session->delete( 'order' );
 		$session->delete( 'step1' );
 		$session->delete( 'step2' );
+		$session->delete( 'cart' );
 		$session->delete( 'success' );
 	}
 

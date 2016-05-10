@@ -2,7 +2,7 @@
 <section>
 	<div class="row flx-center">
 		<div class="content-box page-title">
-			<h1 class="text-center">My Cart</h1>
+			<h1 class="text-center">Kosár</h1>
 		</div>
 		<!-- end .content-box-->
 	</div>
