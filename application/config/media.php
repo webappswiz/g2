@@ -19,6 +19,7 @@ return array(
 			'jquery.collapse',
 			'jquery-ui',
 			'mask',
+			'jquery.hashchange.min',
 			'jquery.easytabs',
 			'lightbox.min',
 			'main',

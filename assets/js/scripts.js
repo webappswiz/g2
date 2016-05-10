@@ -46,11 +46,6 @@ $(function () {
     $("#size-2").val($("#slider-range-3").slider("values", 1));
 });
 
-// Tabs
-$(function () {
-    $("#tabs").tabs();
-});
-
 // Quantity select
 $(function () {
     itemQuantity = $('div[id*="item-id"]'); // Нахожу все блоки корзины

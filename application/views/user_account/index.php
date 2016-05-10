@@ -1,3 +1,20 @@
+<script type="text/javascript">
+	$(function () {
+		$("#tabs").tabs({
+			defaultTab: "#puppy",
+				<?php
+				if(isset($_REQUEST['new'])){
+					//echo 'defaultTab: "li#puppy",
+					//tabs: "> ul > li"
+					//';
+				}
+
+				?>
+		});
+		console.log($('li#puppy').html());
+	});
+
+</script>
 <!-- Page Title ======================================-->
 <section>
 	<div class="row flx-center">
@@ -15,11 +32,10 @@
 		<div class="row tabs">
 			<div id="tabs">
 				<ul>
-					<li><a href="#tabs-1"><?php echo __( 'Személyes adataim' ); ?></a></li>
-					<li><a href="#tabs-2"><?php echo __( 'Kutyusaim' ); ?></a></li>
+					<li id="addr"><a href="#tabs-1"><?php echo __( 'Személyes adataim' ); ?></a></li>
+					<li id="puppy"><a href="#tabs-2"><?php echo __( 'Kutyusaim' ); ?></a></li>
 					<li><a href="#tabs-3"><?php echo __( 'Hívj meg egy barátot!' ); ?></a></li>
 					<li><a href="#tabs-4"><?php echo __( 'Korábbi megrendeléseim' ); ?></a></li>
-
 				</ul>
 				<div id="tabs-1" class="delivery-inf">
 					<h2 class="text-center">Szállítási információ</h2>
