@@ -227,7 +227,11 @@
     min-width: 125px;
     margin-right: 0; }
     .header-mainbox .content-box .right-box .cart-holder {
-      display: none; } }
+      display: none; }
+  .neki-neked_container .neked {
+    top: 0; }
+  .neki-neked_container .neki {
+    top: 35px; } }
 
 @media screen and (max-width: 490px) {
   .main-footer .footer-bottom .row.content-box .col-4:first-child {
