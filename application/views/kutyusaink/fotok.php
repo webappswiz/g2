@@ -9,6 +9,11 @@
 		});
 	});
 </script>
+<style type="text/css">
+	.active{
+		color:crimson;
+	}
+</style>
 <section>
 	<div class="row flx-center">
 		<div class="content-box faq">
