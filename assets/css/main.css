@@ -240,7 +240,11 @@ section {
     white-space: normal;
   }
 
-.item.product-preview > .row {flex-grow: 1;}
+.item.product-preview > .row {
+  flex-grow: 1;
+  justify-content: space-between;
+  flex-direction: column;
+}
 
   .product-preview .ammount {
     display: inline-block;

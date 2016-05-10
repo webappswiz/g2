@@ -250,7 +250,7 @@ $time       = explode( ':', $date_array[1] );
 								<img src="<?= URL::base( true, false ) ?>assets/img/placeholder.png">
 							<?php endif;?>
 								</a>
-							<div class="row">
+							<div class="row flx-justify">
 								<h2><?php echo $product->product_name; ?></h2>
 								<?php if ($product->on_sale==1): ?>
 									<span class="ammount"><?php echo $product->sale_price; ?></span>
