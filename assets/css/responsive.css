@@ -229,11 +229,13 @@
     .header-mainbox .content-box .right-box .cart-holder {
       display: none; }
   .neki-neked_container .neked {
-    top: 15px;
+    top: 397px;
+    left: -60px;
     display: block;
     width: 100%; }
   .neki-neked_container .neki {
     top: 35px;
+    left:60px;
     display: block;
     width: 100%; }
   .specials-cats {

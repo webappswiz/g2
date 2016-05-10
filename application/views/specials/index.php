@@ -18,6 +18,7 @@
 
 					<h1 id="neki" class="neki"><?php echo __( 'NEKI' ); ?></h1></center>
 			</div>
+			<br/>
 			<div id="collapse-content" class="specials-cats">
 				<div class="main-collapse1" style="display: none">
 					<div class="content" style="text-align:justify;">
