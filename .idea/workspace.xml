@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/catalog/product.php" afterPath="$PROJECT_DIR$/application/views/catalog/product.php" />
-    </list>
+    <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="" />
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -63,22 +61,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="252" column="55" selection-start-line="252" selection-start-column="55" selection-end-line="252" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.36334914">
+              <caret line="237" column="30" selection-start-line="237" selection-start-column="30" selection-end-line="237" selection-end-column="30" />
               <folding>
-                <marker date="1462872615318" expanded="true" signature="10558:10593" placeholder="..." />
+                <marker date="1462872884182" expanded="true" signature="10558:10593" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/catalog/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18167457">
+            <state vertical-scroll-proportion="0.0">
               <caret line="284" column="55" selection-start-line="284" selection-start-column="55" selection-end-line="284" selection-end-column="55" />
               <folding />
             </state>
@@ -197,8 +195,8 @@
         <option value="$PROJECT_DIR$/application/views/order/index.php" />
         <option value="$PROJECT_DIR$/assets/js/scripts.js" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
-        <option value="$PROJECT_DIR$/application/views/main/index.php" />
         <option value="$PROJECT_DIR$/application/views/catalog/product.php" />
+        <option value="$PROJECT_DIR$/application/views/main/index.php" />
       </list>
     </option>
   </component>
@@ -987,21 +985,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
+    <entry file="file://$PROJECT_DIR$/application/views/catalog/product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="252" column="55" selection-start-line="252" selection-start-column="55" selection-end-line="252" selection-end-column="55" />
-          <folding>
-            <marker date="1462872615318" expanded="true" signature="10558:10593" placeholder="..." />
-          </folding>
+          <caret line="284" column="55" selection-start-line="284" selection-start-column="55" selection-end-line="284" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/catalog/product.php">
+    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18167457">
-          <caret line="284" column="55" selection-start-line="284" selection-start-column="55" selection-end-line="284" selection-end-column="55" />
-          <folding />
+        <state vertical-scroll-proportion="0.36334914">
+          <caret line="237" column="30" selection-start-line="237" selection-start-column="30" selection-end-line="237" selection-end-column="30" />
+          <folding>
+            <marker date="1462872884182" expanded="true" signature="10558:10593" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
