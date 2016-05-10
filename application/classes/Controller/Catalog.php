@@ -23,7 +23,7 @@ class Controller_Catalog extends Controller_Core {
 	}
 
 	public function action_category() {
-		$this->cats = ORM::factory('Categories')->find_all();
+		$this->categories = ORM::factory('Categories')->find_all();
 		$this->category = ORM::factory('Categories',(int) $this->request->param( 'id' ));
 	}
 
