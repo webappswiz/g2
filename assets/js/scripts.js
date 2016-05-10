@@ -104,6 +104,22 @@ $(document).ready(function () {
         }
     );
 
+    $('.date-dropdown-holder input[name="gender"]').click(
+        function () {
+            console.log('click!');
+            if ($('ul.option.gender').is(':hidden')) {
+                $('ul.option.gender').slideDown(400);
+            } else {
+                $('ul.option.gender').slideUp(400);
+            }
+        }
+    );
+
+    $('ul.option.gender li').click(function () {
+        $('.date-dropdown-holder input[name="gender"]').attr('value', ($(this).text()));
+        $('ul.option.gender').slideUp(400);
+    });
+
     $('ul.option.year li').click(function () {
         $('.date-dropdown-holder input[name="years"]').attr('value', ($(this).text()));
         $('ul.option.year').slideUp(400);

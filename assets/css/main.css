@@ -257,7 +257,7 @@ section {
     width: 50%;
     line-height: 36px; }
   .product-preview .ammount:after {
-    content: "Ft"; }
+    content: " Ft"; }
   .product-preview .ammount.old {
     position: absolute;
     bottom: -13px;
@@ -349,7 +349,7 @@ section {
 
 .date-dropdown-holder {
   display: inline-block;
-  width: 180px; }
+  width: 270px; }
   .date-dropdown-holder .container {
     width: 80px;
     display: inline-block;
@@ -1354,14 +1354,15 @@ section {
 
 .my-cart .date-dropdown-holder {
   display: inline-block;
-  width: 180px; }
+  width: 310px; }
   .my-cart .date-dropdown-holder .container {
     width: 80px;
     display: inline-block;
     margin: 0;
-    position: relative; }
-  .my-cart .date-dropdown-holder .container:first-of-type {
-    margin-right: 16px; }
+    position: relative;
+    margin-right: 16px;
+  }
+
   .my-cart .date-dropdown-holder .icon {
     display: inline-block;
     position: absolute;
