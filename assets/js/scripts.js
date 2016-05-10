@@ -451,9 +451,11 @@ $(document).ready(function(){
     });
 });
 
-$('#dog_size').responsiveGallery();
+
 
 $(function () {
+    $('#pkg').responsiveGallery();
+    
     $('.subscribe').on('click', function () {
         var email = $('#subscr_email').val();
         var firstname = $('#subscr_name').val();
