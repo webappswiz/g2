@@ -229,9 +229,13 @@
     .header-mainbox .content-box .right-box .cart-holder {
       display: none; }
   .neki-neked_container .neked {
-    top: 0; }
+    top: 0;
+    display: block;
+    width: 100%; }
   .neki-neked_container .neki {
-    top: 35px; } }
+    top: 35px;
+    display: block;
+    width: 100%; } }
 
 @media screen and (max-width: 490px) {
   .main-footer .footer-bottom .row.content-box .col-4:first-child {
