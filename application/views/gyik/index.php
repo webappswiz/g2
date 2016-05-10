@@ -126,7 +126,7 @@
 						</p></div>
 				</li>
 				<li>
-					<h3 class="rad-5"><?php echo __( '9. Nem érkezett meg a Goodiebox, pedig regsztráltam, vagyis megrendeltem.' ); ?></h3>
+					<h3 class="rad-5"><?php echo __( '9. Nem érkezett meg a Goodiebox, pedig megrendeltem!' ); ?></h3>
 
 					<div><p>
 						<?php echo __( 'Amennyiben nem érkezett meg a megrendelést visszaigazoló e-mail a rendelést követően azonnal vagy legfeljebb 24 órán belül, mindenképpen jelezd azt ügyfélszolgálati e-mail címünkön, hogy utána tudjunk nézni: <a href="mailto:info@goodiebox.hu">info@goodiebox.hu</a>' ); ?>
