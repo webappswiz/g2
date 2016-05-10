@@ -184,7 +184,7 @@ if ( isset( $session['step2'] ) ) {
 <section>
 	<div class="row flx-center">
 		<div class="content-box page-title">
-			<h1 class="text-center">My Cart</h1>
+			<h1 class="text-center">Pénztár</h1>
 		</div>
 		<!-- end .content-box-->
 	</div>
@@ -192,16 +192,6 @@ if ( isset( $session['step2'] ) ) {
 </section>
 <div class="row flx-center">
 	<div class="content-box my-cart">
-		<section>
-			<div class="row flx-center step-counter">
-				<div class="step-one">
-					<h2>Order details</h2>
-				</div>
-				<div class="step-two active">
-					<h2>Checkout</h2>
-				</div>
-			</div>
-		</section>
 		<section id="step-two" style="display: block">
 			<div class="row flx-justify">
 				<aside class="order-detail">
@@ -402,7 +392,7 @@ if ( isset( $session['step2'] ) ) {
 								<label for="dif-shipping" class="gray-box__green-check"><?php echo __('A szállítási cím nem egyezik?'); ?></label>
 							</div>
 							<div class="dif-shipping-container">
-								<h2>Shipping address</h2>
+								<h2>Szállítási adatok</h2>
 
 								<div class="row flx-justify">
 									<input type="text" name="delivery_lastname" id="delivery_lastname" placeholder="<?php echo __('Vezetéknév*'); ?>" required>
@@ -426,7 +416,7 @@ if ( isset( $session['step2'] ) ) {
 						</div>
 					</div>
 					<div class="billing-info">
-						<h2>Billing info</h2>
+						<h2>Fizetési lehetőség</h2>
 
 						<div class="row">
 							<div class="col-6">
@@ -450,8 +440,7 @@ if ( isset( $session['step2'] ) ) {
 					</div>
 					<div class="row flx-center check-box-holder">
 						<input type="checkbox" id="confirm">
-						<label for="confirm" class="gray-box__green-check">I have read and understood the terms and
-							conditions</label>
+						<label for="confirm" class="gray-box__green-check">Elolvastam és elfogadom az <a href="/aszf.pdf">Általános Szerződési Feltételekben leírtakat!</a></label>
 					</div>
 					<div class="row flx-center action-holder">
 						<input type="submit" name="submit" id="submit" value="<?php echo __('MEGRENDELEM'); ?>" class="btn large solid green">
