@@ -16,11 +16,13 @@ class Controller_Cart extends Controller_Core {
 
 	public function action_index() {
 		$weight = 0;
-		foreach ( $_SESSION['cart'] as $id => $qty ){
-			$product_info = ORM::factory( 'Products', $id );
-			$weight += $product_info->weight;
+		if(isset($_SESSION['cart'])) {
+			foreach ( $_SESSION['cart'] as $id => $qty ) {
+				$product_info = ORM::factory( 'Products', $id );
+				$weight += $product_info->weight;
+			}
+			$this->shipping = $this->shipping_calc( $weight );
 		}
-		$this->shipping = $this->shipping_calc($weight);
 	}
 
 	public function action_add() {
