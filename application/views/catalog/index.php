@@ -18,7 +18,7 @@
 		<div class="row flx-around">
 			<!-- Aside ===========================================-->
 			<aside class="catalog-aside col-3">
-				<div class="slide-filter amount"><span class="filter-block">Categories:</span>
+				<div class="slide-filter amount"><span class="filter-block">Kategória:</span>
 					<?php
 					foreach($categories as $category){
 						$prod_counts = ORM::factory('Products')->where('product_cat','=',$category->id)->count_all();
@@ -28,12 +28,12 @@
 					?>
 				</div>
 				<!-- Fiter =======-->
-				<h2>Filter</h2>
+				<h2>Keresés szűkítése</h2>
 
 				<form class="product-filter" method="GET">
 
 
-					<div class="slide-filter amount"><span class="filter-block">Price:</span>
+					<div class="slide-filter amount"><span class="filter-block">Ár:</span>
 
 						<div id="slider-range"></div>
 						<div class="row flx-justify"><span class="min-amount text-gray">20 Ft</span><span
@@ -43,7 +43,7 @@
 							<input type="text" id="amount-2" name="price_to" readonly>
 						</div>
 					</div>
-					<div class="category-chekbox"><span class="filter-block">Product category:</span>
+					<div class="category-chekbox"><span class="filter-block">Termék kategória:</span>
 						<?php $all_cats = ORM::factory('Categories')->find_all(); ?>
 						<ul class="text-gray">
 							<?php foreach($all_cats as $cat):?>
@@ -54,23 +54,23 @@
 							<?php endforeach; ?>
 						</ul>
 					</div>
-					<div class="slide-filter age"><span class="filter-block">Age:</span>
+					<div class="slide-filter age"><span class="filter-block">Kor:</span>
 
 						<div id="slider-range-max-1"></div>
-						<div class="row flx-justify"><span class="min-amount text-gray">1 month</span><span
-								class="max-amount text-gray">1+ year</span></div>
+						<div class="row flx-justify"><span class="min-amount text-gray">1 Hónap</span><span
+								class="max-amount text-gray">1+ Év</span></div>
 						<div class="row flx-justify">
 							<input type="text" id="age-1" name="age_from" readonly>
 							<input type="text" id="age-2" name="age_to" readonly>
 						</div>
 					</div>
-					<input type="submit" class="btn large solid gray" value="SAVE">
+					<input type="submit" class="btn large solid gray" value="Mentés">
 				</form>
 
 				<?php if ( isset( $_SESSION['cart'] ) && count( $_SESSION['cart'] ) > 0 ): ?>
 					<div class="cart-box">
 						<!-- Cart ========-->
-						<h2>Cart</h2>
+						<h2>Kosár</h2>
 						<?php
 						$total_cart_price = 0;
 						foreach ( $_SESSION['cart'] as $key => $cart_item ):
