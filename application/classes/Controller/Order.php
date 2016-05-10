@@ -390,8 +390,6 @@ class Controller_Order extends Controller_Core {
 			$puppy->gender        = $step1['gender'];
 			$puppy->years         = $step1['years'];
 			$puppy->months        = $step1['months'];
-			$puppy->alerg         = $step1['alerg'];
-			$puppy->alerg_descr   = $step1['alerg_descr'];
 			$puppy->selected_size = $step1['selected_size'];
 			$puppy->user_id       = $this->current_user->id;
 			$puppy->save();
@@ -960,8 +958,6 @@ class Controller_Order extends Controller_Core {
 			$puppy->gender        = $_POST['gender'];
 			$puppy->years         = $_POST['years'];
 			$puppy->months        = $_POST['months'];
-			$puppy->alerg         = $_POST['alerg'];
-			$puppy->alerg_descr   = $_POST['alerg_descr'];
 			$puppy->selected_size = $_POST['selected_size'];
 			$puppy->user_id       = $user->id;
 			$puppy->save();

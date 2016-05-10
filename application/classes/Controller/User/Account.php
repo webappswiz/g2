@@ -110,8 +110,6 @@ class Controller_User_Account extends Controller_Core {
 			$puppy->gender        = $_POST['gender'];
 			$puppy->years         = (int) $_POST['years'];
 			$puppy->months        = (int) $_POST['months'];
-			$puppy->alerg         = (int) $_POST['alerg'];
-			$puppy->alerg_descr   = $_POST['alerg_descr'];
 			$puppy->selected_size = $_POST['selected_size'];
 
 			if ( isset( $_FILES['puppy_img'] ) ) {
@@ -168,8 +166,6 @@ class Controller_User_Account extends Controller_Core {
 			$puppy1['gender']        = $puppy->gender;
 			$puppy1['years']         = $puppy->years;
 			$puppy1['months']        = $puppy->months;
-			$puppy1['alerg']         = $puppy->alerg;
-			$puppy1['alerg_descr']   = $puppy->alerg_descr;
 			$puppy1['selected_size'] = $puppy->selected_size;
 			Session::instance()->set( 'step1', $puppy1 );
 
@@ -194,8 +190,6 @@ class Controller_User_Account extends Controller_Core {
 			$puppy1['gender']        = $puppy->gender;
 			$puppy1['years']         = $puppy->years;
 			$puppy1['months']        = $puppy->months;
-			$puppy1['alerg']         = $puppy->alerg;
-			$puppy1['alerg_descr']   = $puppy->alerg_descr;
 			$puppy1['selected_size'] = $puppy->selected_size;
 			$puppy1['coupon_code']   = $coupon_code;
 			Session::instance()->set( 'step1', $puppy1 );
