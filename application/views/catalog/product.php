@@ -186,9 +186,12 @@
 					</div>
 				<?php endif; ?>
 				<?php if ( $product->video_link <> '' ): ?>
+						<?php
+					preg_match('#.*\/(.*)$#',$product->video_link,$matches);
+					?>
 					<div id="tabs-4">
 						<div class="video-box">
-							<iframe width="1140" height="640" src="<?php echo $product->video_link; ?>" frameborder="0"
+							<iframe width="1140" height="640" src="https://www.youtube.com/embed/<?php echo $matches[1];?>" frameborder="0"
 							        allowfullscreen></iframe>
 						</div>
 					</div>
