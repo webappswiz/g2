@@ -3,6 +3,7 @@
 	<div class="row flx-center">
 		<div class="content-box page-title">
 			<h1 class="text-center"><?php echo __( 'Saját profilom' ); ?></h1>
+
 		</div>
 		<!-- end .content-box-->
 	</div>
@@ -10,6 +11,7 @@
 </section>
 <div class="row flx-center">
 	<div class="content-box my-office">
+		<p>Aktuális kedvezményem: <?php echo $discount; ?></p>
 		<div class="row tabs">
 			<div id="tabs">
 				<ul>
