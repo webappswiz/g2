@@ -377,7 +377,7 @@ $time       = explode( ':', $date_array[1] );
 					</div>
 					<footer><img src="<?= URL::base( true, false ) ?>assets/img/feedbacks/imgpsh_fullsize.jpg" class="avatar">
 
-						<div><span class="author">Szilva,</span><span class="name">Vámosszabadi</span></div>
+						<div><span class="author">@Szilva,</span><span class="name">Vámosszabadi</span></div>
 					</footer>
 				</div>
 				<div class="item feed">
