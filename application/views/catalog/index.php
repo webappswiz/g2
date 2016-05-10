@@ -128,7 +128,7 @@
 					<div class="category-box">
 						<div class="category-title"><a
 								href="<?php echo URL::base( true, false ); ?>catalog/category/<?php echo $category->id ?>"><?php echo $category->cat_name; ?></><a
-								href="#">Olvass tovább</a></div>
+								href="<?php echo URL::base( true, false ); ?>catalog/category/<?php echo $category->id ?>">Megnézem a többit is</a></div>
 						<div class="product-line">
 							<?php
 							$products =$category->products;
