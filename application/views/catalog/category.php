@@ -15,7 +15,7 @@
 			<aside class="catalog-aside col-3">
 				<div class="slide-filter amount"><span class="filter-block">Kategória:</span>
 					<?php
-					foreach($categories as $category){
+					foreach($cats as $category){
 						$prod_counts = ORM::factory('Products')->where('product_cat','=',$category->id)->count_all();
 						echo '<p><a href="'.URL::base( true, false ).'catalog/category/'.$category->id.'">'.$category->cat_name.' ('.$prod_counts.')</a></p>';
 					}
