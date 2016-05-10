@@ -286,7 +286,7 @@ $time       = explode( ':', $date_array[1] );
 			<h1 class="text-center"><?php echo __( 'Goodiebox fotótár' ); ?></h1>
 			<div class="row flx-center gallery-carusel-holder">
 				<div id="gallery-carusel" class="carusel-container">
-					<ul class="flx flx-justify">
+					<ul class="row flx-justify">
 						<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?jan" class="gallery-link"><img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-366.jpg"></a>
 							<h2 class="text-center">Januar 2016</h2>
 						</li>

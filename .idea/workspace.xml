@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/Controller/User/Account.php" afterPath="$PROJECT_DIR$/application/classes/Controller/User/Account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/main.css" afterPath="$PROJECT_DIR$/assets/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/responsive.css" afterPath="$PROJECT_DIR$/assets/css/responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/jquery.lanacarusel.js" afterPath="$PROJECT_DIR$/assets/js/jquery.lanacarusel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/index.php" afterPath="$PROJECT_DIR$/application/views/main/index.php" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/Controller/User/Account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34597155">
+            <state vertical-scroll-proportion="0.0">
               <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
               <folding />
             </state>
@@ -82,6 +79,18 @@
             <state vertical-scroll-proportion="-16.096775">
               <caret line="686" column="19" selection-start-line="686" selection-start-column="19" selection-end-line="686" selection-end-column="19" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47235388">
+              <caret line="288" column="31" selection-start-line="288" selection-start-column="31" selection-end-line="288" selection-end-column="31" />
+              <folding>
+                <marker date="1462865562570" expanded="true" signature="10558:10593" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,7 +182,6 @@
         <option value="$PROJECT_DIR$/application/classes/Controller/Specials.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Kutyusaink.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Partnerek.php" />
-        <option value="$PROJECT_DIR$/application/views/main/index.php" />
         <option value="$PROJECT_DIR$/assets/js/scripts.js" />
         <option value="$PROJECT_DIR$/application/views/template/footer.php" />
         <option value="$PROJECT_DIR$/application/views/cart/index.php" />
@@ -185,6 +193,7 @@
         <option value="$PROJECT_DIR$/assets/css/responsive.css" />
         <option value="$PROJECT_DIR$/assets/js/jquery.lanacarusel.js" />
         <option value="$PROJECT_DIR$/application/classes/Controller/User/Account.php" />
+        <option value="$PROJECT_DIR$/application/views/main/index.php" />
       </list>
     </option>
   </component>
@@ -314,6 +323,68 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -905,17 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="144" column="12" selection-start-line="144" selection-start-column="12" selection-end-line="144" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#!!top" expanded="true" />
-            <marker date="1462709075565" expanded="true" signature="10558:10593" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -972,14 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.096775">
-          <caret line="686" column="19" selection-start-line="686" selection-start-column="19" selection-end-line="686" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/jquery.lanacarusel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.387096">
@@ -1008,9 +1060,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/Controller/User/Account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34597155">
+        <state vertical-scroll-proportion="0.0">
           <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.096775">
+          <caret line="686" column="19" selection-start-line="686" selection-start-column="19" selection-end-line="686" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47235388">
+          <caret line="288" column="31" selection-start-line="288" selection-start-column="31" selection-end-line="288" selection-end-column="31" />
+          <folding>
+            <marker date="1462865562570" expanded="true" signature="10558:10593" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
