@@ -128,7 +128,7 @@
 				<div class="slider-holder">
 					<div id="slider_catalog">
 						<ul>
-							<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive1"></li>
+							<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive"></li>
 						</ul>
 
 					</div>
