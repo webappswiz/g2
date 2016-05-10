@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/Controller/Admin/Products.php" afterPath="$PROJECT_DIR$/application/classes/Controller/Admin/Products.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/logs/2016/05/10.php" afterPath="$PROJECT_DIR$/application/logs/2016/05/10.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/products/form.php" afterPath="$PROJECT_DIR$/application/views/admin/products/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/catalog/product.php" afterPath="$PROJECT_DIR$/application/views/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/responsive.css" afterPath="$PROJECT_DIR$/assets/css/responsive.css" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,16 +38,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="form.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/products/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="66" selection-start-line="89" selection-start-column="66" selection-end-line="89" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.6914557">
+              <caret line="94" column="64" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
               <folding>
-                <marker date="1462895470960" expanded="true" signature="8003:8214" placeholder="..." />
-                <marker date="1462895470960" expanded="true" signature="8085:8109" placeholder="..." />
-                <marker date="1462895470960" expanded="true" signature="8483:8698" placeholder="..." />
-                <marker date="1462895470960" expanded="true" signature="8567:8591" placeholder="..." />
+                <marker date="1462896001616" expanded="true" signature="8024:8235" placeholder="..." />
+                <marker date="1462896001616" expanded="true" signature="8106:8130" placeholder="..." />
+                <marker date="1462896001616" expanded="true" signature="8504:8719" placeholder="..." />
+                <marker date="1462896001616" expanded="true" signature="8588:8612" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -67,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/catalog/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5348101">
+            <state vertical-scroll-proportion="0.0">
               <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
               <folding />
             </state>
@@ -180,10 +176,10 @@
         <option value="$PROJECT_DIR$/application/views/order/index.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Catalog.php" />
         <option value="$PROJECT_DIR$/application/views/catalog/category.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/products/form.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Admin/Products.php" />
         <option value="$PROJECT_DIR$/assets/css/responsive.css" />
         <option value="$PROJECT_DIR$/application/views/catalog/product.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/products/form.php" />
       </list>
     </option>
   </component>
@@ -883,19 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/products/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="66" selection-start-line="89" selection-start-column="66" selection-end-line="89" selection-end-column="66" />
-          <folding>
-            <marker date="1462895470960" expanded="true" signature="8003:8214" placeholder="..." />
-            <marker date="1462895470960" expanded="true" signature="8085:8109" placeholder="..." />
-            <marker date="1462895470960" expanded="true" signature="8483:8698" placeholder="..." />
-            <marker date="1462895470960" expanded="true" signature="8567:8591" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/Controller/Admin/Products.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -914,9 +897,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/catalog/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5348101">
+        <state vertical-scroll-proportion="0.0">
           <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/products/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6914557">
+          <caret line="94" column="64" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
+          <folding>
+            <marker date="1462896001616" expanded="true" signature="8024:8235" placeholder="..." />
+            <marker date="1462896001616" expanded="true" signature="8106:8130" placeholder="..." />
+            <marker date="1462896001616" expanded="true" signature="8504:8719" placeholder="..." />
+            <marker date="1462896001616" expanded="true" signature="8588:8612" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

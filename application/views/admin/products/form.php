@@ -87,11 +87,12 @@
 			<div class="control-group">
 				<label class="control-label" for="product_cat">Product size</label>
 				<div class="controls">
+					<?php $sizes = json_decode($model->product_size);?>
 					<select id="product_size" name="product_size[]" class="input-xxlarge" multiple="multiple">
-						<option value="1" <?php echo ( $model->product_size == 1 ) ? 'selected="selected"' : '' ?>>Small</option>
-						<option value="2" <?php echo ( $model->product_size == 2 ) ? 'selected="selected"' : '' ?>>Medium</option>
-						<option value="3" <?php echo ( $model->product_size == 3 ) ? 'selected="selected"' : '' ?>>Large</option>
-						<option value="4" <?php echo ( $model->product_size == 4 ) ? 'selected="selected"' : '' ?>>Good for all dog sizes</option>
+						<option value="1" <?php echo (in_array(1,$sizes)) ? 'selected="selected"' : '' ?>>Small</option>
+						<option value="2" <?php echo (in_array(2,$sizes)) ? 'selected="selected"' : '' ?>>Medium</option>
+						<option value="3" <?php echo (in_array(3,$sizes)) ? 'selected="selected"' : '' ?>>Large</option>
+						<option value="4" <?php echo (in_array(4,$sizes)) ? 'selected="selected"' : '' ?>>Good for all dog sizes</option>
 					</select>
 				</div>
 			</div>
