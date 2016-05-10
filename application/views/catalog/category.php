@@ -13,18 +13,19 @@
 		<div class="row">
 			<!-- Aside ===========================================-->
 			<aside class="catalog-aside col-3">
+				<div class="slide-filter amount"><span class="filter-block">Categories:</span>
+					<?php
+					foreach($categories as $category){
+						$prod_counts = ORM::factory('Products')->where('product_cat','=',$category->id)->count_all();
+						echo '<p>'.$category->cat_name.' ('.$prod_counts.')</p>';
+					}
+					?>
+				</div>
 				<!-- Fiter =======-->
 				<h2>Filter</h2>
 
 				<form class="product-filter">
-					<div class="slide-filter amount"><span class="filter-block">Categories:</span>
-						<?php
-							foreach($categories as $category){
-								$prod_counts = ORM::factory('Products')->where('product_cat','=',$category->id)->count_all();
-								echo '<p>'.$category->cat_name.' ('.$prod_counts.')</p>';
-							}
-						?>
-					</div>
+
 					<div class="slide-filter amount"><span class="filter-block">Price:</span>
 
 						<div id="slider-range"></div>

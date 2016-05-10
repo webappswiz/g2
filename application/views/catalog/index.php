@@ -18,19 +18,20 @@
 		<div class="row flx-around">
 			<!-- Aside ===========================================-->
 			<aside class="catalog-aside col-3">
+				<div class="slide-filter amount"><span class="filter-block">Categories:</span>
+					<?php
+					foreach($categories as $category){
+						$prod_counts = ORM::factory('Products')->where('product_cat','=',$category->id)->count_all();
+						echo '<p>'.$category->cat_name.' ('.$prod_counts.')</p>';
+					}
+					reset($categories);
+					?>
+				</div>
 				<!-- Fiter =======-->
 				<h2>Filter</h2>
 
 				<form class="product-filter" method="GET">
-					<div class="slide-filter amount"><span class="filter-block">Categories:</span>
-						<?php
-						foreach($categories as $category){
-							$prod_counts = ORM::factory('Products')->where('product_cat','=',$category->id)->count_all();
-							echo '<p>'.$category->cat_name.' ('.$prod_counts.')</p>';
-						}
-						reset($categories);
-						?>
-					</div>
+
 
 					<div class="slide-filter amount"><span class="filter-block">Price:</span>
 
