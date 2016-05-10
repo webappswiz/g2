@@ -236,7 +236,9 @@ section {
     object-fit: contain;
     background-color: #fff; }
   .product-preview h2 {
-    width: 100%; }
+    width: 100%;
+    white-space: normal;
+  }
   .product-preview .ammount {
     display: inline-block;
     font-size: 18px;
