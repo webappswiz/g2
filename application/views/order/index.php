@@ -60,6 +60,16 @@
 		$('input:radio[id^="size"]').on('click', function () {
 			$('.selected_size').val($(this).val());
 		});
+		$('div[class^="size"]').on('click', function () {
+			var id= $(this).data('id');
+			$('#'+id).trigger('click');
+		});
+
+		$('.item-box img').on('click',function(){
+			var id = $(this).data('id');
+			$('#box-'+id).trigger('click');
+		});
+
 		$('.email').on('blur', function () {
 			$.post('/api/check', {'email': $(this).val()}).done(function (data) {
 				var i = $.parseJSON(data);
@@ -139,22 +149,21 @@
 					<div id="dog_size" class="row flx-around select-size">
 						<div class="item-box text-center">
 							<input id="size_1" type="radio" name="group1" value="1">
-
-							<div class="size-img-1"></div>
+							<div class="size-img-1" data-id="size_1"></div>
 							<p class="text-bold"><?php echo __( 'Icipici' ); ?></p><span>MAX 9KG</span>
 							<label for="size_1" class="radio_green s1"></label>
 						</div>
 						<div class="item-box text-center">
 							<input id="size_2" type="radio" name="group1" value="2" checked>
 
-							<div class="size-img-2"></div>
+							<div class="size-img-2" data-id="size_2"></div>
 							<p class="text-bold"><?php echo __( 'Éppen jó' ); ?></p><span>MAX 10-24KG</span>
 							<label for="size_2" class="radio_green s2"></label>
 						</div>
 						<div class="item-box text-center">
 							<input id="size_3" type="radio" name="group1" value="3">
 
-							<div class="size-img-3"></div>
+							<div class="size-img-3" data-id="size_3"></div>
 							<p class="text-bold"><?php echo __( 'Igazi óriás' ); ?></p><span>MAX 25+KG</span>
 							<label for="size_3" class="radio_green s3"></label>
 						</div>
@@ -230,9 +239,9 @@
 							            ->and_where( 'enabled', '=', 1 )
 							            ->find();
 							if ( $product->term == 1 ) {
-								$image  = '<img src="' . URL::base( true, false ) . 'assets/img/orange_box.png"
+								$image  = '<img data-id="plus" src="' . URL::base( true, false ) . 'assets/img/orange_box.png"
 						                           class="responsive">';
-								$image1 = '<img src="' . URL::base( true, false ) . 'assets/img/pink_box.png"
+								$image1 = '<img data-id="smart" src="' . URL::base( true, false ) . 'assets/img/pink_box.png"
 						                           class="responsive">';
 							}
 							$box1 = ( trim( Session::instance()->get( 'package' ) ) == 'plus' ) ? 'checked' : '';

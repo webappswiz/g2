@@ -470,7 +470,6 @@ $(document).ready(function(){
 
 
 $(function () {
-    $('#pkg').responsiveGallery();
 
     $('.subscribe').on('click', function () {
         var email = $('#subscr_email').val();
