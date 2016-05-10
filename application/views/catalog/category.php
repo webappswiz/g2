@@ -52,7 +52,7 @@
 							</li>
 							<li>
 								<input id="age-4" type="checkbox" name="age[]" value="4">
-								<label for="age-4" class="gray-box__green-check">Good for all</label>
+								<label for="age-4" class="gray-box__green-check">Nem korfüggő</label>
 							</li>
 						</ul>
 					</div>
