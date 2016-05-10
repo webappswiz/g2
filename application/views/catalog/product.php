@@ -267,7 +267,7 @@
 			<h1 class="text-center">Popular boxes</h1>
 
 			<div id="carusel-2" class="carusel-container">
-				<ul>
+				<ul id="carusel-line">
 					<?php
 					$products = ORM::factory( 'Products' )->where('status','=',1)->order_by( 'sales', 'DESC' )->limit( 6 )->find_all();
 					foreach ( $products as $product ):
