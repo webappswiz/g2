@@ -3,6 +3,7 @@
     <thead>
         <tr>
             <th>#</th>
+            <th>Product name</th>
             <th>First name</th>
             <th>Rate</th>
             <th>Date</th>
@@ -14,6 +15,7 @@
         ?>
         <tr>
             <td><?=$item->id?></td>
+            <td><?=$item->product->product_name;?></td>
             <td><?=$item->firstname?></td>
             <td><?=$item->rating?></td>
             <td><?=$item->date?></td>
