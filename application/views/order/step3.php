@@ -440,7 +440,7 @@ if ( isset( $session['step2'] ) ) {
 					</div>
 					<div class="row flx-center check-box-holder">
 						<input type="checkbox" id="confirm">
-						<label for="confirm" class="gray-box__green-check">Elolvastam és elfogadom az <a href="/aszf.pdf">Általános Szerződési Feltételekben leírtakat!</a></label>
+						<label for="confirm" class="gray-box__green-check">Elolvastam és elfogadom az <a style="text-decoration: underline" href="/aszf.pdf">Általános Szerződési Feltételekben leírtakat!</a></label>
 					</div>
 					<div class="row flx-center action-holder">
 						<input type="submit" name="submit" id="submit" value="<?php echo __('MEGRENDELEM'); ?>" class="btn large solid green">
