@@ -16,25 +16,25 @@
 		});
 		if ($('#box-smart').is(':checked')) {
 			$('.step2-text').html('<?php echo __('<p>A <span style="color:red"><b>Goodiebox Smart</b></span> dobozt választottad! Ha kutyusod játékos és szereti a hasát, akkor ez a doboz biztosan nagy örömöt okoz majd nektek!</p>'); ?>'
-				+ '<?php echo __('<p>Tartalom: 3-5 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet!</p>'); ?>'
+				+ '<?php echo __('<p>Tartalom: 4-5 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet!</p>'); ?>'
 				+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
 		}
 		if ($('#box-plus').is(':checked')) {
 			$('.step2-text').html('<?php echo __('<p>A <span style="color:red"><b>Goodiebox Plus</b></span> dobozt választottad! Ha kutyusod játékos, szereti a hasát és az extra meglepiket is, akkor ez a doboz egészen biztosan nagy örömöt okoz majd nektek!</p>'); ?>'
-				+ '<?php echo __('<p>Tartalom: 4-6 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet! A Plus doboz a legjobb választás ha valamilyen extra kényeztetésre vágynátok! Mi több, a szülinapos kutyusok Plus meglepidoboz vásárlásakor ajándékot is kapnak tőlünk a doboz értékén felül!</p>'); ?>'
+				+ '<?php echo __('<p>Tartalom: 4-7 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet! A Plus doboz a legjobb választás ha valamilyen extra kényeztetésre vágynátok! Mi több, a szülinapos kutyusok Plus meglepidoboz vásárlásakor ajándékot is kapnak tőlünk a doboz értékén felül!</p>'); ?>'
 				+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
 		}
 
 		$('#box-smart').on('click', function () {
 			$('.step2-text').html('<?php echo __('<p>A <span style="color:red"><b>Goodiebox Smart</b></span> dobozt választottad! Ha kutyusod játékos és szereti a hasát, akkor ez a doboz biztosan nagy örömöt okoz majd nektek!</p>'); ?>'
-				+ '<?php echo __('<p>Tartalom: 3-5 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet!</p>'); ?>'
+				+ '<?php echo __('<p>Tartalom: 4-5 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet!</p>'); ?>'
 				+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
 
 		});
 
 		$('#box-plus').on('click', function () {
 			$('.step2-text').html('<?php echo __('<p>A <span style="color:red"><b>Goodiebox Plus</b></span> dobozt választottad! Ha kutyusod játékos, szereti a hasát és az extra meglepiket is, akkor ez a doboz egészen biztosan nagy örömöt okoz majd nektek!</p>'); ?>'
-				+ '<?php echo __('<p>Tartalom: 4-6 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet! A Plus doboz a legjobb választás ha valamilyen extra kényeztetésre vágynátok! Mi több, a szülinapos kutyusok Plus meglepidoboz vásárlásakor ajándékot is kapnak tőlünk a doboz értékén felül!</p>'); ?>'
+				+ '<?php echo __('<p>Tartalom: 4-7 termék (értékfüggő)! Biztosan találsz a dobozban jutalomfalatot és játékot, mert tudjuk, hogy ezek a legfontosabbak, ha szuper ajándékkal szeretnéd meglepni kis kedvencedet! A Plus doboz a legjobb választás ha valamilyen extra kényeztetésre vágynátok! Mi több, a szülinapos kutyusok Plus meglepidoboz vásárlásakor ajándékot is kapnak tőlünk a doboz értékén felül!</p>'); ?>'
 				+ '<?php echo __('<p>Már csak egy lépésnyire vagy a megrendelés befejezésétől! Ha ennél a meglepidoboznál maradsz, akkor nincs más dolgod, csak kattints a Tovább gombra és add meg a személyes adataidat!</p>'); ?>');
 		});
 
@@ -239,9 +239,9 @@
 							            ->and_where( 'enabled', '=', 1 )
 							            ->find();
 							if ( $product->term == 1 ) {
-								$image  = '<img data-id="plus" src="' . URL::base( true, false ) . 'assets/img/orange_box.png"
+								$image  = '<img data-id="plus" src="' . URL::base( true, false ) . 'assets/img/pink_box.png"
 						                           class="responsive">';
-								$image1 = '<img data-id="smart" src="' . URL::base( true, false ) . 'assets/img/pink_box.png"
+								$image1 = '<img data-id="smart" src="' . URL::base( true, false ) . 'assets/img/orange_box.png"
 						                           class="responsive">';
 							}
 							$box1 = ( trim( Session::instance()->get( 'package' ) ) == 'plus' ) ? 'checked' : '';
