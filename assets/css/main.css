@@ -208,6 +208,10 @@ img.responsive {
   width: 100%;
   object-fit: cover; }
 
+img.responsive1 {
+  height: 100%;
+  object-fit: cover; }
+
 section {
   width: 100%; }
 

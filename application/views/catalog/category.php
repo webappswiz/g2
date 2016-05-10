@@ -17,7 +17,7 @@
 					<?php
 					foreach($categories as $category){
 						$prod_counts = ORM::factory('Products')->where('product_cat','=',$category->id)->count_all();
-						echo '<p>'.$category->cat_name.' ('.$prod_counts.')</p>';
+						echo '<p><a href="'.URL::base( true, false ).'catalog/category/'.$category->id.'">'.$category->cat_name.' ('.$prod_counts.')</a></p>';
 					}
 					?>
 				</div>
@@ -124,7 +124,7 @@
 				<div class="slider-holder">
 				<div id="slider_catalog">
 					<ul>
-						<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive"></li>
+						<li><img src="<?php echo URL::base( true, false ); ?>assets/img/catalog-slider-placeholder.jpg" class="responsive1"></li>
 					</ul>
 				</div>
 				</div>
