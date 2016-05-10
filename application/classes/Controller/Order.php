@@ -1010,10 +1010,12 @@ class Controller_Order extends Controller_Core {
 		$success = $session->get( 'success' );
 		$step1   = $session->get( 'step1' );
 		$step2   = $session->get( 'step2' );
-		if ( $success != 1 ) {
-			$session->delete( 'success' );
-			$this->redirect( '/' );
-		}
+		$options = ORM::factory( 'Options', 1 );
+		$this->status     = $options->status;
+		//if ( $success != 1 ) {
+		//	$session->delete( 'success' );
+		//	$this->redirect( '/' );
+		//}
 		$order = $session->get( 'order', false );
 		if ( $order ) {
 			$order = $order->as_array();

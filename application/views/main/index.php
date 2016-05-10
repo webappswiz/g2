@@ -375,7 +375,7 @@ $time       = explode( ':', $date_array[1] );
 							Nagyszerűnek tartom azt, hogy sosem kaptuk többször ugyanazt a terméket!</p>
 						<a href="#" class="link">Olvass tovább</a>
 					</div>
-					<footer><img src="<?= URL::base( true, false ) ?>assets/img/avatar-1.jpg" class="avatar">
+					<footer><img src="<?= URL::base( true, false ) ?>assets/img/feedbacks/imgpsh_fullsize.jpg" class="avatar">
 
 						<div><span class="author">Szilva,</span><span class="name">Vámosszabadi</span></div>
 					</footer>
