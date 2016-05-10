@@ -50,7 +50,7 @@ class Controller_Main extends Controller_Core {
 		$name = Arr::get($_REQUEST,'firstname');
 		$result = $MailChimp->post("lists/$list_id/members", [
 			'email_address' => $email,
-			'merge_vars' => array('FNAME'=>$name),
+			'merge_fields' => array('FNAME'=>$name,'LNAME'=>''),
 			'status'        => 'subscribed',
 		]);
 		if($result['status']=='subscribed'){
@@ -58,7 +58,6 @@ class Controller_Main extends Controller_Core {
 		} elseif($result['status']==400 && $result['title']=='Member Exists'){
 			echo '{"msg":"exists"}';
 		} else {
-
 		}
 		$this->render_nothing();
 	}
