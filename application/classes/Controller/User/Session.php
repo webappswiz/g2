@@ -35,7 +35,12 @@ class Controller_User_Session extends Controller_Core {
 					I18n::lang( 'en' );
 					$lang = Cookie::set( 'lang', 'en' );
 				}
-				$this->redirect( $requested_url ?: Kohana::$base_url . '/user_account' );
+				if(isset($_REQUEST['redirect']) && $_REQUEST['redirect']==1){
+					$this->redirect( $requested_url ?: Kohana::$base_url . '/order/step3' );
+				} else {
+					$this->redirect( $requested_url ?: Kohana::$base_url . '/user_account' );
+				}
+
 			}
 		} else {
 			Flash::set( 'alert', __( 'Helytelen felhasználónév vagy jelszó!' ) );

@@ -33,7 +33,7 @@ endif;
 					$('#customer_email').val('');
 					$('#customer_email').focus();
 					$('#customer_email').css('background-color', 'rosybrown');
-					$('#customer_email').after('<label id="email-error" class="error" for="email"><?php echo __('Úgy tűnik, már van regisztrált Goodiebox felhasználói fiókod! Jelentkezz be és onnan sokkal gyorsabb lesz!'); ?></label>');
+					$('#customer_email').after('<label id="email-error" class="error" for="email"><?php echo __('Úgy tűnik, már van regisztrált felhasználói fiókod! <a href="/user_session/login?referrer=step3">Jelentkezz be</a> és onnan sokkal gyorsabb lesz!'); ?></label>');
 				} else {
 					$('#email').css('background-color', 'white');
 				}
