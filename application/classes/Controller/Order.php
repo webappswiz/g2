@@ -254,11 +254,11 @@ class Controller_Order extends Controller_Core {
 		if($order->type==3){
 			$template = ORM::factory( 'Templates', 8 );
 			if ( $user->lang == 1 ) {
-				$body = str_replace( '[firstname]', $user->customer_firstname, $template->template_text );
-				$this->send( $user->email, 'info@goodiebox.hu', 'Sikeres megrendelés', $body );
+				$body = str_replace( '[firstname]', $user->customer_firstname, $template->template_text  );
+				$this->send( $user->email, 'info@goodiebox.hu', 'Sikeres megrendelés', $body,'order_' . $order->id . '.pdf' );
 			} else {
 				$body = str_replace( '[firstname]', $user->customer_firstname, $template->template_text_eng );
-				$this->send( $user->email, 'info@goodiebox.hu', 'Order has been received', $body );
+				$this->send( $user->email, 'info@goodiebox.hu', 'Order has been received', $body, 'order_' . $order->id . '.pdf' );
 			}
 		}
 
