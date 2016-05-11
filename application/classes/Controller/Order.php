@@ -66,10 +66,12 @@ class Controller_Order extends Controller_Core {
 			$products = ORM::factory('OrderProducts')->where('order_id','=',$order->id)->find_all();
 			$total_cart_price = 0;
 			$prods = array();
+			$weight = 0;
 			foreach($products as $product){
 				$prod = ORM::factory('Products',$product->product_id);
 				$subtotal     = $prod->price * $product->product_qty;
 				$total_cart_price += $subtotal;
+				$weight += $product->weight;
 				$temp = array(
 						'prod_code' =>   $prod->product_number,
 						'prod_qty' => $product->product_qty,
@@ -80,6 +82,8 @@ class Controller_Order extends Controller_Core {
 				$prods[] = $temp;
 			}
 			$total_price = $total_cart_price;
+			$shipping_calc = $this->shipping_calc($weight);
+			$pr = ($total_price>=8000)?$total_price:$total_cart_price + $shipping_calc;
 		} else {
 			$discount    = $order->package->price - $order->total_price + $pr;
 			$total_price = $order->package->price - $discount;
