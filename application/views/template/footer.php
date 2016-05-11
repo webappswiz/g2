@@ -3,7 +3,7 @@
 <footer class="main-footer">
 	<div class="row flx-center footer-top">
 		<?php
-		$allowed = array('Main','Specials','Kutyusaink','Partnerek');
+		$allowed = array('Main','Kutyusaink','Partnerek');
 		?>
 		<?php if(in_array(Request::current()->controller(),$allowed)): ?>
 		<div class="content-box text-center">
