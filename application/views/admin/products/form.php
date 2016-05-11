@@ -184,6 +184,7 @@
 		?>
 	</form><br/>
 	<?php if($model->id):?>
+			<?php echo $model->id;?>
 	<div class="control-group" style="text-align: center">
 	<?php
 		if(count($product_images)>0){
