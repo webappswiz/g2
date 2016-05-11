@@ -127,19 +127,23 @@
 				<!-- end .col-center-->
 				<div class="col-right">
 					<div class="gray-wall rad-5">
-						<h2 class="text-center">Delivery</h2>
+						<h2 class="text-center">INGYENES HÁZHOZSZÁLLÍTÁS</h2>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. </p>
+						<p>Rendelj 8000 Ft felett a Goodieshopból és a házhozszállítási díjat elengedjük! Nézz körbe és
+							válogass a kutyusod kedvére!</p>
 
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. </p>
+						<p>A Goodieshopban található termékeket kizárólag azonnali bankkártyás fizetéssel (Simple Online
+							Fizetési Rendszer) lehet megrendelni! A házhozszállítási díj a kosárba rakott termékek
+							összsúlya szerint automaikusan hozzáadódik a végösszeghez (lásd: Általános Szerződési
+							Feltételek).
 
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-							pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+						</p>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. </p>
+						<p>A Goodieshopban megrendelt termékek kiszállítása 2-3 munkanapon belül teljesül. A megrendelt
+							termékek csomagolása nem a Goodiebox egyedi mintás dobozba történik, hanem buborékos
+							borítékba vagy sima kartondobozba a megrendelt termékek mennyiségétől és minőségétől
+							függően.</p>
+
 					</div>
 				</div>
 				<!-- end .col-right-->
@@ -195,11 +199,11 @@
 					?>
 					<div id="tabs-4">
 						<div class="video-box">
-							<?php if(isset($matches[1])): ?>
-							<iframe width="1140" height="640"
-							        src="https://www.youtube.com/embed/<?php echo $matches[1]; ?>" frameborder="0"
-							        allowfullscreen></iframe>
-							<?php endif;?>
+							<?php if ( isset( $matches[1] ) ): ?>
+								<iframe width="1140" height="640"
+								        src="https://www.youtube.com/embed/<?php echo $matches[1]; ?>" frameborder="0"
+								        allowfullscreen></iframe>
+							<?php endif; ?>
 						</div>
 					</div>
 				<?php endif; ?>
