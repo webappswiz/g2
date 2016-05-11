@@ -71,7 +71,7 @@ class Controller_Order extends Controller_Core {
 				$prod = ORM::factory('Products',$product->product_id);
 				$subtotal     = $prod->price * $product->product_qty;
 				$total_cart_price += $subtotal;
-				$weight += $product->weight;
+				$weight += $prod->weight;
 				$temp = array(
 						'prod_code' =>   $prod->product_number,
 						'prod_qty' => $product->product_qty,
