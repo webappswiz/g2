@@ -1,10 +1,6 @@
 <script type="text/javascript">
 	$(function () {
-		$("#tabs").tabs({
-			defaultTab: "#puppy",
-			updateHash: false,
 
-		});
 		<?php
 				if(isset($_REQUEST['new'])){
 					echo "$('#puppy_tab').trigger('click');";

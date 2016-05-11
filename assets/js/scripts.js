@@ -253,6 +253,7 @@ $(document).ready(function () {
 
 // FAQ Accordion
 $(document).ready(function () {
+    $("#tabs").tabs();
     $('.faq li').click(function () {
         console.log($(this).find(':after'));
         $(this).find('h3.rad-5').toggleClass('active');
