@@ -177,7 +177,7 @@
 													src="<?php echo $img_path; ?>"></a>
 
 
-											<div class="row justify">
+											<div class="row flx-justify">
 												<h2>
 													<a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id ?>"><?php echo $product->product_name ?></a>
 												</h2><?php if ($product->on_sale==1): ?>
