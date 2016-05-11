@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="" />
+    <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/catalog/product.php" afterPath="$PROJECT_DIR$/application/views/catalog/product.php" />
+    </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -21,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43670887">
+            <state vertical-scroll-proportion="0.0">
               <caret line="282" column="52" selection-start-line="282" selection-start-column="52" selection-end-line="282" selection-end-column="52" />
               <folding>
                 <marker date="1462965989253" expanded="true" signature="10918:10958" placeholder="..." />
@@ -38,6 +40,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/catalog/product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5458861">
+              <caret line="197" column="37" selection-start-line="197" selection-start-column="37" selection-end-line="197" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -174,7 +186,6 @@
         <option value="$PROJECT_DIR$/application/classes/Controller/Order.php" />
         <option value="$PROJECT_DIR$/application/views/order/index.php" />
         <option value="$PROJECT_DIR$/application/views/kutyusaink/fotok.php" />
-        <option value="$PROJECT_DIR$/application/views/catalog/product.php" />
         <option value="$PROJECT_DIR$/application/views/template/footer.php" />
         <option value="$PROJECT_DIR$/application/views/order/step3.php" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
@@ -185,6 +196,7 @@
         <option value="$PROJECT_DIR$/application/views/user_session/login.php" />
         <option value="$PROJECT_DIR$/assets/css/karam.css" />
         <option value="$PROJECT_DIR$/application/views/main/index.php" />
+        <option value="$PROJECT_DIR$/application/views/catalog/product.php" />
       </list>
     </option>
   </component>
@@ -335,51 +347,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="user_session" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="catalog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -964,14 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/catalog/product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.036392406">
-          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/catalog/category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1046,14 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/catalog/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="207" column="45" selection-start-line="207" selection-start-column="45" selection-end-line="207" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/karam.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1064,11 +1016,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43670887">
+        <state vertical-scroll-proportion="0.0">
           <caret line="282" column="52" selection-start-line="282" selection-start-column="52" selection-end-line="282" selection-end-column="52" />
           <folding>
             <marker date="1462965989253" expanded="true" signature="10918:10958" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/catalog/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="207" column="45" selection-start-line="207" selection-start-column="45" selection-end-line="207" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/catalog/product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5458861">
+          <caret line="197" column="37" selection-start-line="197" selection-start-column="37" selection-end-line="197" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
