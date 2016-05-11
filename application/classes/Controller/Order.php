@@ -83,7 +83,7 @@ class Controller_Order extends Controller_Core {
 			}
 			$total_price = $total_cart_price;
 			$shipping_calc = $this->shipping_calc($weight);
-			$pr = ($total_price>=8000)?$total_price:$total_cart_price + $shipping_calc;
+			$pr = ($total_price>=8000)?0:$shipping_calc;
 		} else {
 			$discount    = $order->package->price - $order->total_price + $pr;
 			$total_price = $order->package->price - $discount;
