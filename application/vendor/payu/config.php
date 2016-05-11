@@ -35,7 +35,7 @@ $config = array(
 	//date of transaction
 	'LOGGER'        => false,
 	//transaction log
-	'LOG_PATH'      => '/var/www/vhosts/goodiebox.karam.org.ua',
+	'LOG_PATH'      => '/var/www/vhosts/goodiebox.karam.org.ua/transaction.log',
 	//path of log file
 	'BACK_REF'      => 'http://' . $_SERVER['HTTP_HOST'] . '/order/success',
 	//url of payu payment backref page
