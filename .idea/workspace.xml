@@ -7,6 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/products/form.php" afterPath="$PROJECT_DIR$/application/views/admin/products/form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/responsive.css" afterPath="$PROJECT_DIR$/assets/css/responsive.css" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,26 +61,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responsive.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="responsive.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/responsive.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5666666">
-              <caret line="255" column="27" selection-start-line="255" selection-start-column="27" selection-end-line="255" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="254" column="25" selection-start-line="254" selection-start-column="25" selection-end-line="254" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/products/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43601894">
-              <caret line="186" column="34" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
               <folding>
-                <marker date="1462998872563" expanded="true" signature="8132:8343" placeholder="..." />
-                <marker date="1462998872563" expanded="true" signature="8214:8238" placeholder="..." />
-                <marker date="1462998872563" expanded="true" signature="8612:8827" placeholder="..." />
-                <marker date="1462998872563" expanded="true" signature="8696:8720" placeholder="..." />
+                <marker date="1462998902195" expanded="true" signature="8104:8315" placeholder="..." />
+                <marker date="1462998902195" expanded="true" signature="8186:8210" placeholder="..." />
+                <marker date="1462998902195" expanded="true" signature="8584:8799" placeholder="..." />
+                <marker date="1462998902195" expanded="true" signature="8668:8692" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -170,8 +171,8 @@
         <option value="$PROJECT_DIR$/application/classes/Controller/Catalog.php" />
         <option value="$PROJECT_DIR$/application/views/catalog/product.php" />
         <option value="$PROJECT_DIR$/assets/css/karam.css" />
-        <option value="$PROJECT_DIR$/assets/css/responsive.css" />
         <option value="$PROJECT_DIR$/application/views/admin/products/form.php" />
+        <option value="$PROJECT_DIR$/assets/css/responsive.css" />
       </list>
     </option>
   </component>
@@ -1069,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5666666">
-          <caret line="255" column="27" selection-start-line="255" selection-start-column="27" selection-end-line="255" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/Controller/Admin/Products.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1087,14 +1080,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/products/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43601894">
-          <caret line="186" column="34" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
           <folding>
-            <marker date="1462998872563" expanded="true" signature="8132:8343" placeholder="..." />
-            <marker date="1462998872563" expanded="true" signature="8214:8238" placeholder="..." />
-            <marker date="1462998872563" expanded="true" signature="8612:8827" placeholder="..." />
-            <marker date="1462998872563" expanded="true" signature="8696:8720" placeholder="..." />
+            <marker date="1462998902195" expanded="true" signature="8104:8315" placeholder="..." />
+            <marker date="1462998902195" expanded="true" signature="8186:8210" placeholder="..." />
+            <marker date="1462998902195" expanded="true" signature="8584:8799" placeholder="..." />
+            <marker date="1462998902195" expanded="true" signature="8668:8692" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="254" column="25" selection-start-line="254" selection-start-column="25" selection-end-line="254" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
