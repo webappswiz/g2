@@ -24,6 +24,10 @@ endif;
 ?>
 <script type="text/javascript">
 	$(document).ready(function () {
+
+
+		$('#customer_email').attr('autocomplete', 'off');
+
 		var ship_cost = 0;
 
 		$('#customer_email').on('blur', function () {
