@@ -31,6 +31,7 @@
 						template</a></li>
 				<li <?= ( $model->type == 6 ) ? 'class="active"' : "" ?>><a href="/admin/templates/edit/6">Cash on
 						delivery email template</a></li>
+				<li <?= ( $model->type == 8 ) ? 'class="active"' : "" ?>><a href="/admin/templates/edit/8">Goodieshop email template</a></li>
 				<li <?= ( $model->type == 3 ) ? 'class="active"' : "" ?>><a href="/admin/templates/edit/3">Gift email
 						template</a></li>
 				<li <?= ( $model->type == 4 ) ? 'class="active"' : "" ?>><a href="/admin/templates/edit/4">Invite email
