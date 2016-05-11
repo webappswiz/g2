@@ -1,7 +1,7 @@
 <section>
 	<div class="row flx-center">
 		<div class="registration-form">
-			<h1 class="text-center">Login</h1>
+			<h1 class="text-center">Belépés</h1>
 			<form action="<?php echo URL::site( 'user_session/login' ); ?>" method="POST" class="flx flx-column">
 				<input class="rounded" type="text" name="username" placeholder="<?php echo __( 'E-mail cím' ); ?>">
 				<input class="rounded" type="password" name="password" placeholder="<?php echo __( 'Jelszó' ); ?>">

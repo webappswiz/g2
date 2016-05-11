@@ -1,7 +1,7 @@
 <section>
 	<div class="row flx-center">
 		<div class="content-box partners">
-			<h1 class="text-center">Partners</h1>
+			<h1 class="text-center">Partnereink</h1>
 
 			<div class="row flx-around flx-middle">
 				<a href="https://www.purina-proplan.hu/" target="blank"><img class="" height="60"
