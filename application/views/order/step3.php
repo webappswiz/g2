@@ -307,7 +307,7 @@ if ( isset( $session['step2'] ) ) {
 
 									?>
 									<input type="text" name="customer_email" id="customer_email" value="<?= $email ?>"
-									       placeholder="<?php echo __( 'E-mail cím*' ); ?>" required>
+									       placeholder="<?php echo __( 'E-mail cím*' ); ?>" required autocomplete="off">
 								<?php endif; ?>
 								<input type="text" name="customer_telephone" id="customer_telephone"
 								       value="<?= ( $current_user ) ? $current_user->customer_telephone : ''; ?>"
