@@ -252,7 +252,7 @@
   #step-one, #step-two {
     padding: 0 10px;
     box-sizing: border-box; }
-  .footer-bottom .row.flex-around.content-box {
+  .footer-bottom .row.flx.content-box {
     flex-direction: column;
     align-items: center; }
 }
