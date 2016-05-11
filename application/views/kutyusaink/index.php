@@ -1,7 +1,7 @@
 <section>
 	<div class="row flx-center">
 		<div class="content-box page-title">
-			<h1 class="text-center"><?php echo __( 'Kutyusaink + Dobozaink' ); ?></h1>
+			<h1 class="text-center"><?php echo __( 'Goodieboxosok' ); ?></h1>
 		</div>
 		<!-- end .content-box-->
 	</div>
@@ -13,43 +13,47 @@
 		<!-- Photo ====-->
 		<section>
 			<div class="category-box">
-				<div class="category-title"><a><?php echo __( 'Goodiebox fotók' ); ?></a><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok">SEE MORE</a></div>
-				<div class="row flx-center">
-					<div class="content-box photo">
-						<div class="row flx-justify">
-							<img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-366.jpg">
-							<img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-367.jpg">
-							<img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-368.jpg">
-							<img src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-369.jpg">
-						</div>
-						<!-- end .row.flx-justify-->
+				<div class="category-title"><a><?php echo __( 'Goodiebox fotók' ); ?></a><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok">Nézd meg a többit is</a></div>
+				<div class="row flx-center gallery-carusel-holder">
+					<div id="gallery-carusel" class="carusel-container">
+						<ul class="row flx-justify">
+							<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?jan=1"
+							                    class="gallery-link"><img
+											src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-366.jpg"></a>
+
+								<h2 class="text-center">Januar 2016</h2>
+							</li>
+							<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?dec=1"
+							                    class="gallery-link"><img
+											src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-367.jpg"></a>
+
+								<h2 class="text-center">December 2015</h2>
+							</li>
+							<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?nov=1"
+							                    class="gallery-link"><img
+											src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-368.jpg"></a>
+
+								<h2 class="text-center">November 2016</h2>
+							</li>
+							<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?oct=1"
+							                    class="gallery-link"><img
+											src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-369.jpg"></a>
+
+								<h2 class="text-center">Október 2016</h2>
+							</li>
+						</ul>
 					</div>
-					<!-- end .content-box.photo-->
 				</div>
-				<!-- end .row.flx-center-->
 			</div>
 		</section>
 		<!-- Video ====-->
 		<section>
 			<div class="category-box">
-				<div class="category-title"><a><?php echo __( 'Goodiebox videók' ); ?></a><a href="<?= URL::base( true, false ) ?>kutyusaink/video">SEE MORE</a></div>
+				<div class="category-title"><a><?php echo __( 'Goodiebox videók' ); ?></a><a href="https://www.youtube.com/channel/UCAnqUKt9dkY7Tw2kndO9JAA">Nézd meg a többit is</a></div>
 				<div class="video-box">
 					<iframe width="1140" height="640"
 					        src="https://www.youtube.com/embed/videoseries?list=PL4ZnDVm3eIp0fjo7W2dGCdirkuboJ_kzt&loop=1"
 					        frameborder="0" allowfullscreen></iframe>
-				</div>
-			</div>
-		</section>
-		<!-- Goodiebox Carusel ====-->
-		<section>
-			<div class="category-box">
-				<div class="category-title"><a><?php echo __( 'Meglepi dobozaink' ); ?></a><a href="<?= URL::base( true, false ) ?>kutyusaink/doboz">SEE MORE</a></div>
-				<div id="carusel-goodiebox" class="la-carusel">
-					<ul>
-						<li><img src="<?= URL::base( true, false ) ?>assets/img/photos/plus-februar-large.jpg"></li>
-						<li><img src="<?= URL::base( true, false ) ?>assets/img/photos/plus-januar-large.jpg"></li>
-						<li><img src="<?= URL::base( true, false ) ?>assets/img/photos/plus-december-large.jpg"></li>
-					</ul>
 				</div>
 			</div>
 		</section>
