@@ -3,20 +3,20 @@
  * Includes:
  * Copyright jQuery Foundation and other contributors; Licensed MIT */
 
-(function ($) {
-    $.fn.touchScrolling = function (max) {
+(function($){
+    $.fn.touchScrolling = function(max){
         var startPos = 0;
         var semiPos = 0;
         //console.log(semiPos);
         var x = 0;
         self = $(this);
 
-        self.bind('touchstart', function (event) {
+        self.bind('touchstart', function(event) {
             var e = event.originalEvent;
             startPos = self.scrollLeft() + e.touches[0].pageX
         });
 
-        self.bind('touchmove', function (event) {
+        self.bind('touchmove', function(event) {
             var e = event.originalEvent;
             // var transX = $(this).css('transform').split(",");
             // var semiPos = +transX[4];
@@ -30,7 +30,7 @@
             e.preventDefault();
         });
 
-        self.bind('touchend', function (event) {
+        self.bind('touchend', function(event) {
             if (x > 0) {
                 x = 0;
             } else if (x < -max) {
@@ -40,32 +40,31 @@
             semiPos = x;
         });
     };
-    jQuery.fn.responsiveCarusel = function (options) {
+    jQuery.fn.responsiveCarusel = function(options){
 
-        if ($(this).length == 0) {
-            return;
-        }
+        if ($(this).length == 0) {return;}
 
         // Defaul Settings
         defaultSettings = {
-            'items': '1',
-            'controlPosition': 'beside',
-            'controlPositionX': '40',
-            'controlColor': '#f79320'
+            'items' : '1',
+            'controlPosition' : 'beside',
+            'controlPositionX' : '40',
+            'controlColor' : '#f79320'
         };
         var settings = $.extend({}, defaultSettings, options);
 
         // Add Viewport and controls
         $(this).css({
-            'position': 'relative',
-            'display': 'flex',
-            'justify-content': 'center',
-            'margin': 'auto'
+            'position' : 'relative',
+            'display' : 'flex',
+            'justify-content' : 'center',
+            'margin' : 'auto'
         });
-        $(this).find('ul').css({'transition': '.2s', 'flex-wrap': 'no-wrap'});
+        $(this).find('ul').css({'transition' : '.2s', 'flex-wrap' : 'no-wrap'});
         $(this).find('ul').wrap("<div class='la-viewport'></div>").css("display", "flex");
         $(this).prepend("<span class='la-arrow-left la-rounded la-color'>");
         $(this).append("<span class='la-arrow-right la-rounded la-color'>");
+
         console.log($(this).find('li').length);
         console.log($(this).find('li').width());
 
@@ -81,6 +80,7 @@
             $(this).find('li').css("min-width", viewportWidth + "px");
         } else {
             var itemWidth = $(this).find('li').width();
+            var itemOuterWidth = $(this).find('li').outerWidth(true);
         }
 
         // Set Control Position
@@ -91,16 +91,16 @@
         settings.controlPositionX = (settings.controlPosition == 'above') ? settings.controlPositionX : -(+(settings.controlPositionX) + ($(this).find('.la-arrow-left').width()));
 
         ctrlLeft.css({
-            'top': settings.controlPositionY + 'px',
-            'left': settings.controlPositionX + 'px'
+            'top' : settings.controlPositionY + 'px',
+            'left' : settings.controlPositionX + 'px'
         });
         ctrlRight.css({
-            'top': settings.controlPositionY + 'px',
-            'right': settings.controlPositionX + 'px'
+            'top' : settings.controlPositionY + 'px',
+            'right' : settings.controlPositionX + 'px'
         });
 
         // Set Control Color
-        $(this).find('.la-color').css({'color': settings.controlColor, 'border-color': settings.controlColor});
+        $(this).find('.la-color').css({'color' : settings.controlColor, 'border-color' : settings.controlColor});
 
         // Set Resposive Viewport Width & Controls Position
         if (((viewportWidth + 150) >= $('body').width()) && itemWidth < ($('body').width() - 150)) {
@@ -116,7 +116,7 @@
             var viewportWidth = $('.la-viewport').width();
 
         } else if (itemWidth >= ($('body').width() - 150) && itemWidth <= ($('body').width() - 40)) {
-            $('.la-viewport').width(itemWidth);
+            $('.la-viewport').width(itemOuterWidth);
 
             if (settings.controlPosition == 'beside') {
                 ctrlLeft.removeClass('la-rounded').addClass('slim');
@@ -148,13 +148,11 @@
         // Set Margin
         if (settings.items > 1) {
             var itemMarginRight = Math.floor((viewportWidth - itemWidth * settings.items) / (settings.items - 1));
-            $(this).find('li').css({'margin-right': itemMarginRight + 'px'});
+            $(this).find('li').css({'margin-right' : itemMarginRight + 'px'});
         } else {
             var itemMargin = Math.floor((viewportWidth - itemWidth) / 2);
-            if (itemMargin <= 0) {
-                itemMargin = 10;
-            }
-            $(this).find('li').css({'margin-right': itemMargin + 'px', 'margin-left': itemMargin + 'px'});
+            if(itemMargin <= 0) {itemMargin = 10;}
+            $(this).find('li').css({'margin-right' : itemMargin + 'px', 'margin-left' : itemMargin + 'px'});
         }
 
         // Get Item Lenght, Slide Width; Set Counter
@@ -163,9 +161,9 @@
         var count = 0;
 
         // Right click
-        $(this).find('.la-arrow-right').click(function () {
-            if (itemLength - count > settings.items) {
-                x = count * -slideWidth - slideWidth;
+        $(this).find('.la-arrow-right').click(function(){
+            if (itemLength - count > settings.items){
+                x = count * -slideWidth -slideWidth;
                 $(this).prev().find('ul').css({"transform": "translateX(" + x + "px)"});
                 count++;
             } else {
@@ -175,9 +173,9 @@
         });
 
         // Left click
-        $(this).find('.la-arrow-left').click(function () {
-            if (count > 0) {
-                x = count * -slideWidth + slideWidth;
+        $(this).find('.la-arrow-left').click(function(){
+            if (count > 0){
+                x = count * -slideWidth +slideWidth;
                 $(this).next().find('ul').css({"transform": "translateX(" + x + "px)"});
                 count--;
             } else {
