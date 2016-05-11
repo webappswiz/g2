@@ -7,7 +7,7 @@
 <section>
 	<div class="row flx-center">
 		<div class="content-box page-title">
-			<h1 class="text-center">Shop</h1>
+			<h1 class="text-center">Goodieshop</h1>
 		</div>
 		<!-- end .content-box-->
 	</div>
@@ -56,11 +56,11 @@
 						<ul class="text-gray">
 								<li>
 									<input id="age-1" type="checkbox" name="age[]" value="1">
-									<label for="age-1" class="gray-box__green-check">3 Hónap</label>
+									<label for="age-1" class="gray-box__green-check">3+ Hónap</label>
 								</li>
 							<li>
 								<input id="age-2" type="checkbox" name="age[]" value="2">
-								<label for="age-2" class="gray-box__green-check">4 Hónap</label>
+								<label for="age-2" class="gray-box__green-check">4+ Hónap</label>
 							</li>
 							<li>
 								<input id="age-3" type="checkbox" name="age[]" value="3">
@@ -72,7 +72,7 @@
 							</li>
 						</ul>
 					</div>
-					<input type="submit" class="btn large solid gray" value="Mentés">
+					<input type="submit" class="btn large solid gray" value="KERESÉS">
 				</form>
 
 				<?php if ( isset( $_SESSION['cart'] ) && count( $_SESSION['cart'] ) > 0 ): ?>
