@@ -19,7 +19,7 @@
 		<div class="content-box faq">
 			<h1 class="text-center"><?php echo __( 'Goodiebox fotók' ); ?></h1>
 			<div id="fotok">
-				<div id="navs">
+				<div id="navs" class="text-center">
 
 					<a class="months <?php echo (!isset($_REQUEST['dec']) && !isset($_REQUEST['nov']) && !isset($_REQUEST['oct']))?'active':''?>" data-month="jan" style="cursor: pointer" id="jan"
 					   style="font-family: 'La-chata';font-size: 18px">2016 <?php echo __( 'Január' ); ?></a>
