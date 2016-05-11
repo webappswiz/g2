@@ -145,3 +145,5 @@
 .tovabb{
     cursor: pointer;
 }
+
+.product-line li {display: flex}
