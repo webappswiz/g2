@@ -39,6 +39,7 @@ class Controller_Catalog extends Controller_Core {
 			$this->review();
 		}
 		$this->reviews = ORM::factory('ProductReviews')->where('product_id','=',(int)$this->product->id)->and_where('approved','=',1)->find_all();
+		$this->category = ORM::factory('Categories',$this->product->product_cat);
 	}
 
 	protected function review(){

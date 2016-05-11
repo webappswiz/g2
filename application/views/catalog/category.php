@@ -10,6 +10,9 @@
 </section>
 <div class="row flx-center">
 	<div class="content-box">
+		<div class="row breadcrumbs">
+			<a href="<?php echo URL::base( true, false ); ?>">Home</a> -> <a href="<?php echo URL::base( true, false ); ?>catalog">Catalog</a> -> <a href="<?php echo URL::base( true, false ); ?>catalog/category/<?php echo $category->id?>"><?php echo $category->cat_name?></a>
+		</div>
 		<div class="row">
 			<!-- Aside ===========================================-->
 			<aside class="catalog-aside col-3">
