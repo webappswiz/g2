@@ -89,10 +89,10 @@
 				<div class="controls">
 					<?php $sizes = json_decode($model->product_size);?>
 					<select id="product_size" name="product_size[]" class="input-xxlarge" multiple="multiple">
-						<option value="1" <?php echo (in_array(1,$sizes)) ? 'selected="selected"' : '' ?>>Small</option>
-						<option value="2" <?php echo (in_array(2,$sizes)) ? 'selected="selected"' : '' ?>>Medium</option>
-						<option value="3" <?php echo (in_array(3,$sizes)) ? 'selected="selected"' : '' ?>>Large</option>
-						<option value="4" <?php echo (in_array(4,$sizes)) ? 'selected="selected"' : '' ?>>Good for all dog sizes</option>
+						<option value="1" <?php echo (is_array($sizes) && in_array(1,$sizes)) ? 'selected="selected"' : '' ?>>Small</option>
+						<option value="2" <?php echo (is_array($sizes) && in_array(2,$sizes)) ? 'selected="selected"' : '' ?>>Medium</option>
+						<option value="3" <?php echo (is_array($sizes) && in_array(3,$sizes)) ? 'selected="selected"' : '' ?>>Large</option>
+						<option value="4" <?php echo (is_array($sizes) && in_array(4,$sizes)) ? 'selected="selected"' : '' ?>>Good for all dog sizes</option>
 					</select>
 				</div>
 			</div>
