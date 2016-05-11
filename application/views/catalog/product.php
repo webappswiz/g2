@@ -128,17 +128,13 @@
 				<div class="col-right">
 					<div class="gray-wall rad-5">
 						<h2 class="text-center">INGYENES HÁZHOZSZÁLLÍTÁS</h2>
-
 						<p>Rendelj 8000 Ft felett a Goodieshopból és a házhozszállítási díjat elengedjük! Nézz körbe és
 							válogass a kutyusod kedvére!</p>
-
 						<p>A Goodieshopban található termékeket kizárólag azonnali bankkártyás fizetéssel (Simple Online
 							Fizetési Rendszer) lehet megrendelni! A házhozszállítási díj a kosárba rakott termékek
 							összsúlya szerint automaikusan hozzáadódik a végösszeghez (lásd: Általános Szerződési
 							Feltételek).
-
 						</p>
-
 						<p>A Goodieshopban megrendelt termékek kiszállítása 2-3 munkanapon belül teljesül. A megrendelt
 							termékek csomagolása nem a Goodiebox egyedi mintás dobozba történik, hanem buborékos
 							borítékba vagy sima kartondobozba a megrendelt termékek mennyiségétől és minőségétől
