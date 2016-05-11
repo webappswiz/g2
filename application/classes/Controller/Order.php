@@ -403,7 +403,12 @@ class Controller_Order extends Controller_Core {
 		$puppy = ORM::factory( 'Puppy' );
 		if ( ! isset( $step1['puppy_id'] ) ) {
 			$puppy->puppy_name    = $step1['puppy_name'];
-			$puppy->gender        = $step1['gender'];
+			if($step1['gender']=='Lány' || $step1['gender']=='Girl'){
+				$gender = 0;
+			} else {
+				$gender = 1;
+			}
+			$puppy->gender        = $gender;
 			$puppy->years         = $step1['years'];
 			$puppy->months        = $step1['months'];
 			$puppy->selected_size = $step1['selected_size'];

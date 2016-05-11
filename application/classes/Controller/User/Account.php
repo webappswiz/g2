@@ -107,7 +107,14 @@ class Controller_User_Account extends Controller_Core {
 			$puppy                = ORM::factory( 'Puppy' );
 			$puppy->user_id       = $user->id;
 			$puppy->puppy_name    = $_POST['puppy_name'];
-			$puppy->gender        = $_POST['gender'];
+
+			if($_POST['gender']=='Lány' || $_POST['gender']=='Girl'){
+				$gender = 0;
+			} else {
+				$gender = 1;
+			}
+
+			$puppy->gender        = $gender;
 			$puppy->years         = (int) $_POST['years'];
 			$puppy->months        = (int) $_POST['months'];
 			$puppy->selected_size = $_POST['selected_size'];
@@ -133,7 +140,12 @@ class Controller_User_Account extends Controller_Core {
 			            ->and_where( 'user_id', '=', $user->id )->find();
 			if ( $puppy->loaded() ) {
 				$puppy->puppy_name    = $_POST['puppy_name'];
-				$puppy->gender        = $_POST['gender'];
+				if($_POST['gender']=='Lány' || $_POST['gender']=='Girl'){
+					$gender = 0;
+				} else {
+					$gender = 1;
+				}
+				$puppy->gender        = $gender;
 				$puppy->years         = (int) $_POST['years'];
 				$puppy->months        = (int) $_POST['months'];
 				$puppy->selected_size = $_POST['selected_size'];

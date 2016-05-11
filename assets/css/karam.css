@@ -273,3 +273,13 @@
     font-size: 16px;
     font-weight: 600;
 }
+.my-office .my-puppies .new-puppy .date-dropdown-holder{
+    width: 270px;
+}
+
+.my-office .my-puppies .new-puppy .date-dropdown-holder .container {
+    width: 80px; }
+
+.new-puppy .date-dropdown-holder .container{
+    margin-right: 5px;
+}

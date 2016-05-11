@@ -314,16 +314,15 @@
 									</div>
 								</div>
 								<div class="row flx-justify flx-nowrap">
-									<div class="gender-select"><span class="toggle"><?php echo __('Kutyus neme*'); ?></span>
 
-										<div class="drop-box">
-											<input id="gender_male" type="radio" name="gender" value="0" data-gender="<?php echo __('Lány'); ?>">
-											<label for="gender_male"><?php echo __('Lány'); ?></label>
-											<input id="gender_female" type="radio" name="gender" value="1" data-gender="<?php echo __('Fiú'); ?>">
-											<label for="gender_female"><?php echo __('Fiú'); ?></label>
-										</div>
-									</div>
 									<div class="date-dropdown-holder">
+										<div class="container">
+											<input type="text" name="gender" placeholder="<?php echo __( 'Kutyus neme*' ); ?>" readonly required><span class="icon"></span>
+											<ul class="option gender">
+												<li><?php echo __( 'Lány' ); ?></li>
+												<li><?php echo __( 'Fiú' ); ?></li>
+											</ul>
+										</div>
 										<div class="container">
 											<input type="text" name="years" placeholder="Year" readonly><span class="icon"></span>
 											<ul class="option year">
