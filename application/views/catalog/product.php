@@ -132,7 +132,8 @@
 				<!-- end .col-center-->
 				<div class="col-right">
 					<div class="gray-wall rad-5">
-						<h2 class="text-center">INGYENES HÁZHOZSZÁLLÍTÁS</h2>
+						<h2 class="text-center">Fontos információ!</h2>
+						<p>INGYENES HÁZHOZSZÁLLÍTÁS</p>
 						<p>Rendelj 8000 Ft felett a Goodieshopból és a házhozszállítási díjat elengedjük! Nézz körbe és
 							válogass a kutyusod kedvére!</p>
 						<p>A Goodieshopban található termékeket kizárólag azonnali bankkártyás fizetéssel (Simple Online
