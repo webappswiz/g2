@@ -323,29 +323,30 @@ $time       = explode( ':', $date_array[1] );
 			<div class="row flx-center gallery-carusel-holder">
 				<div id="gallery-carusel" class="carusel-container">
 					<ul class="row flx-justify">
+
+						<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?apr=1"
+						                    class="gallery-link"><img
+									src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-482.jpg"></a>
+
+							<h2 class="text-center">2016 <?php echo __( 'Április' ); ?></h2>
+						</li>
+						<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?mar=1"
+						                    class="gallery-link"><img
+									src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-463.jpg"></a>
+
+							<h2 class="text-center">2016 <?php echo __( 'Március' ); ?></h2>
+						</li>
+						<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?feb=1"
+						                    class="gallery-link"><img
+									src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-424.jpg"></a>
+
+							<h2 class="text-center">2016 <?php echo __( 'Február' ); ?></h2>
+						</li>
 						<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?jan=1"
 						                    class="gallery-link"><img
-									src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-366.jpg"></a>
+										src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-366.jpg"></a>
 
-							<h2 class="text-center">Januar 2016</h2>
-						</li>
-						<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?dec=1"
-						                    class="gallery-link"><img
-									src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-367.jpg"></a>
-
-							<h2 class="text-center">December 2015</h2>
-						</li>
-						<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?nov=1"
-						                    class="gallery-link"><img
-									src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-368.jpg"></a>
-
-							<h2 class="text-center">November 2016</h2>
-						</li>
-						<li class="item"><a href="<?= URL::base( true, false ) ?>kutyusaink/fotok/?oct=1"
-						                    class="gallery-link"><img
-									src="<?= URL::base( true, false ) ?>assets/img/photos/goodiebox-img-369.jpg"></a>
-
-							<h2 class="text-center">Október 2016</h2>
+							<h2 class="text-center">2016 <?php echo __( 'Január' ); ?></h2>
 						</li>
 					</ul>
 				</div>
