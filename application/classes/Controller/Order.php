@@ -250,7 +250,19 @@ class Controller_Order extends Controller_Core {
 		//$pdf->Output(DOCROOT . 'orders/order_' . $order->id . '.pdf', 'F');
 		file_put_contents( DOCROOT . 'orders/order_' . $order->id . '.pdf', $output );
 
-		if ( $order->payment_status == 5 ) {
+
+		if($order->type==3){
+			$template = ORM::factory( 'Templates', 8 );
+			if ( $user->lang == 1 ) {
+				$body = str_replace( '[firstname]', $user->customer_firstname, $template->template_text );
+				$this->send( $user->email, 'info@goodiebox.hu', 'Sikeres megrendelés', $body );
+			} else {
+				$body = str_replace( '[firstname]', $user->customer_firstname, $template->template_text_eng );
+				$this->send( $user->email, 'info@goodiebox.hu', 'Order has been received', $body );
+			}
+		}
+
+		if ( $order->payment_status == 5 && $order->type!=3) {
 			$template = ORM::factory( 'Templates', 6 );
 			if ( $user->lang == 1 ) {
 				$body = str_replace( '[firstname]', $user->customer_firstname, $template->template_text );
@@ -259,7 +271,7 @@ class Controller_Order extends Controller_Core {
 				$body = str_replace( '[firstname]', $user->customer_firstname, $template->template_text_eng );
 				$this->send( $user->email, 'info@goodiebox.hu', 'Order has been received', $body );
 			}
-		} else {
+		} elseif($order->type!=3 && $order->payment_status != 5) {
 			$template = ORM::factory( 'Templates', 2 );
 			if ( $user->lang == 1 ) {
 				$body = str_replace( '[firstname]', $user->customer_firstname, $template->template_text );
