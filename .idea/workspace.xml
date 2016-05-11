@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/index.php" afterPath="$PROJECT_DIR$/application/views/main/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/karam.css" afterPath="$PROJECT_DIR$/assets/css/karam.css" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +26,10 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50949365">
-              <caret line="284" column="76" selection-start-line="284" selection-start-column="76" selection-end-line="284" selection-end-column="76" />
+            <state vertical-scroll-proportion="0.43670887">
+              <caret line="282" column="52" selection-start-line="282" selection-start-column="52" selection-end-line="282" selection-end-column="52" />
               <folding>
-                <marker date="1462964184797" expanded="true" signature="10918:10958" placeholder="..." />
+                <marker date="1462965989253" expanded="true" signature="10918:10958" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -186,8 +185,8 @@
         <option value="$PROJECT_DIR$/application/views/admin/products/form.php" />
         <option value="$PROJECT_DIR$/application/views/partnerek/index.php" />
         <option value="$PROJECT_DIR$/application/views/user_session/login.php" />
-        <option value="$PROJECT_DIR$/application/views/main/index.php" />
         <option value="$PROJECT_DIR$/assets/css/karam.css" />
+        <option value="$PROJECT_DIR$/application/views/main/index.php" />
       </list>
     </option>
   </component>
@@ -1067,10 +1066,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50949365">
-          <caret line="284" column="76" selection-start-line="284" selection-start-column="76" selection-end-line="284" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.43670887">
+          <caret line="282" column="52" selection-start-line="282" selection-start-column="52" selection-end-line="282" selection-end-column="52" />
           <folding>
-            <marker date="1462964184797" expanded="true" signature="10918:10958" placeholder="..." />
+            <marker date="1462965989253" expanded="true" signature="10918:10958" placeholder="..." />
           </folding>
         </state>
       </provider>
