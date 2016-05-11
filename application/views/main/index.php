@@ -278,8 +278,9 @@ $time       = explode( ':', $date_array[1] );
 									<?php endif; ?>
 								</a>
 
-								<div class="row flx-justify">
+								<div class="row">
 									<h2><?php echo $product->product_name; ?></h2>
+									<div class="flx-justify">
 									<?php if ( $product->on_sale == 1 ): ?>
 										<span class="ammount"><?php echo $product->sale_price; ?></span>
 										<span class="ammount old"><?php echo $product->price; ?></span>
@@ -292,7 +293,7 @@ $time       = explode( ':', $date_array[1] );
 										<input type="submit" name="add_to_cart" value="KOSÁRBA"
 										       class="btn solid pink">
 									</form>
-
+									</div>
 								</div>
 							</li>
 						<?php endforeach; ?>
