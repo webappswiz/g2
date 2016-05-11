@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/kutyusaink/fotok.php" afterPath="$PROJECT_DIR$/application/views/kutyusaink/fotok.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/main/index.php" afterPath="$PROJECT_DIR$/application/views/main/index.php" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,105 +23,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="345" column="18" selection-start-line="316" selection-start-column="12" selection-end-line="345" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.7993681">
+              <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
               <folding>
-                <marker date="1462965989253" expanded="true" signature="10918:10958" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user_account/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="188" column="61" selection-start-line="188" selection-start-column="61" selection-end-line="188" selection-end-column="61" />
-              <folding>
-                <marker date="1462980894904" expanded="true" signature="671:684" placeholder="..." />
-                <marker date="1462980894904" expanded="true" signature="4195:4230" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.419354">
-              <caret line="1793" column="1" selection-start-line="1791" selection-start-column="0" selection-end-line="1793" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="karam.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/karam.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.229508">
-              <caret line="273" column="18" selection-start-line="273" selection-start-column="18" selection-end-line="273" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/scripts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="46.967743">
-              <caret line="241" column="53" selection-start-line="241" selection-start-column="32" selection-end-line="241" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/kutyusaink/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fotok.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/kutyusaink/fotok.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.4344392">
-              <caret line="863" column="44" selection-start-line="863" selection-start-column="44" selection-end-line="863" selection-end-column="44" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="en.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/i18n/en.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.935484">
-              <caret line="106" column="12" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="12" />
-              <folding>
-                <marker date="1458926244014" expanded="true" signature="43793:43824" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="127015:127046" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="136668:136681" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="137649:137662" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="138219:138250" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="270422:270431" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="271415:271424" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="273787:273796" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="274780:274789" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="383389:383402" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="384388:384401" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="385715:385728" placeholder="..." />
-                <marker date="1458926244014" expanded="true" signature="386666:386679" placeholder="..." />
+                <marker date="1462986856592" expanded="true" signature="11085:11125" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -186,7 +94,6 @@
         <option value="$PROJECT_DIR$/application/views/admin/products/form.php" />
         <option value="$PROJECT_DIR$/application/views/partnerek/index.php" />
         <option value="$PROJECT_DIR$/application/views/user_session/login.php" />
-        <option value="$PROJECT_DIR$/application/views/main/index.php" />
         <option value="$PROJECT_DIR$/application/views/catalog/product.php" />
         <option value="$PROJECT_DIR$/assets/js/scripts.js" />
         <option value="$PROJECT_DIR$/application/classes/Controller/User/Account.php" />
@@ -194,6 +101,7 @@
         <option value="$PROJECT_DIR$/application/views/kutyusaink/index.php" />
         <option value="$PROJECT_DIR$/assets/css/karam.css" />
         <option value="$PROJECT_DIR$/application/views/kutyusaink/fotok.php" />
+        <option value="$PROJECT_DIR$/application/views/main/index.php" />
       </list>
     </option>
   </component>
@@ -968,59 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.419354">
-          <caret line="1793" column="1" selection-start-line="1791" selection-start-column="0" selection-end-line="1793" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user_account/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="188" column="61" selection-start-line="188" selection-start-column="61" selection-end-line="188" selection-end-column="61" />
-          <folding>
-            <marker date="1462980894904" expanded="true" signature="671:684" placeholder="..." />
-            <marker date="1462980894904" expanded="true" signature="4195:4230" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="46.967743">
-          <caret line="241" column="53" selection-start-line="241" selection-start-column="32" selection-end-line="241" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="345" column="18" selection-start-line="316" selection-start-column="12" selection-end-line="345" selection-end-column="18" />
-          <folding>
-            <marker date="1462965989253" expanded="true" signature="10918:10958" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/karam.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.229508">
-          <caret line="273" column="18" selection-start-line="273" selection-start-column="18" selection-end-line="273" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/kutyusaink/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/i18n/en.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.935484">
@@ -1052,6 +907,60 @@
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/kutyusaink/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69036335">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4186046">
+          <caret line="241" column="53" selection-start-line="241" selection-start-column="32" selection-end-line="241" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/karam.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87762237">
+          <caret line="273" column="18" selection-start-line="273" selection-start-column="18" selection-end-line="273" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48504984">
+          <caret line="1793" column="1" selection-start-line="1791" selection-start-column="0" selection-end-line="1793" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user_account/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52606636">
+          <caret line="188" column="61" selection-start-line="188" selection-start-column="61" selection-end-line="188" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1462980894904" expanded="true" signature="671:684" placeholder="..." />
+            <marker date="1462980894904" expanded="true" signature="4195:4230" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7993681">
+          <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+          <folding>
+            <marker date="1462986856592" expanded="true" signature="11085:11125" placeholder="..." />
           </folding>
         </state>
       </provider>

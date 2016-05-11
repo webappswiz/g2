@@ -101,7 +101,13 @@ $time       = explode( ':', $date_array[1] );
 						szülinapja közeleg, örökbe fogadtad, levizsgázott vagy csak annyira imádod, hogy a legédesebb
 						dologgal lepnéd meg, akkor a legjobb helyen jársz! Trendi, ízléses és kreatív módon segítünk
 						neked, hogy időt és pénzt spórolva a Te kutyusod lehessen a legmenőbb az utcában!</p>
+
+
+					<?php if ( $status == 1 ): ?>
 					<a href="/order" class="btn large solid pink"><?php echo _( "MEGRENDELEM" ); ?></a>
+					<?php else:?>
+						<a class="btn large solid pink gyere" href="#"><?php echo _( "MEGRENDELEM" ); ?></a>
+					<?php endif;?>
 				</div>
 				<!-- end .col-6-->
 				<div class="col-6"><img
