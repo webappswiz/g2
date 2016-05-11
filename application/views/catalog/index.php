@@ -16,10 +16,13 @@
 </section>
 <div class="row flx-center">
 	<div class="content-box">
+		<div class="row breadcrumbs">
+			<a href="#">Home</a> -> <a href="#">Catalog</a>
+		</div>
 		<div class="row flx-around">
-			<section>
-				<div class="rw"></div>
-			</section>
+
+
+
 			<!-- Aside ===========================================-->
 			<aside class="catalog-aside col-3">
 				<h2>Kategória:</h2>
