@@ -33,7 +33,7 @@ $config = array(
 	//payment method	 empty -> select payment method on PayU payment page OR [ CCVISAMC, WIRE, CASH, PAYU_MOBILE ]
 	'ORDER_DATE'    => date( "Y-m-d H:i:s" ),
 	//date of transaction
-	'LOGGER'        => false,
+	'LOGGER'        => true,
 	//transaction log
 	'LOG_PATH'      => '/var/www/vhosts/goodiebox.karam.org.ua/transaction.log',
 	//path of log file
