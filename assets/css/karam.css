@@ -147,3 +147,124 @@
 }
 
  .product-line li {display: flex}
+
+.my-office .my-puppies .edit-puppy h3 {
+    color: #fff;
+    padding: 0.8em 0;
+    margin-bottom: 20px; }
+
+.my-office .my-puppies .edit-puppy h3:hover {
+    cursor: pointer;
+}
+
+.my-office .my-puppies .edit-puppy form {
+    display: none;
+}
+
+.my-office .my-puppies .edit-puppy input[type="text"],
+.my-office .my-puppies .edit-puppy textarea {
+    width: 100%;
+    margin: 7px 0;
+    padding: 1em; }
+.my-office .my-puppies .edit-puppy textarea {
+    height: 150px; }
+.my-office .my-puppies .edit-puppy .img-upload-holder {
+    width: 80px;
+    height: 80px;
+    background-image: url("images/puppies-background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px; }
+.my-office .my-puppies .edit-puppy .puppies-avatar {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    vertical-align: middle; }
+.my-office .my-puppies .edit-puppy #uploadImg {
+    opacity: 0; }
+.my-office .my-puppies .edit-puppy #puppy-img-load {
+    display: none; }
+.my-office .my-puppies .edit-puppy label {
+    text-transform: none; }
+.my-office .my-puppies .edit-puppy .input-name-holder {
+    margin: 10px 0; }
+.my-office .my-puppies .edit-puppy .size-select label {
+    display: block;
+    margin: 7px 0; }
+.my-office .my-puppies .edit-puppy .size-select p {
+    margin: 2px 0;
+    font-size: 12px; }
+.my-office .my-puppies .edit-puppy .size-select .size-img-1,
+.my-office .my-puppies .edit-puppy .size-select .size-img-2,
+.my-office .my-puppies .edit-puppy .size-select .size-img-3 {
+    background-image: url("images/sprite-size2.png");
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 10px; }
+.my-office .my-puppies .edit-puppy .size-select .size-img-1 {
+    background-position: 6px center; }
+.my-office .my-puppies .edit-puppy .size-select .size-img-2 {
+    background-position: -52px center; }
+.my-office .my-puppies .edit-puppy .size-select .size-img-3 {
+    background-position: right center; }
+.my-office .my-puppies .edit-puppy .size-select #size_1:checked ~ .radio_green.s1:before,
+.my-office .my-puppies .edit-puppy .size-select #size_2:checked ~ .radio_green.s2:before,
+.my-office .my-puppies .edit-puppy .size-select #size_3:checked ~ .radio_green.s3:before {
+    background-position: center bottom; }
+.my-office .my-puppies .edit-puppy .date-dropdown-holder {
+    width: 220px; }
+.my-office .my-puppies .edit-puppy .date-dropdown-holder .container {
+    width: 100px; }
+.my-office .my-puppies .edit-puppy .date-dropdown-holder .container input[type="text"] {
+    padding: 1.3em; }
+.my-office .my-puppies .edit-puppy .date-dropdown-holder .icon {
+    top: 26px;
+    right: 2em; }
+.my-office .my-puppies .edit-puppy .date-holder:after {
+    content: '\f073';
+    font-family: 'FontAwesome';
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
+    line-height: 50px;
+    font-size: 18px; }
+.my-office .my-puppies .edit-puppy .gender-select {
+    display: inline-block;
+    background-color: #f5f4f4;
+    padding: 1.3em;
+    position: relative;
+    border-radius: 5px;
+    outline-color: #209b20;
+    width: 108px;
+    margin: 7px 0;
+    cursor: pointer; }
+.my-office .my-puppies .edit-puppy .gender-select .toggle:after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    margin: 0 0 0 1em; }
+.my-office .my-puppies .edit-puppy .gender-select .drop-box {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50px; }
+.my-office .my-puppies .edit-puppy .gender-select input[type="radio"] {
+    display: none; }
+.my-office .my-puppies .edit-puppy .gender-select label {
+    background-color: #f5f4f4;
+    padding: 1.3em;
+    display: block; }
+.my-office .my-puppies .edit-puppy .alergi-select p {
+    font-size: 14px; }
+.my-office .my-puppies .edit-puppy .alergi-select #alerg_yes:checked ~ .radio_green.a1:before,
+.my-office .my-puppies .edit-puppy .alergi-select #alerg_no:checked ~ .radio_green.a2:before {
+    background-position: center bottom; }
+.my-office .my-puppies .edit-puppy input.btn {
+    width: 100%;
+    padding: 0.4em;
+    outline: none; }

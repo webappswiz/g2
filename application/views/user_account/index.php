@@ -176,8 +176,100 @@
 											<input type="hidden" name="puppy_id" value="<?= $puppy->id ?>">
 											<input type="submit" name="submit" value="<?php echo __('Újra rendelem!'); ?>" class="btn solid green">
 										</form>&nbsp;&nbsp;
-										<a href="#" class="btn solid orange">Szerkesztés</a>
+										<a data-id="<?php echo $i; ?>" class="edit-puppy btn solid orange">Szerkesztés</a>
 									</div>
+								</div>
+								<div class="col-12 edit-puppy">
+									<form action="/user_account/editDog" method="POST" class="edit-puppy-<?php echo $i;?>" enctype="multipart/form-data">
+										<div class="row flx-middle">
+											<div class="img-upload-holder">
+												<?php if($puppy->img_name!=''):?>
+													<img style="opacity: 1" id="uploadImg" src="<?php echo URL::base( true, false ); ?>uploads/puppies/<?php echo $puppy->img_name?>"
+													     class="puppies-avatar rounded">
+												<?php else:?>
+													<img id="uploadImg" src="#"
+													     class="puppies-avatar rounded">
+												<?php endif;?>
+											</div>
+
+											<input id="puppy-img-load" type="file" name="puppy_img" accept="image/*">
+											<label for="puppy-img-load" class="btn solid green">Add photo</label>
+										</div>
+										<div class="row input-name-holder">
+											<input type="text" name="puppy_name" value="<?= $puppy->puppy_name ?>">
+										</div>
+										<div class="row flx-around radiobox-holder size-select">
+											<div class="item-box text-center text-small">
+												<input id="size_1" type="radio" name="selected_size" value="1" <?php echo ($puppy->selected_size == 1)?'checked':''; ?>>
+
+												<div class="size-img-1"></div>
+												<p><?php echo __('Icipici'); ?></p><span>(max 9kg)</span>
+												<label for="size_1" class="radio_green s1"></label>
+											</div>
+											<div class="item-box text-center text-small">
+												<input id="size_2" type="radio" name="selected_size" value="2" <?php echo ($puppy->selected_size == 2)?'checked':''; ?>>
+
+												<div class="size-img-2"></div>
+												<p><?php echo __('Éppen jó'); ?></p><span>(10-24kg)</span>
+												<label for="size_2" class="radio_green s2"></label>
+											</div>
+											<div class="item-box text-center text-small">
+												<input id="size_3" type="radio" name="selected_size" value="3" <?php echo ($puppy->selected_size == 3)?'checked':''; ?>>
+
+												<div class="size-img-3"></div>
+												<p><?php echo __('Igazi óriás'); ?></p><span>(25+kg)</span>
+												<label for="size_3" class="radio_green s3"></label>
+											</div>
+										</div>
+										<div class="row flx-justify flx-nowrap">
+											<div class="gender-select"><span class="toggle">
+													<?php
+													if($puppy->gender == 0){
+														echo __('Lány');
+													} else {
+														echo __('Fiú');
+													}
+													?>
+												</span>
+
+												<div class="drop-box">
+													<input id="gender_male" type="radio" name="gender" value="0" <?= ($puppy->gender == 0) ? 'checked' : '' ?> data-gender="<?php echo __('Lány'); ?>">
+													<label for="gender_male"><?php echo __('Lány'); ?></label>
+													<input id="gender_female" type="radio" name="gender" value="1" <?= ($puppy->gender == 1) ? 'checked' : '' ?> data-gender="<?php echo __('Fiú'); ?>">
+													<label for="gender_female"><?php echo __('Fiú'); ?></label>
+												</div>
+											</div>
+											<div class="date-dropdown-holder">
+												<div class="container">
+													<input type="text" name="years" placeholder="Year" readonly value="<?php echo $puppy->years; ?>"><span class="icon"></span>
+													<ul class="option year">
+														<?php
+
+														for ( $i = 1994; $i <= date( 'Y' ); $i ++ ) {
+															echo '<li>'.$i.'</li>';
+														}
+
+														?>
+													</ul>
+												</div>
+												<div class="container">
+													<input type="text" name="months" placeholder="Month" readonly value="<?php echo $puppy->months; ?>"><span class="icon"></span>
+													<ul class="option month">
+														<?php
+														for ( $i = 1; $i <= 12; $i ++ ) {
+															echo '<li>'.$i.'</li>';
+														}
+														?>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<input type="submit" value="<?php echo __('GYERÜNK'); ?>" class="btn large solid green">
+										</div>
+										<input type="hidden" name="order1" value="1">
+										<input type="hidden" name="dog" value="<?php echo $puppy->id?>">
+									</form>
 								</div>
 								<?php
 								$i ++;

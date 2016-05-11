@@ -126,6 +126,34 @@ class Controller_User_Account extends Controller_Core {
 		}
 	}
 
+	public function action_editDog() {
+		$user = $this->current_user;
+		if ( isset( $_POST['order1'] ) ) {
+			$puppy = ORM::factory( 'Puppy' )->where( 'id', '=', (int) $_REQUEST['dog'] )
+			            ->and_where( 'user_id', '=', $user->id )->find();
+			if ( $puppy->loaded() ) {
+				$puppy->puppy_name    = $_POST['puppy_name'];
+				$puppy->gender        = $_POST['gender'];
+				$puppy->years         = (int) $_POST['years'];
+				$puppy->months        = (int) $_POST['months'];
+				$puppy->selected_size = $_POST['selected_size'];
+
+				if ( isset( $_FILES['puppy_img'] ) ) {
+					$filename = $this->_save_image( $_FILES['puppy_img'] );
+					if ( ! $filename ) {
+						$puppy->img_name = '';
+					} else {
+						$puppy->img_name = $filename;
+					}
+				}
+				$puppy->save();
+				Flash::set( 'notice', __( 'Sikeresen hozzáadtad a kutyust a profilodhoz!' ) );
+
+			}
+			$this->redirect( '/user_account' );
+		}
+	}
+
 	protected function _save_image( $image ) {
 		if (
 			! Upload::valid( $image ) OR

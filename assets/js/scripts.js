@@ -455,15 +455,46 @@ $(document).ready(function () {
 });
 
 $(document).ready(function(){
-    $('.new-puppy h3').click(function(){
+    $('.new-puppy h3').on('click',function(){
         console.log('click');
-        $('.new-puppy form').show();
-        $('.my-puppies .col-12.row').removeClass("col-12", "row").addClass("col-6");
-        $(this).unbind();
+        if($('.new-puppy form').is(':hidden')) {
+            $('.new-puppy form').show();
+            $('.edit-puppy form').hide();
+            $('.my-puppies .col-12.row').removeClass("col-12", "row").addClass("col-6");
+        } else {
+            $('.my-puppies .col-12.row').removeClass("col-6").addClass("col-12", "row");
+            $('.new-puppy form').hide();
+        }
+
     });
+    $('.edit-puppy h3').on('click',function(){
+        console.log('click');
+        if($('.edit-puppy form').is(':hidden')) {
+            $('.edit-puppy form').show();
+            $('.new-puppy form').hide();
+            $('.my-puppies .col-12.row').removeClass("col-12", "row").addClass("col-6");
+        } else {
+            $('.my-puppies .col-12.row').removeClass("col-6").addClass("col-12", "row");
+            $('.edit-puppy form').hide();
+        }
+    });
+
+    $('a.edit-puppy').on('click',function(){
+        var id = $(this).data('id');
+        $('.new-puppy form').hide();
+        if($('.edit-puppy-'+id).is(':hidden')){
+            $('.edit-puppy-'+id).show();
+        } else {
+            $('.edit-puppy-'+id).hide();
+        }
+
+    });
+
 });
 
+$(document).ready(function(){
 
+});
 
 $(function () {
 
