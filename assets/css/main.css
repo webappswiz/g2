@@ -692,6 +692,7 @@ section {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      flex-basis: 250px
     }
     .carusel-container .la-viewport .item{
       display: inline-block;
