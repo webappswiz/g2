@@ -26,7 +26,20 @@ endif;
 	$(document).ready(function () {
 
 
-		$('#customer_email').attr('autocomplete', 'off');
+		$('form[autocomplete="off"] input, input[autocomplete="off"]').each(function(){
+
+			var input = this;
+			var name = $(input).attr('name');
+			var id = $(input).attr('id');
+
+			$(input).removeAttr('name');
+			$(input).removeAttr('id');
+
+			setTimeout(function(){
+				$(input).attr('name', name);
+				$(input).attr('id', id);
+			}, 1);
+		});
 
 		var ship_cost = 0;
 
