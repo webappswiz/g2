@@ -4,6 +4,7 @@
 	<div class="row"><i class="fa fa-shopping-cart"></i></div>
 </div>
 <!-- Page Title ======================================-->
+
 <section>
 	<div class="row flx-center">
 		<div class="content-box page-title">
@@ -16,6 +17,9 @@
 <div class="row flx-center">
 	<div class="content-box">
 		<div class="row flx-around">
+			<section>
+				<div class="rw"></div>
+			</section>
 			<!-- Aside ===========================================-->
 			<aside class="catalog-aside col-3">
 				<h2>Kategória:</h2>
