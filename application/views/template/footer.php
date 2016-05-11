@@ -21,7 +21,7 @@
 		<div class="row flx-around content-box">
 			<div class="col-4">
 				<p><a href="http://forum.goodiebox.hu">GOODIEBOX PLACC</a></p>
-				<p><span>ÜZENJ: <a href="mailto:info@goodiebox.hu">info@goodiebox.hu</a></span></p>
+				<p><span>ÜZENJ NEKÜNK: <a href="mailto:info@goodiebox.hu">info@goodiebox.hu</a></span></p>
 
 
 			</div>

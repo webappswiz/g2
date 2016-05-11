@@ -154,7 +154,7 @@ a.gallery-link {
     margin: 0; }
 
 a.gallery-link:after {
-  content: 'Olvass tovább';
+  content: 'Megnézem';
   color: #fff;
   background-color: #f79320;
   position: absolute;
