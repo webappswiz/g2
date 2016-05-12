@@ -251,6 +251,11 @@
   .footer-bottom .row.flx-around.content-box {
     flex-direction: column;
     align-items: center; }
+  .call-to-action-2 .btn {
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+  }
 }
 
 @media screen and (max-width: 460px) {
