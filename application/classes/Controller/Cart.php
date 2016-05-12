@@ -42,8 +42,11 @@ class Controller_Cart extends Controller_Core {
 		}
 		if ( $prod_id->qty >= $product_qty ) {
 			if ( isset( $_SESSION['cart'][ $product_id ] ) ) {
-				if($prod_id->qty>=($product_qty+$_SESSION['cart'][ $product_id ]))
+				if($prod_id->qty>=($product_qty+$_SESSION['cart'][ $product_id ])) {
 					$_SESSION['cart'][ $product_id ] ++;
+				} else {
+					$prod_id->status = 0;
+				}
 			} else {
 
 				$_SESSION['cart'][ $product_id ] = $product_qty;
