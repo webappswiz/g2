@@ -258,8 +258,8 @@
       <file leaf-file-name="Account.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/classes/Controller/User/Account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14533965">
-              <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.61769354">
+              <caret line="164" column="12" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -1202,8 +1202,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/Controller/User/Account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14533965">
-          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.61769354">
+          <caret line="164" column="12" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="12" />
           <folding />
         </state>
       </provider>

@@ -162,7 +162,7 @@ class Controller_User_Account extends Controller_Core {
 				Flash::set( 'notice', __( 'Sikeresen hozzáadtad a kutyust a profilodhoz!' ) );
 
 			}
-			//$this->redirect( '/user_account' );
+			$this->redirect( '/user_account' );
 		}
 	}
 
