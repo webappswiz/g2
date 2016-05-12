@@ -123,9 +123,6 @@ $time       = explode( ':', $date_array[1] );
 
 
 	</script>
-	<noscript><img height="1" width="1" style="display:none"
-	               src="https://www.facebook.com/tr?id=676982215724170&ev=PageView&noscript=1"
-		/></noscript>
 	<!-- End Facebook Pixel Code -->
 	<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6014782475522&amp;cd[value]=0.00&amp;cd[currency]=GBP&amp;noscript=1" /></noscript>
 	<!-- End Facebook Pixel Code -->
