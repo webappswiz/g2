@@ -105,7 +105,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/user_account/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.451613">
+            <state vertical-scroll-proportion="-10.903226">
               <caret line="322" column="70" selection-start-line="322" selection-start-column="70" selection-end-line="322" selection-end-column="70" />
               <folding />
             </state>
@@ -258,8 +258,8 @@
       <file leaf-file-name="Account.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/classes/Controller/User/Account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5450237">
-              <caret line="165" column="14" selection-start-line="165" selection-start-column="14" selection-end-line="165" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.5813586">
+              <caret line="148" column="56" selection-start-line="148" selection-start-column="56" selection-end-line="148" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -1194,7 +1194,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user_account/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.451613">
+        <state vertical-scroll-proportion="-10.903226">
           <caret line="322" column="70" selection-start-line="322" selection-start-column="70" selection-end-line="322" selection-end-column="70" />
           <folding />
         </state>
@@ -1202,8 +1202,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/Controller/User/Account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5450237">
-          <caret line="165" column="14" selection-start-line="165" selection-start-column="14" selection-end-line="165" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.5813586">
+          <caret line="148" column="56" selection-start-line="148" selection-start-column="56" selection-end-line="148" selection-end-column="56" />
           <folding />
         </state>
       </provider>

@@ -146,7 +146,7 @@ class Controller_User_Account extends Controller_Core {
 				} else {
 					$gender = 1;
 				}
-				$puppy->gender        = $gender;
+				$puppy->gender        = $_POST['gender'];
 				$puppy->years         = (int) $_POST['years'];
 				$puppy->months        = (int) $_POST['months'];
 				$puppy->selected_size = $_POST['selected_size'];
