@@ -134,6 +134,7 @@ class Controller_User_Account extends Controller_Core {
 	}
 
 	public function action_editDog() {
+		print_r($_POST);
 		$user = $this->current_user;
 		if ( isset( $_POST['order1'] ) ) {
 			$puppy = ORM::factory( 'Puppy' )->where( 'id', '=', (int) $_REQUEST['dog'] )
@@ -162,7 +163,7 @@ class Controller_User_Account extends Controller_Core {
 				Flash::set( 'notice', __( 'Sikeresen hozzáadtad a kutyust a profilodhoz!' ) );
 
 			}
-			$this->redirect( '/user_account' );
+			//$this->redirect( '/user_account' );
 		}
 	}
 
