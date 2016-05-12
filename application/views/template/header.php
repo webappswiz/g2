@@ -30,7 +30,6 @@ $time       = explode( ':', $date_array[1] );
 	}
 	echo Media::inline_script();
 	?>
-	<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6015691752322&amp;cd[value]=0.00&amp;cd[currency]=GBP&amp;noscript=1" /></noscript>
 	<script src='http://connect.facebook.net/en_US/all.js'></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
