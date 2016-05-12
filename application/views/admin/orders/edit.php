@@ -68,7 +68,7 @@
 	?>
 
 
-	<table>
+	<table cellpadding="2" cellspacing="2" border="0">
 		<tr>
 			<td><?php if($model->type!=3){?><strong>Purchased package</strong><?php }?></td>
 			<?php
@@ -118,9 +118,10 @@
 			<td></td>
 			<td></td>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
-			<th colspan="3">Details</th>
+			<th colspan="6">Details</th>
 		</tr>
 		<?php if($model->type!=3):?>
 		<tr>
@@ -193,7 +194,8 @@
 			<tr>
 				<td><strong>Product name</strong></td>
 				<td><strong>Product code</strong></td>
-				<td></td>
+				<td><strong>Quantity</strong></td>
+				<td><strong>Price</strong></td>
 			</tr>
 				<?php
 			$products = ORM::factory('OrderProducts')->where('order_id','=',$model->id)->find_all();
@@ -203,7 +205,8 @@
 				<tr>
 					<td><?php echo $prod->product_name; ?></td>
 					<td><?php echo $prod->product_number; ?></td>
-					<td><?php echo $product->product_qty.' x '.$prod->price; ?> Ft</td>
+					<td><?php echo $product->product_qty; ?></td>
+					<td><?php echo $prod->price;?> Ft</td>
 				</tr>
 		<?php
 
@@ -217,10 +220,12 @@
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 		</tr>
 		<tr>
 			<td><strong>Order comments</strong></td>
 			<td><?= $model->message ?></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 		</tr>
 
