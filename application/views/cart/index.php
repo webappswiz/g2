@@ -76,7 +76,7 @@
 				<!-- end .row.flx-end.cart-total-->
 			</div>
 		<?php else: ?>
-			<h2 class="text-center">A kosarad üres! <a style="text-decoration: underline" href="<?php echo URL::base( true, false ); ?>catalog">Kattints ide</a> ha shoppingolni szeretnél!</h2>
+			<h2 class="text-center">A kosarad üres! <a style="color: deeppink" href="<?php echo URL::base( true, false ); ?>catalog">Kattints ide</a> ha shoppingolni szeretnél!</h2>
 		<?php endif; ?>
 		<!-- end .cart-box.cart-page-->
 	</div>

@@ -245,7 +245,7 @@ $time       = explode( ':', $date_array[1] );
 				válogatott, itthon kevésbé ismert különféle (többnyire játék, jutalomfalat, snack, rágcsálnivaló, de
 				esetenként higiénés termék és kiegészítő is) termék kerül a dobozodba, persze ez függ a típusától (Smart
 				vagy Plus) és az adott havi koncepciótól is! Ha lemaradtál egy korábbi Goodieboxról, de szeretted volna
-				ami benne volt, a termékeket megtalálhatod a <a style="text-decoration: underline" href="<?= URL::base( true, false ) ?>catalog">GOODIESHOP</a> ban is!</h3><img
+				ami benne volt, a termékeket megtalálhatod a <a style="color:#f79320" href="<?= URL::base( true, false ) ?>catalog">GOODIESHOP</a> ban is!</h3><img
 				src="<?= URL::base( true, false ) ?><?php echo __( 'assets/img/fotobox-2.png' ); ?>" class="responsive"><a
 				a href="/order" class="btn large solid orange"><?php echo _( "MEGRENDELEM" ); ?></a>
 		</div>
@@ -263,7 +263,7 @@ $time       = explode( ':', $date_array[1] );
 
 				<h3 class="text-center">Lemaradtál a nyitásról? Imádtál egy korábbi Goodiebox dobozba került terméket és
 					ideje lenne megszerezned? Most itt a nagyszerű lehetőség, válogass az egyedülálló Goodieshop online
-					boltunkból és lepd meg a kutyusodat azzal, aminek szerinted biztosan örülne! <a style="text-decoration: underline" href="<?= URL::base( true, false ) ?>catalog">Hogy körbenézhess, kattints ide!</a></h3>
+					boltunkból és lepd meg a kutyusodat azzal, aminek szerinted biztosan örülne! <a style="color:deeppink" href="<?= URL::base( true, false ) ?>catalog">Hogy körbenézhess, kattints ide!</a></h3>
 
 				<div id="carusel-1" class="carusel-container">
 					<ul id="carusel-line">

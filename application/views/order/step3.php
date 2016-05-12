@@ -50,7 +50,7 @@ endif;
 					$('#customer_email').val('');
 					$('#customer_email').focus();
 					$('#customer_email').css('background-color', 'rosybrown');
-					$('#customer_email').after('<label id="email-error" class="error" for="email"><?php echo __('Úgy tűnik, már van regisztrált felhasználói fiókod! <strong><a style="text-decoration: underline" href="/user_session/login?referrer=step3">Jelentkezz be</a></strong> és onnan sokkal gyorsabb lesz!'); ?></label>');
+					$('#customer_email').after('<label id="email-error" class="error" for="email"><?php echo __('Úgy tűnik, már van regisztrált felhasználói fiókod! <strong><a style="color:deeppink" href="/user_session/login?referrer=step3">Jelentkezz be</a></strong> és onnan sokkal gyorsabb lesz!'); ?></label>');
 				} else {
 					$('#email').css('background-color', 'white');
 				}
@@ -461,7 +461,7 @@ if ( isset( $session['step2'] ) ) {
 					</div>
 					<div class="row flx-center check-box-holder">
 						<input type="checkbox" id="confirm">
-						<label for="confirm" class="gray-box__green-check">Elolvastam és elfogadom az <a style="text-decoration: underline" href="/aszf.pdf">Általános Szerződési Feltételekben leírtakat!</a></label>
+						<label for="confirm" class="gray-box__green-check">Elolvastam és elfogadom az <a style="color:deeppink" href="/aszf.pdf">Általános Szerződési Feltételekben leírtakat!</a></label>
 					</div>
 					<div class="row flx-center action-holder">
 						<input type="submit" name="submit" id="submit" value="<?php echo __('MEGRENDELEM'); ?>" class="btn large solid gray">
