@@ -60,7 +60,7 @@
             'justify-content' : 'center',
             'margin' : 'auto'
         });
-        $(this).find('ul').css({'transition' : '.2s', 'flex-wrap' : 'no-wrap'});
+        $(this).find('ul').css({'transition' : '.2s', 'flex-wrap' : 'nowrap'});
         $(this).find('ul').wrap("<div class='la-viewport'></div>").css("display", "flex");
         $(this).prepend("<span class='la-arrow-left la-rounded la-color'>");
         $(this).append("<span class='la-arrow-right la-rounded la-color'>");

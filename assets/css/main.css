@@ -678,7 +678,6 @@ section {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    min-width: 250px;
     border: 1px solid #ececec;
     display: inline-block;
     vertical-align: middle;
@@ -702,6 +701,7 @@ section {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      min-width: 250px;
       flex-basis: 250px
     }
     .carusel-container .la-viewport .item{
@@ -800,7 +800,7 @@ section {
   .call-to-action-2 .btn {
     position: absolute;
     bottom: 15px;
-    left: calc(50% - 142px); }
+    left: calc(50% - 200px); }
 
 /*- Shop Carusel -*/
 .shop-carusel {
