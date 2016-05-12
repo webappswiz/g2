@@ -61,7 +61,7 @@
 	</div>
 	<div id="cart_error"><span id="error_close"><i class="fa fa-times"></i></span>
 		<h1 class="text-center text-orange">
-			<p>Test</p>
+			<p>Sajnáljuk, ez a termék jelenleg nem rendelhető!</p>
 			<p class="text-center">
 				<a class="tovabb btn solid green">Tovább válogatok</a>
 				<a href="<?= URL::base( true, false ) ?>cart" class="btn solid green">Megnézem a kosarat!</a>
