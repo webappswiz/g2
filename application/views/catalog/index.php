@@ -172,7 +172,7 @@
 								}
 								$products->and_where('product_size','IN',$size);
 							}
-							$prods = $products->order_by( 'id', 'DESC' )->limit( 3 )->find_all();
+							$prods = $products->and_where('status','=','1')->order_by( 'id', 'DESC' )->limit( 3 )->find_all();
 							if ( count( $prods ) > 0 ):
 								?>
 								<ul>
