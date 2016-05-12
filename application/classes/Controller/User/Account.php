@@ -134,7 +134,6 @@ class Controller_User_Account extends Controller_Core {
 	}
 
 	public function action_editDog() {
-		print_r($_POST);
 		$user = $this->current_user;
 		if ( isset( $_POST['order1'] ) ) {
 			$puppy = ORM::factory( 'Puppy' )->where( 'id', '=', (int) $_REQUEST['dog'] )
