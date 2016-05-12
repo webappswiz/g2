@@ -539,23 +539,8 @@ $(function () {
             );
     });
 
-    var _fbq = window._fbq || (window._fbq = []);
-    if (!_fbq.loaded) {
-        var fbds = document.createElement('script');
-        fbds.async = true;
-        fbds.src = '//connect.facebook.net/en_US/fbds.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(fbds, s);
-        _fbq.loaded = true;
-    }
 
-    window._fbq = window._fbq || [];
-    window._fbq.push(['track', '6015691752322', {'value': '0.00', 'currency': 'GBP'}]);
 
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '176383062407846', status: true, cookie: true, xfbml: true});
-    };
     $('.btnShare').click(function () {
         elem = $(this);
         postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
@@ -586,29 +571,4 @@ $(function () {
         }
         FB.ui(obj, callback);
     }
-
-    function (d, debug) {
-        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement('script');
-        js.id = id;
-        js.async = true;
-        js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-        ref.parentNode.insertBefore(js, ref);
-    }
-
 });
-
-(function (d, debug) {
-    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-    if (d.getElementById(id)) {
-        return;
-    }
-    js = d.createElement('script');
-    js.id = id;
-    js.async = true;
-    js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-    ref.parentNode.insertBefore(js, ref);
-}(document, /*debug*/ false));
