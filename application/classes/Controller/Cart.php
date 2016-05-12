@@ -47,18 +47,17 @@ class Controller_Cart extends Controller_Core {
 				} else {
 					$prod_id->status = 0;
 				}
+				Flash::set( 'cart_added', __( 'added' ) );
 			} else {
-
 				$_SESSION['cart'][ $product_id ] = $product_qty;
+				Flash::set( 'cart_added', __( 'added' ) );
 			}
-			Flash::set( 'cart_added', __( 'added' ) );
 		} else {
 			$prod_id->status = 0;
 			$prod_id->save();
 		}
 
-		echo $prod_id->qty.' '.$_SESSION['cart'][ $product_id ];
-		//$this->redirect( $this->request->referrer() );
+		$this->redirect( $this->request->referrer() );
 	}
 
 	public function action_delete() {
