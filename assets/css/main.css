@@ -256,6 +256,11 @@ section {
     font-weight: 800;
     width: 50%;
     line-height: 36px; }
+.product-preview input[type="submit"].btn {
+  border-radius: 3px;
+  box-shadow: none;
+  padding: 0.8em 0.8em;
+  -webkit-appearance: none; }
   .product-preview .ammount:after {
     content: " Ft"; }
   .product-preview .ammount.old {
