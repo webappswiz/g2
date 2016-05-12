@@ -6,8 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/template/header.php" afterPath="$PROJECT_DIR$/application/views/template/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/responsive.css" afterPath="$PROJECT_DIR$/assets/css/responsive.css" />
     </list>
     <ignored path="public_html.iws" />
@@ -43,8 +41,8 @@
       <file leaf-file-name="responsive.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/responsive.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7905759">
-              <caret line="257" column="3" selection-start-line="257" selection-start-column="3" selection-end-line="257" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.22862129">
+              <caret line="252" column="26" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -732,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/responsive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7905759">
-          <caret line="257" column="3" selection-start-line="257" selection-start-column="3" selection-end-line="257" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.22862129">
+          <caret line="252" column="26" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
           <folding />
         </state>
       </provider>
