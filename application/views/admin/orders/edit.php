@@ -191,8 +191,8 @@
 		<?php else:
 			?>
 			<tr>
-				<td>Product name</td>
-				<td>Product code</td>
+				<td><strong>Product name</strong></td>
+				<td><strong>Product code</strong></td>
 				<td></td>
 			</tr>
 				<?php
@@ -213,6 +213,11 @@
 
 
 		<?php endif;?>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
 		<tr>
 			<td><strong>Order comments</strong></td>
 			<td><?= $model->message ?></td>
