@@ -254,6 +254,11 @@ if ( isset( $session['step2'] ) ) {
 							<h2><?php echo __('Összesen'); ?>:<span id="total_price"><?= round($price->price) ?></span></h2>
 						</div>
 					<?php else: ?>
+						<div class="cart-item">
+							<div class="row">
+								<img src="<?= URL::base( true, false ) ?>assets/img/cart-img.jpg">
+							</div>
+						</div>
 						<?php
 						$total_cart_price = 0;
 						foreach($cart as $id => $qty):
@@ -264,12 +269,17 @@ if ( isset( $session['step2'] ) ) {
 								$subtotal     = $product_info->price * $qty;
 							}
 							$total_cart_price += $subtotal;
+							$image = ORM::factory('ProductImages')->where('product_id','=',$product_info->id)->and_where('img_type','=',1)->limit(1)->find_all();
+							if(count($image)>0){
+								$img_path = URL::base( true, false ).'uploads/products/'.$image[0]->img_name;
+							} else {
+								$img_path = URL::base( true, false ).'assets/img/product-img-4.jpg';
+							}
 							?>
 							<div class="cart-item">
-								<div class="row"><img src="<?= URL::base( true, false ) ?>assets/img/cart-img.jpg"></div>
+								<div class="row"><img src="<?php echo $img_path;?>"></div>
 								<div class="row"><a href="#"><?php echo $product_info->product_name; ?> X <?= $qty ?></a></div>
-								<div class="row"><span><?php echo __('Összeg'); ?>:</span></div>
-								<div class="row"><span class="text-bold"><?= $subtotal ?> Ft</div>
+								<div class="row"><span><?php echo __('Összeg'); ?>:&nbsp;</span><span class="text-bold"><?= $subtotal ?> Ft</div>
 							</div>
 						<?php endforeach;?>
 						<div class="shipping">

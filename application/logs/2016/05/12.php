@@ -10,3 +10,57 @@
 #6 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #7 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
 #8 {main} in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Admin/Products.php:61
+2016-05-12 16:44:53 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: price ~ APPPATH/classes/Controller/Cart.php [ 126 ] in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php:126
+2016-05-12 16:44:53 --- DEBUG: #0 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php(126): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/vhosts...', 126, Array)
+#1 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php(24): Controller_Cart::shipping_calc(2050)
+#2 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Controller.php(84): Controller_Cart->action_index()
+#3 [internal function]: Kohana_Controller->execute()
+#4 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Cart))
+#5 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
+#8 {main} in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php:126
+2016-05-12 16:46:05 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: shipping ~ APPPATH/views/cart/index.php [ 69 ] in /var/www/vhosts/g2.priv/public_html/application/views/cart/index.php:69
+2016-05-12 16:46:05 --- DEBUG: #0 /var/www/vhosts/g2.priv/public_html/application/views/cart/index.php(69): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/vhosts...', 69, Array)
+#1 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/View.php(61): include('/var/www/vhosts...')
+#2 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/View.php(348): Kohana_View::capture('/var/www/vhosts...', Array)
+#3 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Base/Core.php(511): Kohana_View->render()
+#4 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Controller.php(87): Controller_Base_Core->after()
+#5 [internal function]: Kohana_Controller->execute()
+#6 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Cart))
+#7 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#8 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#9 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
+#10 {main} in /var/www/vhosts/g2.priv/public_html/application/views/cart/index.php:69
+2016-05-12 16:46:06 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: shipping ~ APPPATH/views/cart/index.php [ 69 ] in /var/www/vhosts/g2.priv/public_html/application/views/cart/index.php:69
+2016-05-12 16:46:06 --- DEBUG: #0 /var/www/vhosts/g2.priv/public_html/application/views/cart/index.php(69): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/vhosts...', 69, Array)
+#1 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/View.php(61): include('/var/www/vhosts...')
+#2 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/View.php(348): Kohana_View::capture('/var/www/vhosts...', Array)
+#3 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Base/Core.php(511): Kohana_View->render()
+#4 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Controller.php(87): Controller_Base_Core->after()
+#5 [internal function]: Kohana_Controller->execute()
+#6 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Cart))
+#7 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#8 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#9 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
+#10 {main} in /var/www/vhosts/g2.priv/public_html/application/views/cart/index.php:69
+2016-05-12 16:47:01 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: price ~ APPPATH/classes/Controller/Cart.php [ 126 ] in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php:126
+2016-05-12 16:47:01 --- DEBUG: #0 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php(126): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/vhosts...', 126, Array)
+#1 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php(24): Controller_Cart::shipping_calc(2050)
+#2 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Controller.php(84): Controller_Cart->action_index()
+#3 [internal function]: Kohana_Controller->execute()
+#4 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Cart))
+#5 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
+#8 {main} in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Cart.php:126
+2016-05-12 16:49:38 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: price ~ APPPATH/classes/Controller/Order.php [ 1255 ] in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Order.php:1255
+2016-05-12 16:49:38 --- DEBUG: #0 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Order.php(1255): Kohana_Core::error_handler(8, 'Undefined varia...', '/var/www/vhosts...', 1255, Array)
+#1 /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Order.php(838): Controller_Order::shipping_calc(2050)
+#2 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Controller.php(84): Controller_Order->action_step3()
+#3 [internal function]: Kohana_Controller->execute()
+#4 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Order))
+#5 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 /var/www/vhosts/g2.priv/public_html/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 /var/www/vhosts/g2.priv/public_html/index.php(118): Kohana_Request->execute()
+#8 {main} in /var/www/vhosts/g2.priv/public_html/application/classes/Controller/Order.php:1255

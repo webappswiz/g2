@@ -136,9 +136,13 @@ class Controller_Admin_Products extends Controller_Admin {
 	public function action_del_img(){
 		$this->img = ORM::factory( 'ProductImages', (int) $this->request->param( 'id' ) );
 		if ( $this->img->loaded() ) {
+			unlink(DOCROOT . 'uploads/products/'.$this->img->img_name);
 			$this->img->delete();
+
 		}
 		$this->redirect( '/admin/products/' );
 	}
+
+
 
 }

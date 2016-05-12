@@ -1225,28 +1225,28 @@ class Controller_Order extends Controller_Core {
 	}
 
 	public static function shipping_calc($weight){
-		if($weight<=2000){
+		if($weight<=2099){
 			$price = 1030;
 		}
-		if($weight>=2100 && $weight<=3000){
+		if($weight>=2100 && $weight<=3099){
 			$price = 1160;
 		}
-		if($weight>=3100 && $weight<=5000){
+		if($weight>=3100 && $weight<=5099){
 			$price = 1300;
 		}
-		if($weight>=5100 && $weight<=10000){
+		if($weight>=5100 && $weight<=10099){
 			$price = 1420;
 		}
-		if($weight>=10100 && $weight<=15000){
+		if($weight>=10100 && $weight<=15099){
 			$price = 1550;
 		}
-		if($weight>=15100 && $weight<=20000){
+		if($weight>=15100 && $weight<=20099){
 			$price = 1740;
 		}
-		if($weight>=20100 && $weight<=25000){
+		if($weight>=20100 && $weight<=25099){
 			$price = 1940;
 		}
-		if($weight>=25100 && $weight<=30000){
+		if($weight>=25100 && $weight<=30099){
 			$price = 2260;
 		}
 		if($weight>=30100 && $weight<=40000){
