@@ -15,7 +15,6 @@ return array(
 			'jquery.validate.min',
 			'jquery-ui',
 			'mask',
-			'jquery.hashchange.min',
 			'jquery.easytabs',
 			'lightbox.min',
 			'main',
