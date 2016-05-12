@@ -43,15 +43,15 @@
 						<ul class="text-gray">
 							<li>
 								<input id="age-1" type="checkbox" name="age[]" value="1">
-								<label for="age-1" class="gray-box__green-check">3+ Hónap</label>
+								<label for="age-1" class="gray-box__green-check">3+ hónapos</label>
 							</li>
 							<li>
 								<input id="age-2" type="checkbox" name="age[]" value="2">
-								<label for="age-2" class="gray-box__green-check">4+ Hónap</label>
+								<label for="age-2" class="gray-box__green-check">4+ hónapos</label>
 							</li>
 							<li>
 								<input id="age-3" type="checkbox" name="age[]" value="3">
-								<label for="age-3" class="gray-box__green-check">1+ Év</label>
+								<label for="age-3" class="gray-box__green-check">1+ éves</label>
 							</li>
 							<li>
 								<input id="age-4" type="checkbox" name="age[]" value="4">
