@@ -635,7 +635,8 @@ class Controller_Order extends Controller_Core {
 			$cost = ORM::factory( 'ShippingCost', 1 );
 			$order->total_price = round( $total_cart_price  + $cost->cost );
 		} else {
-			$order->total_price = round($total_cart_price + $this->shipping_calc($weight));
+
+			$order->total_price = ($total_cart_price>=8000)?$total_cart_price:round($total_cart_price + $this->shipping_calc($weight));
 		}
 		$order->save();
 		reset($cart);
