@@ -580,6 +580,13 @@ $(function () {
         return false;
     });
 
+    function postToFeed(title, desc, url, image) {
+        var obj = {method: 'feed', link: 'http://goodiebox.hu', picture: 'http://goodiebox.hu/assets/img/bark.jpg', name: 'Goodiebox', description: 'Hurrá, megrendeltem a legújabb Goodiebox-ot a kutyámnak! Ha Te is szeretnéd megajándékozni kis kedvencedet a legszuperebb meglepidobozzal, akkor kattints a weboldalukra http://goodiebox.hu'};
+        function callback(response) {
+        }
+        FB.ui(obj, callback);
+    }
+
 });
 
 (function (d, debug) {
@@ -593,9 +600,3 @@ $(function () {
     js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
     ref.parentNode.insertBefore(js, ref);
 }(document, /*debug*/ false));
-function postToFeed(title, desc, url, image) {
-    var obj = {method: 'feed', link: 'http://goodiebox.hu', picture: 'http://goodiebox.hu/assets/img/bark.jpg', name: 'Goodiebox', description: 'Hurrá, megrendeltem a legújabb Goodiebox-ot a kutyámnak! Ha Te is szeretnéd megajándékozni kis kedvencedet a legszuperebb meglepidobozzal, akkor kattints a weboldalukra http://goodiebox.hu'};
-    function callback(response) {
-    }
-    FB.ui(obj, callback);
-}
