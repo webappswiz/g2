@@ -16,7 +16,7 @@
 		<div class="row">
 			<!-- Aside ===========================================-->
 			<aside class="catalog-aside col-3">
-				<div class="slide-filter amount"><span class="filter-block">Kategória:</span>
+				<div class="slide-filter amount"><span class="filter-block">Kategóriák:</span>
 					<?php
 					foreach($categories as $cat){
 						$prod_counts = ORM::factory('Products')->where('product_cat','=',$cat->id)->count_all();

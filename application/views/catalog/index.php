@@ -25,7 +25,7 @@
 
 			<!-- Aside ===========================================-->
 			<aside class="catalog-aside col-3">
-				<h2>Kategória:</h2>
+				<h2>Kategóriák:</h2>
 					<?php
 					foreach($categories as $category){
 						$prod_counts = ORM::factory('Products')->where('product_cat','=',$category->id)->count_all();

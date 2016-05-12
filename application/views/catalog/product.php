@@ -138,8 +138,8 @@
 							válogass a kutyusod kedvére!</p>
 						<p>A Goodieshopban található termékeket kizárólag azonnali bankkártyás fizetéssel (Simple Online
 							Fizetési Rendszer) lehet megrendelni! A házhozszállítási díj a kosárba rakott termékek
-							összsúlya szerint automaikusan hozzáadódik a végösszeghez (lásd: Általános Szerződési
-							Feltételek).
+							összsúlya szerint automatikusan hozzáadódik a végösszeghez (lásd: <a style="color:deeppink" href="<?php echo URL::base( true, false );?>aszf.pdf">Általános Szerződési
+							Feltételek</a>).
 						</p>
 						<p>A Goodieshopban megrendelt termékek kiszállítása 2-3 munkanapon belül teljesül. A megrendelt
 							termékek csomagolása nem a Goodiebox egyedi mintás dobozba történik, hanem buborékos
