@@ -3,7 +3,7 @@
 
 		<div class="content-box page-title">
 			<div class="row breadcrumbs">
-				<a href="<?php echo URL::base( true, false ); ?>">Home</a> -> <a href="<?php echo URL::base( true, false ); ?>catalog">Catalog</a> -> <a href="<?php echo URL::base( true, false ); ?>catalog/category/<?php echo $category->id?>"><?php echo $category->cat_name?></a> -> <a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id?>"><?php echo $product->product_name?></a>
+				<a href="<?php echo URL::base( true, false ); ?>">Főoldal</a> -> <a href="<?php echo URL::base( true, false ); ?>catalog">Goodieshop</a> -> <a href="<?php echo URL::base( true, false ); ?>catalog/category/<?php echo $category->id?>"><?php echo $category->cat_name?></a> -> <a href="<?php echo URL::base( true, false ); ?>catalog/product/<?php echo $product->id?>"><?php echo $product->product_name?></a>
 			</div>
 			<h1><?php echo $product->product_name ?></h1>
 

@@ -17,7 +17,7 @@
 <div class="row flx-center">
 	<div class="content-box">
 		<div class="row breadcrumbs">
-			<a href="<?php echo URL::base( true, false ); ?>">Home</a> -> <a href="<?php echo URL::base( true, false ); ?>catalog">Catalog</a>
+			<a href="<?php echo URL::base( true, false ); ?>">Főoldal</a> -> <a href="<?php echo URL::base( true, false ); ?>catalog">Goodieshop</a>
 		</div>
 		<div class="row flx-around">
 
