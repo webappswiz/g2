@@ -7,7 +7,7 @@
     $.fn.touchScrolling = function(max){
         var startPos = 0;
         var semiPos = 0;
-        //console.log(semiPos);
+
         var x = 0;
         self = $(this);
 
@@ -36,7 +36,6 @@
             } else if (x < -max) {
                 x = -max;
             }
-            console.log("x after " + x);
             semiPos = x;
         });
     };
@@ -65,8 +64,7 @@
         $(this).prepend("<span class='la-arrow-left la-rounded la-color'>");
         $(this).append("<span class='la-arrow-right la-rounded la-color'>");
 
-        console.log($(this).find('li').length);
-        console.log($(this).find('li').width());
+
 
         $(this).find('ul').width(($(this).find('li').length) * ($(this).find('li').outerWidth(true)));
 
@@ -110,7 +108,7 @@
                 ctrlLeft.css("left", "-65px");
                 ctrlRight.css("right", "-65px");
 
-                console.log("first");
+
             }
 
             var viewportWidth = $('.la-viewport').width();
@@ -124,7 +122,7 @@
                 $('.la-arrow-left').css("left", "0px");
                 $('.la-arrow-right').css("right", "0px");
 
-                console.log('scnd');
+
             }
             var viewportWidth = $('.la-viewport').width();
         } else if (itemWidth >= ($('body').width() - 40)) {
@@ -136,7 +134,7 @@
                 ctrlRight.removeClass('la-rounded').addClass('slim');
                 $('.la-arrow-left').css("left", "0px");
                 $('.la-arrow-right').css("right", "0px");
-                console.log("wthf?");
+
             }
         }
 
