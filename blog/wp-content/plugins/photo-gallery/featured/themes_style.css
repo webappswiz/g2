@@ -39,7 +39,7 @@
 }
 
 #main_featured_themes_page #featured-plugins-list  li.sauron .product {background:url("images/sauron.jpg") left center no-repeat;}
-#main_featured_themes_page #featured-plugins-list  li.portfolio .product {background:url("images/portfolio.png") left center no-repeat;}
+#main_featured_themes_page #featured-plugins-list  li.portfolio_gallery .product {background:url("images/portfolio.png") left center no-repeat;}
 #main_featured_themes_page #featured-plugins-list  li.business_elite  .product {background:url("images/business_elite.jpg") left center no-repeat;}
 #main_featured_themes_page #featured-plugins-list  li.mottomag  .product {background:url("images/mottomag.jpg") left center no-repeat;  }
 #main_featured_themes_page #featured-plugins-list  li.business_world  .product {background:url("images/business_world.jpg") left center no-repeat;}
