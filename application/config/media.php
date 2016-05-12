@@ -13,7 +13,6 @@ return array(
 			'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js',
 			'ui_lib',
 			'jquery.validate.min',
-			//'jquery.collapse',
 			'jquery-ui',
 			'mask',
 			'jquery.hashchange.min',
