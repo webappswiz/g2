@@ -91,7 +91,7 @@ if ( count( $data ) > 0 ) {
 					$type = 'Gift order';
 				}
 				if ( $order->type == 3 ) {
-					$type = 'Shelter';
+					$type = 'Shop';
 				}
 				if ( $order->type == 4 ) {
 					$type = 'Manual order';

@@ -57,7 +57,7 @@
 		$type = 'Gift order';
 	}
 	if ( $model->type == 3 ) {
-		$type = 'Shelter order';
+		$type = 'Shop order';
 	}
 	if ( $model->type == 4 ) {
 		$type = 'Manual order';
@@ -70,15 +70,16 @@
 
 	<table>
 		<tr>
-			<td><strong>Purchased package</strong></td>
+			<td><?php if($model->type!=3){?><strong>Purchased package</strong><?php }?></td>
 			<?php
+
 			if ( $model->selected_box == 0 ) {
 				$pkg = $model->prod_name;
 			} else {
 				$pkg = $model->package->package_name;
 			}
 			?>
-			<td><?= $pkg ?></td>
+			<td><?= ($model->type!=3)?$pkg:'' ?></td>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<th>Modify order</th>
 		</tr>
@@ -121,6 +122,7 @@
 		<tr>
 			<th colspan="3">Details</th>
 		</tr>
+		<?php if($model->type!=3):?>
 		<tr>
 			<td><strong>Client email address</strong></td>
 			<td><?= $current_user->email ?></td>
@@ -186,6 +188,31 @@
 			<td></td>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 		</tr>
+		<?php else:
+			?>
+			<tr>
+				<td>Product name</td>
+				<td>Product code</td>
+				<td></td>
+			</tr>
+				<?php
+			$products = ORM::factory('OrderProducts')->where('order_id','=',$model->id)->find_all();
+			foreach($products as $product){
+				$prod = ORM::factory('Products',$product->product_id);
+				?>
+				<tr>
+					<td><?php echo $prod->product_name; ?></td>
+					<td><?php echo $prod->product_number; ?></td>
+					<td><?php echo $product->product_qty.' x '.$prod->price; ?> Ft</td>
+				</tr>
+		<?php
+
+			}
+
+			?>
+
+
+		<?php endif;?>
 		<tr>
 			<td><strong>Order comments</strong></td>
 			<td><?= $model->message ?></td>
