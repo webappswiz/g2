@@ -308,6 +308,7 @@ $(function () {
             'items': '1',
             'controlPosition': 'above',
             'controlPositionX': '40',       // Margin inner / outer
+            'controlPositionY' : '131',
             'controlColor': '#fff'
         });
 });
