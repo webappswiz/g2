@@ -59,6 +59,14 @@
 				<a href="<?= URL::base( true, false ) ?>cart" class="btn solid green">Megnézem a kosarat!</a>
 			</p>
 	</div>
+	<div id="cart_error"><span id="error_close"><i class="fa fa-times"></i></span>
+		<h1 class="text-center text-orange">
+			<p>Test</p>
+			<p class="text-center">
+				<a class="tovabb btn solid green">Tovább válogatok</a>
+				<a href="<?= URL::base( true, false ) ?>cart" class="btn solid green">Megnézem a kosarat!</a>
+			</p>
+	</div>
 	<div id="modal_window"><span id="modal_close"><i class="fa fa-times"></i></span>
 		<h1 class="text-center text-orange">
 		<p>Visszaszámolunk a következő Goodieboxig, addig nézz szét a Goodieshopban!</p>

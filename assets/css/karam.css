@@ -146,6 +146,43 @@
     cursor: pointer;
 }
 
+
+#cart_error {
+    width: 490px;
+    height: auto;
+    border-radius: 5px;
+    background: #fff;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    margin-top: -290px;
+    margin-left: -245px;
+    display: none;
+    opacity: 0;
+    z-index: 700;
+    padding: 20px 80px; }
+#cart_error h1 {
+    font-size: 40px; }
+#cart_error a.btn {
+    font-weight: 800;
+    padding: 0.8em 3em;
+    margin: 3px; }
+
+/* Кнoпкa зaкрыть */
+#cart_error #error_close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px; }
+
+
  .product-line li {display: flex}
 
 .my-office .my-puppies .edit-puppy h3 {

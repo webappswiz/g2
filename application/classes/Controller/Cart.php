@@ -48,10 +48,14 @@ class Controller_Cart extends Controller_Core {
 			if($prod_id->qty>=($qty+$product_qty)){
 				$_SESSION['cart'][$product_id]++;
 				Flash::set( 'cart_added', __( 'added' ) );
+			} else {
+				Flash::set( 'cart_error', __( 'limit' ) );
 			}
 		} elseif($prod_id->qty>=$product_qty) {
 			$_SESSION['cart'][$product_id] = $product_qty;
 			Flash::set( 'cart_added', __( 'added' ) );
+		} else {
+			Flash::set( 'cart_error', __( 'limit' ) );
 		}
 		$this->redirect($this->request->referrer());
 	}
