@@ -42,8 +42,8 @@ class Controller_Cart extends Controller_Core {
 		}
 		if ( $prod_id->qty >= $product_qty ) {
 			if ( isset( $_SESSION['cart'][ $product_id ] ) ) {
-				$_SESSION['cart'][ $product_id ] ++;
-
+				if($prod_id->qty>=($product_qty+$_SESSION['cart'][ $product_id ]))
+					$_SESSION['cart'][ $product_id ] ++;
 			} else {
 
 				$_SESSION['cart'][ $product_id ] = $product_qty;
@@ -54,8 +54,8 @@ class Controller_Cart extends Controller_Core {
 			$prod_id->save();
 		}
 
-
-		$this->redirect( $this->request->referrer() );
+		echo $prod_id->qty.' '.$_SESSION['cart'][ $product_id ];
+		//$this->redirect( $this->request->referrer() );
 	}
 
 	public function action_delete() {
