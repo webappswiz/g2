@@ -42,8 +42,8 @@ class Controller_Cart extends Controller_Core {
 		}
 
 
-
-		if(isset($_SESSION['cart'][$product_id]) && $prod_id->qty>=($_SESSION['cart'][$product_id]+$product_qty) ){
+		$qty = $_SESSION['cart'][$product_id];
+		if(isset($_SESSION['cart'][$product_id]) && $prod_id->qty>=($qty+$product_qty) ){
 			$_SESSION['cart'][$product_id]++;
 			Flash::set( 'cart_added', __( 'added' ) );
 		} elseif($prod_id->qty>=$product_qty) {
