@@ -554,7 +554,7 @@ $(function () {
 
     window.fbAsyncInit = function () {
         FB.init({
-            appId: '764361780253904', status: true, cookie: true, xfbml: true});
+            appId: '176383062407846', status: true, cookie: true, xfbml: true});
     };
     $('.btnShare').click(function () {
         elem = $(this);
