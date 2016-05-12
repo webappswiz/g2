@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7946cae9-0ec9-4cc3-8b78-5663f5889b48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/Controller/Order.php" afterPath="$PROJECT_DIR$/application/classes/Controller/Order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/Controller/Cart.php" afterPath="$PROJECT_DIR$/application/classes/Controller/Cart.php" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,20 +104,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/classes/Controller/Cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="125" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.835703">
+              <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/Controller/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33222592">
+            <state vertical-scroll-proportion="-6.451613">
               <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
               <folding>
                 <marker date="1463065471486" expanded="true" signature="3423:5804" placeholder="..." />
@@ -317,13 +317,13 @@
         <option value="$PROJECT_DIR$/application/views/catalog/category.php" />
         <option value="$PROJECT_DIR$/application/views/catalog/index.php" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Admin/Products.php" />
-        <option value="$PROJECT_DIR$/application/classes/Controller/Cart.php" />
         <option value="$PROJECT_DIR$/application/views/order/step3.php" />
         <option value="$PROJECT_DIR$/application/views/admin/orders/page.php" />
         <option value="$PROJECT_DIR$/application/views/admin/orders/edit.php" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
         <option value="$PROJECT_DIR$/assets/js/jquery.lanacarusel.js" />
         <option value="$PROJECT_DIR$/application/classes/Controller/Order.php" />
+        <option value="$PROJECT_DIR$/application/classes/Controller/Cart.php" />
       </list>
     </option>
   </component>
@@ -989,17 +989,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/Controller/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="125" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/Controller/Order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33222592">
+        <state vertical-scroll-proportion="-6.451613">
           <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
           <folding>
             <marker date="1463065471486" expanded="true" signature="3423:5804" placeholder="..." />
@@ -1135,6 +1127,14 @@
             <marker date="1463065471486" expanded="true" signature="59885:60079" placeholder="..." />
             <marker date="1463065471486" expanded="false" signature="59927:59964" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/Controller/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.835703">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
